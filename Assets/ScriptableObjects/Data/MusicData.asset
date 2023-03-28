@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67bb8576cc047b19795582228a38984, type: 3}
+  m_Name: MusicData
+  m_EditorClassIdentifier: 
+  musicTracks:
+  - clip: {fileID: 8300000, guid: 0d689f5951323a844ac7684b92f3ce60, type: 3}
+    bpm: 124
+  - clip: {fileID: 8300000, guid: 01457c18458de93468a4f4e9c43eb80c, type: 3}
+    bpm: 115
+  - clip: {fileID: 8300000, guid: 16db45043401740429d2a9089d4f86e8, type: 3}
+    bpm: 93
+  currentTrackIndex: 1
+  playing: 1
+  OnPressPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFastForward:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRewind:
+    m_PersistentCalls:
+      m_Calls: []

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_Hoos
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 7a83c5b8482ecda4e9fccbb2db8a66a6, type: 3}
+  - {fileID: 8300000, guid: 555e1e27ae6231f42927bfee431994ac, type: 3}
+  - {fileID: 8300000, guid: b1e74dab68aeec244b384bc2dc679709, type: 3}
+  - {fileID: 8300000, guid: 66b220f495732144c96027f1dba4c572, type: 3}
+  - {fileID: 8300000, guid: 2ac5a97e8661ca64db0322f84b219f2e, type: 3}
+  volume: {x: 0.8, y: 0.9}
+  pitch: {x: 1, y: 1}

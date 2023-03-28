@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_BagPunch
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 80a4bd8a31717364a87790e6c9d952f8, type: 3}
+  - {fileID: 8300000, guid: eaa20969621fdda4fa963a1c1eb4b5a5, type: 3}
+  - {fileID: 8300000, guid: b2490356586ca6e4f82d792c916e0686, type: 3}
+  - {fileID: 8300000, guid: c58fa3b32b2967b408f13abb9f9676b4, type: 3}
+  - {fileID: 8300000, guid: c0d589a54c48cc8499dacae1ee01a76d, type: 3}
+  - {fileID: 8300000, guid: 7e93eddf3823b234da13d2c76769365e, type: 3}
+  - {fileID: 8300000, guid: b7162fbdf6818074bb8be9ad02eec7f2, type: 3}
+  volume: {x: 0.5, y: 0.7}
+  pitch: {x: 0.8, y: 1.1}

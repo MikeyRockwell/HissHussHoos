@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_Huss
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 53a4847dad37f5b46b62b9e8695a1b2f, type: 3}
+  - {fileID: 8300000, guid: 77828575b3ccfdb40a08e9e99787aab7, type: 3}
+  - {fileID: 8300000, guid: 95f165120e9d2c74e88b3f1722f3626f, type: 3}
+  - {fileID: 8300000, guid: a2727c30490441d44b4e70ca725fe316, type: 3}
+  - {fileID: 8300000, guid: 7baf291b63ea46344aaa8a5ca9fd57a7, type: 3}
+  volume: {x: 0.8, y: 0.9}
+  pitch: {x: 1, y: 1}

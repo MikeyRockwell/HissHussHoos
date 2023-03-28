@@ -1,0 +1,157 @@
+{
+    "m_SelectedDeviceId": "4f6202e4",
+    "m_SelectedPackage": {
+        "deviceId": "4f6202e4",
+        "name": "com.RockwellStudios.HISSHUSSHOOS",
+        "processId": 17136,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.mi.android.globallauncher",
+            "processId": 24817,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 18527,
+            "exited": true
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 19851,
+            "exited": true
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 20774,
+            "exited": true
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 21650,
+            "exited": true
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 22267,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 11339,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 13347,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 14337,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 15160,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 15744,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 16351,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 17136,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_FilterOptions": {
+        "m_Filter": "",
+        "m_UseRegularExpressions": false,
+        "m_MatchCase": false
+    },
+    "m_SymbolPaths": [],
+    "m_CaptureVideoSettings": {
+        "TimeLimitEnabled": false,
+        "TimeLimit": 180,
+        "VideoSizeEnabled": false,
+        "VideoSizeX": 1280,
+        "VideoSizeY": 720,
+        "BitRateEnabled": false,
+        "BitRateK": 20000,
+        "DisplayIdEnabled": false,
+        "DisplayId": ""
+    }
+}
