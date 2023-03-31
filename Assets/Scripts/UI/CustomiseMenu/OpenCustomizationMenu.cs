@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Managers;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Sequence = DG.Tweening.Sequence;
@@ -12,15 +13,33 @@ namespace UI.CustomiseMenu {
         [SerializeField] private RectTransform xf;
         [SerializeField] private float xClosedPos;
         [SerializeField] private float xOpenPos;
+        [SerializeField] private float xHiddenPos;
         [SerializeField] private float animSpeed = 0.2f;
 
         [SerializeField] private bool open;
         public RectTransform subMenu;
 
+        private DataWrangler.GameData gd;
+
         private void Awake() {
+            gd = DataWrangler.GetGameData();
+            
             button.onClick.AddListener(CheckStatus);
             events.OnCloseOtherTabs.AddListener(CheckOpen);
+            
+            gd.roundData.OnGameBegin.AddListener(HideMenu);
+            gd.eventData.OnGameOver.AddListener(UnHideMenu);
             Close();
+        }
+
+        private void UnHideMenu() {
+            xf.DOKill();
+            xf.DOLocalMove(new Vector2(xClosedPos, xf.localPosition.y), animSpeed);
+        }
+
+        private void HideMenu(int arg0) {
+            xf.DOKill();
+            xf.DOLocalMove(new Vector2(xHiddenPos, xf.localPosition.y), animSpeed);
         }
 
         private void CheckOpen() {

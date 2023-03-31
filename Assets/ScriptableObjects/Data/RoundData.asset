@@ -15,7 +15,7 @@ MonoBehaviour:
   roundType: 0
   roundTextTime: 1.5
   currentRound: 12
-  roundLength: 1
+  roundLength: 10
   roundStep: 1
   bonusRound: 5
   maxRoundTime: 10
@@ -39,7 +39,7 @@ MonoBehaviour:
   OnSpeedBonus:
     m_PersistentCalls:
       m_Calls: []
-  bonusRoundLength: 5
+  bonusRoundLength: 20
   bonusTime: -0.0022632529
   OnBonusRoundBegin:
     m_PersistentCalls:

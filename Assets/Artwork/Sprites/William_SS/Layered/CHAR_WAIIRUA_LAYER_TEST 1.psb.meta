@@ -2584,7 +2584,7 @@ ScriptedImporter:
     - {x: 63, y: 64}
     tessellationDetail: 0
     uvTransform: {x: 365, y: 819}
-    spritePosition: {x: 221, y: 795}
+    spritePosition: {x: 221, y: 796}
   - name: ARM_R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4730,7 +4730,7 @@ ScriptedImporter:
     - {x: 108, y: 109}
     tessellationDetail: 0
     uvTransform: {x: 3, y: 398}
-    spritePosition: {x: 171, y: 449}
+    spritePosition: {x: 172, y: 450}
   - name: ARM_L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -5913,7 +5913,7 @@ ScriptedImporter:
     - {x: 102, y: 103}
     tessellationDetail: 0
     uvTransform: {x: 446, y: -6}
-    spritePosition: {x: 277, y: 431}
+    spritePosition: {x: 308, y: 441}
   - name: SHOE_L
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -6647,7 +6647,7 @@ ScriptedImporter:
     - {x: 62, y: 63}
     tessellationDetail: 0
     uvTransform: {x: 229, y: 817}
-    spritePosition: {x: 344, y: 87}
+    spritePosition: {x: 344, y: 88}
   - name: SHOE_R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -7390,7 +7390,7 @@ ScriptedImporter:
     - {x: 62, y: 63}
     tessellationDetail: 0
     uvTransform: {x: 674, y: 3}
-    spritePosition: {x: 175, y: 64}
+    spritePosition: {x: 175, y: 65}
   - name: LEG_R
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -9723,7 +9723,7 @@ ScriptedImporter:
     - {x: 101, y: 102}
     tessellationDetail: 0
     uvTransform: {x: 329, y: 391}
-    spritePosition: {x: 253, y: 160}
+    spritePosition: {x: 289, y: 168}
   characterData:
     bones:
     - name: bone_1

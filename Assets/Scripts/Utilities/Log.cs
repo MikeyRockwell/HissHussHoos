@@ -4,7 +4,10 @@ namespace Utils {
     public static class Log {
         
         public static void Message(string message) {
-            #if UNITY_EDITOR
+            // #if UNITY_EDITOR
+            // Debug.Log(message);
+            // #endif
+            #if PLATFORM_ANDROID
             Debug.Log(message);
             #endif
         }

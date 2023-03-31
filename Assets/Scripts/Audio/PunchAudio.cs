@@ -14,14 +14,18 @@ namespace Audio {
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
-            gd.eventData.OnPunchNormal.AddListener(Punch);
-            gd.eventData.OnPunchWarmup.AddListener(Punch);
-            gd.eventData.OnPunchBonus.AddListener(Punch);
+            gd.eventData.OnPunchNormal.AddListener(PunchBag);
+            gd.eventData.OnPunchWarmup.AddListener(PunchOnly);
+            gd.eventData.OnPunchBonus.AddListener(PunchOnly);
         }
 
-        private void Punch(TARGET target) {
+        private void PunchBag(TARGET target) {
             voiceEvents[(int)target].Play(voiceSource);
             bagPunch.Play(bagSource);
+        }
+
+        private void PunchOnly(TARGET target) {
+            voiceEvents[(int)target].Play(voiceSource);
         }
     }
 }

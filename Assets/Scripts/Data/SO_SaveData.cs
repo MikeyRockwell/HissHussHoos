@@ -27,8 +27,17 @@ namespace Data {
         }
 
         public void LoadGame() {
-            SaveGameData data = Serialization.Load("Save.dat");
-            LoadData(data);
+            if (Serialization.CheckSaveExists("Save.dat")) {
+                // If the save file exists
+                Log.Message("Save file found - Loading Save Data");
+                SaveGameData data = Serialization.Load("Save.dat");
+                LoadData(data);
+            }
+            else {
+                // Create a default save file
+                Log.Message("No Save file found");
+                // SaveGame();
+            }
         }
         
         private SaveGameData GenerateSaveData() {

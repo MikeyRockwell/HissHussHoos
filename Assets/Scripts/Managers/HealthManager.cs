@@ -9,6 +9,9 @@ namespace Managers {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnMiss.AddListener(RemoveHealth);
             gd.eventData.OnNewGame.AddListener(NewGame);
+            
+            // This will be triggered when the end game menu closes
+            gd.eventData.OnGameOver.AddListener(NewGame);
         }
 
         private void NewGame() {
@@ -16,7 +19,6 @@ namespace Managers {
         }
 
         private void RemoveHealth() {
-            
             gd.playerData.ChangeHealth(-1);
             if (gd.playerData.health == 0) {
                 gd.eventData.GameOver();

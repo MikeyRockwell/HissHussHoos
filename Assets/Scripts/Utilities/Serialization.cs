@@ -5,6 +5,17 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Utils {
     public static class Serialization {
+
+        public static bool CheckSaveExists(string saveName) {
+            
+            if(!Directory.Exists(Application.persistentDataPath + "/saves")){
+                Directory.CreateDirectory(Application.persistentDataPath + "/saves");
+            }
+            
+            string path = Application.persistentDataPath + "/saves/" + saveName;
+
+            return File.Exists(path);
+        }
         
         public static void Save(string saveName, SaveGameData gameData) {
             
@@ -21,12 +32,14 @@ namespace Utils {
             FileStream file = new (path, FileMode.Create);
             formatter.Serialize(file, json);
             file.Close();
+            
+            Log.Message("Save Successful!");
         }
 
         public static SaveGameData Load(string saveName) {
-            
+
             string path = Application.persistentDataPath + "/saves/" + saveName;
-            
+
             if(!File.Exists(path)){
                 Log.Error("Save file does not exist!");
             }
@@ -38,6 +51,7 @@ namespace Utils {
                 string loaded = formatter.Deserialize(file) as string;
                 SaveGameData gameData = JsonLoad(loaded);
                 file.Close();
+                Log.Message("Load Successful!");
                 return gameData;
             }
             catch {

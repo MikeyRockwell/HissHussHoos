@@ -20,6 +20,7 @@ namespace Managers {
 
         private void GameOver() {
             gd.roundData.roundType = RoundData.RoundType.warmup;
+            roundText.text = "";
         }
 
         private void Start() {

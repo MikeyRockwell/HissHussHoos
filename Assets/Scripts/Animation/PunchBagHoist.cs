@@ -15,26 +15,20 @@ namespace Animation {
         
         private void Awake() {
             gd = DataWrangler.GetGameData();
-            gd.roundData.OnBonusRoundBegin.AddListener((() => HoistBag(0)));
-            gd.roundData.OnRoundBegin.AddListener(HoistBag);
+            gd.roundData.OnRoundBegin.AddListener(LowerBag);
+            gd.roundData.OnBonusRoundBegin.AddListener(RaiseBag);
+            gd.eventData.OnGameOver.AddListener(RaiseBag);
             xf = transform;
         }
         
-        private void HoistBag(int arg0) {
+        private void LowerBag(int arg0) {
+            xf.DOKill();
+            xf.DOLocalMove(new Vector2(xf.position.x, yDefault), animDuration);
+        }
 
-            float endPosY = 0;
-            switch (gd.roundData.roundType) {
-                case RoundData.RoundType.warmup:
-                    endPosY = yDefault;
-                    break;
-                case RoundData.RoundType.normal:
-                    endPosY = yDefault;
-                    break;
-                case RoundData.RoundType.bonus:
-                    endPosY = yHoist;
-                    break;
-            }
-            xf.DOLocalMove(new Vector2(xf.position.x, endPosY), animDuration);
+        private void RaiseBag() {
+            xf.DOKill();
+            xf.DOLocalMove(new Vector2(xf.position.x, yHoist), animDuration);
         }
     }
 }

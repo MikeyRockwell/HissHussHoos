@@ -97,6 +97,7 @@ namespace UI {
         }
 
         private void GameOver() {
+            xf.DOKill();
             xf.localScale = Vector3.zero;
         }
     }

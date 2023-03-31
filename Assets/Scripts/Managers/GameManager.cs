@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System;
+using Data;
 using Utils;
 using UnityEngine;
 
@@ -24,7 +25,13 @@ namespace Managers {
             saveData.LoadGame();
             gd.eventData.NewGame();
         }
-
+        
+#if PLATFORM_ANDROID
+        private void OnApplicationPause(bool pauseStatus) {
+            // DataWrangler.GetSaveData().SaveGame();
+        }
+#endif
+        
         private void OnDisable() {
             DataWrangler.GetSaveData().SaveGame();
         }

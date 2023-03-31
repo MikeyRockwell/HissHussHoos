@@ -11,11 +11,16 @@ namespace Managers {
         private string username;
         private string idToken;
         
-        async void Start() {
+        private void Start() {
+            SelectLoginSystem();
+        }
 
+        async void SelectLoginSystem() {
+            
             switch (Application.platform) {
                 case RuntimePlatform.WindowsEditor:
                     Debug.Log("Attempting Guest Login");
+                    username = "Unity Editor";
                     await LoginLootLockerGuest();
                     break;
                 case RuntimePlatform.IPhonePlayer:
@@ -30,6 +35,10 @@ namespace Managers {
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private void OnApplicationFocus(bool hasFocus) {
+            SelectLoginSystem();
         }
 
         private Task AuthenticateGoogle() {

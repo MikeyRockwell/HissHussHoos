@@ -1,89 +1,41 @@
 {
     "m_SelectedDeviceId": "4f6202e4",
     "m_SelectedPackage": {
-        "deviceId": "4f6202e4",
-        "name": "com.RockwellStudios.HISSHUSSHOOS",
-        "processId": 17136,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "4f6202e4",
-            "name": "com.mi.android.globallauncher",
-            "processId": 24817,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 18527,
+            "processId": 13847,
             "exited": true
         },
         {
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 19851,
+            "processId": 14421,
             "exited": true
         },
         {
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 20774,
+            "processId": 14878,
             "exited": true
         },
         {
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 21650,
+            "processId": 16032,
             "exited": true
         },
         {
             "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 22267,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 11339,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 13347,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 14337,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 15160,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 15744,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 16351,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 17136,
+            "name": "com.google.android.documentsui",
+            "processId": 17855,
             "exited": false
         }
     ],
@@ -139,7 +91,7 @@
     },
     "m_FilterOptions": {
         "m_Filter": "",
-        "m_UseRegularExpressions": false,
+        "m_UseRegularExpressions": true,
         "m_MatchCase": false
     },
     "m_SymbolPaths": [],
