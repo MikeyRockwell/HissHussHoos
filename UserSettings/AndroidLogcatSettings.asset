@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "4f6202e4",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "4f6202e4",
+        "name": "com.RockwellStudios.HISSHUSSHOOS",
+        "processId": 29048,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,108 @@
             "deviceId": "4f6202e4",
             "name": "com.google.android.documentsui",
             "processId": 17855,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 6402,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 20950,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 17131,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 17929,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 18918,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 19416,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 22508,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 23244,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 24924,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 25173,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 26189,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 26453,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 26793,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 27093,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 28460,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 28632,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 29048,
             "exited": false
         }
     ],

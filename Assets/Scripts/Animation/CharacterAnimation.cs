@@ -13,10 +13,14 @@ namespace Animation {
         private DataWrangler.GameData gd;
         private SpriteRenderer spriteRenderer;
 
+        private Material mat;
+
+        private static readonly int Color1 = Shader.PropertyToID("_Color");
+
         private void Awake() {
             
             spriteRenderer = GetComponent<SpriteRenderer>();
-
+            mat = spriteRenderer.material;
             gd = DataWrangler.GetGameData();
             
             gd.eventData.OnPunchNormal.AddListener(Punch);
@@ -28,7 +32,7 @@ namespace Animation {
             
             // Default item initialization - from here OK??
             // It's done here so that the event is subscribed prior to changing
-            part.ChangeItem(part.DefaultItem);
+            part.ChangeItem(part.DefaultItem, false);
         }
 
         private void UpdateSprites(SO_Item item) {
@@ -37,8 +41,13 @@ namespace Animation {
         }
 
         private void UpdateSpriteColor(SO_Item item, Color newColor) {
-            
-            spriteRenderer.color = newColor;
+            if (item.colorMask) {
+                mat.SetColor(Color1, newColor);
+            }
+            else {
+                mat.SetColor(Color1, Color.white);
+                spriteRenderer.color = newColor;
+            }
         }
 
         private void Punch(TARGET punch) {

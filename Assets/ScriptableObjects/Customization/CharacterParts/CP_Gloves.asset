@@ -22,3 +22,4 @@ MonoBehaviour:
   OnChangeItemColor:
     m_PersistentCalls:
       m_Calls: []
+  SaveData: {fileID: 11400000, guid: 25e8ae280a7fa45469b0ba7d01d1fb74, type: 2}

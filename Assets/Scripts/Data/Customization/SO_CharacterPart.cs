@@ -17,18 +17,26 @@ namespace Data.Customization {
         public UnityEvent<SO_Item> OnChangeItem;
         public UnityEvent<SO_Item, Color> OnChangeItemColor;
 
-        public void ChangeItem(SO_Item newItem) {
+        public SO_SaveData SaveData;
+
+        public void ChangeItem(SO_Item newItem, bool save) {
             CurrentItem ??= DefaultItem;
             CurrentItem.equipped = false;
             CurrentItem = newItem;
             CurrentItem.equipped = true;
             OnChangeItem?.Invoke(newItem);
-            OnChangeItemColor?.Invoke(newItem, newItem.color);
+            ChangeItemColor(CurrentItem.color, save);
+
+            // OnChangeItemColor?.Invoke(newItem, newItem.color);
         }
 
-        public void ChangeItemColor(Color newColor) {
+        public void ChangeItemColor(Color newColor, bool save) {
             CurrentItem.color = newColor;
             OnChangeItemColor?.Invoke(CurrentItem, newColor);
+            // SaveData.SaveGame();
+            if (save) {
+                SaveData.SaveGame();
+            }
         }
     }
 }

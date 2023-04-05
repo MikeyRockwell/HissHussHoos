@@ -2,17 +2,14 @@
 using UnityEngine;
 using SaveGameData = Data.SO_SaveData.SaveGameData;
 using System.Runtime.Serialization.Formatters.Binary;
+using Unity.VisualScripting;
 
 namespace Utils {
     public static class Serialization {
 
         public static bool CheckSaveExists(string saveName) {
             
-            if(!Directory.Exists(Application.persistentDataPath + "/saves")){
-                Directory.CreateDirectory(Application.persistentDataPath + "/saves");
-            }
-            
-            string path = Application.persistentDataPath + "/saves/" + saveName;
+            string path = Path.Combine(Application.persistentDataPath, saveName);
 
             return File.Exists(path);
         }
@@ -22,14 +19,11 @@ namespace Utils {
             string json = JsonSerializer.Save(gameData);
             
             BinaryFormatter formatter = GetBinaryFormatter();
-            
-            if(!Directory.Exists(Application.persistentDataPath + "/saves")){
-                Directory.CreateDirectory(Application.persistentDataPath + "/saves");
-            }
-           
-            string path = Application.persistentDataPath + "/saves/" + saveName;
+
+            string path = Path.Combine(Application.persistentDataPath, saveName);
             
             FileStream file = new (path, FileMode.Create);
+            
             formatter.Serialize(file, json);
             file.Close();
             
@@ -38,7 +32,7 @@ namespace Utils {
 
         public static SaveGameData Load(string saveName) {
 
-            string path = Application.persistentDataPath + "/saves/" + saveName;
+            string path = Path.Combine(Application.persistentDataPath, saveName);
 
             if(!File.Exists(path)){
                 Log.Error("Save file does not exist!");
@@ -51,7 +45,6 @@ namespace Utils {
                 string loaded = formatter.Deserialize(file) as string;
                 SaveGameData gameData = JsonLoad(loaded);
                 file.Close();
-                Log.Message("Load Successful!");
                 return gameData;
             }
             catch {
