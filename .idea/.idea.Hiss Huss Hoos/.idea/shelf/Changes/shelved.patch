@@ -1,0 +1,122 @@
+Index: Assets/RiderFlow.UserData.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData.meta b/Assets/RiderFlow.UserData.meta
+new file mode 100644
+--- /dev/null	(date 1680147405748)
++++ b/Assets/RiderFlow.UserData.meta	(date 1680147405748)
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: ccd7c518225a32f4c9080210e86cc6c9
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+Index: Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map.meta b/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map.meta
+new file mode 100644
+--- /dev/null	(date 1680147405774)
++++ b/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map.meta	(date 1680147405774)
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: 624fda7df303660428092c07cc34d831
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+Index: Assets/RiderFlow.UserData/Editor/Scenes.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData/Editor/Scenes.meta b/Assets/RiderFlow.UserData/Editor/Scenes.meta
+new file mode 100644
+--- /dev/null	(date 1680147405765)
++++ b/Assets/RiderFlow.UserData/Editor/Scenes.meta	(date 1680147405765)
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: c063d062c379cd34ab28b8af82da2a42
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+Index: Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata.meta b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata.meta
+new file mode 100644
+--- /dev/null	(date 1680147723762)
++++ b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata.meta	(date 1680147723762)
+@@ -0,0 +1,7 @@
++fileFormatVersion: 2
++guid: 050805f316f0b474eb495b223a533213
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+Index: Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata
+new file mode 100644
+--- /dev/null	(date 1680147520685)
++++ b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map/8c9cfa26abfee488c85f1582747f6a02.userdata	(date 1680147520685)
+@@ -0,0 +1,22 @@
++{
++  "GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1440129516-0": {
++    "GameObjectId": "GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-1440129516-0",
++    "SectionColorRed": 0.5,
++    "SectionColorGreen": 0.833333254,
++    "SectionColorBlue": 1.0,
++    "SectionAltColorRed": 0.125,
++    "SectionAltColorGreen": 0.37499994,
++    "SectionAltColorBlue": 0.5,
++    "RemoveSectionDuringBuild": false
++  },
++  "GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-461468792-0": {
++    "GameObjectId": "GlobalObjectId_V1-2-8c9cfa26abfee488c85f1582747f6a02-461468792-0",
++    "SectionColorRed": 0.8333335,
++    "SectionColorGreen": 0.5,
++    "SectionColorBlue": 1.0,
++    "SectionAltColorRed": 0.375000119,
++    "SectionAltColorGreen": 0.125,
++    "SectionAltColorBlue": 0.5,
++    "RemoveSectionDuringBuild": false
++  }
++}
+\ No newline at end of file
+Index: Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map.meta
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map.meta b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map.meta
+new file mode 100644
+--- /dev/null	(date 1680147723729)
++++ b/Assets/RiderFlow.UserData/Editor/Scenes/Sections.Map.meta	(date 1680147723729)
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: 68fbe70b9f8621b4ca897b3f277ede2f
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 

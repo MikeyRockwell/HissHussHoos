@@ -910,7 +910,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "733f7f68814b489b865ebbc4cfd14ae3",
     "m_Id": 0,
-    "m_DisplayName": "ColorMask",
+    "m_DisplayName": "MaskTex",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1137,10 +1137,10 @@
     "m_Guid": {
         "m_GuidSerialized": "105bd5a6-dac2-4786-b0e6-5c620820ad48"
     },
-    "m_Name": "ColorMask",
+    "m_Name": "MaskTex",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "ColorMask",
-    "m_DefaultReferenceName": "_ColorMask",
+    "m_RefNameGeneratedByDisplayName": "MaskTex",
+    "m_DefaultReferenceName": "_MaskTex",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1318,7 +1318,7 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     },
-    "m_BlendMode": 21
+    "m_BlendMode": 13
 }
 
 {
@@ -1597,8 +1597,8 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -418.4000244140625,
-            "y": -359.20001220703127,
-            "width": 105.60003662109375,
+            "y": -306.3999938964844,
+            "width": 105.60000610351563,
             "height": 33.600006103515628
         }
     },

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Utils;
+using System;
 using UnityEngine;
 using GooglePlayGames;
 using LootLocker.Requests;
@@ -11,36 +12,56 @@ namespace Managers {
         private string username;
         private string idToken;
         
+        
         private void Start() {
+            SelectLoginSystem();
+        }
+        
+        private void OnApplicationFocus(bool hasFocus) {
             SelectLoginSystem();
         }
 
         async void SelectLoginSystem() {
             
-            switch (Application.platform) {
-                case RuntimePlatform.WindowsEditor:
-                    Debug.Log("Attempting Guest Login");
-                    username = "Unity Editor";
-                    await LoginLootLockerGuest();
-                    break;
-                case RuntimePlatform.IPhonePlayer:
-                    AuthenticateIOS();
-                    break;
-                case RuntimePlatform.Android:
-                    await AuthenticateGoogle();
-                    await LoginLootLockerGuest();
-                    // await LootLockerLoginGoogle();
-                    Debug.Log("Attempting Google Login");
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            #if UNITY_EDITOR
+            
+                Log.Message("Attempting Guest Login");
+                username = "Unity Editor";
+                await LoginLootLockerGuest();
+            
+            #endif
+
+            #if UNITY_ANDROID
+            
+                await AuthenticateGoogle();
+                await LoginLootLockerGuest();   
+            
+            #endif
+            
+            #if UNITY_IOS
+                
+                AuthenticateIOS();
+            
+            #endif
         }
 
-        private void OnApplicationFocus(bool hasFocus) {
-            SelectLoginSystem();
+        
+        private Task LoginLootLockerGuest() {
+            
+            LootLockerSDKManager.StartGuestSession(username,response => {
+                if (!response.success) {
+                    Debug.Log("Error starting LootLocker GUEST session");
+                    return;
+                }
+
+                Debug.Log("Successfully started LootLocker GUEST Session");
+                PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
+            });
+            return Task.CompletedTask;
         }
 
+#if UNITY_ANDROID
+        
         private Task AuthenticateGoogle() {
             
             var tcs = new TaskCompletionSource<object>();
@@ -68,24 +89,15 @@ namespace Managers {
             return Task.CompletedTask;
         }
         
-        private Task LoginLootLockerGuest() {
-            
-            LootLockerSDKManager.StartGuestSession(username,response => {
-                if (!response.success) {
-                    Debug.Log("Error starting LootLocker GUEST session");
-                    return;
-                }
+#endif
 
-                Debug.Log("Successfully started LootLocker GUEST Session");
-                PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
-            });
-            return Task.CompletedTask;
-        }
-
-
+#if UNITY_IOS
+        
         private void AuthenticateIOS() {
-
+            // DO IOS login thing here
         }
+        
+#endif
         
     }
 }

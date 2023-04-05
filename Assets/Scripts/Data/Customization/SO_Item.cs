@@ -1,5 +1,6 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
+using Utils;
 
 namespace Data.Customization {
     [CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Customization/CharacterItem", order = 0)]
@@ -13,6 +14,7 @@ namespace Data.Customization {
         [FoldoutGroup("Colors")] public bool noColors;
         [FoldoutGroup("Colors")] public bool standardColors;
         [FoldoutGroup("Colors")] public bool customColors;
+        [FoldoutGroup("Colors")] public bool colorMask;
         [FoldoutGroup("Colors")] public Color[] availableColors;
         [FoldoutGroup("Colors")] public Color color = Color.white;
         
@@ -22,6 +24,12 @@ namespace Data.Customization {
 
         public void LoadSaveData(SaveData sd) {
             
+            Log.Message(
+                "Loading Item: " + name + " | " +
+                "Equipped: " + equipped + " | " +
+                "Color: " + color,
+                color
+                );
             unlocked = sd.unlocked;
             equipped = sd.equipped;
             color = new Color(sd.color.x, sd.color.y, sd.color.z);
@@ -29,22 +37,30 @@ namespace Data.Customization {
             // Is this equipped check enough to handle loading the current item??
             if (!equipped) return;
             
-            characterPart.ChangeItem(this);
-            characterPart.ChangeItemColor(color);
+            characterPart.ChangeItem(this, false);
+            characterPart.ChangeItemColor(color, false);
         }
         
         public SaveData CreateSaveData() {
-            return new SaveData(unlocked, equipped, new Vector3(color.r, color.g, color.b));
+            Log.Message(
+                "Saving Item: " + name + " | " +
+                "Equipped: " + equipped + " | " +
+                "Color: " + color,
+                color
+            );
+            return new SaveData(name, unlocked, equipped, new Vector3(color.r, color.g, color.b));
         }
         
         [System.Serializable]
         public struct SaveData {
 
+            public string itemName;
             public bool unlocked;
             public bool equipped;
             public Vector3 color;
 
-            public SaveData(bool unlocked, bool equipped, Vector3 color) {
+            public SaveData(string name, bool unlocked, bool equipped, Vector3 color) {
+                this.itemName = name;
                 this.unlocked = unlocked;
                 this.equipped = equipped;
                 this.color = color;

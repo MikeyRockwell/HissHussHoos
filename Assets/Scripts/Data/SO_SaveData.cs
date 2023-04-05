@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using Data.Customization;
+using System.Diagnostics;
 using System.Collections.Generic;
 
 namespace Data {
@@ -14,16 +15,22 @@ namespace Data {
         // These are called and made into lists - then serialized
         
         // This data is loaded from the resources folder
+        public List<SO_CharacterPart> allParts;
         public List<SO_Item> allItems;
 
         public void InitializeLists() {
             allItems.Clear();
-            allItems = Resources.LoadAll<SO_Item>("").ToList();
+            foreach (SO_Item item in allParts.SelectMany(part => part.Items)) {
+                allItems.Add(item);
+            }
+            // allItems = Resources.LoadAll<SO_Item>("").ToList();
         }
         
         public void SaveGame() {
+            Stopwatch timer = Timer.StartTimer();
             SaveGameData data = GenerateSaveData();
             Serialization.Save("Save.dat", data);
+            Log.Message(Timer.StopTimer(timer), Color.yellow);
         }
 
         public void LoadGame() {
@@ -36,7 +43,7 @@ namespace Data {
             else {
                 // Create a default save file
                 Log.Message("No Save file found");
-                // SaveGame();
+                SaveGame();
             }
         }
         

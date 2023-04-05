@@ -15,7 +15,7 @@ MonoBehaviour:
   Items:
   - {fileID: 11400000, guid: 4e907d62d7df99a478d629aa820b4a96, type: 2}
   - {fileID: 11400000, guid: 8b3cc1155787fff4493dbd1bba7c4552, type: 2}
-  CurrentItem: {fileID: 11400000, guid: 4e907d62d7df99a478d629aa820b4a96, type: 2}
+  CurrentItem: {fileID: 11400000, guid: 8b3cc1155787fff4493dbd1bba7c4552, type: 2}
   DefaultItem: {fileID: 11400000, guid: 8b3cc1155787fff4493dbd1bba7c4552, type: 2}
   OnChangeItem:
     m_PersistentCalls:
@@ -23,3 +23,4 @@ MonoBehaviour:
   OnChangeItemColor:
     m_PersistentCalls:
       m_Calls: []
+  SaveData: {fileID: 11400000, guid: 25e8ae280a7fa45469b0ba7d01d1fb74, type: 2}
