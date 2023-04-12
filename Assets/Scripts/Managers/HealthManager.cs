@@ -8,7 +8,7 @@ namespace Managers {
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnMiss.AddListener(RemoveHealth);
-            gd.eventData.OnNewGame.AddListener(NewGame);
+            gd.eventData.OnGameInit.AddListener(NewGame);
             
             // This will be triggered when the end game menu closes
             gd.eventData.OnGameOver.AddListener(NewGame);

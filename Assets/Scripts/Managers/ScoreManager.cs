@@ -13,7 +13,7 @@ namespace Managers {
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnHit.AddListener(OnHit);
-            gd.eventData.OnNewGame.AddListener(NewGame);
+            gd.eventData.OnGameInit.AddListener(NewGame);
             gd.eventData.OnGameOver.AddListener(GameOver);
         }
 

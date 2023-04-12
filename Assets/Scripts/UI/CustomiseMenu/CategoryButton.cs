@@ -17,7 +17,8 @@ namespace UI.CustomiseMenu {
             // Check if active button on any button press
             events.OnCategoryButtonPressed.AddListener(SetActiveButton);
         }
-        
+
+
         private void SetActiveButton(Button eventButton) {
             // Manual navigation button highlighting
             button.image.color = button == eventButton ? button.colors.selectedColor : disabledColor;

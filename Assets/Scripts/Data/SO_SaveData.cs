@@ -14,7 +14,7 @@ namespace Data {
         // Items such as clothing items have save and load functions
         // These are called and made into lists - then serialized
         
-        // This data is loaded from the resources folder
+        // This data is loaded from the parts
         public List<SO_CharacterPart> allParts;
         public List<SO_Item> allItems;
 
@@ -23,14 +23,11 @@ namespace Data {
             foreach (SO_Item item in allParts.SelectMany(part => part.Items)) {
                 allItems.Add(item);
             }
-            // allItems = Resources.LoadAll<SO_Item>("").ToList();
         }
         
         public void SaveGame() {
-            Stopwatch timer = Timer.StartTimer();
             SaveGameData data = GenerateSaveData();
             Serialization.Save("Save.dat", data);
-            Log.Message(Timer.StopTimer(timer), Color.yellow);
         }
 
         public void LoadGame() {

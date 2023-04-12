@@ -7,18 +7,27 @@ namespace Data {
     [CreateAssetMenu(fileName = "GameEventDatta", menuName = "ScriptableObjects/GameEvents/GameEventData")]
     public class GameEventData : ScriptableObject {
         
-        // GLOBAL
-        public UnityEvent OnNewGame;
-        public UnityEvent OnLoadGame;
+        // GAME EVENTS
+        // Subscribable and callable events 
+        // For game objects to link behaviour to
+        
+        // Called when the game is first loaded
+        public UnityEvent OnGameInit;
+        
+        // Different punches
         public UnityEvent<TARGET> OnPunchWarmup;
         public UnityEvent<TARGET> OnPunchNormal;
         public UnityEvent<TARGET> OnPunchBonus;
+        
+        // Hit and Miss target
         public UnityEvent<int> OnHit;
         public UnityEvent OnMiss;
+        
+        // Game over
         public UnityEvent OnGameOver;
         
-        public void NewGame() {
-            OnNewGame?.Invoke();
+        public void InitializeGame() {
+            OnGameInit?.Invoke();
         }
 
         public void PunchWarmup(TARGET target) {

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_Pants
   m_EditorClassIdentifier: 
+  UIName: PANTS
   Items:
   - {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}
   CurrentItem: {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}

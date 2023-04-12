@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="338fe14c-d9f2-4806-9ed9-c918acebb189" name="Changes" comment="Android Working" />
+    <list default="true" id="338fe14c-d9f2-4806-9ed9-c918acebb189" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchFX.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchFX.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/WW_Animation_Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/WW_Animation_Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FastPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FastPopUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SuperFastPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SuperFastPopUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Gloves.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Gloves.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Legs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Legs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_PunchingBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_PunchingBag.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Shoes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Shoes.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/Resources/CharacterItems/PunchingBag/CI_DefaultPunchingBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/Resources/CharacterItems/PunchingBag/CI_DefaultPunchingBag.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/Resources/CharacterItems/Torso/CI_TShirt.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/Resources/CharacterItems/Torso/CI_TShirt.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/PlayerData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/SO_SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/SO_SaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HealthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomiseEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomiseEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/RoundTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/RoundTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serialization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Rendering/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Rendering/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/ShaderGraph/Mat_PixelShader.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/ShaderGraph/Mat_PixelShader.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file:////Library/WARP/LIVE/UNITY/HISS HUSS HOOS/Assets/_Scripts/Time/ComboTimer.cs" root0="SKIP_HIGHLIGHTING" />
@@ -62,13 +113,18 @@
     "XThreadsFramesViewSplitterKey": "0.50038254",
     "do_not_show_Android_plugin_suggestion": "true",
     "full.screen.before.presentation.mode": "false",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
       "C:\\Users\\mikey\\AppData\\Local\\Symbols\\src"
     ]
   }
@@ -77,6 +133,14 @@
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;Z:\UNITY\HHH\Hiss Huss Hoos&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="Z:\UNITY\HHH\Hiss Huss Hoos" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.12f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;Z:\UNITY\HHH\Hiss Huss Hoos&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="Z:\UNITY\HHH\Hiss Huss Hoos" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -168,7 +232,9 @@
       <workItem from="1680506680927" duration="4103000" />
       <workItem from="1680572541389" duration="4913000" />
       <workItem from="1680646856269" duration="5626000" />
-      <workItem from="1680667352762" duration="8485000" />
+      <workItem from="1680667352762" duration="10606000" />
+      <workItem from="1681158050757" duration="1458000" />
+      <workItem from="1681171140959" duration="12808000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Repository!!">
       <created>1679967462436</created>
@@ -191,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680732881549</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Android Working">
+      <created>1680733260491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680733260491</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_Shoes
   m_EditorClassIdentifier: 
+  UIName: SHOES
   Items: []
   CurrentItem: {fileID: 11400000, guid: 3ef0924ebb56adb4c804c4b2de42ec51, type: 2}
   DefaultItem: {fileID: 11400000, guid: 3ef0924ebb56adb4c804c4b2de42ec51, type: 2}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_Legs
   m_EditorClassIdentifier: 
+  UIName: LEGS
   Items:
   - {fileID: 11400000, guid: e05a59f022592604ca97b7951635283e, type: 2}
   CurrentItem: {fileID: 11400000, guid: e05a59f022592604ca97b7951635283e, type: 2}

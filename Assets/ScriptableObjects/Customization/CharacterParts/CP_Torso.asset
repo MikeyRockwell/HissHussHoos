@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_Torso
   m_EditorClassIdentifier: 
+  UIName: TOPS
   Items:
   - {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
   - {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
-  CurrentItem: {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
+  CurrentItem: {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
   DefaultItem: {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
   OnChangeItem:
     m_PersistentCalls:

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_PunchingBag
   m_EditorClassIdentifier: 
+  UIName: BOXING BAG
   Items:
   - {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}
   CurrentItem: {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}

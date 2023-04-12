@@ -1,6 +1,6 @@
-﻿using Sirenix.OdinInspector;
+﻿using Utils;
 using UnityEngine;
-using Utils;
+using Sirenix.OdinInspector;
 
 namespace Data.Customization {
     [CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Customization/CharacterItem", order = 0)]
@@ -24,12 +24,12 @@ namespace Data.Customization {
 
         public void LoadSaveData(SaveData sd) {
             
-            Log.Message(
+            /*Log.Message(
                 "Loading Item: " + name + " | " +
                 "Equipped: " + equipped + " | " +
                 "Color: " + color,
                 color
-                );
+                );*/
             unlocked = sd.unlocked;
             equipped = sd.equipped;
             color = new Color(sd.color.x, sd.color.y, sd.color.z);
@@ -38,16 +38,16 @@ namespace Data.Customization {
             if (!equipped) return;
             
             characterPart.ChangeItem(this, false);
-            characterPart.ChangeItemColor(color, false);
+            // characterPart.ChangeItemColor(color, false);
         }
         
         public SaveData CreateSaveData() {
-            Log.Message(
+            /*Log.Message(
                 "Saving Item: " + name + " | " +
                 "Equipped: " + equipped + " | " +
                 "Color: " + color,
                 color
-            );
+            );*/
             return new SaveData(name, unlocked, equipped, new Vector3(color.r, color.g, color.b));
         }
         

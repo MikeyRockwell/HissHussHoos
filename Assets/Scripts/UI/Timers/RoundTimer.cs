@@ -1,11 +1,12 @@
-﻿using TMPro;
+﻿using Data;
+using TMPro;
 using System;
 using Managers;
 using UnityEngine;
 using System.Text;
-using Data;
 using DG.Tweening;
 using UnityEngine.UI;
+using Utils;
 
 namespace UI {
     public class RoundTimer: MonoBehaviour {
@@ -43,7 +44,7 @@ namespace UI {
         }
 
         private void SubscribeEvents() {
-            gd.eventData.OnNewGame.AddListener(NewGame);
+            gd.eventData.OnGameInit.AddListener(NewGame);
             gd.eventData.OnGameOver.AddListener(CollapseTimer);
             gd.roundData.OnRoundBegin.AddListener(SetTimerSize);
             gd.roundData.OnComboBegin.AddListener(StartTimer);
@@ -81,7 +82,7 @@ namespace UI {
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            
+            Log.Message("Timer Width: " + width);
             timerRect.sizeDelta = new Vector2(width, timerRect.sizeDelta.y);
             ScaleUpTimer();
         }

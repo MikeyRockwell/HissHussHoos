@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
   m_Name: CP_Gloves
   m_EditorClassIdentifier: 
+  UIName: GLOVES
   Items:
   - {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}
   CurrentItem: {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}

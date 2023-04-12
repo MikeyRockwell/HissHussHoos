@@ -1,5 +1,4 @@
 ﻿using Data;
-using Utils;
 using UnityEngine;
 
 namespace Managers {
@@ -9,22 +8,22 @@ namespace Managers {
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
-            gd.eventData.OnGameOver.AddListener(GameOver);
-        }
-
-        private void GameOver() {
-            Log.Message("GAME OVER");
-            // gd.eventData.NewGame();
+            
+            // Target frame rate 
+            // TODO move to a video controller 
+            Application.targetFrameRate = 60;
         }
 
         private void Start() {
-            // Start new game - this might be called from the menu screen?
+            // Load data
             SO_SaveData saveData = DataWrangler.GetSaveData();
             saveData.InitializeLists();
             saveData.LoadGame();
-            gd.eventData.NewGame();
+            // Init game
+            gd.eventData.InitializeGame();
         }
-        
+
+
 #if UNITY_ANDROID
         // private void OnApplicationPause(bool pauseStatus) {
         //     DataWrangler.GetSaveData().SaveGame();

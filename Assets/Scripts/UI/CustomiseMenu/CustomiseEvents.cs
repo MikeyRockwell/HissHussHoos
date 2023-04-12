@@ -18,6 +18,7 @@ namespace UI.CustomiseMenu {
         public UnityEvent<SO_CharacterPart> OnChangeCategory;
         public UnityEvent<Button> OnCategoryButtonPressed;
         public UnityEvent<SO_Item> OnItemSelected;
+        public UnityEvent<Color> OnColorChanged;
         public SO_CharacterPart targetPart;
         public SO_CharacterPart defaultPart;
         
@@ -40,6 +41,7 @@ namespace UI.CustomiseMenu {
 
         public void ChangeItemColor(Color color) {
             targetPart.ChangeItemColor(color, true);
+            OnColorChanged?.Invoke(color);
         }
 
         public void ChangeItem(SO_Item item) {

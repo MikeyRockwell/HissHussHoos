@@ -19,6 +19,7 @@ namespace Managers {
         
         // REGULAR GAME MODE
         private void BeginRound(int round) {
+            targetStep = 0;
             gd.targetData.CreateTargetSet(3);
             gd.roundData.BeginCombo();
         }

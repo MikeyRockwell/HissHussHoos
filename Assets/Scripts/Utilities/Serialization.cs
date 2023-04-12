@@ -2,7 +2,6 @@
 using UnityEngine;
 using SaveGameData = Data.SO_SaveData.SaveGameData;
 using System.Runtime.Serialization.Formatters.Binary;
-using Unity.VisualScripting;
 
 namespace Utils {
     public static class Serialization {
@@ -10,18 +9,14 @@ namespace Utils {
         public static bool CheckSaveExists(string saveName) {
             
             string path = Path.Combine(Application.persistentDataPath, saveName);
-
             return File.Exists(path);
         }
         
         public static void Save(string saveName, SaveGameData gameData) {
             
             string json = JsonSerializer.Save(gameData);
-            
             BinaryFormatter formatter = GetBinaryFormatter();
-
             string path = Path.Combine(Application.persistentDataPath, saveName);
-            
             FileStream file = new (path, FileMode.Create);
             
             formatter.Serialize(file, json);

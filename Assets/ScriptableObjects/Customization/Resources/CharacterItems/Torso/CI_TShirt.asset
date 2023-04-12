@@ -19,9 +19,10 @@ MonoBehaviour:
   - {fileID: 734040883, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
   - {fileID: 823099704, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
   - {fileID: -363094012, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
-  noColors: 0
-  standardColors: 1
+  noColors: 1
+  standardColors: 0
   customColors: 0
+  colorMask: 0
   availableColors:
   - {r: 0.90588236, g: 0.54901963, b: 0.011764706, a: 1}
   - {r: 0.8117647, g: 0.25490198, b: 0, a: 1}
@@ -37,4 +38,4 @@ MonoBehaviour:
   - {r: 1, g: 0.85490197, b: 0, a: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
   unlocked: 0
-  equipped: 1
+  equipped: 0

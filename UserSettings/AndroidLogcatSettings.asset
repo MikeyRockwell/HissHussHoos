@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "4f6202e4",
         "name": "com.RockwellStudios.HISSHUSSHOOS",
-        "processId": 29048,
+        "processId": 14616,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -138,6 +138,12 @@
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
             "processId": 29048,
+            "exited": false
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 14616,
             "exited": false
         }
     ],

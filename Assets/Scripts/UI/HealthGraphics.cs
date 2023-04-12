@@ -26,7 +26,6 @@ namespace UI {
                 slider.value,
                 gd.playerData.GetHealth(),
                 0.5f);
-
             fill.DOColor(gradient.Evaluate(gd.playerData.GetHealth()), 0.5f);
             underText.DOColor(gradient.Evaluate(gd.playerData.GetHealth()), 0.5f);
         }
