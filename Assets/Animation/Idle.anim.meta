@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animation/Idle.anim.meta
 guid: 56b4d06c082d4da41ad1339254319059
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
+========
+guid: 75cc81c8a62097f4ca73bbc0bc3e3104
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+>>>>>>>> 2e9d25d460529a823f366b72e58bf7cad134475c:Assets/Animation/WW_Animation_Controller.controller.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

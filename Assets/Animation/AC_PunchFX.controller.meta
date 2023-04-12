@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animation/AC_PunchFX.controller.meta
 guid: 1a4af93ec6cf9914990520b8a4d2ed68
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: 56b4d06c082d4da41ad1339254319059
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+>>>>>>>> 2e9d25d460529a823f366b72e58bf7cad134475c:Assets/Animation/Idle.anim.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
