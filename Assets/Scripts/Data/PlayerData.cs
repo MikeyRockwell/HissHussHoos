@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,8 @@ namespace Data {
         [TitleGroup("SpeedBonus")]
         public float superThreshold = 1.8f;
         public float fastThreshold = 0.08f;
+        public bool punching;
+
 
         public UnityEvent<int> OnScoreUpdated;
         public UnityEvent<int> OnHighScoreUpdated;
@@ -60,6 +63,11 @@ namespace Data {
         
         public float GetHealth() {
             return (float)health / maxHealth;
+        }
+
+        public void CoolDown() {
+            Sequence seq = DOTween.Sequence();
+            seq.AppendInterval(punchSpeed).OnComplete(()=>punching = false);
         }
     }
 }

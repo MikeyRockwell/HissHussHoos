@@ -15,6 +15,8 @@ namespace Data.Customization {
         [FoldoutGroup("Colors")] public bool standardColors;
         [FoldoutGroup("Colors")] public bool customColors;
         [FoldoutGroup("Colors")] public bool colorMask;
+        [FoldoutGroup("Colors")] public bool zestGlasses;
+        [FoldoutGroup("Colors"), ColorUsage(true, true)] public Color zestLightColor;
         [FoldoutGroup("Colors")] public Color[] availableColors;
         [FoldoutGroup("Colors")] public Color color = Color.white;
         

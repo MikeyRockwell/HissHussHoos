@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_Shirtless
+  m_EditorClassIdentifier: 
+  characterPart: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
+  menuSprite: {fileID: 21300000, guid: 4e3320a34381a2646a9ad693bbd46c6e, type: 3}
+  animSprites:
+  - {fileID: 352953890, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
+  - {fileID: 734040883, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
+  - {fileID: 823099704, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
+  - {fileID: -363094012, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
+  noColors: 1
+  standardColors: 0
+  customColors: 0
+  colorMask: 1
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
+  availableColors:
+  - {r: 0.90588236, g: 0.54901963, b: 0.011764706, a: 1}
+  - {r: 0.8117647, g: 0.25490198, b: 0, a: 1}
+  - {r: 0.7529412, g: 0, b: 0.023529412, a: 1}
+  - {r: 0.78431374, g: 0.003921569, b: 0.36078432, a: 1}
+  - {r: 0.80784315, g: 0.13333334, b: 0.90588236, a: 1}
+  - {r: 0.11764706, g: 0.25490198, b: 0.7058824, a: 1}
+  - {r: 0, g: 0.5137255, b: 0.7529412, a: 1}
+  - {r: 0, g: 0.7019608, b: 0.74509805, a: 1}
+  - {r: 0, g: 0.93333334, b: 0.38039216, a: 1}
+  - {r: 0.09411765, g: 0.8666667, b: 0, a: 1}
+  - {r: 0.78431374, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.85490197, b: 0, a: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  unlocked: 0
+  equipped: 0

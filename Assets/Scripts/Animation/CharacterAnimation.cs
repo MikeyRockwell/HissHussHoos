@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using Utils;
+using Managers;
 using UnityEngine;
 using DG.Tweening;
 using Data.Customization;
@@ -13,20 +14,22 @@ namespace Animation {
         private DataWrangler.GameData gd;
         private SpriteRenderer spriteRenderer;
 
-        private Material mat;
+        [SerializeField] private Material mat;
 
         private static readonly int Color1 = Shader.PropertyToID("_Color");
 
         private void Awake() {
             
+            // Cache renderer and material
             spriteRenderer = GetComponent<SpriteRenderer>();
             mat = spriteRenderer.material;
-            gd = DataWrangler.GetGameData();
             
+            gd = DataWrangler.GetGameData();
             gd.eventData.OnPunchNormal.AddListener(Punch);
             gd.eventData.OnPunchWarmup.AddListener(Punch);
             gd.eventData.OnPunchBonus.AddListener(Punch);
             
+            // Listen for item changes on the character part
             part.OnChangeItem.AddListener(UpdateSprites);
             part.OnChangeItemColor.AddListener(UpdateSpriteColor);
             
@@ -38,6 +41,14 @@ namespace Animation {
         private void UpdateSprites(SO_Item item) {
             punchSprites = item.animSprites;
             spriteRenderer.sprite = punchSprites[0];
+            if (item.zestGlasses) {
+
+                mat.SetColor("_ZestLights", item.zestLightColor);
+                Log.Message(mat.GetColor(Color1).ToString());
+            }
+            else {
+                mat.SetColor("_ZestLights", Color.black);
+            };
         }
 
         private void UpdateSpriteColor(SO_Item item, Color newColor) {

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Data.Customization;
 
 namespace UI.CustomiseMenu {
     public class CategoryButton : MonoBehaviour {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultGloves
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: a80cc4843c4850d4a8ee31f84f69813a, type: 2}
-  menuSprite: {fileID: 0}
+  menuSprite: {fileID: 21300000, guid: 605f9fe81e82bef4288062ee1b488361, type: 3}
   animSprites:
   - {fileID: -1026280530, guid: 0b5ef90277ae3ea40a46cc933a8611de, type: 3}
   - {fileID: 834513975, guid: 0b5ef90277ae3ea40a46cc933a8611de, type: 3}
@@ -22,7 +22,10 @@ MonoBehaviour:
   noColors: 0
   standardColors: 1
   customColors: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
-  color: {r: 0.99110615, g: 1, b: 0.48490566, a: 1}
+  color: {r: 0, g: 0.7019608, b: 0.74509805, a: 1}
   unlocked: 0
   equipped: 1

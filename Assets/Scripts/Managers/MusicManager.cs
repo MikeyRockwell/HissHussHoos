@@ -26,7 +26,7 @@ namespace Managers {
         private void Start() {
             md.currentTrackIndex = PlayerPrefs.GetInt("CurrentMusicTrack");
             md.playing = false;
-            // md.Play();
+            md.Play();
         }
 
         private void Play(bool playing) {

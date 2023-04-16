@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 36
+  spritePixelsToUnits: 46
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,6 +103,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -112,8 +136,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 180
-        height: 200
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +155,10 @@ TextureImporter:
       name: MoraleBoosterPink_Anim_1
       rect:
         serializedVersion: 2
-        x: 180
+        x: 130
         y: 0
-        width: 180
-        height: 200
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +176,10 @@ TextureImporter:
       name: MoraleBoosterPink_Anim_2
       rect:
         serializedVersion: 2
-        x: 360
+        x: 260
         y: 0
-        width: 180
-        height: 200
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +197,10 @@ TextureImporter:
       name: MoraleBoosterPink_Anim_3
       rect:
         serializedVersion: 2
-        x: 540
+        x: 390
         y: 0
-        width: 180
-        height: 200
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +226,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       MoraleBoosterPink_Anim_0: 5553535
-      MoraleBoosterPink_Anim_2: 509088017
       MoraleBoosterPink_Anim_1: -844968042
+      MoraleBoosterPink_Anim_2: 509088017
       MoraleBoosterPink_Anim_3: -1182819351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

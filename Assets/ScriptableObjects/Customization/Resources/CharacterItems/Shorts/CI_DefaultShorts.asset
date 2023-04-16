@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultShorts
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: df48d2b86f42e824bb72fbf1f8c7d41b, type: 2}
-  menuSprite: {fileID: -921823419, guid: 551630300f93f784f96f2608d1febdc1, type: 3}
+  menuSprite: {fileID: 21300000, guid: 5737255ad037b2e4ab40f1ed09407fec, type: 3}
   animSprites:
   - {fileID: -1751008566, guid: 1c7434a7535acfa4984f7fbcb83cebea, type: 3}
   - {fileID: -659429069, guid: 1c7434a7535acfa4984f7fbcb83cebea, type: 3}
@@ -23,6 +23,8 @@ MonoBehaviour:
   standardColors: 1
   customColors: 0
   colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors:
   - {r: 0.90588236, g: 0.54901963, b: 0.011764706, a: 1}
   - {r: 0.8117647, g: 0.25490198, b: 0, a: 1}
@@ -36,6 +38,6 @@ MonoBehaviour:
   - {r: 0.09411765, g: 0.8666667, b: 0, a: 1}
   - {r: 0.78431374, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.85490197, b: 0, a: 1}
-  color: {r: 0.99110615, g: 1, b: 0.48490566, a: 1}
+  color: {r: 1, g: 0.80571, b: 0.51320755, a: 1}
   unlocked: 0
   equipped: 1

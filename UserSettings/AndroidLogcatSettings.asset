@@ -1,145 +1,13 @@
 {
     "m_SelectedDeviceId": "4f6202e4",
     "m_SelectedPackage": {
-        "deviceId": "4f6202e4",
-        "name": "com.RockwellStudios.HISSHUSSHOOS",
-        "processId": 14616,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 13847,
-            "exited": true
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 14421,
-            "exited": true
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 14878,
-            "exited": true
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 16032,
-            "exited": true
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.google.android.documentsui",
-            "processId": 17855,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 6402,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 20950,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 17131,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 17929,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 18918,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 19416,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 22508,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 23244,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 24924,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 25173,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 26189,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 26453,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 26793,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 27093,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 28460,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 28632,
-            "exited": false
-        },
-        {
-            "deviceId": "4f6202e4",
-            "name": "com.RockwellStudios.HISSHUSSHOOS",
-            "processId": 29048,
-            "exited": false
-        },
         {
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
@@ -155,7 +23,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "",
@@ -171,7 +39,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "CRASH",
@@ -199,7 +67,7 @@
     },
     "m_FilterOptions": {
         "m_Filter": "",
-        "m_UseRegularExpressions": true,
+        "m_UseRegularExpressions": false,
         "m_MatchCase": false
     },
     "m_SymbolPaths": [],

@@ -1,4 +1,5 @@
 ﻿using System;
+using Managers;
 using DG.Tweening;
 using UnityEngine;
 using Data.Customization;
@@ -16,16 +17,24 @@ namespace UI.CustomiseMenu {
         [SerializeField] private float animSpeed = 0.2f;
 
         private Button button;
+        private DataWrangler.GameData gd;
         
         private void Awake() {
+            gd = DataWrangler.GetGameData();
+            
             button = GetComponent<Button>();
             button.onClick.AddListener(()=> menuEvents.CloseMenu());
             
             menuEvents.OnMenuOpened.AddListener(OpenMenu);
             menuEvents.OnMenuClosed.AddListener(CloseMenu);
             
+            gd.roundData.OnGameBegin.AddListener(CloseMenu);
+
             CloseMenu();
         }
+
+        // Build in a system that adjusts the menu width to a percentage of the screen width??
+        // This was the beginning of that process
 
         /*private void OnValidate() {
             CalculateWidth();
@@ -41,6 +50,11 @@ namespace UI.CustomiseMenu {
             gameObject.SetActive(true);
             xf.DOKill();
             xf.DOScaleX(1, animSpeed);
+        }
+
+        private void CloseMenu(int arg0) {
+            xf.DOKill();
+            xf.DOScaleX(0, animSpeed).OnComplete(()=> gameObject.SetActive(false));
         }
 
         private void CloseMenu() {

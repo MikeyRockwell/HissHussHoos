@@ -1,10 +1,10 @@
 ﻿using Utils;
 using System;
 using UnityEngine;
-using GooglePlayGames;
+// using GooglePlayGames;
 using LootLocker.Requests;
 using System.Threading.Tasks;
-using GooglePlayGames.BasicApi;
+// using GooglePlayGames.BasicApi;
 
 namespace Managers {
     public class Authentication : MonoBehaviour {
@@ -33,7 +33,7 @@ namespace Managers {
 
             #if UNITY_ANDROID
             
-                await AuthenticateGoogle();
+                // await AuthenticateGoogle();
                 await LoginLootLockerGuest();   
             
             #endif
@@ -62,7 +62,7 @@ namespace Managers {
 
 #if UNITY_ANDROID
         
-        private Task AuthenticateGoogle() {
+        /* private Task AuthenticateGoogle() {
             
             var tcs = new TaskCompletionSource<object>();
             PlayGamesPlatform.Instance.Authenticate(delegate(SignInStatus status) { });
@@ -74,7 +74,7 @@ namespace Managers {
                 tcs.SetResult(null);
             });
             return tcs.Task;
-        }
+        } */
 
         private Task LootLockerLoginGoogle() {
             

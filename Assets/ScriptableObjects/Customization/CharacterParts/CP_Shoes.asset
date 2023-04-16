@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: CP_Shoes
   m_EditorClassIdentifier: 
   UIName: SHOES
-  Items: []
-  CurrentItem: {fileID: 11400000, guid: 3ef0924ebb56adb4c804c4b2de42ec51, type: 2}
-  DefaultItem: {fileID: 11400000, guid: 3ef0924ebb56adb4c804c4b2de42ec51, type: 2}
+  Items:
+  - {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
+  - {fileID: 11400000, guid: ed9b035b5d44e754e949eb9b8730aa95, type: 2}
+  CurrentItem: {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
+  DefaultItem: {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
   OnChangeItem:
     m_PersistentCalls:
       m_Calls: []

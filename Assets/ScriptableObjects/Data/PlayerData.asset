@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75f0e24019a48a1b321cf99a03f85ae, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  score: 21
+  score: 0
   health: 5
   maxHealth: 5
   punchSpeed: 0.1
   superThreshold: 1.8
   fastThreshold: 1.2
+  punching: 0
   OnScoreUpdated:
     m_PersistentCalls:
       m_Calls: []

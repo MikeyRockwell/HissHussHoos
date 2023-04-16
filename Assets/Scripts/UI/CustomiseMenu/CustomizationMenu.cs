@@ -17,7 +17,7 @@ namespace UI.CustomiseMenu {
             
             events.OnMenuOpened.AddListener(InitSubMenu);
             events.OnChangeCategory.AddListener(InitSubMenu);
-            events.OnItemSelected.AddListener(InitializeColorGrid);
+            events.OnItemChanged.AddListener(InitializeColorGrid);
         }
 
         private void InitSubMenu(SO_CharacterPart part) {

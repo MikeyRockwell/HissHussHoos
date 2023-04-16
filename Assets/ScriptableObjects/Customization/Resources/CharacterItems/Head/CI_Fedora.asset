@@ -20,8 +20,11 @@ MonoBehaviour:
   - {fileID: -1429930826, guid: d6b01488c1c833f4f8041141f80b8595, type: 3}
   - {fileID: 764228998, guid: d6b01488c1c833f4f8041141f80b8595, type: 3}
   noColors: 0
-  standardColors: 0
-  customColors: 1
+  standardColors: 1
+  customColors: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors:
   - {r: 0.6509434, g: 0.61041296, b: 0.61041296, a: 1}
   - {r: 0.754717, g: 0.6391388, b: 0.4727661, a: 1}
@@ -29,6 +32,6 @@ MonoBehaviour:
   - {r: 0.1509434, g: 0.124457106, b: 0.124457106, a: 1}
   - {r: 1, g: 0.44716978, b: 0.8633973, a: 1}
   - {r: 0.50377357, g: 0.70608795, b: 1, a: 1}
-  color: {r: 0.50377357, g: 0.70608795, b: 1, a: 1}
+  color: {r: 0.99110615, g: 1, b: 0.48490566, a: 1}
   unlocked: 0
   equipped: 1

@@ -44,13 +44,17 @@ namespace Managers {
         }
 
         private void SetRoundType(int round) {
+            
+            // Demo currently only plays regular rounds
+            BeginRegularRound(round);
+            
             // Check for bonus round
-            if (round % gd.roundData.bonusRound == 0) {
+            /*  if (round % gd.roundData.bonusRound == 0) {
                 BeginBonusRound(round);
             }
             else {
                 BeginRegularRound(round);
-            }
+            } */
         }
 
         private void BeginRegularRound(int round) {

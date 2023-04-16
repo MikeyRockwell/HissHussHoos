@@ -17,7 +17,7 @@ namespace UI.CustomiseMenu {
         public UnityEvent OnMenuClosed;    
         public UnityEvent<SO_CharacterPart> OnChangeCategory;
         public UnityEvent<Button> OnCategoryButtonPressed;
-        public UnityEvent<SO_Item> OnItemSelected;
+        public UnityEvent<SO_Item> OnItemChanged;
         public UnityEvent<Color> OnColorChanged;
         public SO_CharacterPart targetPart;
         public SO_CharacterPart defaultPart;
@@ -45,7 +45,7 @@ namespace UI.CustomiseMenu {
         }
 
         public void ChangeItem(SO_Item item) {
-            OnItemSelected?.Invoke(item);
+            OnItemChanged?.Invoke(item);
         }
     }
 }
