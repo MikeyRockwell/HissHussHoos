@@ -8,7 +8,7 @@ using Utils;
 namespace UI.CustomiseMenu {
     public class CustomizationMenuButton : MonoBehaviour {
 
-        [SerializeField] private CustomiseEvents events;
+        [SerializeField] private CustomizationEvents events;
         
         [SerializeField] private Button button;
         [SerializeField] private RectTransform xf;
@@ -38,12 +38,6 @@ namespace UI.CustomiseMenu {
 
         private void OpenMenu() {
             events.OpenMenu();
-        }
-
-        private void Update() {
-            if (Input.GetKeyDown(KeyCode.Escape)) {
-                events.CloseMenu();
-            }
         }
     }
 }

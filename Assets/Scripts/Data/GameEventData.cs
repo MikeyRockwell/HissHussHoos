@@ -18,7 +18,7 @@ namespace Data {
         public UnityEvent<TARGET> OnPunchWarmup;
         public UnityEvent<TARGET> OnPunchNormal;
         public UnityEvent<TARGET> OnPunchBonus;
-        
+
         // Hit and Miss target
         public UnityEvent<int> OnHit;
         public UnityEvent OnMiss;

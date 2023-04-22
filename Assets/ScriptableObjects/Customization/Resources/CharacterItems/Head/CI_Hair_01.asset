@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_Hair_01
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 0ea2794192414dc40bd2f7ba7bceba08, type: 2}
+  itemName: Luscious Locks
   menuSprite: {fileID: 21300000, guid: eb27523fe3a11c641935755d41159bc5, type: 3}
   animSprites:
   - {fileID: -357292674, guid: f1d047add3e47844190ed989e10f403f, type: 3}
@@ -22,7 +23,12 @@ MonoBehaviour:
   noColors: 1
   standardColors: 0
   customColors: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
+  price: 0
+  defaultItem: 1
   unlocked: 1
   equipped: 1

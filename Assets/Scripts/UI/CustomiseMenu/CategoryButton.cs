@@ -7,7 +7,7 @@ namespace UI.CustomiseMenu {
         public Button button;
         public Color disabledColor;
         
-        public CustomiseEvents events;
+        public CustomizationEvents events;
 
         public virtual void Awake() {
             // Cache button and set disabled

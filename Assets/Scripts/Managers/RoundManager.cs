@@ -2,20 +2,27 @@
 using TMPro;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Managers {
     public class RoundManager : MonoBehaviour {
 
         [SerializeField] private TextMeshProUGUI roundText;
+        [SerializeField] private Button readyButton;
 
         private DataWrangler.GameData gd;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnGameBegin.AddListener(NewGame);
-            gd.roundData.OnRoundComplete.AddListener(NewRoundInit);
-            gd.roundData.OnBonusRoundComplete.AddListener(NewRoundInit);
+            gd.roundData.OnRoundInit.AddListener(NewRoundInit);
             gd.eventData.OnGameOver.AddListener(GameOver);
+            gd.roundData.OnRoundComplete.AddListener(EnableReadyButton);
+            readyButton.onClick.AddListener(() => gd.roundData.InitRound());
+        }
+
+        private void EnableReadyButton(int arg0) {
+            readyButton.gameObject.SetActive(true);
         }
 
         private void GameOver() {
@@ -39,6 +46,7 @@ namespace Managers {
         private void NewRoundInit(int round) {
             // Begins a new round
             // Handles both regular and bonus rounds
+            readyButton.gameObject.SetActive(false);
             Sequence seq = DOTween.Sequence();
             seq.PrependInterval(gd.roundData.roundTextTime).OnComplete(() => SetRoundType(round));
         }
@@ -61,7 +69,9 @@ namespace Managers {
             // This starts a new round
             gd.roundData.roundType = RoundData.RoundType.normal;
             gd.roundData.BeginRound();
-            roundText.text = "ROUND: " + round;
+            roundText.text = "ROUND " + $"{round:00}";
+            // Send round to check for best round
+            gd.playerData.UpdateRound(round);
         }
 
         private void BeginBonusRound(int round) {

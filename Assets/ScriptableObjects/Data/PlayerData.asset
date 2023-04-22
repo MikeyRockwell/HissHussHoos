@@ -12,19 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75f0e24019a48a1b321cf99a03f85ae, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  score: 0
+  score: 378
   health: 5
   maxHealth: 5
   punchSpeed: 0.1
-  superThreshold: 1.8
-  fastThreshold: 1.2
+  punchCoolDown: 0.12
+  superThreshold: 1.1
+  fastThreshold: 1.3
   punching: 0
+  moralePoints: 2237
+  morale: 27
+  maxMorale: 100
+  moraleBoostDuration: 8
+  moraleBoostMultiplier: 1.5
+  moraleBoostActive: 0
   OnScoreUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
   OnHighScoreUpdated:
     m_PersistentCalls:
       m_Calls: []
-  OnHealthChange:
+  OnBestRoundUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoraleBoost:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoraleBoostEnd:
     m_PersistentCalls:
       m_Calls: []

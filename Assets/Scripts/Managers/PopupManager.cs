@@ -5,13 +5,15 @@ using BONUS = Data.RoundData.SpeedBonusType;
 
 namespace Managers {
     public class PopupManager : MonoBehaviour {
-
+        
         [SerializeField] private Transform fastPopPool;
         [SerializeField] private Transform superFastPopPool;
         [SerializeField] private Transform roundEndPopPool;
+        [SerializeField] private Transform scoreBonusPopPool;
         [SerializeField] private Popup fastPopUpPrefab;
         [SerializeField] private Popup superPopUpPrefab;
         [SerializeField] private Popup roundEndPopUpPrefab;
+        [SerializeField] private Popup scoreBonusPopUpPrefab;
 
         private DataWrangler.GameData gd;
 
@@ -20,8 +22,8 @@ namespace Managers {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnSpeedBonus.AddListener(SpeedBonusPopUp);
             gd.roundData.OnGameBegin.AddListener(RoundBeginPopUp);
-            gd.roundData.OnRoundComplete.AddListener(RoundBeginPopUp);
-            gd.roundData.OnBonusRoundComplete.AddListener(RoundBeginPopUp);
+            // gd.roundData.OnRoundBegin.AddListener(RoundBeginPopUp);
+            gd.roundData.OnRoundInit.AddListener(RoundBeginPopUp);
         }
 
         private void RoundBeginPopUp(int round) {
@@ -38,6 +40,21 @@ namespace Managers {
             Popup newPop = GetBonusPopUpFromPool(type);
             newPop.gameObject.SetActive(true);
             newPop.Init();
+            
+            // Get a score bonus popup and initialize it
+            Popup newScorePop = GetPopUpFromPool(scoreBonusPopUpPrefab, scoreBonusPopPool);
+            newScorePop.gameObject.SetActive(true);
+            // Initialize score bonus popup based on what type of bonus was received
+            switch (type) {
+                case BONUS.fast:
+                    newScorePop.Init("+" + 2, gd.uIData.LaserGreen);
+                    break;
+                case BONUS.super:
+                    newScorePop.Init("+" + 3, gd.uIData.Gold);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            }
         }
 
         private static Popup GetPopUpFromPool(Popup prefab, Transform pool) {

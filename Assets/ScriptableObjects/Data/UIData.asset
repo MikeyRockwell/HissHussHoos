@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948dd141cc944629844b7b158e07f8ad, type: 3}
+  m_Name: UIData
+  m_EditorClassIdentifier: 
+  MenuAnimSpeed: 0.2
+  DefaultMenuEase: 4
+  MenuBackgroundColor: {r: 0.10980392, g: 0.05882353, b: 0.11372549, a: 1}
+  HotPink: {r: 1, g: 0.19245279, b: 0.5369135, a: 1}
+  LaserGreen: {r: 0.07816255, g: 1, b: 0, a: 1}
+  Gold: {r: 1, g: 0.7877302, b: 0, a: 1}
+  DisabledComboText: {r: 0.6517241, g: 0.34913793, b: 0.675, a: 1}
+  OnMoraleUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoralePointsEarned:
+    m_PersistentCalls:
+      m_Calls: []

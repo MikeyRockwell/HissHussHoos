@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace UI.CustomiseMenu {
     public class CustomizationMenuAnimation : MonoBehaviour {
 
-        [SerializeField] private CustomiseEvents menuEvents;
+        [SerializeField] private CustomizationEvents menuEvents;
         
         [SerializeField] private float openPivot;
         [SerializeField] private float closedPivot;

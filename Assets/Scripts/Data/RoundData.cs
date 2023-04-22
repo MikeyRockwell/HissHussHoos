@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Events;
+﻿using System.Collections;
 using Sirenix.OdinInspector;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Data {
     [CreateAssetMenu(fileName = "RoundData", menuName = "ScriptableObjects/Data/RoundData", order = 0)]
@@ -19,14 +19,17 @@ namespace Data {
         public float maxRoundTime;
         public float minRoundTime;
         public float roundTimeLimit;
+        public float lastComboTime;
         
         // Regular Game Mode HHH
         [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnGameBegin;
+        [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundInit;
         [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundBegin;
         [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundComplete;
         [FoldoutGroup("Regular Events")]            public UnityEvent<float> OnComboBegin;
         [FoldoutGroup("Regular Events")]            public UnityEvent OnComboComplete;
         [FoldoutGroup("Regular Events")]            public UnityEvent<SpeedBonusType> OnSpeedBonus;
+        [FoldoutGroup("Regular Events")]            public UnityEvent<int, float> OnLogTimer;
 
         // Bonus Round Game Mode
         [FoldoutGroup("Bonus Round Events")]        public float bonusRoundLength;
@@ -42,6 +45,10 @@ namespace Data {
 
         public void BeginGame() {
             OnGameBegin?.Invoke(1);
+        }
+        
+        public void InitRound() {
+            OnRoundInit?.Invoke(currentRound);
         }
 
         public void BeginRound() {
@@ -67,6 +74,11 @@ namespace Data {
             // Combo complete but still within round
             OnComboComplete?.Invoke();
             BeginCombo();
+        }
+
+        public void LogTimer(int combo, float elapsedTime) {
+            // Log the time of the combo
+            OnLogTimer?.Invoke(combo, elapsedTime);
         }
 
         public void SpeedBonus(SpeedBonusType type) {

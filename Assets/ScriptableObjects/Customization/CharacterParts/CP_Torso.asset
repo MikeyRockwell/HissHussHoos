@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIName: TOPS
   Items:
-  - {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
   - {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
+  - {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
   CurrentItem: {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
   DefaultItem: {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
   OnChangeItem:

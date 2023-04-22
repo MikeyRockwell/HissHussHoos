@@ -4,7 +4,7 @@ using UnityEngine.UI;
 namespace UI.CustomiseMenu {
     public class ClothingColorChanger : MonoBehaviour {
         
-        [SerializeField] private CustomiseEvents events;
+        [SerializeField] private CustomizationEvents events;
         private Image image;
 
         private void Awake() {

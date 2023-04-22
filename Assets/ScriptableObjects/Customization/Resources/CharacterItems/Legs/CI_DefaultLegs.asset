@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultLegs
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 72cd17f73f2a7834f9cdb3fd85056321, type: 2}
+  itemName: 
   menuSprite: {fileID: 0}
   animSprites:
   - {fileID: 1072588969, guid: 219dcd5e65a8fa041a609f41c51d5069, type: 3}
@@ -22,7 +23,12 @@ MonoBehaviour:
   noColors: 0
   standardColors: 0
   customColors: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  unlocked: 0
-  equipped: 0
+  price: 0
+  defaultItem: 1
+  unlocked: 1
+  equipped: 1

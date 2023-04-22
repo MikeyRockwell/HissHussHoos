@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_BlueMoraleBoostersZest
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: f32d5cf56256bd341bf86eeb3587e34a, type: 2}
+  itemName: Blue Morale Boosters with Zest
   menuSprite: {fileID: 21300000, guid: 0061ac40070a66040bb5e869593c9ee8, type: 3}
   animSprites:
   - {fileID: 1120847296, guid: efa386ceda66c0941a2b89f55a112a07, type: 3}
@@ -27,5 +28,7 @@ MonoBehaviour:
   zestLightColor: {r: 0, g: 13.496456, b: 13.766361, a: 1}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
+  price: 500
+  defaultItem: 0
   unlocked: 0
-  equipped: 1
+  equipped: 0

@@ -17,9 +17,9 @@ namespace Managers {
             SelectLoginSystem();
         }
         
-        private void OnApplicationFocus(bool hasFocus) {
-            SelectLoginSystem();
-        }
+        // private void OnApplicationFocus(bool hasFocus) {
+        //     SelectLoginSystem();
+        // }
 
         async void SelectLoginSystem() {
             

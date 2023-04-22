@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Data {
@@ -25,7 +26,7 @@ namespace Data {
             OnRewind?.Invoke();
         }
         
-        [System.Serializable]
+        [Serializable]
         public struct MusicTrack {
             public AudioClip clip;
             public int bpm;

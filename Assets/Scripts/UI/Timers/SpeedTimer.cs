@@ -4,13 +4,12 @@ using UnityEngine;
 using BONUS = Data.RoundData.SpeedBonusType;
 
 namespace UI {
+    
     public class SpeedTimer : MonoBehaviour {
 
-        [SerializeField] private float maxTime = 3.0f;
-
         private bool isActive;
-        private float currentTime;
-        
+        private float elapsedTime;
+        private int roundStep;
         private TimeSpan ts;
         private string currentString;
 
@@ -21,7 +20,7 @@ namespace UI {
             gd = DataWrangler.GetGameData();
             
             gd.roundData.OnComboBegin.AddListener(StartTimer);
-            gd.roundData.OnComboComplete.AddListener(CheckTimer);
+            gd.roundData.OnComboComplete.AddListener(LogTimer);
             gd.eventData.OnGameOver.AddListener(StopTimer);
         }
 
@@ -31,32 +30,38 @@ namespace UI {
 
         private void StartTimer(float unused) {
             isActive = true;
-            currentTime = maxTime;
+            roundStep = gd.roundData.roundStep;
+            elapsedTime = 0;
         }
 
-        private void CheckTimer() {
-            if (currentTime > gd.playerData.superThreshold) {
+        // A function to check the timer and give the player a bonus
+        private void LogTimer() {
+            CheckSpeedBonus();
+            gd.roundData.LogTimer(roundStep, elapsedTime);
+            StopTimer();
+        }
+
+        private void CheckSpeedBonus() {
+            // If the timer is active and below the superThreshold - give the player a super bonus
+            if (elapsedTime < gd.playerData.superThreshold) {
                 isActive = false;
                 gd.roundData.SpeedBonus(BONUS.super);
             }
-            else if (currentTime < gd.playerData.superThreshold && currentTime > gd.playerData.fastThreshold) {
+            // If the timer is active and above the superThreshold and below the fastThreshold
+            // Give the player a fast bonus
+            else if (elapsedTime > gd.playerData.superThreshold && elapsedTime < gd.playerData.fastThreshold) {
                 isActive = false;
                 gd.roundData.SpeedBonus(BONUS.fast);
             }
         }
 
+
         private void FixedUpdate() {
 
-            // When active and above 0 - count down the timer
-            
+            // When active and below maxTime - count up the timer
             if (!isActive) return;
             
-            if (currentTime <= 0) {
-                currentTime = 0;
-                return;
-            }
-
-            currentTime -= Time.deltaTime;
+            elapsedTime += Time.deltaTime;
         }
     }
 }

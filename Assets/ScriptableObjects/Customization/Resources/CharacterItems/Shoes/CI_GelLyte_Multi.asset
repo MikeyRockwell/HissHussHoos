@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_GelLyte_Multi
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 58c4cd704f6b1be41b8d6de1fc280212, type: 2}
+  itemName: ASICS Gel Lyte IV
   menuSprite: {fileID: 21300000, guid: 99bab2bcad041d3459fe73fe75b1b67d, type: 3}
   animSprites:
   - {fileID: -439852396, guid: b51a07423ca9b6b43b805723ced5f779, type: 3}
@@ -27,5 +28,7 @@ MonoBehaviour:
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  unlocked: 0
-  equipped: 0
+  price: 0
+  defaultItem: 0
+  unlocked: 1
+  equipped: 1

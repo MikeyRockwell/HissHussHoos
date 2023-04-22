@@ -1,53 +1,53 @@
-﻿using System;
-using Managers;
+﻿using Managers;
 using DG.Tweening;
 using UnityEngine;
 using Data.Customization;
 using UnityEngine.UI;
-using Utils;
 
 namespace UI.CustomiseMenu {
+    
+    // This is the main menu window
     public class CustomizationMenuWindow : MonoBehaviour {
-
-        [SerializeField] private CustomiseEvents menuEvents;
+        
+        [SerializeField] private CustomizationEvents menuEvents;
         
         [SerializeField] private RectTransform xf;
-        [SerializeField] private float openPivot;
-        [SerializeField] private float closedPivot;
+        [SerializeField] private float windowScreenPercent;
         [SerializeField] private float animSpeed = 0.2f;
 
         private Button button;
         private DataWrangler.GameData gd;
         
         private void Awake() {
+            // Get the game data
             gd = DataWrangler.GetGameData();
-            
+            // Get the button component
             button = GetComponent<Button>();
+            // Add a listener to the button that closes the menu
             button.onClick.AddListener(()=> menuEvents.CloseMenu());
-            
+            // Add listeners to the menu events
             menuEvents.OnMenuOpened.AddListener(OpenMenu);
             menuEvents.OnMenuClosed.AddListener(CloseMenu);
             
             gd.roundData.OnGameBegin.AddListener(CloseMenu);
 
+            // SetWidth(windowScreenPercent);
             CloseMenu();
         }
-
-        // Build in a system that adjusts the menu width to a percentage of the screen width??
-        // This was the beginning of that process
-
-        /*private void OnValidate() {
-            CalculateWidth();
-        }
-
-        private void CalculateWidth() {
-            float windowWidth = Screen.width * 0.5f;
-            Log.Message("Screen Width = " + windowWidth );
-            xf.sizeDelta = new Vector2(windowWidth, xf.sizeDelta.y);
-        }*/
+        
+        
+        // Adjust the menu width to a percentage of the screen width
+        // private void SetWidth(float percent) {
+        //     var rect = xf.rect;
+        //     rect.width = Screen.width * (percent / 100);
+        //     xf.sizeDelta = rect.size;
+        // }
 
         private void OpenMenu(SO_CharacterPart arg0) {
             gameObject.SetActive(true);
+#if UNITY_EDITOR
+            // SetWidth(windowScreenPercent);
+#endif
             xf.DOKill();
             xf.DOScaleX(1, animSpeed);
         }

@@ -16,9 +16,9 @@ namespace Managers {
 
         private void Start() {
             // Load data
-            SO_SaveData saveData = DataWrangler.GetSaveData();
-            saveData.InitializeLists();
-            saveData.LoadGame();
+            SO_LoadSave loadSave = DataWrangler.GetSaveData();
+            gd.itemData.Initialize();
+            loadSave.LoadGame();
             // Init game
             gd.eventData.InitializeGame();
         }

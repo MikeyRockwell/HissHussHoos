@@ -1,9 +1,9 @@
-﻿using UI;
-using Utils;
+﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using UI;
 using UnityEngine;
 using UnityEngine.Events;
-using Sirenix.OdinInspector;
-using System.Collections.Generic;
+using Utils;
 using TARGET = Data.TargetData.Target;
 
 namespace Data {

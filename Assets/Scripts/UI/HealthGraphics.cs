@@ -21,7 +21,7 @@ namespace UI {
         }
 
         private void RemoveHealth(int amount) {
-            
+            // Update the graphics
             DOTween.To(x => slider.value = x,
                 slider.value,
                 gd.playerData.GetHealth(),

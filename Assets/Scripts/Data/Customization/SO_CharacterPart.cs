@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Data.Customization {
     [CreateAssetMenu(
@@ -19,7 +20,7 @@ namespace Data.Customization {
         
         public UnityEvent<SO_Item, Color> OnChangeItemColor;
 
-        public SO_SaveData SaveData;
+        [FormerlySerializedAs("SaveData")] public SO_LoadSave loadSave;
 
         public void ChangeItem(SO_Item newItem, bool save) {
             // Sets default item if none is current
@@ -42,7 +43,7 @@ namespace Data.Customization {
             OnChangeItemColor?.Invoke(CurrentItem, newColor);
             // SaveData.SaveGame();
             if (save) {
-                SaveData.SaveGame();
+                loadSave.SaveGame();
             }
         }
     }

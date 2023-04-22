@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
-using SaveGameData = Data.SO_SaveData.SaveGameData;
 using System.Runtime.Serialization.Formatters.Binary;
+using Data;
 
 namespace Utils {
     public static class Serialization {
@@ -12,9 +12,9 @@ namespace Utils {
             return File.Exists(path);
         }
         
-        public static void Save(string saveName, SaveGameData gameData) {
+        public static void Save(string saveName, ItemData.ItemSaveData data) {
             
-            string json = JsonSerializer.Save(gameData);
+            string json = JsonSerializer.Save(data);
             BinaryFormatter formatter = GetBinaryFormatter();
             string path = Path.Combine(Application.persistentDataPath, saveName);
             FileStream file = new (path, FileMode.Create);
@@ -25,7 +25,7 @@ namespace Utils {
             Log.Message("Save Successful!");
         }
 
-        public static SaveGameData Load(string saveName) {
+        public static ItemData.ItemSaveData Load(string saveName) {
 
             string path = Path.Combine(Application.persistentDataPath, saveName);
 
@@ -38,19 +38,19 @@ namespace Utils {
             
             try {
                 string loaded = formatter.Deserialize(file) as string;
-                SaveGameData gameData = JsonLoad(loaded);
+                ItemData.ItemSaveData data = JsonLoad(loaded);
                 file.Close();
-                return gameData;
+                return data;
             }
             catch {
                 Debug.LogErrorFormat("Failed to load file at {0}", path);
                 file.Close();
-                return new SaveGameData();
+                return new ItemData.ItemSaveData();
             }
         }
 
-        private static SaveGameData JsonLoad(string loaded) {
-            return JsonUtility.FromJson<SaveGameData>(loaded);
+        private static ItemData.ItemSaveData JsonLoad(string loaded) {
+            return JsonUtility.FromJson<ItemData.ItemSaveData>(loaded);
         }
 
         public static void NewGame(string saveName){

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultPunchingBag
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: fd258f60efaa36147b2356a82591daef, type: 2}
+  itemName: 
   menuSprite: {fileID: 0}
   animSprites:
   - {fileID: 21300000, guid: d3ad33162abdf524f8a33cbec6ee747e, type: 3}
@@ -23,7 +24,11 @@ MonoBehaviour:
   standardColors: 1
   customColors: 0
   colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
-  color: {r: 0.78431374, g: 0.003921569, b: 0.36078432, a: 1}
-  unlocked: 0
+  color: {r: 1, g: 1, b: 1, a: 1}
+  price: 0
+  defaultItem: 1
+  unlocked: 1
   equipped: 1

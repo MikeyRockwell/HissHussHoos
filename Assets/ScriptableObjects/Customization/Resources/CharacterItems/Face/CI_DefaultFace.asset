@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultFace
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 0317fda4d9fd1234891ab5a70afd4259, type: 2}
+  itemName: Default Face
   menuSprite: {fileID: 0}
   animSprites:
   - {fileID: 872278370, guid: 1e7c5b8f0b8bf704ba40f74c1c1fd2a8, type: 3}
@@ -23,7 +24,11 @@ MonoBehaviour:
   standardColors: 0
   customColors: 0
   colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  unlocked: 0
+  price: 0
+  defaultItem: 1
+  unlocked: 1
   equipped: 1

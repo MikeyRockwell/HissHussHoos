@@ -4,9 +4,9 @@ using UnityEngine;
 namespace Utils {
     public static class JsonSerializer {
        
-        public static string Save(SO_SaveData.SaveGameData saveGameData) {
+        public static string Save(ItemData.ItemSaveData itemSaveData) {
             // Convert gameData to a string
-            string json = JsonUtility.ToJson(saveGameData);
+            string json = JsonUtility.ToJson(itemSaveData);
             return json;
         }
     }
