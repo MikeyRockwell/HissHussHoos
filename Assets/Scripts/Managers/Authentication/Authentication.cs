@@ -1,5 +1,4 @@
 ﻿using Utils;
-using System;
 using UnityEngine;
 // using GooglePlayGames;
 using LootLocker.Requests;
@@ -11,41 +10,43 @@ namespace Managers {
         
         private string username;
         private string idToken;
-        
-        
+
         private void Start() {
             SelectLoginSystem();
         }
-        
-        // private void OnApplicationFocus(bool hasFocus) {
-        //     SelectLoginSystem();
-        // }
-
         async void SelectLoginSystem() {
             
-            #if UNITY_EDITOR
-            
-                Log.Message("Attempting Guest Login");
-                username = "Unity Editor";
-                await LoginLootLockerGuest();
-            
-            #endif
+        #region UNITY EDITOR -- Guest Login
+        #if UNITY_EDITOR
+            // If we are in the editor, we will use the guest login system
+            Log.Message("Attempting Guest Login as Unity Editor");
+            username = "Unity Editor";
+            await LoginLootLockerGuest();
+        #endif
+        #endregion
 
-            #if UNITY_ANDROID
-            
-                // await AuthenticateGoogle();
-                await LoginLootLockerGuest();   
-            
-            #endif
-            
-            #if UNITY_IOS
-                
-                AuthenticateIOS();
-            
-            #endif
+        #region ANDROID DEVICE -- Google Login
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            // If we are on an android device, we will use the google login system
+            await AuthenticateGoogle();
+            await LoginLootLockerGuest();
+        #endif
+        #endregion
+
+        #region IOS DEVICE -- Apple Login
+        #if UNITY_IOS
+                    // If we are on an IOS device, we will use the IOS login system
+                    AuthenticateIOS();
+        #endif
+        #endregion
         }
 
-        
+#if UNITY_ANDROID && !UNITY_EDITOR
+        private void OnApplicationFocus(bool hasFocus) {
+        SelectLoginSystem();
+        }
+#endif
+
         private Task LoginLootLockerGuest() {
             
             LootLockerSDKManager.StartGuestSession(username,response => {

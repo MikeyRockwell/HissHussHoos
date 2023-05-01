@@ -22,17 +22,21 @@ namespace UI.Statistics {
             gd.roundData.OnLogTimer.AddListener(LogComboSpeed);
             gd.roundData.OnRoundComplete.AddListener(UpdateAverage);
             gd.playerData.OnBestRoundUpdated.AddListener(UpdateBestRound);
-            
             InitializeTextObjects();
         }
 
         private void InitializeTextObjects() {
+            // Initialize the text objects
             for (int i = 0; i < comboSpeedTexts.Length; i++) {
+                // Set the combo speed text to the correct combo number
                 comboSpeedTexts[i].text = $"<mspace=25>COMBO {i + 1:00}: ";
             }
+            // Set the best round text to the correct value
             bestRoundText.text = highestRound + $"{PlayerPrefs.GetInt("BestRound", 0):000}";
             fastestAverageText.text =
                 $"FASTEST AVERAGE COMBO: {PlayerPrefs.GetFloat("FastestAverageComboSpeed", 0):00.00}";
+            
+            // Set the last average text to 0
             lastAverageText.text = $"LAST ROUND AVERAGE: {0:00.00}";
         }
 

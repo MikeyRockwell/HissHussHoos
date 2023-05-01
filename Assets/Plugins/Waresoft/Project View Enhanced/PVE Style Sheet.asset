@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PVE Style Sheet
   m_EditorClassIdentifier: 
   styles:
-  - mInitialised: 0
+  - mInitialised: 1
     matchMethod: 2
     matchValue: 393c8389a0c9867459c318eb29315ea6
     priority: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     backgroundColour: {r: 0, g: 0, b: 0, a: 0}
     visibleInInspector: 1
     styleFilteredInInspector: 0
-  - mInitialised: 0
+  - mInitialised: 1
     matchMethod: 2
     matchValue: 4cbb0a5748cf6f547a2f67f7297e1496
     priority: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     backgroundColour: {r: 0, g: 0, b: 0, a: 0}
     visibleInInspector: 1
     styleFilteredInInspector: 0
-  - mInitialised: 0
+  - mInitialised: 1
     matchMethod: 2
     matchValue: 3b009d4b39c101341a86e6a3a77ddb40
     priority: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     backgroundColour: {r: 0, g: 0, b: 0, a: 0}
     visibleInInspector: 1
     styleFilteredInInspector: 0
-  - mInitialised: 0
+  - mInitialised: 1
     matchMethod: 2
     matchValue: f089869617d8db2458c41eb8f70a104c
     priority: 0
@@ -67,6 +67,21 @@ MonoBehaviour:
     iconName: Asset - Material Coloured
     overrideLabel: 1
     labelColour: {r: 0.28225344, g: 0.648687, b: 0.9528302, a: 1}
+    labelStyle: 0
+    overrideBackground: 0
+    backgroundName: 
+    backgroundColour: {r: 0, g: 0, b: 0, a: 0}
+    visibleInInspector: 1
+    styleFilteredInInspector: 0
+  - mInitialised: 0
+    matchMethod: 2
+    matchValue: f7380774c4efa9748b645f7f8ccd7b19
+    priority: 0
+    recursive: 1
+    overrideIcon: 1
+    iconName: Asset - Prefab Coloured
+    overrideLabel: 1
+    labelColour: {r: 0.56037736, g: 0.8639264, b: 1, a: 1}
     labelStyle: 0
     overrideBackground: 0
     backgroundName: 

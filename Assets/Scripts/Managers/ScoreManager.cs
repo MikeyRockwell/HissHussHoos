@@ -3,13 +3,15 @@ using Utils;
 using System;
 using UnityEngine;
 using LootLocker.Requests;
+using Newtonsoft.Json;
+using Unity.Services.Leaderboards;
 
 namespace Managers {
     
     
     public class ScoreManager : MonoBehaviour {
         
-        private const int leaderboardID = 12628;
+        private const string leaderboardID = "highScores";
         private DataWrangler.GameData gd;
 
         private void Awake() {
@@ -39,9 +41,15 @@ namespace Managers {
 
         private void GameOver() {
             SubmitScore(gd.playerData.score);
+            gd.playerData.ResetScore();
         }
 
-        private void SubmitScore(int scoreToUpload) {
+        public async void SubmitScore(int score) {
+            var playerEntry = await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardID, score);
+            Log.Message(JsonConvert.SerializeObject(playerEntry));
+        }
+
+        /*private void SubmitScore(int scoreToUpload) {
             
             string playerID = PlayerPrefs.GetString("PlayerID");
             LootLockerSDKManager.SubmitScore(playerID, scoreToUpload, leaderboardID, (response) => 
@@ -54,6 +62,6 @@ namespace Managers {
                     }
                 }
             );
-        }
+        }*/
     }
 }

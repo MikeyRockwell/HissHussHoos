@@ -11,7 +11,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - BEVEL_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -46,9 +47,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient: 0.5
-    - _Bevel: 0.5
+    - _Bevel: 1
     - _BevelClamp: 0
-    - _BevelOffset: 0
+    - _BevelOffset: 0.056
     - _BevelRoundness: 0
     - _BevelWidth: 0
     - _BumpFace: 0
@@ -70,17 +71,17 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.331
+    - _OutlineWidth: 0.348
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
     - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.33854166
+    - _ScaleRatioC: 0.2624354
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
     - _Sharpness: 0
-    - _SpecularPower: 2
+    - _SpecularPower: 2.62
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -90,8 +91,8 @@ Material:
     - _TextureWidth: 1024
     - _UnderlayDilate: 1
     - _UnderlayOffsetX: 1
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
+    - _UnderlayOffsetY: 0.232
+    - _UnderlaySoftness: 0.58
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.75
@@ -102,11 +103,11 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.4811321, g: 0.17358491, b: 0, a: 1}
+    - _OutlineColor: {r: 0.021623842, g: 0, b: 0.047169805, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+    - _SpecularColor: {r: 1, g: 0.3339622, b: 0.822056, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -118,11 +119,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: HEAVY_Outline_Only
+  m_Name: HEAVY_Outline_Black
   m_EditorClassIdentifier: 
-  hashCode: -1016974153
+  hashCode: 785161956
   material: {fileID: -7208077320674119390}
-  materialHashCode: -2009048265
+  materialHashCode: 118801860
   m_Version: 1.1.0
   m_SourceFontFileGUID: 7c61294c26db35943aa57818a68e90cd
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 7c61294c26db35943aa57818a68e90cd, type: 3}

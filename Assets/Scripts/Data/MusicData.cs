@@ -9,8 +9,11 @@ namespace Data {
         public MusicTrack[] musicTracks;
         public int currentTrackIndex;
         public bool playing;
+
+        public bool playByDefault;
         
         public UnityEvent<bool> OnPressPlay;
+        
         public void Play() {
             playing = !playing;
             OnPressPlay?.Invoke(playing);
