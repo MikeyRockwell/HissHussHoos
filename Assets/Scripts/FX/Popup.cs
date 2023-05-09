@@ -28,6 +28,12 @@ namespace FX {
             Animate();
         }
         
+        public void Init(string newText, float time) {
+            textMesh.text = newText;
+            ResetPopUp();
+            Animate();
+        }
+        
         public void Init(string newText, Color newColor) {
             textMesh.text = newText;
             textMesh.color = newColor;

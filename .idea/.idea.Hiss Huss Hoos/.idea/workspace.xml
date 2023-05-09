@@ -5,39 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338fe14c-d9f2-4806-9ed9-c918acebb189" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerName.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/AuthenticationData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/AuthenticationData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Waresoft/Project View Enhanced/PVE Style Sheet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Waresoft/Project View Enhanced/PVE Style Sheet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TreatSelector.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TreatSelector.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/Authentication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/Authentication.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/SO_LoadSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/LoadSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/SO_LoadSave.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/LoadSaveData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/Popup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/Popup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerNameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerName.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerNameInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/StatsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/StatsWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Only.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Only.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,14 +44,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file:////Library/WARP/LIVE/UNITY/HISS HUSS HOOS/Assets/_Scripts/Time/ComboTimer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file:////Library/media library/INTERNAL/GAMEDEV/BU/SpellsForSale2D/Assets/___Scripts/BaseClass/GameStateSO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file:////Library/media library/INTERNAL/GAMEDEV/UNITY/BACKUP/Potions!/Assets/___Scripts/Managers/Logging/GameLog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8744f615ca0c450898baad3219003b4516e800/c4/e0ee308c/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8744f615ca0c450898baad3219003b4516e800/dd/160a8a5b/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8744f615ca0c450898baad3219003b4516e800/e3/e77649af/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/11/1c04dc50/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/24/82a83eaf/SynchronizationContextAwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/3e/730f3e82/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/7f/ab25817b/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/8c/c8b79ec6/AwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/cc/f3c22dc9/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.android-logcat@1.3.2/Editor/AndroidTools/AndroidBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core/UnityServices.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.leaderboards@dd8c55d0e488/Runtime/Models/LeaderboardsModels.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.leaderboards@dd8c55d0e488/Runtime/com.unity.services.leaderboards.internal/Http/ResponseHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.leaderboards@dd8c55d0e488/Runtime/com.unity.services.leaderboards.internal/LeaderboardsServiceInternal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.7/Editor/Drawing/SearchWindowProvider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../OLD/HISS HUSS HOOS/Assets/_Scripts/RoundManager/CheckTarget.cs" root0="SKIP_HIGHLIGHTING" />
@@ -67,6 +70,7 @@
     <setting file="file://$PROJECT_DIR$/../../OLD/HISS HUSS HOOS/Assets/_Scripts/Time/TimeBar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../OLD/HISS HUSS HOOS/Assets/_Scripts/Time/TimeKeeper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Potions/Assets/___Scripts/DataClass/AudioEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Potions/Assets/___Scripts/DataClass/GameStateSO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Potions/Assets/___Scripts/DataClass/SimpleAudioEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Potions/Assets/___Scripts/DataClass/Singleton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Potions/Assets/___Scripts/Editor/ControlPanel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -105,7 +109,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -151,10 +155,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12812">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12812" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -236,6 +240,10 @@
       <workItem from="1682240483712" duration="853000" />
       <workItem from="1682295493781" duration="606000" />
       <workItem from="1682893561416" duration="14597000" />
+      <workItem from="1682997447265" duration="3399000" />
+      <workItem from="1683066244198" duration="1586000" />
+      <workItem from="1683070478232" duration="3487000" />
+      <workItem from="1683156115584" duration="11451000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Repository!!">
       <created>1679967462436</created>

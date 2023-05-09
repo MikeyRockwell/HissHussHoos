@@ -4,10 +4,11 @@ using UnityEngine.Serialization;
 
 namespace Managers {
     public class DataWrangler : Singleton<DataWrangler> {
-
-        [FormerlySerializedAs("SaveData")] public SO_LoadSave loadSave;
+        
+        public GameState GameState;
+        public LoadSaveData LoadSaveData;
         public GameEventData EventData;
-        [FormerlySerializedAs("CustomiseEvents")] public CustomizationEvents customizationEvents;
+        public CustomizationEvents customizationEvents;
         public TargetData TargetData;
         public PlayerData PlayerData;
         public RoundData RoundData;
@@ -17,12 +18,13 @@ namespace Managers {
         public UIData UIData;
         public ItemData ItemData;
 
-        public static SO_LoadSave GetSaveData() {
-            return Instance.loadSave;
+        public static LoadSaveData GetSaveData() {
+            return Instance.LoadSaveData;
         }
         
         public static GameData GetGameData() {
             return new GameData(
+                Instance.GameState,
                 Instance.EventData,
                 Instance.customizationEvents,
                 Instance.TargetData, 
@@ -37,6 +39,7 @@ namespace Managers {
 
         public struct GameData {
 
+            public readonly GameState gameState;
             public readonly GameEventData eventData;
             public readonly CustomizationEvents customEvents;
             public readonly TargetData targetData;
@@ -49,6 +52,7 @@ namespace Managers {
             public readonly ItemData itemData;
 
             public GameData(
+                GameState gameState,
                 GameEventData eventData, 
                 CustomizationEvents customEvents, 
                 TargetData targetData,
@@ -59,7 +63,8 @@ namespace Managers {
                 ColorData colorData,
                 UIData uIData,
                 ItemData itemData) {
-                
+
+                this.gameState = gameState;
                 this.eventData = eventData;
                 this.customEvents = customEvents;
                 this.targetData = targetData;

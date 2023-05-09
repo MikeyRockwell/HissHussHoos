@@ -1,5 +1,6 @@
 ﻿using Data;
 using UnityEngine;
+using Utils;
 
 namespace Managers {
     public class GameManager : MonoBehaviour {
@@ -8,36 +9,22 @@ namespace Managers {
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
-            
             // Target frame rate 
             // TODO move to a video controller 
             Application.targetFrameRate = 60;
         }
 
         private void Start() {
+
+            if (gd.gameState.firstLaunch) {
+                gd.gameState.firstLaunch = false;
+            }
+            
             // Load data
-            SO_LoadSave loadSave = DataWrangler.GetSaveData();
-            gd.itemData.Initialize();
-            loadSave.LoadGame();
+            LoadSaveData loadSaveData = DataWrangler.GetSaveData();
+            loadSaveData.LoadGame();
             // Init game
             gd.eventData.InitializeGame();
         }
-
-
-#if UNITY_ANDROID
-        // private void OnApplicationPause(bool pauseStatus) {
-        //     DataWrangler.GetSaveData().SaveGame();
-        // }
-
-        private void OnApplicationQuit() {
-            DataWrangler.GetSaveData().SaveGame();
-        }
-#endif
-        
-#if UNITY_EDITOR        
-        private void OnDisable() {
-            DataWrangler.GetSaveData().SaveGame();
-        }
-#endif
     }
 }

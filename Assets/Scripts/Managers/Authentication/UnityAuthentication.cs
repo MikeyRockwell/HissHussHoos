@@ -1,4 +1,5 @@
-﻿using Utils;
+﻿using Data;
+using Utils;
 using System;
 using UnityEngine;
 using Unity.Services.Core;
@@ -9,6 +10,9 @@ namespace Managers {
     
     // This class is used to initialize the Unity Services SDK
     public class UnityAuthentication : MonoBehaviour {
+
+        [SerializeField] private AuthenticationData authData;
+        
         private async void Awake() {
             try {
                 await UnityServices.InitializeAsync();
@@ -38,6 +42,15 @@ namespace Managers {
             }
 
             Log.Message("PLAYER NAME: " + AuthenticationService.Instance.PlayerName, Color.magenta);
+            CheckPlayerName();
+        }
+        
+        private void CheckPlayerName() {
+            // Check to see if the player signed in has a name
+            // If not, prompt the player to enter a name
+            if (AuthenticationService.Instance.PlayerName == null) {
+                authData.PlayerNameRequired();
+            }
         }
     }
     

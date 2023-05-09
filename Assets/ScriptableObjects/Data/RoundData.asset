@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: RoundData
   m_EditorClassIdentifier: 
   roundType: 0
-  roundTextTime: 1.5
-  currentRound: 12
+  roundTextTime: 2.5
+  currentRound: 10
   roundLength: 10
-  roundStep: 1
+  roundStep: 0
   bonusRound: 5
   maxRoundTime: 10
   minRoundTime: 3
-  roundTimeLimit: 4
+  roundTimeLimit: 5
+  lastComboTime: 0
   OnGameBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRoundInit:
     m_PersistentCalls:
       m_Calls: []
   OnRoundBegin:
@@ -37,6 +41,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnSpeedBonus:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLogTimer:
     m_PersistentCalls:
       m_Calls: []
   bonusRoundLength: 20

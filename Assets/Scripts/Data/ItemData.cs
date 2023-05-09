@@ -25,7 +25,6 @@ namespace Data {
             }
         }
 
-        
         public void ResetItems() {
             // Reset all the items
             foreach (SO_Item item in allParts.SelectMany(part => part.Items)) {
@@ -40,6 +39,7 @@ namespace Data {
         }
 
         public void LoadItemData(ItemSaveData data) {
+            Initialize();
             // Load all the save data
             for (int i = 0; i < allItems.Count; i++) {
                 allItems[i].LoadSaveData(data.itemSaveData[i]);

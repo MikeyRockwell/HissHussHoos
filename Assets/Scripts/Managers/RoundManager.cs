@@ -17,13 +17,18 @@ namespace Managers {
             gd.roundData.OnGameBegin.AddListener(NewGame);
             gd.roundData.OnRoundInit.AddListener(NewRoundInit);
             gd.eventData.OnGameOver.AddListener(GameOver);
-            gd.roundData.OnRoundComplete.AddListener(EnableReadyButton);
-            readyButton.onClick.AddListener(() => gd.roundData.InitRound());
+            
+            gd.roundData.OnRoundComplete.AddListener(_=> gd.roundData.InitRound());
+            
+            // Ready Button is currently disabled
+            // gd.roundData.OnRoundComplete.AddListener(EnableReadyButton);
+            // readyButton.onClick.AddListener(() => gd.roundData.InitRound());
         }
 
+        /*
         private void EnableReadyButton(int arg0) {
             readyButton.gameObject.SetActive(true);
-        }
+        }*/
 
         private void GameOver() {
             gd.roundData.roundType = RoundData.RoundType.warmup;
@@ -46,9 +51,12 @@ namespace Managers {
         private void NewRoundInit(int round) {
             // Begins a new round
             // Handles both regular and bonus rounds
-            readyButton.gameObject.SetActive(false);
+            
+            // After a delay, set the round type
             Sequence seq = DOTween.Sequence();
             seq.PrependInterval(gd.roundData.roundTextTime).OnComplete(() => SetRoundType(round));
+            
+            // readyButton.gameObject.SetActive(false);
         }
 
         private void SetRoundType(int round) {

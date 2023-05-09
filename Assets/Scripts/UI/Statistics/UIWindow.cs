@@ -18,20 +18,24 @@ namespace UI.Statistics {
             // Get the game data
             gd = DataWrangler.GetGameData();
             // Add a listener to the button that opens and closes the window
-            openWindowButton.onClick.AddListener(()=> {
-                if (background.gameObject.activeSelf) {
-                    CloseWindow();
-                } 
-                else {
-                    OpenWindow();
-                }
-            });
+            if (openWindowButton != null) {
+                openWindowButton.onClick.AddListener(CheckWindowStatus);
+            }
             // Add a listener to the background button that closes the window
-            closeWindowButton.onClick.AddListener(()=> {
-                if (background.gameObject.activeSelf) {
-                    CloseWindow();
-                }
-            });
+            closeWindowButton.onClick.AddListener(CheckWindowStatus);
+        }
+
+        protected bool CheckWindowOpen() {
+            return background.gameObject.activeSelf;
+        }
+
+        protected void CheckWindowStatus() {
+            if (background.gameObject.activeSelf) {
+                CloseWindow();
+            }
+            else {
+                OpenWindow();
+            }
         }
         
         private void OpenWindow() {

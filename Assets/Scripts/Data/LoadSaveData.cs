@@ -1,9 +1,9 @@
-﻿using UnityEngine;
-using Utils;
+﻿using Utils;
+using UnityEngine;
 
 namespace Data {
     [CreateAssetMenu(fileName = "SaveData", menuName = "ScriptableObjects/Data/SaveData", order = 0)]
-    public class SO_LoadSave : ScriptableObject {
+    public class LoadSaveData : ScriptableObject {
         
         // This is a scriptable object - only to make life easier when accessing this object
         // It holds lists of every save-able item 

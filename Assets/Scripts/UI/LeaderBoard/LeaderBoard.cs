@@ -1,30 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using TMPro;
+using System;
 using Managers;
+using DG.Tweening;
 using UnityEngine;
 using UI.Statistics;
 using Newtonsoft.Json;
-using TMPro;
-using Unity.Services.Authentication;
+using Unity.VisualScripting;
+using UnityEngine.Serialization;
+using System.Collections.Generic;
 using Unity.Services.Leaderboards;
+using Unity.Services.Authentication;
 using Unity.Services.Leaderboards.Models;
+using UnityEngine.UI;
 
 namespace UI {
     public class LeaderBoard : UIWindow {
         
         // This class opens and populates the LeaderBoard UI
         private const string leaderBoardId = "highScores";
-        // An array to hold the high scores
         
-        [SerializeField] private TextMeshProUGUI[] scoreTextMeshes;
-
+        [SerializeField] private Button topScoresTab;
+        [SerializeField] private Button yourScoreTab;
+        // An array to hold the high score text meshes
+        [SerializeField] private LeaderBoardEntry[] uIEntries;
+        
         private DataWrangler.GameData gd;
         private String textColor;
 
         protected override void Awake() {
             base.Awake();
-            openWindowButton.onClick.AddListener(GetPlayerRange);
             gd = DataWrangler.GetGameData();
+            
+            // Reconfigure the button subscriptions
+            openWindowButton.onClick.AddListener(GetPlayerRange);
+            openWindowButton.onClick.RemoveListener(CheckWindowStatus);
+            
+            topScoresTab.onClick.AddListener(GetTopScores);
+            yourScoreTab.onClick.AddListener(GetPlayerRange);
         }
 
         private async void GetTopScores() {
@@ -34,8 +46,18 @@ namespace UI {
         }
 
         public async void GetPlayerRange() {
+            // Check if the player has a score on the leaderboard
+            try {
+                LeaderboardEntry playerScore = await LeaderboardsService.Instance
+                    .GetPlayerScoreAsync(leaderBoardId);
+            }
+            catch {
+                GetTopScores();
+                return;
+            }
+
             // Returns a total of 11 entries (the given player plus 5 on either side)
-            var rangeLimit = 5;
+            var rangeLimit = uIEntries.Length - 1;
             LeaderboardScores scoresResponse = await LeaderboardsService.Instance
                 .GetPlayerRangeAsync(leaderBoardId, new GetPlayerRangeOptions{ RangeLimit = rangeLimit }
                 );
@@ -45,9 +67,10 @@ namespace UI {
         private void FormatScores(List<LeaderboardEntry> scoresResponse) {
             
             // Extract the names and scores from the response
-            for (int i = 0; i < scoreTextMeshes.Length; i++) {
+            for (int i = 0; i < uIEntries.Length; i++) {
+                
                 // Disable the text mesh
-                scoreTextMeshes[i].transform.parent.gameObject.SetActive(false);
+                uIEntries[i].gameObject.SetActive(false);
                 // If there are no more scores continue
                 if (i > scoresResponse.Count-1) {
                     continue;
@@ -59,19 +82,25 @@ namespace UI {
                 if (index > 0) {
                     playerName = playerNameFull[..index];
                 }
-
-                textColor = playerNameFull == AuthenticationService.Instance.PlayerName
-                    ? ColorUtility.ToHtmlStringRGBA(gd.uIData.Gold)
-                    : ColorUtility.ToHtmlStringRGBA(gd.uIData.HotPink);
-                
-                TextMeshProUGUI textMesh = scoreTextMeshes[i];
-                textMesh.text = "<color=#" + textColor + ">" + 
-                                $"<mspace=32>{scoresResponse[i].Rank+1}. " + 
-                                playerName + " - " +
-                                // $"{scoresResponse.Results[i].PlayerName} - " +
-                                $"{scoresResponse[i].Score}";
-                textMesh.transform.parent.gameObject.SetActive(true);
+                // Check if this is the player
+                bool isPlayer = playerNameFull == AuthenticationService.Instance.PlayerName;
+                // Initialize the entry
+                uIEntries[i].SetEntry(
+                        rank: scoresResponse[i].Rank+1,
+                        playerName: playerName,
+                        score: (int)scoresResponse[i].Score,
+                        isPlayer: isPlayer
+                    );
             }
+            
+            // Animate each entry scale to 1 in a cascade using DoTween
+            var seq = DOTween.Sequence();
+            
+            for (int i = 0; i < uIEntries.Length; i++) {
+                seq.Append(uIEntries[i].transform.DOScale(1, 0.1f)).SetEase(Ease.InQuad);
+            }
+            
+            CheckWindowStatus();
         }
         
         public async void GetPlayerScore() {
