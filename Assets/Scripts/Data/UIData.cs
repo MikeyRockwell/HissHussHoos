@@ -15,16 +15,5 @@ namespace Data {
         public Color LaserGreen;
         public Color Gold;
         public Color DisabledComboText;
-        
-        public UnityEvent<float> OnMoraleUpdated;
-        public UnityEvent<int> OnMoralePointsEarned;
-        
-        public void UpdateMoraleUI(float morale) {
-            OnMoraleUpdated?.Invoke(morale);
-        }
-        
-        public void DisplayMoralePoints(int moraleEarned) {
-            OnMoralePointsEarned?.Invoke(moraleEarned);
-        }
     }
 }

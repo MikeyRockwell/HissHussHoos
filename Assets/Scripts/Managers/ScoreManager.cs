@@ -2,7 +2,6 @@
 using Utils;
 using System;
 using UnityEngine;
-using LootLocker.Requests;
 using Newtonsoft.Json;
 using Unity.Services.Leaderboards;
 
@@ -16,6 +15,7 @@ namespace Managers {
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
+            gd.eventData.OnGameFirstLaunch.AddListener(ClearSavedScores);
             gd.eventData.OnHit.AddListener(AddScore);
             gd.eventData.OnGameInit.AddListener(NewGame);
             gd.eventData.OnGameOver.AddListener(GameOver);
@@ -23,6 +23,11 @@ namespace Managers {
         }
 
         private void NewGame() {
+            gd.playerData.ResetScore();
+        }
+        
+        private void ClearSavedScores() {
+            PlayerPrefs.SetInt("HighScore", 0);
             gd.playerData.ResetScore();
         }
 
@@ -48,20 +53,5 @@ namespace Managers {
             var playerEntry = await LeaderboardsService.Instance.AddPlayerScoreAsync(leaderboardID, score);
             Log.Message(JsonConvert.SerializeObject(playerEntry));
         }
-
-        /*private void SubmitScore(int scoreToUpload) {
-            
-            string playerID = PlayerPrefs.GetString("PlayerID");
-            LootLockerSDKManager.SubmitScore(playerID, scoreToUpload, leaderboardID, (response) => 
-                {
-                    if (response.success) {
-                        Log.Message("Successfully uploaded score");
-                    }
-                    else {
-                        Log.Message("Failed " + response.Error);
-                    }
-                }
-            );
-        }*/
     }
 }

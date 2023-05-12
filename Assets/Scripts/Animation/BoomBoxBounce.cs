@@ -37,15 +37,15 @@ namespace Animation {
         }
 
         private void UpdateBounce() {
-            xf.DOKill();
-            xf.localScale = new Vector3(2,2,2);
-            StartBounce();
+            // xf.DOKill();
+            // xf.localScale = new Vector3(2,2,2);
+            // StartBounce();
         }
 
         private void StartBounce() {
-            bpm = (float)(md.musicTracks[md.currentTrackIndex].bpm * 2) / 1000;
-            xf.DOKill();
-            xf.DOScaleY(bounceHeight, bpm).SetLoops(-1, LoopType.Yoyo).SetEase(vertBounceEase);
+            // bpm = (float)(md.musicTracks[md.currentTrackIndex].bpm * 2) / 1000;
+            // xf.DOKill();
+            // xf.DOScaleY(bounceHeight, bpm).SetLoops(-1, LoopType.Yoyo).SetEase(vertBounceEase);
         }
 
         private void StopBounce() {

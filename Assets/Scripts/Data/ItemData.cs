@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using Data.Customization;
-using UI.CustomiseMenu;
 using UnityEngine;
+using UI.CustomiseMenu;
+using Data.Customization;
+using System.Collections.Generic;
 
 namespace Data {
     [CreateAssetMenu(fileName = "ItemData", menuName = "ScriptableObjects/Data/ItemData", order = 0)]
@@ -16,8 +16,8 @@ namespace Data {
         public List<SO_CharacterPart> allParts;
         public List<SO_Item> allItems;
 
-        
-        public void Initialize() {
+
+        private void Initialize() {
             // Create a list of all the items
             allItems.Clear();
             foreach (SO_Item item in allParts.SelectMany(part => part.Items)) {
@@ -32,18 +32,18 @@ namespace Data {
             }
         }
 
-        public ItemSaveData GetItemSaveData() {
-            // Create a list of all the save data
-            List<SO_Item.SaveData> items = allItems.Select(item => item.CreateSaveData()).ToList();
-            return new ItemSaveData(items);
-        }
-
         public void LoadItemData(ItemSaveData data) {
             Initialize();
             // Load all the save data
             for (int i = 0; i < allItems.Count; i++) {
                 allItems[i].LoadSaveData(data.itemSaveData[i]);
             }
+        }
+
+        public ItemSaveData GetItemSaveData() {
+            // Create a list of all the save data
+            List<SO_Item.SaveData> items = allItems.Select(item => item.CreateSaveData()).ToList();
+            return new ItemSaveData(items);
         }
         
         [Serializable]

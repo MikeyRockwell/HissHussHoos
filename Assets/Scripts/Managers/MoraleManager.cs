@@ -1,7 +1,7 @@
 ﻿using Data;
 using UnityEngine;
 using Data.Customization;
-using Unity.VisualScripting;
+using Utils;
 
 namespace Managers {
     
@@ -13,22 +13,27 @@ namespace Managers {
         [SerializeField] private int moralePointsEarned;
         
         private DataWrangler.GameData gd;
-        private PlayerData pd;
-        
+        private MoraleData moraleData;
+
         private void Awake() {
             // Cache components
             gd = DataWrangler.GetGameData();
-            pd = gd.playerData;
+            moraleData = gd.playerData.md;
+            SubscribeEvents();
+
+            // Initialize morale points
+            moraleData.ResetMorale();
+            moraleData.UpdateMoraleMeter(moraleData.GetMorale());
+        }
+
+        private void SubscribeEvents() {
             // Subscribe to events
+            gd.eventData.OnGameFirstLaunch.AddListener(moraleData.ResetMoralePoints);
             gd.customEvents.OnItemUnlocked.AddListener(SpendMoralPoints);
             gd.eventData.OnHit.AddListener(AddMoraleFromPunch);
             gd.eventData.OnMiss.AddListener(RemoveMorale);
             gd.roundData.OnSpeedBonus.AddListener(AddMoraleFromBonus);
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);
-            
-            pd.ResetMorale();
-            // Trigger the update morale event
-            gd.uIData.UpdateMoraleUI(pd.GetMorale());
         }
 
         private void AddMoraleFromPunch(int unused) {
@@ -46,52 +51,55 @@ namespace Managers {
         }
 
         public void AddMorale(int morale) {
-            
             // If morale boost is active multiply the amount of morale by the boost multiplier
-            int moraleAdded = Mathf.RoundToInt(pd.moraleBoostActive ? morale * pd.moraleBoostMultiplier : morale);
+            int moraleAdded = Mathf.RoundToInt(
+                moraleData.moraleBoostActive ? morale * moraleData.moraleBoostMultiplier : morale);
             // Update the morale points to a maximum of 100
-            pd.morale = Mathf.Min(pd.maxMorale, pd.morale + moraleAdded);
+            moraleData.morale = Mathf.Min(moraleData.maxMorale, moraleData.morale + moraleAdded);
             // Update the morale points earned
             moralePointsEarned += moraleAdded;
-            pd.moralePoints += moraleAdded;
+            moraleData.UpdateMoralePoints(morale);
             // Trigger the update morale event
-            gd.uIData.UpdateMoraleUI(pd.GetMorale());
-
+            moraleData.UpdateMoraleMeter(moraleData.GetMorale());
             // If the player has reached the maximum morale, trigger the morale boost event
-            if (pd.morale != pd.maxMorale) return;
+            if (moraleData.morale != moraleData.maxMorale) return;
             // If the morale boost is already active, return
-            if (pd.moraleBoostActive) return;
+            if (moraleData.moraleBoostActive) return;
             
-            pd.moraleBoostActive = true;
-            pd.OnMoraleBoost?.Invoke();
+            // Trigger the morale boost event
+            moraleData.moraleBoostActive = true;
+            moraleData.OnMoraleBoost?.Invoke();
+            Log.Message("Morale boost activated!", gd.uIData.HotPink);
             // Start a timer to reset the morale
-            Invoke(nameof(EndMoraleBoost), pd.moraleBoostDuration);
+            Invoke(nameof(EndMoraleBoost), moraleData.moraleBoostDuration);
         }
         
         private void RemoveMorale() {
-            if (pd.moraleBoostActive) return;
+            if (moraleData.moraleBoostActive) return;
             // Remove morale points to a minimum of zero
-            pd.morale = Mathf.Max(0, pd.morale - moralePointReduction);
+            moraleData.morale = Mathf.Max(0, moraleData.morale - moralePointReduction);
             // Trigger the update morale event
-            gd.uIData.UpdateMoraleUI(pd.GetMorale());
+            moraleData.UpdateMoraleMeter(moraleData.GetMorale());
         }
         
         private void EndMoraleBoost() {
+            Log.Message("Morale boost ended!", gd.uIData.LaserGreen);
             // Reset the morale points to zero
-            pd.ResetMorale();
-            pd.OnMoraleBoostEnd?.Invoke();
+            moraleData.ResetMorale();
+            moraleData.OnMoraleBoostEnd?.Invoke();
             // Trigger the update morale event
-            gd.uIData.UpdateMoraleUI(pd.GetMorale());
+            moraleData.UpdateMoraleMeter(moraleData.GetMorale());
         }
         
         private void DisplayMoralePoints() {
             // Display the morale points earned
-            gd.uIData.DisplayMoralePoints(moralePointsEarned);
+            moraleData.DisplayMoralePoints(moralePointsEarned);
         }
 
         private void SpendMoralPoints(SO_Item item) {
             // Spend morale points
-            pd.moralePoints -= item.price;
+            moraleData.SpendMoralePoints(item.price);
+            DataWrangler.GetSaverLoader().SaveGame();
         }
     }
 }

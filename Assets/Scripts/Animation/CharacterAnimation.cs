@@ -17,6 +17,7 @@ namespace Animation {
         [SerializeField] private Material mat;
 
         private static readonly int Color1 = Shader.PropertyToID("_Color");
+        private static readonly int ZestLights = Shader.PropertyToID("_ZestLights");
 
         private void Awake() {
             
@@ -35,7 +36,11 @@ namespace Animation {
             
             // Default item initialization - from here OK??
             // It's done here so that the event is subscribed prior to changing
-            part.ChangeItem(part.DefaultItem, false);
+            // part.ChangeItem(part.DefaultItem, false);
+        }
+
+        private void Start() {
+            part.ChangeItem(part.CurrentItem, false);
         }
 
         private void UpdateSprites(SO_Item item) {
@@ -43,11 +48,11 @@ namespace Animation {
             spriteRenderer.sprite = punchSprites[0];
             if (item.zestGlasses) {
 
-                mat.SetColor("_ZestLights", item.zestLightColor);
+                mat.SetColor(ZestLights, item.zestLightColor);
                 Log.Message(mat.GetColor(Color1).ToString());
             }
             else {
-                mat.SetColor("_ZestLights", Color.black);
+                mat.SetColor(ZestLights, Color.black);
             };
         }
 

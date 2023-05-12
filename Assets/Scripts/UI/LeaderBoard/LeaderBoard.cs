@@ -4,14 +4,16 @@ using Managers;
 using DG.Tweening;
 using UnityEngine;
 using UI.Statistics;
+using UnityEngine.UI;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 using System.Collections.Generic;
+using Data;
 using Unity.Services.Leaderboards;
 using Unity.Services.Authentication;
 using Unity.Services.Leaderboards.Models;
-using UnityEngine.UI;
+using Sequence = DG.Tweening.Sequence;
 
 namespace UI {
     public class LeaderBoard : UIWindow {
@@ -23,6 +25,9 @@ namespace UI {
         [SerializeField] private Button yourScoreTab;
         // An array to hold the high score text meshes
         [SerializeField] private LeaderBoardEntry[] uIEntries;
+        [SerializeField] private float animDuration;
+        [SerializeField] private float animDelay;
+        [SerializeField] private Ease animEase;
         
         private DataWrangler.GameData gd;
         private String textColor;
@@ -32,11 +37,24 @@ namespace UI {
             gd = DataWrangler.GetGameData();
             
             // Reconfigure the button subscriptions
-            openWindowButton.onClick.AddListener(GetPlayerRange);
             openWindowButton.onClick.RemoveListener(CheckWindowStatus);
-            
+
+            openWindowButton.onClick.AddListener(CheckLeaderBoardOpen);
             topScoresTab.onClick.AddListener(GetTopScores);
             yourScoreTab.onClick.AddListener(GetPlayerRange);
+        }
+
+        private void CheckLeaderBoardOpen() {
+            if (gd.roundData.roundType != RoundData.RoundType.warmup) {
+                return;
+            }
+            // Check if the leaderboard is open
+            if (background.gameObject.activeSelf) {
+                CloseWindow();
+            }
+            else {
+                GetPlayerRange();
+            }
         }
 
         private async void GetTopScores() {
@@ -65,7 +83,6 @@ namespace UI {
         }
 
         private void FormatScores(List<LeaderboardEntry> scoresResponse) {
-            
             // Extract the names and scores from the response
             for (int i = 0; i < uIEntries.Length; i++) {
                 
@@ -92,17 +109,22 @@ namespace UI {
                         isPlayer: isPlayer
                     );
             }
-            
-            // Animate each entry scale to 1 in a cascade using DoTween
-            var seq = DOTween.Sequence();
-            
-            for (int i = 0; i < uIEntries.Length; i++) {
-                seq.Append(uIEntries[i].transform.DOScale(1, 0.1f)).SetEase(Ease.InQuad);
-            }
-            
-            CheckWindowStatus();
+
+            AnimateEntries();
         }
-        
+
+        private void AnimateEntries() {
+            // Animate each entry scale to 1 in a cascade using DoTween
+            Sequence seq = DOTween.Sequence();
+
+            foreach (LeaderBoardEntry entry in uIEntries) {
+                entry.transform.DOKill();
+                seq.Append(entry.transform.DOScale(1, animDuration)).SetEase(animEase);
+            }
+
+            OpenWindow();
+        }
+
         public async void GetPlayerScore() {
             var scoreResponse = await LeaderboardsService.Instance
                 .GetPlayerScoreAsync(leaderBoardId);

@@ -13,14 +13,33 @@ MonoBehaviour:
   m_Name: MusicData
   m_EditorClassIdentifier: 
   musicTracks:
-  - clip: {fileID: 8300000, guid: 0d689f5951323a844ac7684b92f3ce60, type: 3}
+  - artist: JBrown
+    songName: HISS HUSS HOOS Theme
+    clip: {fileID: 8300000, guid: e258210399835e541a8a35320b087562, type: 3}
+    bpm: 0
+  - artist: William Waiirua
+    songName: Mauri Mahi
+    clip: {fileID: 8300000, guid: 0cf35dc650859ec4686ad10dd6b77b7e, type: 3}
+    bpm: 0
+  - artist: William Waiirua
+    songName: Stay In It
+    clip: {fileID: 8300000, guid: 0d689f5951323a844ac7684b92f3ce60, type: 3}
     bpm: 124
-  - clip: {fileID: 8300000, guid: 01457c18458de93468a4f4e9c43eb80c, type: 3}
+  - artist: William Waiirua
+    songName: Wowee
+    clip: {fileID: 8300000, guid: 01457c18458de93468a4f4e9c43eb80c, type: 3}
     bpm: 115
-  - clip: {fileID: 8300000, guid: 16db45043401740429d2a9089d4f86e8, type: 3}
+  - artist: William Waiirua feat Vince Harder, Kings
+    songName: Whatta Beauty
+    clip: {fileID: 8300000, guid: 16db45043401740429d2a9089d4f86e8, type: 3}
     bpm: 93
+  - artist: 'William Waiirua feat Vince Harder, Kings '
+    songName: Ka Wani Ke
+    clip: {fileID: 8300000, guid: 436359f5f5e94374f8e40c23381eac66, type: 3}
+    bpm: 0
   currentTrackIndex: 1
   playing: 1
+  playByDefault: 1
   OnPressPlay:
     m_PersistentCalls:
       m_Calls: []

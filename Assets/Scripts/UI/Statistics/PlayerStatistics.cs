@@ -1,27 +1,40 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using Managers;
 using UnityEngine;
+using Utils;
 
 namespace UI.Statistics {
     public class PlayerStatistics : MonoBehaviour {
         
         // This script updates the player statistics window
         [SerializeField] private TextMeshProUGUI bestRoundText;
+        [SerializeField] private TextMeshProUGUI fastestComboText;
         [SerializeField] private TextMeshProUGUI fastestAverageText;
         [SerializeField] private TextMeshProUGUI lastAverageText;
         [SerializeField] private TextMeshProUGUI[] comboSpeedTexts;
         [SerializeField] private float[] comboSpeeds = new float[10];
-        
-        private readonly string highestRound = "HIGHEST ROUND: ";
-        
+
+        private const string highestRound = "HIGHEST ROUND: ";
+
         private DataWrangler.GameData gd;
 
         private void Awake() {
             // Get the game data and sub to events
             gd = DataWrangler.GetGameData();
+            gd.eventData.OnGameFirstLaunch.AddListener(ResetPlayerStatistics);
             gd.roundData.OnLogTimer.AddListener(LogComboSpeed);
             gd.roundData.OnRoundComplete.AddListener(UpdateAverage);
             gd.playerData.OnBestRoundUpdated.AddListener(UpdateBestRound);
+            InitializeTextObjects();
+        }
+
+        private void ResetPlayerStatistics() {
+            // Reset the player statistics
+            PlayerPrefs.SetInt("BestRound", 0);
+            PlayerPrefs.SetFloat("FastestAverageComboSpeed", 0);
+            PlayerPrefs.SetFloat("LastAverageComboSpeed", 0);
+            PlayerPrefs.SetFloat("BestTime", 999);
             InitializeTextObjects();
         }
 
@@ -38,6 +51,15 @@ namespace UI.Statistics {
             
             // Set the last average text to 0
             lastAverageText.text = $"LAST ROUND AVERAGE: {0:00.00}";
+            
+            // Set the fastest combo text to the correct value
+            
+            if (Math.Abs(PlayerPrefs.GetFloat("BestTime") - 999) < 0.001) {
+                fastestComboText.text = "FASTEST COMBO: NONE";
+                return;
+            }
+            
+            fastestComboText.text = $"FASTEST COMBO: {PlayerPrefs.GetFloat("BestTime", 0):00.000}";
         }
 
         private void LogComboSpeed(int comboNumber, float comboSpeed) {
@@ -53,6 +75,16 @@ namespace UI.Statistics {
             else if (gd.roundData.currentRound != 2) {
                 comboSpeedTexts[^1].color = gd.uIData.DisabledComboText;
             }
+            SetBestTime(comboSpeed);
+        }
+
+        private void SetBestTime(float time) {
+            
+            if (time > PlayerPrefs.GetFloat("BestTime")) return;
+            
+            // If the time is faster than the fastest combo, update the fastest combo text
+            fastestComboText.text = $"FASTEST COMBO: {time:00.000}";
+            PlayerPrefs.SetFloat("BestTime", time);
         }
         
         private void UpdateBestRound(int bestRound) {

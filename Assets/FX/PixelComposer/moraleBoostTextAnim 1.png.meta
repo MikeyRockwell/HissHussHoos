@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: cfaec6291137b1b42b5599aa772cb079
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 46
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 525
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a22852f5a0c34cb207ac5bdd96af2
+      internalID: -933046630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 525
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b961c750536c84bb35f4571866b011
+      internalID: -2086711626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_2
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 525
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1062c4f162118e843b41250282285784
+      internalID: -2043301180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_3
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 525
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd221407e747264e92b3aa43cd27af7
+      internalID: -406958267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec45163ea2c40244af34cf476ce2af0
+      internalID: -2136754773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_5
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 450
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0e7c89cafa21b4185c607a4b3a03ae
+      internalID: 247602734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_6
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 450
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63ad5a1af6797e4d8e0a166f21fea18
+      internalID: 1972602435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_7
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 450
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6c04d59c4c70e4ebf6a86b7434c5e5
+      internalID: -2145383183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a314fc3ee028c694f98cc7b60805f087
+      internalID: -1785710025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_9
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 375
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f2f4a893e1c1b943a738643f6ee802f
+      internalID: -489544524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_10
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 375
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7b3653a0d4dd542ae54318fb548b06
+      internalID: 1505078604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_11
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 375
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb4c582c1bc0cd4b91e089349ba024b
+      internalID: -1794370160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723e44eb8d0fe074886ac0c538d61d05
+      internalID: 1660405248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_13
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 300
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6004193fe5fc3a429062407ca22205d
+      internalID: -288444218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_14
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 300
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036fa6dfe746273439c74a98136c9018
+      internalID: 1646150736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_15
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 300
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8efdd8d0770af04989bcd26f33f1bf5
+      internalID: -1660552498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b95e1138b5db6e4b996b91a1ef2ec07
+      internalID: 974720435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 225
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14f701059878ef40965143aead746cd
+      internalID: -1695221087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_18
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 225
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2a82c5dbbe0b742afeb79e77a80b70
+      internalID: 1596936991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_19
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 225
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7485cda2e6c27c4c9fda1097b48d0e1
+      internalID: -557077072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cc7888e4826514ab9222bfc1688b8e
+      internalID: 1181907577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_21
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 150
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198b1d5ac7668824cafa0263889d14b7
+      internalID: 21760005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_22
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 150
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b786ef10996d7345920dbe14cc8c36a
+      internalID: -2065501028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_23
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 150
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6f83c5be1b1ab4c837620ac4986073
+      internalID: 1279087877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b1559e5ef5a1c4e80ddc61df0ec8b6
+      internalID: 2025371911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_25
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 75
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc14a14780e7bca4cbc4cd70ee4bcf0b
+      internalID: 2132212117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_26
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 75
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5fe2cd31712ed4581c8c3185bace1d
+      internalID: 2127310727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_27
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 75
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d221a1b44bbd8434097f8c975db23300
+      internalID: 1069560032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca0e56dbef696c40af577b7df598b54
+      internalID: 175292100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: moraleBoostTextAnim 1_29
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 464
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4674f216389757468a6c61b2780c9f3
+      internalID: -2142736888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      moraleBoostTextAnim 1_0: -933046630
+      moraleBoostTextAnim 1_1: -2086711626
+      moraleBoostTextAnim 1_10: 1505078604
+      moraleBoostTextAnim 1_11: -1794370160
+      moraleBoostTextAnim 1_12: 1660405248
+      moraleBoostTextAnim 1_13: -288444218
+      moraleBoostTextAnim 1_14: 1646150736
+      moraleBoostTextAnim 1_15: -1660552498
+      moraleBoostTextAnim 1_16: 974720435
+      moraleBoostTextAnim 1_17: -1695221087
+      moraleBoostTextAnim 1_18: 1596936991
+      moraleBoostTextAnim 1_19: -557077072
+      moraleBoostTextAnim 1_2: -2043301180
+      moraleBoostTextAnim 1_20: 1181907577
+      moraleBoostTextAnim 1_21: 21760005
+      moraleBoostTextAnim 1_22: -2065501028
+      moraleBoostTextAnim 1_23: 1279087877
+      moraleBoostTextAnim 1_24: 2025371911
+      moraleBoostTextAnim 1_25: 2132212117
+      moraleBoostTextAnim 1_26: 2127310727
+      moraleBoostTextAnim 1_27: 1069560032
+      moraleBoostTextAnim 1_28: 175292100
+      moraleBoostTextAnim 1_29: -2142736888
+      moraleBoostTextAnim 1_3: -406958267
+      moraleBoostTextAnim 1_4: -2136754773
+      moraleBoostTextAnim 1_5: 247602734
+      moraleBoostTextAnim 1_6: 1972602435
+      moraleBoostTextAnim 1_7: -2145383183
+      moraleBoostTextAnim 1_8: -1785710025
+      moraleBoostTextAnim 1_9: -489544524
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

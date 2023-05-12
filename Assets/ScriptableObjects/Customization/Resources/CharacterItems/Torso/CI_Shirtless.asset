@@ -40,7 +40,7 @@ MonoBehaviour:
   - {r: 0.78431374, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.85490197, b: 0, a: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
-  price: 0
+  price: 1000
   defaultItem: 0
   unlocked: 0
   equipped: 0

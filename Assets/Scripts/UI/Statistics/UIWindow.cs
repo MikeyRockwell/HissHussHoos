@@ -1,10 +1,13 @@
 ﻿using Managers;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Utils;
 
 namespace UI.Statistics {
     public class UIWindow : MonoBehaviour {
+        
         // Window that scales open on the Y axis
         // And sets its own active state
         public Button openWindowButton;
@@ -25,20 +28,17 @@ namespace UI.Statistics {
             closeWindowButton.onClick.AddListener(CheckWindowStatus);
         }
 
-        protected bool CheckWindowOpen() {
-            return background.gameObject.activeSelf;
-        }
-
         protected void CheckWindowStatus() {
             if (background.gameObject.activeSelf) {
+                Log.Message("Window Button Pressed");
                 CloseWindow();
             }
             else {
                 OpenWindow();
             }
         }
-        
-        private void OpenWindow() {
+
+        protected void OpenWindow() {
             // Animate the window y scale using DOTween
             background.gameObject.SetActive(true);
             background.DOKill();
@@ -46,8 +46,8 @@ namespace UI.Statistics {
                 SetEase(gd.uIData.DefaultMenuEase);
 
         }
-        
-        private void CloseWindow() {
+
+        protected void CloseWindow() {
             // Animate the window closing using DOTween
             background.DOKill();
             background.DOScaleY(0, gd.uIData.MenuAnimSpeed * 0.5f).
@@ -55,7 +55,5 @@ namespace UI.Statistics {
                 OnComplete(()=> background.gameObject.SetActive(false)
                 );
         }
-        
-        
     }
 }

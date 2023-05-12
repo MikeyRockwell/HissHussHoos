@@ -40,7 +40,6 @@ namespace UI.CustomiseMenu {
             }
         }
 
-        
         private void DisableItemButtons() {
             foreach (RectTransform child in itemGrid) {
                 child.gameObject.SetActive(false);

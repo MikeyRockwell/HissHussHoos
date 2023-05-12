@@ -24,7 +24,7 @@ namespace UI {
             gd.roundData.OnComboBegin.AddListener(StartTimer);
             gd.roundData.OnComboComplete.AddListener(StopTimer);
             gd.eventData.OnGameOver.AddListener(CollapseTimer);
-            SetBestTimeText(PlayerPrefs.GetFloat("BestTime"));
+            // SetBestTimeText(PlayerPrefs.GetFloat("BestTime"));
             defaultTextScale = timerText.rectTransform.localScale;
             timerText.rectTransform.localScale = Vector3.zero;
         }
@@ -51,11 +51,11 @@ namespace UI {
 
             if (!(currentTime < PlayerPrefs.GetFloat("BestTime"))) return;
             
-            SetBestTimeText(currentTime);
-            PlayerPrefs.SetFloat("BestTime", currentTime);
+            // SetBestTimeText(currentTime);
+            // PlayerPrefs.SetFloat("BestTime", currentTime);
         }
         
-        private void SetBestTimeText(float time) {
+        /*private void SetBestTimeText(float time) {
 
             if (time == 0.0f) {
                 PlayerPrefs.SetFloat("BestTime", 999);
@@ -65,7 +65,7 @@ namespace UI {
             
             string bestTimeString = GetFormattedString(time);
             bestText.text = "FASTEST COMBO: " + bestTimeString;
-        }
+        }*/
         
         private string GetFormattedString(float time) {
             

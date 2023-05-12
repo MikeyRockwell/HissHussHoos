@@ -6,7 +6,7 @@ namespace Managers {
     public class DataWrangler : Singleton<DataWrangler> {
         
         public GameState GameState;
-        public LoadSaveData LoadSaveData;
+        [FormerlySerializedAs("LoadSaveData")] public DataSaverLoader dataSaverLoader;
         public GameEventData EventData;
         public CustomizationEvents customizationEvents;
         public TargetData TargetData;
@@ -18,8 +18,8 @@ namespace Managers {
         public UIData UIData;
         public ItemData ItemData;
 
-        public static LoadSaveData GetSaveData() {
-            return Instance.LoadSaveData;
+        public static DataSaverLoader GetSaverLoader() {
+            return Instance.dataSaverLoader;
         }
         
         public static GameData GetGameData() {

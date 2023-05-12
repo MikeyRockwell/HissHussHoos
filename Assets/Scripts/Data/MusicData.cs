@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Data {
     [CreateAssetMenu(fileName = "MusicData", menuName = "ScriptableObjects/Data/MusicData", order = 0)]
@@ -31,10 +32,14 @@ namespace Data {
         
         [Serializable]
         public struct MusicTrack {
+            public string artist;
+            [FormerlySerializedAs("name")] public string songName;
             public AudioClip clip;
             public int bpm;
 
-            public MusicTrack(AudioClip clip, int bpm) {
+            public MusicTrack(string artist, string songName, AudioClip clip, int bpm) {
+                this.artist = artist;
+                this.songName = songName;
                 this.clip = clip;
                 this.bpm = bpm;
             }

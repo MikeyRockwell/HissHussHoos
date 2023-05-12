@@ -28,7 +28,7 @@ MonoBehaviour:
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  price: 0
+  price: 150
   defaultItem: 0
-  unlocked: 1
-  equipped: 1
+  unlocked: 0
+  equipped: 0

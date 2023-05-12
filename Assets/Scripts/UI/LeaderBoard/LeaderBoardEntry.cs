@@ -2,6 +2,7 @@
 using Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI {
     public class LeaderBoardEntry : MonoBehaviour {
@@ -10,7 +11,7 @@ namespace UI {
         [SerializeField] private TextMeshProUGUI rankText;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI scoreText;
-        
+        [SerializeField] private Image playerBackground;
         [SerializeField] private Gradient rankGradient;
         
         private DataWrangler.GameData gd;
@@ -31,7 +32,7 @@ namespace UI {
             rect.localScale = Vector3.zero;
             
             // Set the color of the player name
-            Color playerNameColor = isPlayer ? gd.uIData.Gold : gd.uIData.HotPink;
+            Color playerNameColor = isPlayer ? gd.uIData.HotPink : rankGradient.Evaluate(rank / 10f);
             
             // Set the text of the entry
             rankText.text = rank.ToString();
@@ -43,7 +44,10 @@ namespace UI {
             
             // Set the score
             scoreText.text = score.ToString();
-
+            
+            // Set the background color
+            playerBackground.color = isPlayer ? gd.uIData.Gold : gd.uIData.DisabledComboText * 0.5f;
+            
             gameObject.SetActive(true);
         }
     }

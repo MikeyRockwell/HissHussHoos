@@ -19,11 +19,11 @@ namespace UI {
             // Cache components
             gd = DataWrangler.GetGameData();
             // Subscribe to events
-            gd.uIData.OnMoraleUpdated.AddListener(UpdateGraphics);
             gd.roundData.OnGameBegin.AddListener(ShowMeter);
             gd.eventData.OnGameOver.AddListener(HideMeter);
-            gd.playerData.OnMoraleBoost.AddListener(MoraleBoost);
-            gd.playerData.OnMoraleBoostEnd.AddListener(EndMoraleBoost);
+            gd.playerData.md.OnMoraleBoost.AddListener(MoraleBoost);
+            gd.playerData.md.OnMoraleBoostEnd.AddListener(EndMoraleBoost);
+            gd.playerData.md.OnMoraleUpdated.AddListener(UpdateGraphics);
             HideMeter();
         }
         

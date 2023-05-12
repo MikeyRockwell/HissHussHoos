@@ -20,7 +20,7 @@ namespace Data.Customization {
         
         public UnityEvent<SO_Item, Color> OnChangeItemColor;
 
-        [FormerlySerializedAs("loadSave")] [FormerlySerializedAs("SaveData")] public LoadSaveData loadSaveData;
+        public DataSaverLoader dataSaverLoader;
 
         public void ChangeItem(SO_Item newItem, bool save) {
             // Sets default item if none is current
@@ -43,7 +43,7 @@ namespace Data.Customization {
             OnChangeItemColor?.Invoke(CurrentItem, newColor);
             // SaveData.SaveGame();
             if (save) {
-                loadSaveData.SaveGame();
+                dataSaverLoader.SaveGame();
             }
         }
     }

@@ -15,14 +15,21 @@ namespace Managers {
         }
 
         private void Start() {
+            
+            DataSaverLoader dataSaverLoader = DataWrangler.GetSaverLoader();
 
             if (gd.gameState.firstLaunch) {
                 gd.gameState.firstLaunch = false;
+                
+                // Reset game to new
+                gd.eventData.FirstLaunch();
+                dataSaverLoader.ResetData();
+                gd.eventData.InitializeGame();
+                return;
             }
             
             // Load data
-            LoadSaveData loadSaveData = DataWrangler.GetSaveData();
-            loadSaveData.LoadGame();
+            dataSaverLoader.LoadGame();
             // Init game
             gd.eventData.InitializeGame();
         }

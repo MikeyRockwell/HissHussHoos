@@ -45,7 +45,7 @@ namespace UI.CustomiseMenu {
             // Open the window and set the item
             currentItem = item;
             // Check if the item is available
-            bool available = item.price <= gd.playerData.moralePoints;
+            bool available = item.price <= gd.playerData.md.moralePoints;
             unlockButton.enabled = available;
             // Init graphics
             InitGraphics(item, available);
@@ -65,10 +65,9 @@ namespace UI.CustomiseMenu {
             itemPrice.color = textColor;
             unlockText.color = textColor;
             // Set the text            
-            currentMorale.text = "MORAALE POINTS " + gd.playerData.moralePoints;
+            currentMorale.text = "MORAALE POINTS " + gd.playerData.md.moralePoints;
             itemName.text = item.itemName;
             itemPrice.text = item.price + " MP";
-            
         }
 
         private void CloseWindow() {
