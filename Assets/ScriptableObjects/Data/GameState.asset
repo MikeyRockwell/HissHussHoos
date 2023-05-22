@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315e311bd67b490aa8895e52a87add77, type: 3}
   m_Name: GameState
   m_EditorClassIdentifier: 
-  firstLaunch: 0
+  firstLaunch: 1

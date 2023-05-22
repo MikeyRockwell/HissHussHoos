@@ -20,7 +20,10 @@ namespace Managers {
             catch(Exception e) {
                 Log.Error(e.ToString());
             }
+            // Sign in anonymously for testing - possibly solution??
             await SignInAnonymously();
+            // Here we will put apple and google sign in
+            
         }
 
         public async Task SignInAnonymously() {

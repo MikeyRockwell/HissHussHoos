@@ -16,7 +16,7 @@ namespace Audio {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnPunchNormal.AddListener(PunchBag);
             gd.eventData.OnPunchWarmup.AddListener(PunchOnly);
-            gd.eventData.OnPunchBonus.AddListener(PunchOnly);
+            gd.eventData.OnPunchTimeAttack.AddListener(PunchOnly);
         }
 
         private void PunchBag(TARGET target) {

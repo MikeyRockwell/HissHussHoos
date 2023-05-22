@@ -5,164 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338fe14c-d9f2-4806-9ed9-c918acebb189" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/MoraleData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/MoraleData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/MoraleBoostFX.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/MoraleBoostFX.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/AnimatedFX.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/AnimatedFX.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/RoundPopUps.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FX/RoundPopUps.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimeAttackManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimeAttackManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimeAttackTarget.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimeAttackTarget.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/HISS HUSS THEME.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/HISS HUSS THEME.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/KA WANI KE - 91 bpm.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/KA WANI KE - 91 bpm.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/MAURI MAHI - 105 bpm.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/MAURI MAHI - 105 bpm.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/Stay In It - 124 bpm.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/Stay In It - 124 bpm.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/WHATTA BEAUTY - 93.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/WHATTA BEAUTY - 93.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/Wowee - 115 bpm.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/Music/Wowee - 115 bpm.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/LICENSE.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Resources/Config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Resources/Config/LootLockerConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Resources/Config/LootLockerConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/EndPointClass.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/EndPointClass.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/GetRequests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/GetRequests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerBaseServerAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerBaseServerAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerEndPoints.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerEndPoints.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerServerRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Client/LootLockerServerRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Documentation.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Documentation.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/AttributionHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/AttributionHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/ProjectSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/ProjectSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/VSAttribution.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Editor/VSAttribution.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerGameServerAPI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerGameServerAPI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerLogger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerLogger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerSDKManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerSDKManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerServerManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerServerManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerValidation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/LootLockerValidation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Platforms.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Platforms/PlatformManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Platforms/PlatformManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/AssetInstanceRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/AssetInstanceRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/AssetRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/AssetRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CharacterRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CharacterRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CollectableRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CollectableRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CrashesRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/CrashesRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/DropTableRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/DropTableRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/EventRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/EventRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LeaderboardRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LeaderboardRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LootLockerSessionRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LootLockerSessionRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LootLockerVerifyRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/LootLockerVerifyRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MapsRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MapsRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MessagesRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MessagesRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MiscRequests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MiscRequests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MissionsRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/MissionsRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PersitentPlayerStorageRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PersitentPlayerStorageRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PlayerRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PlayerRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/ProgressionsRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/ProgressionsRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PurchaseRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/PurchaseRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/ReportRequets.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/ReportRequets.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/TriggerEventsRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/TriggerEventsRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/UserGeneratedContentRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/UserGeneratedContentRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/WhiteLabelRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Requests/WhiteLabelRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Resources/LootLockerConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/Game/Resources/LootLockerConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/lootlocker.lootlockersdk.runtime.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/Runtime/lootlocker.lootlockersdk.runtime.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/LootLockerSDK/package.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HISSButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HISSButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/BoomBox/BoomBoxGrey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Sprites/BoomBox/BoomBoxGrey.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/TimeBar_001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Sprites/TimeBar_001.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_BoomBox.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_BoomBox.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_MoraleMeter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_MoraleMeter.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_MoraleMeter.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_MoraleMeter.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_SpriteNormal.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_SpriteNormal.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BonusTarget.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BonusTarget.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/RoundPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/RoundPopUp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Target.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Target.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Face.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Gloves.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Gloves.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Legs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Legs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_PunchingBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_PunchingBag.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Shoes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Shoes.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/GameState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/GameState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/MusicData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/MusicData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/PlayerData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/SaveData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/SaveData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/BoomBoxBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/BoomBoxBounce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/HurtAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/HurtAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/LoadSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataSaverLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/LoadSaveData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataSaverLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/PlayerData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/UIData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/UIData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/Authentication.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/Authentication.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagHoist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagHoist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/PunchAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/PunchAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/RoundData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/RoundData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TargetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/TargetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/BonusRoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimingRoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/BonusRoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimingRoundManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MoraleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MoraleManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemUnlockWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemUnlockWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/RoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/RoundManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BoomBoxControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BoomBoxControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MoraleMeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MoraleMeter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MoralePoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MoralePoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/TimerRecording.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/TimerRecording.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButtons.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartGameButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/BonusTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimingTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/BonusTarget.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimingTarget.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/ComboTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/ComboTimer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Black.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Black.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,6 +89,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/7f/ab25817b/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/8c/c8b79ec6/AwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cbc72d4a9767498db39486e941a498e346ac00/cc/f3c22dc9/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Z:/UNITY/HHH/Hiss Huss Hoos/Assets/Scripts/FX/Popup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mobile.android-logcat@1.3.2/Editor/AndroidTools/AndroidBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.8.1/Runtime/Core/UnityServices.cs" root0="SKIP_HIGHLIGHTING" />
@@ -226,32 +129,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.50038254",
-    "do_not_show_Android_plugin_suggestion": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.50038254&quot;,
+    &quot;do_not_show_Android_plugin_suggestion&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\mikey\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\mikey\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.2.14f1\Editor\Unity.exe" />
@@ -287,10 +190,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17668">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20256">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17668" />
+      <option name="pid" value="20256" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -379,6 +282,13 @@
       <workItem from="1683598509705" duration="4345000" />
       <workItem from="1683699580641" duration="3376000" />
       <workItem from="1683768893163" duration="10071000" />
+      <workItem from="1683856891151" duration="4040000" />
+      <workItem from="1684013310318" duration="1371000" />
+      <workItem from="1684274632632" duration="2031000" />
+      <workItem from="1684292092640" duration="6269000" />
+      <workItem from="1684373368646" duration="6651000" />
+      <workItem from="1684447350695" duration="10247000" />
+      <workItem from="1684715057023" duration="5603000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Repository!!">
       <created>1679967462436</created>

@@ -6,13 +6,14 @@ using BONUS = Data.RoundData.SpeedBonusType;
 namespace Managers {
     public class PopupManager : MonoBehaviour {
         
+        // Handles in game popups
+        // Speed bonus etc - not animated popups
+        
         [SerializeField] private Transform fastPopPool;
         [SerializeField] private Transform superFastPopPool;
-        [SerializeField] private Transform roundEndPopPool;
         [SerializeField] private Transform scoreBonusPopPool;
         [SerializeField] private Popup fastPopUpPrefab;
         [SerializeField] private Popup superPopUpPrefab;
-        [SerializeField] private Popup roundEndPopUpPrefab;
         [SerializeField] private Popup scoreBonusPopUpPrefab;
 
         private DataWrangler.GameData gd;
@@ -21,20 +22,8 @@ namespace Managers {
             // Subscribe events
             gd = DataWrangler.GetGameData();
             gd.roundData.OnSpeedBonus.AddListener(SpeedBonusPopUp);
-            gd.roundData.OnGameBegin.AddListener(RoundBeginPopUp);
-            // gd.roundData.OnRoundBegin.AddListener(RoundBeginPopUp);
-            gd.roundData.OnRoundInit.AddListener(RoundBeginPopUp);
         }
 
-        private void RoundBeginPopUp(int round) {
-            // Get a popup from the pool
-            // could be just one reusable popup
-            Popup newPop = GetPopUpFromPool(roundEndPopUpPrefab, roundEndPopPool);
-            // Initialize
-            newPop.gameObject.SetActive(true);
-            newPop.Init("ROUND " + round);
-        }
-        
         private void SpeedBonusPopUp(BONUS type) {
             // Get a speed popup and initialize it
             Popup newPop = GetBonusPopUpFromPool(type);

@@ -1,0 +1,1446 @@
+fileFormatVersion: 2
+guid: 46d07444ec0745b43a34222ebe8a5b51
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 36
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TimeAttackSS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f40f2a3f99bd1449807927d9efe73c
+      internalID: -1554080701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d8df4357bd2304cbc3f0cbb7bf4cb0
+      internalID: -1863541931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_2
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d31d03877ef6954eb23a1deb6926b80
+      internalID: 410619312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_3
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18192be500cc06744b646212ea217e17
+      internalID: -1520679721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94f72715aa7c964f97f12d1f1989e59
+      internalID: 121574102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0d87d235313a4468e1bbdbbeb4138f
+      internalID: 358434342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_6
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104db65ffecf16f4282499a53b57e493
+      internalID: -716958293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_7
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f25fbd4b6d5d44419e475aeb487f9b8
+      internalID: -2136724027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f650aadc37445498108c1a0a743f75
+      internalID: -190296293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968b20f3f96a01d40b597d39480cb5a6
+      internalID: -909443250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_10
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bd5f1b6f5837d46b20d8b92bfc6e73
+      internalID: -1921278755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_11
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0d16457e7807d4381dc75a7975eec6
+      internalID: -1094673131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef3b927b1321d04cb392d2908d34843
+      internalID: 1468137590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_13
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498f8a910b9766a4c970c96b6ff4261e
+      internalID: -1122094546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_14
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c941261e57affb4fac5cccef4ae66d2
+      internalID: -1547428464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_15
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecfae93e1b45e3449664a63ebd3c1d7
+      internalID: -627949068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d528a25d84e6354e922559175dbb6b4
+      internalID: -958653320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_17
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00ee420fa637b7459c0936dbb103621
+      internalID: 444490094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_18
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b30cdb778c9ca479897d4b76ca2098
+      internalID: 1418044939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_19
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3a759977bdea34a9f5dff4d17e9817
+      internalID: 1876789471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9240de1a8caf2174eb9ea1f6842d0a9d
+      internalID: 370286355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_21
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d52dfa0870cc648adcfc936f40378e
+      internalID: 1480860965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_22
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdb4c384f88c54429f5c5b4bd18ca26
+      internalID: 828245899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_23
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7503e2e2e997a2418c21879f68df76d
+      internalID: 535224119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f589b6dc44eea7540b090cedd7ed07e7
+      internalID: 1570665378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_25
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e1f17033e9be04d95c04b200777792
+      internalID: -2010769979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_26
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ab3a68aee23f24685e290eb16f0270
+      internalID: 420285914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_27
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373b2da4cbd5b724bb4d83f98cd83682
+      internalID: -736554740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb05336058fdea4587737b36fe1dd9c
+      internalID: -735342550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_29
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7166acebfcda89c4ea4bbf781d299053
+      internalID: -128596573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_30
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b07fe42a22d8a4d833624fc4ef12b5
+      internalID: 348656332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_31
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c3d3c9ce5659c46893a6b35b426f28
+      internalID: -1788975824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45f0abd92ce3e341ab9dee4c6419881
+      internalID: 1153290671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_33
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cabd34814afc1f4f949ee6f1bbae3a7
+      internalID: 956992652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_34
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b9cf850b464df449517fc79c9a98e0
+      internalID: -1956568486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_35
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9a01f067728bd4f8c6400f38fd07bf
+      internalID: -1455708116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da178c4cdab9fa488b236da640ffdbe
+      internalID: 573885035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_37
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5900a4161bcd0b498959dd8fc0d71fb
+      internalID: -59600979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_38
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d9d4e17b7fe554d97d4fb14b2d74ae
+      internalID: -8807522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_39
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674cdd71e1ae321498bbcca0c8cd1683
+      internalID: -17508903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6225be981cf680e4e99a8b8857666ed4
+      internalID: -1031552596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_41
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e8ad4de55d7314dbe147bd23e48a5d
+      internalID: 640347660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_42
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53771d365323f2409d9eb8c98537380
+      internalID: -679437538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_43
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f5594232ca98a4799820b8c8322237
+      internalID: 240531980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904595f9cbde81149a528307467bf157
+      internalID: 1637506696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_45
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063fdc04455812c41b5b58f47e455353
+      internalID: 1814940662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_46
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc22c8579691203459e1d5462b694024
+      internalID: 1851128806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_47
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ab157a039591f46905031b7da93f5e
+      internalID: 430090578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d2909f85c055f4eaf89032e49e6a3d
+      internalID: 374986811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_49
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d271c208fe5944d9a9d504ea67fd13
+      internalID: -1384140607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_50
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81371ce132b3c7459328da02bf0a5cc
+      internalID: -2055895740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_51
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0cf8f1abbf2ef41a11c32697b11a4b
+      internalID: 2068891630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db4f20e097ab1041bb749a6506dabb4
+      internalID: 770810082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_53
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8826d182cf501374c915f006e5d9b0f9
+      internalID: -817057306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_54
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d592b905351eb469ab20eef724f310
+      internalID: -421937528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_55
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a66fa8bec991e24084159829dabf34e
+      internalID: -524738648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818fa6b03fa0e184d93322bbfeba9aa5
+      internalID: 1502254789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_57
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fef77af270ba94db326b7c514571a2
+      internalID: 823928171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TimeAttackSS_58
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6765151572f3846bf1da3b4eeb79d2
+      internalID: 315900622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TimeAttackSS_0: -1554080701
+      TimeAttackSS_1: -1863541931
+      TimeAttackSS_10: -1921278755
+      TimeAttackSS_11: -1094673131
+      TimeAttackSS_12: 1468137590
+      TimeAttackSS_13: -1122094546
+      TimeAttackSS_14: -1547428464
+      TimeAttackSS_15: -627949068
+      TimeAttackSS_16: -958653320
+      TimeAttackSS_17: 444490094
+      TimeAttackSS_18: 1418044939
+      TimeAttackSS_19: 1876789471
+      TimeAttackSS_2: 410619312
+      TimeAttackSS_20: 370286355
+      TimeAttackSS_21: 1480860965
+      TimeAttackSS_22: 828245899
+      TimeAttackSS_23: 535224119
+      TimeAttackSS_24: 1570665378
+      TimeAttackSS_25: -2010769979
+      TimeAttackSS_26: 420285914
+      TimeAttackSS_27: -736554740
+      TimeAttackSS_28: -735342550
+      TimeAttackSS_29: -128596573
+      TimeAttackSS_3: -1520679721
+      TimeAttackSS_30: 348656332
+      TimeAttackSS_31: -1788975824
+      TimeAttackSS_32: 1153290671
+      TimeAttackSS_33: 956992652
+      TimeAttackSS_34: -1956568486
+      TimeAttackSS_35: -1455708116
+      TimeAttackSS_36: 573885035
+      TimeAttackSS_37: -59600979
+      TimeAttackSS_38: -8807522
+      TimeAttackSS_39: -17508903
+      TimeAttackSS_4: 121574102
+      TimeAttackSS_40: -1031552596
+      TimeAttackSS_41: 640347660
+      TimeAttackSS_42: -679437538
+      TimeAttackSS_43: 240531980
+      TimeAttackSS_44: 1637506696
+      TimeAttackSS_45: 1814940662
+      TimeAttackSS_46: 1851128806
+      TimeAttackSS_47: 430090578
+      TimeAttackSS_48: 374986811
+      TimeAttackSS_49: -1384140607
+      TimeAttackSS_5: 358434342
+      TimeAttackSS_50: -2055895740
+      TimeAttackSS_51: 2068891630
+      TimeAttackSS_52: 770810082
+      TimeAttackSS_53: -817057306
+      TimeAttackSS_54: -421937528
+      TimeAttackSS_55: -524738648
+      TimeAttackSS_56: 1502254789
+      TimeAttackSS_57: 823928171
+      TimeAttackSS_58: 315900622
+      TimeAttackSS_6: -716958293
+      TimeAttackSS_7: -2136724027
+      TimeAttackSS_8: -190296293
+      TimeAttackSS_9: -909443250
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

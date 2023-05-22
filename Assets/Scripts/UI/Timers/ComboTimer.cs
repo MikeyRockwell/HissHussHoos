@@ -26,7 +26,7 @@ namespace UI {
 
         private Vector3 defaultTextScale;
         private Vector3 defaultTimeBarScale;
-        private float currentTime;
+        public float currentTime;
         private bool active;
         private int frameUpdate;
         private TimeSpan ts;
@@ -52,7 +52,7 @@ namespace UI {
             gd.roundData.OnRoundBegin.AddListener(SetTimerSize);
             gd.roundData.OnComboBegin.AddListener(StartTimer);
             gd.roundData.OnComboComplete.AddListener(StopTimer);
-            gd.roundData.OnBonusRoundBegin.AddListener(SetBonusTimer);
+            gd.roundData.OnTimeAttackRoundBegin.AddListener(SetTimeAttackTimer);
         }
 
         private void NewGame() {
@@ -64,28 +64,29 @@ namespace UI {
             timerTextTop.rectTransform.localScale = Vector3.zero;
         }
 
-        private void SetBonusTimer() {
+        private void SetTimeAttackTimer() {
             SetTimerSize(0);
-            StartTimer(gd.roundData.bonusRoundLength);
+            StartTimer(gd.roundData.timeAttackLength);
         }
 
         private void SetTimerSize(int round) {
             
-            float width = 0;
-            
-            switch (gd.roundData.roundType) {
-                case RoundData.RoundType.warmup:
-                    break;
-                case RoundData.RoundType.normal:
-                    width = gd.roundData.roundTimeLimit * widthMultiplier;
-                    break;
-                case RoundData.RoundType.bonus:
-                    width = gd.roundData.bonusRoundLength * widthMultiplier / 2;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-            timerRect.sizeDelta = new Vector2(width, timerRect.sizeDelta.y);
+            // float width = 0;
+            //
+            // switch (gd.roundData.roundType) {
+            //     case RoundData.RoundType.warmup:
+            //         break;
+            //     case RoundData.RoundType.normal:
+            //         width = gd.roundData.roundTimeLimit * widthMultiplier;
+            //         break;
+            //     case RoundData.RoundType.timeAttack:
+            //         width = gd.roundData.timeAttackLength * widthMultiplier;
+            //         break;
+            //     default:
+            //         throw new ArgumentOutOfRangeException();
+            // }
+            // 
+            // timerRect.sizeDelta = new Vector2(width, timerRect.sizeDelta.y);
             ScaleUpTimer();
         }
 
@@ -116,12 +117,14 @@ namespace UI {
             switch (currentTime) {
                 case <= 0 when gd.roundData.roundType == RoundData.RoundType.normal:
                     timerTextTop.text = "TIMEOUT";
+                    timerTextBot.text = "TIMEOUT";
                     timerTextTop.color = gradient.Evaluate(slider.value);
+                    timerTextBot.color = gradient.Evaluate(slider.value);
                     gd.eventData.Miss();
                     active = false;
                     return;
-                case <= 0 when gd.roundData.roundType == RoundData.RoundType.bonus:
-                    gd.roundData.EndBonusRound();
+                case <= 0 when gd.roundData.roundType == RoundData.RoundType.timeAttack:
+                    gd.roundData.EndTimeAttackRound();
                     active = false;
                     ScaleTimerDown();
                     return;
@@ -129,7 +132,7 @@ namespace UI {
             
             timeString = new StringBuilder("TIMER: "+ GetFormattedString());
             timerTextTop.text = timeString.ToString();
-            // timerTextTop.color = gradient.Evaluate(slider.value);
+            timerTextTop.color = Color.black;
             timerTextBot.text = timeString.ToString();
             timerTextBot.color = gradient.Evaluate(slider.value);
         }
@@ -144,10 +147,24 @@ namespace UI {
 
             if (!active) return;
 
-            currentTime -= Time.deltaTime;
+            switch (gd.roundData.roundType) {
+                // Regular round timer
+                case RoundData.RoundType.normal:
+                    currentTime -= Time.deltaTime;
+                    break;
+                case RoundData.RoundType.timeAttack:
+                    currentTime = gd.roundData.timeAttackRoundClock;
+                    break;
+                case RoundData.RoundType.warmup:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
             frameUpdate++;
 
             UpdateGraphics();
+            // Update timer text every 3 frames
             if (frameUpdate % timerUpdateFrames == 0) {
                 FormatTimer();
             }

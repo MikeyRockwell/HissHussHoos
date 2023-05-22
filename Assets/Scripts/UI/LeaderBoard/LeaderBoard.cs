@@ -99,12 +99,18 @@ namespace UI {
                 if (index > 0) {
                     playerName = playerNameFull[..index];
                 }
+                // Extract the player number from the full name
+                string playerNumber = "";
+                if (index > 0) {
+                    playerNumber = playerNameFull[(index+1)..];
+                }
                 // Check if this is the player
                 bool isPlayer = playerNameFull == AuthenticationService.Instance.PlayerName;
                 // Initialize the entry
                 uIEntries[i].SetEntry(
                         rank: scoresResponse[i].Rank+1,
                         playerName: playerName,
+                        playerNumber: playerNumber, 
                         score: (int)scoresResponse[i].Score,
                         isPlayer: isPlayer
                     );

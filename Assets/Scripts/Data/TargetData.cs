@@ -26,7 +26,7 @@ namespace Data {
         
         // Bonus targets
         [TitleGroup("Bonus Round")] 
-        public List<BonusTarget> bonusTargets;
+        public List<TimingTarget> bonusTargets;
         public Vector2[] punchTargets;
         
         public float bonusTargetSpeedMultiplier = 1;

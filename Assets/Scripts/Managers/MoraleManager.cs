@@ -1,6 +1,7 @@
 ﻿using Data;
 using UnityEngine;
 using Data.Customization;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace Managers {
@@ -9,8 +10,9 @@ namespace Managers {
     // For morale points, the player data is the source of truth
     public class MoraleManager : MonoBehaviour {
 
-        [SerializeField] private int moralePointReduction = 25;
+        [FormerlySerializedAs("moralePointReduction")] [SerializeField] private int moraleReduction = 25;
         [SerializeField] private int moralePointsEarned;
+        [SerializeField] private float moralePointsMultiplier = 0.3f;
         
         private DataWrangler.GameData gd;
         private MoraleData moraleData;
@@ -57,7 +59,8 @@ namespace Managers {
             // Update the morale points to a maximum of 100
             moraleData.morale = Mathf.Min(moraleData.maxMorale, moraleData.morale + moraleAdded);
             // Update the morale points earned
-            moralePointsEarned += moraleAdded;
+            moralePointsEarned += Mathf.RoundToInt(moraleAdded * moralePointsMultiplier);
+            
             moraleData.UpdateMoralePoints(morale);
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
@@ -77,13 +80,12 @@ namespace Managers {
         private void RemoveMorale() {
             if (moraleData.moraleBoostActive) return;
             // Remove morale points to a minimum of zero
-            moraleData.morale = Mathf.Max(0, moraleData.morale - moralePointReduction);
+            moraleData.morale = Mathf.Max(0, moraleData.morale - moraleReduction);
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
         }
         
         private void EndMoraleBoost() {
-            Log.Message("Morale boost ended!", gd.uIData.LaserGreen);
             // Reset the morale points to zero
             moraleData.ResetMorale();
             moraleData.OnMoraleBoostEnd?.Invoke();

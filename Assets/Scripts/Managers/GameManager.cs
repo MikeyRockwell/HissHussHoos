@@ -1,6 +1,5 @@
 ﻿using Data;
 using UnityEngine;
-using Utils;
 
 namespace Managers {
     public class GameManager : MonoBehaviour {
@@ -19,13 +18,18 @@ namespace Managers {
             DataSaverLoader dataSaverLoader = DataWrangler.GetSaverLoader();
 
             if (gd.gameState.firstLaunch) {
-                gd.gameState.firstLaunch = false;
-                
-                // Reset game to new
-                gd.eventData.FirstLaunch();
-                dataSaverLoader.ResetData();
-                gd.eventData.InitializeGame();
-                return;
+
+                if (PlayerPrefs.GetInt("FirstLaunch", 1) == 1) {
+                    
+                    gd.gameState.firstLaunch = false;
+                    PlayerPrefs.SetInt("FirstLaunch", 0);
+                    
+                    // Reset game to new
+                    gd.eventData.FirstLaunch();
+                    dataSaverLoader.ResetData();
+                    gd.eventData.InitializeGame();
+                    return;
+                }
             }
             
             // Load data

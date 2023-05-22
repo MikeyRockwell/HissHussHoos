@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
@@ -11,7 +12,7 @@ namespace Data {
         // GAME EVENTS
         // Subscribable and callable events 
         // For game objects to link behaviour to
-        
+        public bool inputEnabled;
         // Called when the game is launched for the first time
         public UnityEvent OnGameFirstLaunch;
         
@@ -21,7 +22,7 @@ namespace Data {
         // Different punches
         public UnityEvent<TARGET> OnPunchWarmup;
         public UnityEvent<TARGET> OnPunchNormal;
-        public UnityEvent<TARGET> OnPunchBonus;
+        public UnityEvent<TARGET> OnPunchTimeAttack;
 
         // Hit and Miss target
         public UnityEvent<int> OnHit;
@@ -36,6 +37,7 @@ namespace Data {
         }
         
         public void InitializeGame() {
+            inputEnabled = true;
             OnGameInit?.Invoke();
         }
 
@@ -43,11 +45,14 @@ namespace Data {
             OnPunchWarmup?.Invoke(target);
         }
         public void PunchNormal(TARGET target) {
+            Log.Message("Punching Normal");
+            if (!inputEnabled) return;
             OnPunchNormal?.Invoke(target);
         }
 
-        public void PunchBonus(TARGET target) {
-            OnPunchBonus?.Invoke(target);
+        public void PunchTimeAttack(TARGET target) {
+            if (!inputEnabled) return;
+            OnPunchTimeAttack?.Invoke(target);
         }
 
         public void Hit(int step) {

@@ -24,7 +24,7 @@ namespace UI {
             initialized = true;
         }
 
-        public void SetEntry(int rank, string playerName, int score, bool isPlayer) {
+        public void SetEntry(int rank, string playerName, string playerNumber, int score, bool isPlayer) {
             // Check that the class has been initialized
             if (!initialized) Init();
             
@@ -39,7 +39,7 @@ namespace UI {
             rankText.color = rankGradient.Evaluate(rank / 10f);
             
             // Set the player name 
-            nameText.text = playerName;
+            nameText.text = playerName + " <size=75%>#" + playerNumber + "</size>";
             nameText.color = playerNameColor;
             
             // Set the score

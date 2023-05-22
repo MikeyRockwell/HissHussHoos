@@ -28,7 +28,7 @@ namespace Animation {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnPunchNormal.AddListener(Punch);
             gd.eventData.OnPunchWarmup.AddListener(Punch);
-            gd.eventData.OnPunchBonus.AddListener(Punch);
+            gd.eventData.OnPunchTimeAttack.AddListener(Punch);
             
             // Listen for item changes on the character part
             part.OnChangeItem.AddListener(UpdateSprites);

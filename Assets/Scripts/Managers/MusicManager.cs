@@ -43,8 +43,8 @@ namespace Managers {
         
         // TODO Put this in a class on the text object
         private void DisplayTrackName() {
+            
             // Display track name animation
-
             DOTween.Kill(trackText);
             trackText.localScale = Vector3.zero;
             
@@ -57,7 +57,7 @@ namespace Managers {
             trackNameText.text = "<color=#" + trackNameColor + ">" + currentTrack.songName;
             
             Sequence seq = DOTween.Sequence(trackText);
-            seq.Append(trackText.DOScale(1, 0.5f).SetEase(Ease.OutBack));
+            seq.Append(trackText.DOScale(2, 0.5f).SetEase(Ease.OutBack));
             seq.AppendInterval(5f);
             seq.Append(trackText.DOScale(0, 0.5f).SetEase(Ease.InBack));                
         }

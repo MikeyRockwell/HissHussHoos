@@ -31,23 +31,12 @@ namespace UI.CustomiseMenu {
             
             gd.roundData.OnGameBegin.AddListener(CloseMenu);
 
-            // SetWidth(windowScreenPercent);
             CloseMenu();
         }
-        
-        
-        // Adjust the menu width to a percentage of the screen width
-        // private void SetWidth(float percent) {
-        //     var rect = xf.rect;
-        //     rect.width = Screen.width * (percent / 100);
-        //     xf.sizeDelta = rect.size;
-        // }
 
         private void OpenMenu(SO_CharacterPart arg0) {
             gameObject.SetActive(true);
-#if UNITY_EDITOR
-            // SetWidth(windowScreenPercent);
-#endif
+
             xf.DOKill();
             xf.DOScaleX(1, animSpeed);
         }

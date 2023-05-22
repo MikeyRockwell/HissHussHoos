@@ -16,7 +16,7 @@ namespace Animation {
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnRoundBegin.AddListener(LowerBag);
-            gd.roundData.OnBonusRoundBegin.AddListener(RaiseBag);
+            gd.roundData.OnTimeAttackRoundBegin.AddListener(RaiseBag);
             gd.eventData.OnGameOver.AddListener(RaiseBag);
             xf = transform;
         }

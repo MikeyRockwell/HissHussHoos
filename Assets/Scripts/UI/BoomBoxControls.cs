@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using Utils;
+using Managers;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
@@ -27,10 +28,15 @@ namespace UI {
             playButton.onClick.AddListener(Play);
             fastForwardButton.onClick.AddListener(FastForward);
             rewindButton.onClick.AddListener(Rewind);
-            
-            slider.value = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
             slider.onValueChanged.AddListener(SetMusicVolume);
-            SetMusicVolume(slider.value);
+        }
+
+        private void Start() {
+            float volume = PlayerPrefs.GetFloat("MusicVolume", 0.75f);
+            
+            SetMusicVolume(volume);
+            slider.value = volume;
+            Log.Message("Volume level loaded = " + slider.value, Color.yellow);
         }
 
         private void SetMusicVolume(float volume) {

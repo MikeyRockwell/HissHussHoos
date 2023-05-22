@@ -29,15 +29,15 @@ MonoBehaviour:
     songName: Wowee
     clip: {fileID: 8300000, guid: 01457c18458de93468a4f4e9c43eb80c, type: 3}
     bpm: 115
-  - artist: William Waiirua feat Vince Harder, Kings
+  - artist: William Waiirua<br>feat Vince Harder, Kings
     songName: Whatta Beauty
     clip: {fileID: 8300000, guid: 16db45043401740429d2a9089d4f86e8, type: 3}
     bpm: 93
-  - artist: 'William Waiirua feat Vince Harder, Kings '
+  - artist: 'William Waiirua<br>feat Vince Harder, Kings '
     songName: Ka Wani Ke
     clip: {fileID: 8300000, guid: 436359f5f5e94374f8e40c23381eac66, type: 3}
     bpm: 0
-  currentTrackIndex: 1
+  currentTrackIndex: 4
   playing: 1
   playByDefault: 1
   OnPressPlay:

@@ -44,8 +44,8 @@ namespace UI {
                 case RoundData.RoundType.normal:
                     gd.eventData.PunchNormal(target);
                     break;
-                case RoundData.RoundType.bonus:
-                    gd.eventData.PunchBonus(target);
+                case RoundData.RoundType.timeAttack:
+                    gd.eventData.PunchTimeAttack(target);
                     break;
                 default:
                     break;

@@ -1,4 +1,6 @@
-﻿using UI;
+﻿using Data;
+using FX;
+using UI;
 using Utils;
 using UnityEngine;
 using Unity.Services.Authentication;
@@ -9,6 +11,7 @@ namespace Managers {
         [SerializeField] private UnityAuthentication authentication;
         [SerializeField] private LeaderBoard Leaderboard;
         [SerializeField] private MoraleManager moraleManager;
+        [SerializeField] private RoundPopUps roundPops;
         
         private DataWrangler.GameData gd;
         
@@ -37,6 +40,10 @@ namespace Managers {
                 AuthenticationService.Instance.SignOut();
                 AuthenticationService.Instance.ClearSessionToken();
                 SignIn();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                roundPops.InitRoundPopup(RoundData.RoundType.timeAttack);
             }
         }
 

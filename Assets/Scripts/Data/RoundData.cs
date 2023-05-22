@@ -1,41 +1,53 @@
-﻿using System.Collections;
-using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
+using Sirenix.OdinInspector;
+using UnityEngine.Serialization;
+using Utils;
 
 namespace Data {
     [CreateAssetMenu(fileName = "RoundData", menuName = "ScriptableObjects/Data/RoundData", order = 0)]
     public class RoundData : ScriptableObject {
 
-        public enum RoundType {warmup, normal, bonus}
+        public enum RoundType {warmup, normal, timeAttack, precision}
         public RoundType roundType;
         public enum SpeedBonusType {fast, super}
 
-        public float roundTextTime = 1.5f;
+        public float roundTextTime = 2.1f;
         public int currentRound;
         public int roundLength;
         public int roundStep;
-        public int bonusRound = 1;
         public float maxRoundTime;
         public float minRoundTime;
         public float roundTimeLimit;
         public float lastComboTime;
         
         // Regular Game Mode HHH
-        [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnGameBegin;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundInit;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundBegin;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<int> OnRoundComplete;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<float> OnComboBegin;
-        [FoldoutGroup("Regular Events")]            public UnityEvent OnComboComplete;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<SpeedBonusType> OnSpeedBonus;
-        [FoldoutGroup("Regular Events")]            public UnityEvent<int, float> OnLogTimer;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<int> OnGameBegin;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<int> OnRoundInit;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<int> OnRoundBegin;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<int> OnRoundComplete;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<float> OnComboBegin;
+        [FoldoutGroup("Regular Events")]       public UnityEvent OnComboComplete;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<SpeedBonusType> OnSpeedBonus;
+        [FoldoutGroup("Regular Events")]       public UnityEvent<int, float> OnLogTimer;
 
-        // Bonus Round Game Mode
-        [FoldoutGroup("Bonus Round Events")]        public float bonusRoundLength;
-        [FoldoutGroup("Bonus Round Events")]        public float bonusTime;
-        [FoldoutGroup("Bonus Round Events")]        public UnityEvent OnBonusRoundBegin;
-        [FoldoutGroup("Bonus Round Events")]        public UnityEvent<int> OnBonusRoundComplete;
+        // Time Attack Game Mode
+        [TitleGroup("TIME ATTACK ROUND")]
+        public int timeAttackRoundDivisor = 4;
+        public float timeAttackLength;
+        public float timeAttackRoundClock;
+        public float timeAttackPenalty;
+        public float timeAttackReward;
+        // Events
+        [FoldoutGroup("Time Attack Events")]public UnityEvent OnTimeAttackRoundBegin;
+        [FoldoutGroup("Time Attack Events")]public UnityEvent OnTimeAttackTargetTimedOut;
+        [FoldoutGroup("Time Attack Events")]public UnityEvent<int> OnTimeAttackRoundComplete;
+        
+        // Precision Game Mode
+        [TitleGroup("PRECISION ROUND")]
+        public int precisionRoundDivisor = 8;
+        
 
         private void CalcRoundTime() {
             // Calculation for round time limit - needs refining
@@ -53,7 +65,6 @@ namespace Data {
 
         public void BeginRound() {
             roundStep = 0;
-            currentRound++;
             OnRoundBegin?.Invoke(currentRound);
         }
 
@@ -67,6 +78,7 @@ namespace Data {
             roundStep++;
             if (roundStep == roundLength) {
                 // If we are at the end of the round
+                currentRound++;
                 OnComboComplete?.Invoke();
                 OnRoundComplete?.Invoke(currentRound);
                 return;
@@ -85,19 +97,25 @@ namespace Data {
             OnSpeedBonus?.Invoke(type);
         }
 
-        public void BeginBonusRound() {
-            OnBonusRoundBegin?.Invoke();
+        public void BeginTimeAttackRound() {
+            Log.Message("Beginning Time Attack Round!", Color.blue);            
+            OnTimeAttackRoundBegin?.Invoke();
+            // currentRound++;
+        }
+        
+        public void TimeAttackTargetTimedOut() {
+            OnTimeAttackTargetTimedOut?.Invoke();
+        }
+
+        public void EndTimeAttackRound() {
             currentRound++;
+            OnTimeAttackRoundComplete?.Invoke(currentRound);
         }
 
-        public void EndBonusRound() {
-            OnBonusRoundComplete?.Invoke(currentRound);
-        }
-
-        public IEnumerator BonusRoundTimer() {
-            bonusTime = bonusRoundLength;
-            while (bonusTime > 0) {
-                bonusTime -= Time.deltaTime;
+        public IEnumerator TimeAttackRoundTimer() {
+            timeAttackRoundClock = timeAttackLength;
+            while (timeAttackRoundClock > 0) {
+                timeAttackRoundClock -= Time.deltaTime;
                 yield return null;
             }
         }
