@@ -24,6 +24,7 @@ namespace Managers {
             if (Input.GetKeyDown(KeyCode.R) && Input.GetKey(KeyCode.LeftShift)) {
                 Log.Message("Resetting All Items", gd.uIData.HotPink);
                 gd.itemData.ResetItems();
+                
             }
 
             if (Input.GetKey(KeyCode.UpArrow)) {

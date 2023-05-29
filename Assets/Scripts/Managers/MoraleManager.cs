@@ -11,7 +11,7 @@ namespace Managers {
     public class MoraleManager : MonoBehaviour {
 
         [FormerlySerializedAs("moralePointReduction")] [SerializeField] private int moraleReduction = 25;
-        [SerializeField] private int moralePointsEarned;
+        [SerializeField] private float moralePointsEarned;
         [SerializeField] private float moralePointsMultiplier = 0.3f;
         
         private DataWrangler.GameData gd;
@@ -53,15 +53,15 @@ namespace Managers {
         }
 
         public void AddMorale(int morale) {
-            // If morale boost is active multiply the amount of morale by the boost multiplier
-            int moraleAdded = Mathf.RoundToInt(
-                moraleData.moraleBoostActive ? morale * moraleData.moraleBoostMultiplier : morale);
-            // Update the morale points to a maximum of 100
-            moraleData.morale = Mathf.Min(moraleData.maxMorale, moraleData.morale + moraleAdded);
-            // Update the morale points earned
-            moralePointsEarned += Mathf.RoundToInt(moraleAdded * moralePointsMultiplier);
+            // // If morale boost is active multiply the amount of morale by the boost multiplier
+            // int moraleAdded = Mathf.RoundToInt(
+            //     moraleData.moraleBoostActive ? morale * moraleData.moraleBoostMultiplier : morale);
             
-            moraleData.UpdateMoralePoints(morale);
+            // Update the morale to a maximum of 100
+            moraleData.morale = Mathf.Min(moraleData.maxMorale, moraleData.morale + morale);
+            
+            UpdateMoralePoints(morale);
+            
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
             // If the player has reached the maximum morale, trigger the morale boost event
@@ -76,7 +76,14 @@ namespace Managers {
             // Start a timer to reset the morale
             Invoke(nameof(EndMoraleBoost), moraleData.moraleBoostDuration);
         }
-        
+
+        private void UpdateMoralePoints(int moraleAdded) {
+            // Update the morale points earned
+            float mpEarned = moraleAdded * moralePointsMultiplier;
+            moralePointsEarned += mpEarned;
+            moraleData.UpdateMoralePoints(mpEarned);
+        }
+
         private void RemoveMorale() {
             if (moraleData.moraleBoostActive) return;
             // Remove morale points to a minimum of zero

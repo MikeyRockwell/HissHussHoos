@@ -15,6 +15,8 @@ namespace FX {
         [SerializeField] private Ease animEase;
         // TEXT
         [SerializeField] private TextMeshPro textMesh;
+        // AUDIO
+        [SerializeField] private Audio.SoundFXPlayer soundFX;
 
 
         public void Init() {
@@ -51,6 +53,7 @@ namespace FX {
         }
 
         private void Animate() {
+            if (soundFX != null) soundFX.PlayRandomAudio();
             Sequence seq = DOTween.Sequence();
             seq.Append(xf.DOScale(Vector2.one, scaleDuration).SetEase(animEase)).
                 AppendInterval(0.3f).

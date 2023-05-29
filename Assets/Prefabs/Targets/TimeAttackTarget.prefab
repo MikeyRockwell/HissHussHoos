@@ -151,5 +151,5 @@ MonoBehaviour:
   type: 0
   textMesh: {fileID: 4264570238441156869}
   xf: {fileID: 1394730210834547749}
-  timeToKill: 1
+  timeToKill: 0.8
   spawnPosition: {x: 0, y: -173}

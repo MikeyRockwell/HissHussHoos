@@ -1,5 +1,4 @@
 ﻿using System;
-using Data;
 using Managers;
 using UnityEngine;
 using TYPE = Data.RoundData.RoundType;
@@ -10,13 +9,14 @@ namespace FX {
         // Handle round popups based on round type
         [SerializeField] private AnimatedFX regularRoundPop;
         [SerializeField] private AnimatedFX timeAttackPop;
+        [SerializeField] private RoundNumberPopUp roundNumber;       
         
         private DataWrangler.GameData gd;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
             // Hide all popups
-            // regularRoundPop.gameObject.SetActive(false);
+            regularRoundPop.gameObject.SetActive(false);
             timeAttackPop.gameObject.SetActive(false);
         }
         
@@ -26,6 +26,7 @@ namespace FX {
                     break;
                 case TYPE.normal:
                     regularRoundPop.Init();
+                    roundNumber.Init(gd.roundData.currentRound);
                     Invoke(nameof(BeginRound), regularRoundPop.animationLength);
                     break;
                 case TYPE.timeAttack:

@@ -10,11 +10,10 @@ namespace Data {
         // from the source, to the sound manager
         // Each audio event needs an audio source as well
         // Is there a cleaner way to do this?
-        public UnityEvent<AudioEvent, AudioSource> OnAudioEvent;
+        public UnityEvent<AudioEvent> OnAudioEvent;
 
-        public void PlayAudio(AudioEvent audioEvent, AudioSource source) {
-            OnAudioEvent?.Invoke(audioEvent, source);
+        public void PlayAudioDetached(AudioEvent audioEvent) {
+            OnAudioEvent?.Invoke(audioEvent);
         }
-
     }
 }

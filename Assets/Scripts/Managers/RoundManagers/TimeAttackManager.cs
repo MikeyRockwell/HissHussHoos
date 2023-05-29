@@ -1,6 +1,7 @@
-﻿using Data;
-using UI;
+﻿using UI;
+using Data;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using TARGET = Data.TargetData.Target;
 
@@ -14,9 +15,11 @@ namespace Managers {
         
         [SerializeField] private Transform targetPool;
         [SerializeField] private TimeAttackTarget targetPrefab;
+        [SerializeField] private TextMeshProUGUI streakText;
         
         private DataWrangler.GameData gd;
         private TimeAttackTarget currentTATarget;
+        private int streak; 
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
@@ -27,6 +30,10 @@ namespace Managers {
         }
         
         private void BeginRound() {
+            streak = 0;
+            FormatStreakText();
+            streakText.gameObject.SetActive(true);
+            streakText.DOScale(1, 0.2f).From(0);
             SpawnNewTarget();
             StartCoroutine(gd.roundData.TimeAttackRoundTimer());
         }
@@ -56,13 +63,26 @@ namespace Managers {
         
         private void CheckTarget(TARGET target) {
             if (target != currentTarget) {
+                ResetStreak();
                 gd.roundData.timeAttackRoundClock -= gd.roundData.timeAttackPenalty;
                 return;
             }
 
             currentTATarget.DisableSelfHit();
-            gd.roundData.timeAttackRoundClock += gd.roundData.timeAttackReward;
+            streak++;
+            FormatStreakText();
+            // Add score based on streak
+            gd.playerData.UpdateScore(1 + streak);
             SpawnNewTarget();
+        }
+
+        private void ResetStreak() {
+            streak = 0;
+            FormatStreakText();
+        }
+
+        private void FormatStreakText() {
+            streakText.text = "STREAK: " + streak;
         }
 
         private void TargetTimeOut() {
@@ -71,6 +91,7 @@ namespace Managers {
         }
         
         private void EndRound(int unused) {
+            streakText.DOScale(0, 0.2f).OnComplete(()=>streakText.gameObject.SetActive(false));
             currentTATarget.DisableSelfMiss();
         }
     }

@@ -1,0 +1,1446 @@
+fileFormatVersion: 2
+guid: f9cf959af6fcef142ae7a6478bbcd2fb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 36
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoundSS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b8e10f5c50499418d1de9540547774
+      internalID: 30246072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a35b7436ccc794db5369067b875953
+      internalID: 556277795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_2
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ecfed8a495a5a45899c2097fd27de8
+      internalID: 1288349178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_3
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 2100
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1597d967c5a6dd8488343be35a9464ac
+      internalID: -1507211228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f92d6107ba971c4aa8eba1f7353355c
+      internalID: 1709194303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c570a4fc4e2614e82951593ad344ba
+      internalID: 2026770102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_6
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c17639339bec74baab7ad36e04ed1d
+      internalID: -393819518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_7
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1950
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf15f26a1b44754cb6cc8642bbba095
+      internalID: -314822376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e932e6c2f2272c343898d3cdecd47e9a
+      internalID: 886563792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6044ad32fa9fc4545a8067a3d9d92c44
+      internalID: 1082800693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_10
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e77a4f2cb2423a43abd9ef9f4f38758
+      internalID: -1592616820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_11
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1800
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ced6a119971a4245a0c81f238e8e1d7
+      internalID: -1053533458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc569334bbf8b04f99196069edbbc50
+      internalID: 601600326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_13
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9579fc8c25b0bf41b792eef18ad96e8
+      internalID: -978219844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_14
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e88bff551749747a5d68a9cb5a9a57
+      internalID: 952385008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_15
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1650
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fb1d28e2a8c0a4cb363ff21159ba10
+      internalID: -1270002312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c1cb6c53882bd40861a4a28070a154
+      internalID: -1501378092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_17
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0c6d08736d8db4997e933e333deb49
+      internalID: 216419187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_18
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3123b65794f0c7e4397b8f228ee1c5c5
+      internalID: 796685657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_19
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1500
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbebcc89707610447be96ecc38d12208
+      internalID: 2100380148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4761355f59c849645b9841c7e3f6638d
+      internalID: -837398314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_21
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e9823bc0a440c45b61680ac6644221
+      internalID: -666372442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_22
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb467db15c5968541bf58c7f14113c19
+      internalID: 1224221173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_23
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1350
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1a6ec92269d3f488732e2119a2bec5
+      internalID: 411456647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4a20fdd38e31f438133c0b462b4b44
+      internalID: -1520736892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_25
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f9bdd08f38dc847bf652c9521257ba
+      internalID: 1829065183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_26
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc972b1bce8c69478fc93860da1891f
+      internalID: -1535575993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_27
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1200
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f0e1cc24ece06468915be9add6017a
+      internalID: -1691728008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415f7eb354024f947b7f6c4f8c13d43e
+      internalID: -787532294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_29
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9078e040948cc743a129ce78326bf9c
+      internalID: 1906023494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_30
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bde37e4e8d8b447b9e46565c6b4c89
+      internalID: 2116396511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_31
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1050
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d355267d52c6b428737f0c71f144c9
+      internalID: -1125180189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c01ef407e19164cba896e68c4d9425
+      internalID: 1893416277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_33
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900ad900543d81d43bcd4b1a80c3505b
+      internalID: -1045056017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_34
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8861eaad51fa7e64184a84542bec6fa3
+      internalID: 429887306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_35
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 900
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde55bf986087c4dbdf52d79bdcd40d
+      internalID: 443846132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9786a56e6027bbc47953de2ddc19163b
+      internalID: 410552797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_37
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311e5439763424244ba05e9482b4c294
+      internalID: -43320004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_38
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c150d2b9bcc2e42a4fc7b67eaf04a7
+      internalID: -661127800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_39
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 750
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0c27aa2d1a3c641b543513ca4330f7
+      internalID: -124425608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91caa1107cb38fb40977e7bb2c40b64d
+      internalID: -1896526400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_41
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369d4d6837896c34da933ac06f3f047a
+      internalID: 1604290371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_42
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f27d1c3f9cacf47aed9605828edc90
+      internalID: 1687715012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_43
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 600
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fe35a624903ea45ad8895bdfd10179
+      internalID: -746675662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d0616f3cbf5904cad463a9fff1889c
+      internalID: -2062314502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_45
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3aba14e65e3ced4c84d33b3e9c0c920
+      internalID: 1698773650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_46
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d340b96ea8bed2046b684731596ad535
+      internalID: 1447573976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_47
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 450
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d60a8a083451a4a9d24e8c1fbd98a8
+      internalID: -733751032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74648fe6b65a7e4885fc099e9cf81f0
+      internalID: 1813420359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_49
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9765ca02bdf0b6e439ae93758041fd7b
+      internalID: -1869111559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_50
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7552b82e703250d4a802a5a1d36d577d
+      internalID: 936400323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_51
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 300
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a7c3bb3eef43349b9c9bf0da8b988a
+      internalID: -1679435800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70988f2401305b4aaf9da8c4d020f89
+      internalID: 274893518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_53
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1222735bf746fa4b969a81be1584cce
+      internalID: -152134616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_54
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590d33b6569287640b33efd2f477f910
+      internalID: 518140683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_55
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 150
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdc841c5dced0e4897ac13e238ccb1a
+      internalID: -1524808937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce54828d0cda5a46867c8c03f0ac18e
+      internalID: 2127395372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_57
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24744b4abae57b4bb90307a106597fd
+      internalID: 920683376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundSS_58
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 570
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4fd73a9141f744eaf9fc280465eb8b
+      internalID: -782808072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RoundSS_0: 30246072
+      RoundSS_1: 556277795
+      RoundSS_10: -1592616820
+      RoundSS_11: -1053533458
+      RoundSS_12: 601600326
+      RoundSS_13: -978219844
+      RoundSS_14: 952385008
+      RoundSS_15: -1270002312
+      RoundSS_16: -1501378092
+      RoundSS_17: 216419187
+      RoundSS_18: 796685657
+      RoundSS_19: 2100380148
+      RoundSS_2: 1288349178
+      RoundSS_20: -837398314
+      RoundSS_21: -666372442
+      RoundSS_22: 1224221173
+      RoundSS_23: 411456647
+      RoundSS_24: -1520736892
+      RoundSS_25: 1829065183
+      RoundSS_26: -1535575993
+      RoundSS_27: -1691728008
+      RoundSS_28: -787532294
+      RoundSS_29: 1906023494
+      RoundSS_3: -1507211228
+      RoundSS_30: 2116396511
+      RoundSS_31: -1125180189
+      RoundSS_32: 1893416277
+      RoundSS_33: -1045056017
+      RoundSS_34: 429887306
+      RoundSS_35: 443846132
+      RoundSS_36: 410552797
+      RoundSS_37: -43320004
+      RoundSS_38: -661127800
+      RoundSS_39: -124425608
+      RoundSS_4: 1709194303
+      RoundSS_40: -1896526400
+      RoundSS_41: 1604290371
+      RoundSS_42: 1687715012
+      RoundSS_43: -746675662
+      RoundSS_44: -2062314502
+      RoundSS_45: 1698773650
+      RoundSS_46: 1447573976
+      RoundSS_47: -733751032
+      RoundSS_48: 1813420359
+      RoundSS_49: -1869111559
+      RoundSS_5: 2026770102
+      RoundSS_50: 936400323
+      RoundSS_51: -1679435800
+      RoundSS_52: 274893518
+      RoundSS_53: -152134616
+      RoundSS_54: 518140683
+      RoundSS_55: -1524808937
+      RoundSS_56: 2127395372
+      RoundSS_57: 920683376
+      RoundSS_58: -782808072
+      RoundSS_6: -393819518
+      RoundSS_7: -314822376
+      RoundSS_8: 886563792
+      RoundSS_9: 1082800693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

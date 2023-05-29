@@ -26,6 +26,8 @@ namespace Animation {
             gd.eventData.OnPunchWarmup.AddListener(PlayPunchFX);
             gd.eventData.OnPunchNormal.AddListener(PlayPunchFX);
             gd.eventData.OnPunchNormal.AddListener(PlayImpactFX);
+            gd.eventData.OnPunchTimeAttack.AddListener(PlayImpactFX);
+            gd.eventData.OnPunchTimeAttack.AddListener(PlayPunchFX);
         }
 
         private void ChangeSpriteColor(SO_Item arg0, Color color) {

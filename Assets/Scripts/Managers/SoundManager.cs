@@ -6,14 +6,15 @@ namespace Managers {
     public class SoundManager : MonoBehaviour {
 
         private DataWrangler.GameData gd;
+        [SerializeField] private AudioSource source;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.soundData.OnAudioEvent.AddListener(PlayBasicAudio);
         }
 
-        private static void PlayBasicAudio(AudioEvent audioEvent, AudioSource source) {
-            audioEvent.Play(source);
+        private void PlayBasicAudio(AudioEvent audioEvent) {
+            audioEvent.PlayRandomClip(source);
         }
     }
 }

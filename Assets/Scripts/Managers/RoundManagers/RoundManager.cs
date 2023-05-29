@@ -65,9 +65,9 @@ namespace Managers {
             if (round % gd.roundData.timeAttackRoundDivisor == 0) {
                 gd.roundData.roundType = RoundData.RoundType.timeAttack;
             }
-            else if (round % gd.roundData.precisionRoundDivisor == 0) {
-                gd.roundData.roundType = RoundData.RoundType.precision;
-            }
+            // else if (round % gd.roundData.precisionRoundDivisor == 0) {
+            //     gd.roundData.roundType = RoundData.RoundType.precision;
+            // }
             else {
                 gd.roundData.roundType = RoundData.RoundType.normal;
             }

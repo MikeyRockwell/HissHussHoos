@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 3970853901040214968}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4929169469102722786
 MonoBehaviour:
@@ -47,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xf: {fileID: 2001993194002802312}
   startScale: {x: 0, y: 0}
-  startPos: {x: 1.3, y: 0.28}
-  animDuration: 2
-  riseHeight: 0.25
-  scaleDuration: 0.01
-  animEase: 3
+  startPos: {x: -2, y: 0.35}
+  animDuration: 1.2
+  riseHeight: 0.5
+  scaleDuration: 0.15
+  animEase: 6
   textMesh: {fileID: 2657621190265009247}
 --- !u!1 &4734664759478178636
 GameObject:
@@ -155,7 +155,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: +2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5b96dbc3217b75d48bef207ba58cf5bb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 833c1fde5405366449d28c6517c65d56, type: 2}
   m_sharedMaterial: {fileID: -9151002925037438525, guid: 5b96dbc3217b75d48bef207ba58cf5bb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -222,6 +222,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 3178516859233225455}
   m_maskType: 0

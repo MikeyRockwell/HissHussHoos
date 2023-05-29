@@ -37,15 +37,16 @@ namespace Data.Customization {
         public void ResetItem() {
             // This is called when the game resets the character
             // DEBUG
+            color = Color.white;
             if (defaultItem) {
                 unlocked = true;
                 equipped = true;
+                characterPart.ChangeItem(this, true);
             }
             else {
                 unlocked = false;
                 equipped = false;
             }
-            color = Color.white;
         }
 
         public void LoadSaveData(SaveData sd) {

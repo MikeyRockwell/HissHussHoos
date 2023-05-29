@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_Whoosh
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 759eceeef44de804daf6f2580f968edf, type: 3}
+  volume: {x: 0.23739558, y: 0.23739558}
+  pitch: {x: 1.0511782, y: 1.0511782}

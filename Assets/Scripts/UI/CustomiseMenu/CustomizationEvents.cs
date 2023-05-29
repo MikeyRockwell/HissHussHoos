@@ -67,6 +67,7 @@ namespace UI.CustomiseMenu {
             // Trigger the item unlocked event
             item.unlocked = true;
             OnItemUnlocked?.Invoke(item);
+            ChangeItem(item);
         }
     }
 }

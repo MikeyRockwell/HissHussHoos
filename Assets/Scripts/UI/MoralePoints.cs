@@ -15,7 +15,7 @@ namespace UI {
 
         private DataWrangler.GameData gd;
         private MoraleData md;
-        private int moralePointsAtRoundStart;
+        private float moralePointsAtRoundStart;
 
         private void Awake() {
             // Subscribe to events
@@ -32,31 +32,34 @@ namespace UI {
 
         private void InitMoralePoints() {
             // Load morale points and set the text
-            int moralePoints = gd.playerData.md.LoadMoralePoints();
-            moralePointsText.text = moralePoints.ToString();
+            float moralePoints = gd.playerData.md.LoadMoralePoints();
+            moralePointsText.text = moralePoints.ToString($"0");
         }
 
-        private void StoreMoralePoints(int arg0) {
+        private void StoreMoralePoints(int i) {
             // Store the morale points at the start of the round
             moralePointsAtRoundStart = gd.playerData.md.moralePoints;
         }
 
-        private void SpendMoralePoints(int moralePoints, int moralePointsSpent) {
+        private void SpendMoralePoints(float moralePoints, float moralePointsSpent) {
             // Spend morale points
             DOTween.To(
-                () => moralePoints, x => moralePointsText.text = x.ToString(), 
+                () => moralePoints, x => moralePointsText.text = x.ToString($"0"), 
                 moralePoints - moralePointsSpent, 0.5f
             );
         }
 
-        private void UpdateMoralePoints(int moralePoints) {
+        private void UpdateMoralePoints(float moralePoints) {
             // Update the morale points earned
+            moralePointsEarnedText.color = gd.uIData.LaserGreen;
             moralePointsEarnedText.transform.position = Vector3.zero;
             moralePointsEarnedText.transform.DOScale(Vector3.one, 1f).SetEase(Ease.OutBounce);
-            // Count up the morale points earned from zero to moralePoints
+            // Count up the morale points earned from zero to moralePoints in whole numbers
             DOTween.To(
-                () => 0, x => moralePointsEarnedText.text = x.ToString(), moralePoints, 3f
+                () => 0, x => moralePointsEarnedText.text = x.ToString(), 
+                Mathf.RoundToInt(moralePoints), 1f
             ).OnComplete(AnimateToTotal);
+            
         }
 
         private void AnimateToTotal() {
@@ -72,8 +75,8 @@ namespace UI {
         private void UpdateTotal() {
             // Update the morale points total with a counting animation
             DOTween.To(
-                () => moralePointsAtRoundStart, x => moralePointsText.text = x.ToString(), 
-                gd.playerData.md.moralePoints, 0.5f
+                () => moralePointsAtRoundStart, x => moralePointsText.text = x.ToString($"0"), 
+                (int)gd.playerData.md.moralePoints, 0.5f
             );
         }
     }

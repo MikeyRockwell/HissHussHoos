@@ -5,27 +5,27 @@ using TARGET = Data.TargetData.Target;
 namespace Audio {
     public class PunchAudio : MonoBehaviour {
 
-        [SerializeField] private AudioEvent[] voiceEvents;
-        [SerializeField] private AudioEvent bagPunch;
-        [SerializeField] private AudioSource voiceSource;
-        [SerializeField] private AudioSource bagSource;
-        
+        [SerializeField] private SoundFXPlayer[] voiceSFXPlayers;
+        [SerializeField] private SoundFXPlayer bagSFX;
+        [SerializeField] private SoundFXPlayer wooshSFX;
+
         private DataWrangler.GameData gd;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
-            gd.eventData.OnPunchNormal.AddListener(PunchBag);
             gd.eventData.OnPunchWarmup.AddListener(PunchOnly);
-            gd.eventData.OnPunchTimeAttack.AddListener(PunchOnly);
+            gd.eventData.OnPunchNormal.AddListener(PunchBag);
+            gd.eventData.OnPunchTimeAttack.AddListener(PunchBag);
         }
 
         private void PunchBag(TARGET target) {
-            voiceEvents[(int)target].Play(voiceSource);
-            bagPunch.Play(bagSource);
+            voiceSFXPlayers[(int)target].PlayRandomAudio();
+            bagSFX.PlayRandomAudio();
         }
 
         private void PunchOnly(TARGET target) {
-            voiceEvents[(int)target].Play(voiceSource);
+            voiceSFXPlayers[(int)target].PlayRandomAudio();
+            wooshSFX.PlayRandomAudio();
         }
     }
 }

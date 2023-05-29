@@ -1,10 +1,12 @@
 ﻿using TMPro;
 using System;
+using Audio;
 using Managers;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using Data.Customization;
+using Utils;
 
 namespace UI.CustomiseMenu {
     public class ItemUnlockWindow : MonoBehaviour {
@@ -17,6 +19,7 @@ namespace UI.CustomiseMenu {
         [SerializeField] private TextMeshProUGUI unlockText;
         [SerializeField] private TextMeshProUGUI currentMorale;
         [SerializeField] private Image itemImage;
+        [SerializeField] private SoundFXPlayer unlockSFX;
 
         private RectTransform xf;
         private bool open;
@@ -35,13 +38,14 @@ namespace UI.CustomiseMenu {
             button.onClick.AddListener(CloseWindow);
             button.image.color = gd.uIData.MenuBackgroundColor;
             // Init unlock button
-            unlockButton.onClick.AddListener(()=>gd.customEvents.UnlockItem(currentItem));
+            unlockButton.onClick.AddListener(UnlockItem);
             // Init window
             open = Math.Abs(xf.localScale.x - 1) < 0.001f;
             CloseWindow();
         }
 
-        private void OpenWindow(SO_Item item) {
+        private void OpenWindow(SO_Item item) 
+        {
             // Open the window and set the item
             currentItem = item;
             // Check if the item is available
@@ -68,6 +72,14 @@ namespace UI.CustomiseMenu {
             currentMorale.text = "MORAALE POINTS " + gd.playerData.md.moralePoints;
             itemName.text = item.itemName;
             itemPrice.text = item.price + " MP";
+        }
+        
+        private void UnlockItem() 
+        {
+            // Unlock the item
+            Log.Message("Unlocking: " + itemName.text);
+            unlockSFX.PlayRandomAudio();
+            gd.customEvents.UnlockItem(currentItem);
         }
 
         private void CloseWindow() {

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_FastWooshOpen
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 3eae38d78e4217d43b105cf137fe8fe7, type: 3}
+  - {fileID: 8300000, guid: 7753568fd9b85224baccc90d2fc9b793, type: 3}
+  - {fileID: 8300000, guid: a8f7b8cdddee82f43b87ca38ca812601, type: 3}
+  - {fileID: 8300000, guid: dd3372d8dfeb5734a93a5f110c4ef374, type: 3}
+  - {fileID: 8300000, guid: cda483664203a6341a73d9a993fdaa8b, type: 3}
+  volume: {x: 0.4686103, y: 0.5492756}
+  pitch: {x: 0.9300662, y: 1.1486317}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace Audio {
     [CreateAssetMenu(fileName = "NewAudioEvent", menuName = "ScriptableObjects/Audio/AudioEvent", order = 0)]
@@ -6,11 +7,10 @@ namespace Audio {
     public class AudioEvent : ScriptableObject {
         
         public AudioClip[] clips;
-        
-        public Vector2 volume;
-        public Vector2 pitch;
+        [MinMaxSlider(0, 1)] public Vector2 volume;
+        [MinMaxSlider(0, 2)] public Vector2 pitch;
     
-        public void Play(AudioSource source) {
+        public void PlayRandomClip(AudioSource source) {
 
             if (clips.Length == 0) return;
         

@@ -10,18 +10,18 @@ namespace Data {
     public class MoraleData : ScriptableObject {
         
         [TitleGroup("Morale", "Moraaaaale")]
-        public int moralePoints;
+        public float moralePoints;
         public int morale;
         public int maxMorale = 100;
         public float moraleBoostDuration;
-        public float moraleBoostMultiplier;
+        public int moraleBoostScoreMultiplier = 3;
         public bool moraleBoostActive;
         
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoost;
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoostEnd;
         [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoraleUpdated;
-        [FoldoutGroup("Events", false)] public UnityEvent<int> OnMoralePointsEarned;
-        [FoldoutGroup("Events", false)] public UnityEvent<int, int> OnMoralePointsSpent;
+        [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoralePointsEarned;
+        [FoldoutGroup("Events", false)] public UnityEvent<float, float> OnMoralePointsSpent;
         
         public void ResetMoralePoints() {
             // Called on first launch
@@ -33,7 +33,7 @@ namespace Data {
             OnMoraleUpdated?.Invoke(newMorale);
         }
         
-        public void DisplayMoralePoints(int moraleEarned) {
+        public void DisplayMoralePoints(float moraleEarned) {
             OnMoralePointsEarned?.Invoke(moraleEarned);
         }
         
@@ -43,9 +43,9 @@ namespace Data {
             SaveMoralePoints();
         }
 
-        public int LoadMoralePoints() {
+        public float LoadMoralePoints() {
             // Called on game init
-            moralePoints = PlayerPrefs.GetInt("MoralePoints");
+            moralePoints = PlayerPrefs.GetFloat("MoralePoints");
             return moralePoints;
         }
 
@@ -55,9 +55,9 @@ namespace Data {
             moraleBoostActive = false;
         }
 
-        public void UpdateMoralePoints(int addition) {
+        public void UpdateMoralePoints(float addition) {
             moralePoints += addition;
-            PlayerPrefs.SetInt("MoralePoints", moralePoints);
+            PlayerPrefs.SetFloat("MoralePoints", moralePoints);
         }
 
         public float GetMorale() {
@@ -67,7 +67,7 @@ namespace Data {
 
         private void SaveMoralePoints() {
             // Write the morale points to the player prefs
-            PlayerPrefs.SetInt("MoralePoints", moralePoints);
+            PlayerPrefs.SetFloat("MoralePoints", moralePoints);
         }
     }
 }

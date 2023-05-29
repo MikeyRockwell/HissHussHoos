@@ -9,9 +9,10 @@ namespace Managers {
     
     
     public class ScoreManager : MonoBehaviour {
-        
+
         private const string leaderboardID = "highScores";
         private DataWrangler.GameData gd;
+        private MoraleData md; 
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
@@ -20,6 +21,7 @@ namespace Managers {
             gd.eventData.OnGameInit.AddListener(NewGame);
             gd.eventData.OnGameOver.AddListener(GameOver);
             gd.roundData.OnSpeedBonus.AddListener(AddSpeedBonus);
+            md = gd.playerData.md;
         }
 
         private void NewGame() {
@@ -32,7 +34,8 @@ namespace Managers {
         }
 
         private void AddScore(int arg) {
-            gd.playerData.UpdateScore(1);
+            int scoreToAdd = md.moraleBoostActive ? 1 * md.moraleBoostScoreMultiplier : 1;
+            gd.playerData.UpdateScore(scoreToAdd);
         }
         
         private void AddSpeedBonus(RoundData.SpeedBonusType bonus) {
@@ -41,6 +44,7 @@ namespace Managers {
                 RoundData.SpeedBonusType.super => 3,
                 _ => throw new ArgumentOutOfRangeException(nameof(bonus), bonus, null)
             };
+            bonusScore = md.moraleBoostActive ? bonusScore * md.moraleBoostScoreMultiplier : bonusScore;
             gd.playerData.UpdateScore(bonusScore);
         }
 

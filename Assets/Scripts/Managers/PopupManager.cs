@@ -39,7 +39,7 @@ namespace Managers {
                     newScorePop.Init("+" + 2, gd.uIData.LaserGreen);
                     break;
                 case BONUS.super:
-                    newScorePop.Init("+" + 3, gd.uIData.Gold);
+                    newScorePop.Init("+" + 3, gd.uIData.HotPink);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

@@ -1,4 +1,5 @@
-﻿using Utils;
+﻿using Audio;
+using Utils;
 using Managers;
 using UnityEngine;
 using DG.Tweening;
@@ -18,6 +19,8 @@ namespace UI {
         [SerializeField] private Ease animEase;
         [SerializeField] private Slider slider;
         [SerializeField] private AudioMixer musicMixer;
+        [SerializeField] private SoundFXPlayer openSFX;
+        [SerializeField] private SoundFXPlayer closeSFX;
         
         private bool controlsOpen;
         private DataWrangler.GameData gd;
@@ -46,11 +49,13 @@ namespace UI {
 
         private void OpenControls() {
             if (!controlsOpen) {
+                openSFX.PlayRandomAudio();
                 controls.DOKill();
                 controls.DOLocalMoveY(ctrlOpenY, 0.3f).
                     SetEase(animEase).OnComplete(() => controlsOpen = true);
             }
             else {
+                closeSFX.PlayRandomAudio();
                 controls.DOKill();
                 controls.DOLocalMoveY(ctrlClosedY, 0.3f).
                     SetEase(animEase).OnComplete(() => controlsOpen = false);;

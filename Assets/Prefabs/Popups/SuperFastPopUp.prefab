@@ -17,10 +17,10 @@ PrefabInstance:
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_renderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6924786711278180196}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontStyle
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontColor.b
@@ -39,37 +39,49 @@ PrefabInstance:
       value: -33.13
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: m_characterSpacing
+      value: 14.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: m_geometrySortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontColorGradient.topLeft.b
-      value: 0.93938804
+      value: 0.8649349
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontColorGradient.topLeft.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_fontColorGradient.topLeft.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
-      propertyPath: m_fontColorGradient.topRight.b
-      value: 0.93938804
-      objectReference: {fileID: 0}
-    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
-      propertyPath: m_fontColorGradient.topRight.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
-      propertyPath: m_fontColorGradient.topRight.r
+      propertyPath: m_fontColorGradient.topRight.b
+      value: 0.8649349
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: m_fontColorGradient.topRight.g
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237326074393486951, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: m_fontColorGradient.topRight.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2834130604252929542, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_Name
-      value: FastPopUp Variant
+      value: SuperFastPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5626327162847550063, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: AudioEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f1f4cdb3f12e584d9993f34d613a861, type: 2}
     - target: {fileID: 8476771310070276281, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -119,3 +131,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+--- !u!23 &6924786711278180196 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7890527776832373862, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+  m_PrefabInstance: {fileID: 979816482012041986}
+  m_PrefabAsset: {fileID: 0}
