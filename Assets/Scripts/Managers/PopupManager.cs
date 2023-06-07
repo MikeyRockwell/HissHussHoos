@@ -36,10 +36,10 @@ namespace Managers {
             // Initialize score bonus popup based on what type of bonus was received
             switch (type) {
                 case BONUS.fast:
-                    newScorePop.Init("+" + 2, gd.uIData.LaserGreen);
+                    newScorePop.Init("", gd.uIData.LaserGreen);
                     break;
                 case BONUS.super:
-                    newScorePop.Init("+" + 3, gd.uIData.HotPink);
+                    newScorePop.Init("", gd.uIData.HotPink);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

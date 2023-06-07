@@ -1,11 +1,13 @@
-﻿using Managers;
+﻿using System;
+using Managers;
 using DG.Tweening;
 using UnityEngine;
 using Data.Customization;
+using MoreMountains.Feedbacks;
 
 namespace Animation {
-    public class HurtAnimation : MonoBehaviour {
-
+    public class HurtAnimation : MonoBehaviour
+    {
         private SpriteRenderer spriteRenderer;
         private DataWrangler.GameData gd;
         private SO_CharacterPart part;
@@ -20,7 +22,6 @@ namespace Animation {
 
         private void Hurt() {
             Color current = part.CurrentItem.colorMask ?  Color.white : part.CurrentItem.color ;
-
             DOTween.Kill(spriteRenderer);
             spriteRenderer.color = Color.red;
             Sequence seq = DOTween.Sequence(spriteRenderer);

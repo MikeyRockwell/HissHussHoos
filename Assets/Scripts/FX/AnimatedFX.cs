@@ -10,7 +10,7 @@ namespace FX {
         public float animationLength;
         
         [SerializeField] private Animator animator;
-        [FormerlySerializedAs("sfx")] [SerializeField] private SoundFXPlayer whipCrack;
+        [FormerlySerializedAs("whipCrack")] [SerializeField] private SoundFXPlayer primarySFX;
         [SerializeField] private SoundFXPlayer secondarySFX;
 
         private static readonly int Play = Animator.StringToHash("Play");
@@ -20,7 +20,7 @@ namespace FX {
             gameObject.SetActive(true);
             animator.SetTrigger(Play);
             // Play audio events
-            whipCrack.PlayRandomAudio();
+            primarySFX.PlayRandomAudio();
             Invoke(nameof(PlaySecondaryAudio), animationLength * 0.65f);
             // Start a timer to deactivate the game object
             Invoke(nameof(Deactivate), animationLength);

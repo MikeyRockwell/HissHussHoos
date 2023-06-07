@@ -50,9 +50,6 @@ namespace UI {
                 default:
                     break;
             }
-            // Animations
-            xf.DOKill();
-            xf.DOScale(xf.localScale * 0.9f, 0.05f).SetLoops(2, LoopType.Yoyo);
 
             // Cooldown
             gd.playerData.punching = true;

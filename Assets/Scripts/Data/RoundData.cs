@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Utils;
+using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
-using Utils;
 
 namespace Data {
     [CreateAssetMenu(fileName = "RoundData", menuName = "ScriptableObjects/Data/RoundData", order = 0)]
@@ -55,7 +56,14 @@ namespace Data {
             roundTimeLimit = Mathf.Max(roundTimeLimit, minRoundTime);
         }
 
-        public void BeginGame() {
+        public void BeginGameDelayed()
+        {
+            Sequence seq = DOTween.Sequence();
+            seq.AppendInterval(1.0f).OnComplete(BeginGame);
+        }
+
+        private void BeginGame()
+        {
             OnGameBegin?.Invoke(1);
         }
         

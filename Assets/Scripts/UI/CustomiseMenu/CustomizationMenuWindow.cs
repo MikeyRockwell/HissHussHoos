@@ -2,7 +2,10 @@
 using DG.Tweening;
 using UnityEngine;
 using Data.Customization;
+using MoreMountains.Feedbacks;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Utils;
 
 namespace UI.CustomiseMenu {
     
@@ -10,45 +13,38 @@ namespace UI.CustomiseMenu {
     public class CustomizationMenuWindow : MonoBehaviour {
         
         [SerializeField] private CustomizationEvents menuEvents;
+        [SerializeField] private MMF_Player openFeedbacks;
+        [SerializeField] private MMF_Player closeFeedbacks;
         
         [SerializeField] private RectTransform xf;
         [SerializeField] private float windowScreenPercent;
         [SerializeField] private float animSpeed = 0.2f;
 
-        private Button button;
+        [SerializeField] private Button bgButton;
         private DataWrangler.GameData gd;
         
         private void Awake() {
             // Get the game data
             gd = DataWrangler.GetGameData();
-            // Get the button component
-            button = GetComponent<Button>();
+       
+            
             // Add a listener to the button that closes the menu
-            button.onClick.AddListener(()=> menuEvents.CloseMenu());
+            bgButton.onClick.AddListener(()=> menuEvents.CloseMenu());
+
             // Add listeners to the menu events
             menuEvents.OnMenuOpened.AddListener(OpenMenu);
-            menuEvents.OnMenuClosed.AddListener(CloseMenu);
-            
+            menuEvents.OnMenuClosed.AddListener(()=>CloseMenu(0));
             gd.roundData.OnGameBegin.AddListener(CloseMenu);
+            
 
-            CloseMenu();
         }
 
         private void OpenMenu(SO_CharacterPart arg0) {
-            gameObject.SetActive(true);
-
-            xf.DOKill();
-            xf.DOScaleX(1, animSpeed);
+            openFeedbacks.PlayFeedbacks();
         }
 
         private void CloseMenu(int arg0) {
-            xf.DOKill();
-            xf.DOScaleX(0, animSpeed).OnComplete(()=> gameObject.SetActive(false));
-        }
-
-        private void CloseMenu() {
-            xf.DOKill();
-            xf.DOScaleX(0, animSpeed).OnComplete(()=> gameObject.SetActive(false));
+            closeFeedbacks.PlayFeedbacks();
         }
     }
 }

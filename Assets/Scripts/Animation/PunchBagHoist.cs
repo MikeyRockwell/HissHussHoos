@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Customization;
 using Managers;
 using DG.Tweening;
 using UnityEngine;
@@ -16,11 +17,17 @@ namespace Animation {
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnRoundBegin.AddListener(LowerBag);
-            // gd.roundData.OnTimeAttackRoundBegin.AddListener(RaiseBag);
             gd.eventData.OnGameOver.AddListener(RaiseBag);
+            gd.customEvents.OnMenuOpened.AddListener(LowerBag1);
+            gd.customEvents.OnMenuClosed.AddListener(RaiseBag);
             xf = transform;
         }
-        
+
+        private void LowerBag1(SO_CharacterPart arg0)
+        {
+            LowerBag(0);
+        }
+
         private void LowerBag(int arg0) {
             xf.DOKill();
             xf.DOLocalMove(new Vector2(xf.position.x, yDefault), animDuration);

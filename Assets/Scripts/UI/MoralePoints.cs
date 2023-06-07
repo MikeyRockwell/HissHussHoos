@@ -1,6 +1,7 @@
 ﻿using Data;
 using DG.Tweening;
 using Managers;
+using MoreMountains.Feedbacks;
 using TMPro;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace UI {
         [SerializeField] private TextMeshProUGUI moralePointsText;
         [SerializeField] private TextMeshProUGUI moralePointsEarnedText;
         [SerializeField] private float jumpPower = 2f;
+        [SerializeField] private MMF_Player audioCountStart;
+        [SerializeField] private MMF_Player jumpAudio;
 
         private DataWrangler.GameData gd;
         private MoraleData md;
@@ -49,22 +52,39 @@ namespace UI {
             );
         }
 
-        private void UpdateMoralePoints(float moralePoints) {
+        private void UpdateMoralePoints(float moralePoints)
+        {
             // Update the morale points earned
             moralePointsEarnedText.color = gd.uIData.LaserGreen;
             moralePointsEarnedText.transform.position = Vector3.zero;
-            moralePointsEarnedText.transform.DOScale(Vector3.one, 1f).SetEase(Ease.OutBounce);
-            // Count up the morale points earned from zero to moralePoints in whole numbers
-            DOTween.To(
-                () => 0, x => moralePointsEarnedText.text = x.ToString(), 
-                Mathf.RoundToInt(moralePoints), 1f
-            ).OnComplete(AnimateToTotal);
+            float countDuration = Utils.Conversion.Remap(0, 100, 1, 5, moralePoints);
             
+            // Play the audio feedbacks
+            audioCountStart.PlayFeedbacks();
+            Invoke(nameof(FadeOutCountAudio), countDuration - 1f);
+            
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(moralePointsEarnedText.transform.DOScale(Vector3.one, 0.1f).SetEase(Ease.OutBounce));
+            sequence.Append(DOTween.To(
+                    () => 0, x => moralePointsEarnedText.text = x.ToString(), 
+                    Mathf.RoundToInt(moralePoints), countDuration
+                )
+            // Count up the morale points earned from zero to moralePoints in whole numbers
+            ).SetEase(Ease.OutCirc).OnComplete(AnimateToTotal);
+            sequence.Play();
+        }
+
+        private void FadeOutCountAudio()
+        {
+            audioCountStart.StopFeedbacks();
         }
 
         private void AnimateToTotal() {
             // Animate the morale points earned to the total points position
             // In an arc
+            // Stop the audio feedbacks
+            audioCountStart.StopFeedbacks();
+            jumpAudio.PlayFeedbacks();
             moralePointsEarnedText.transform.DOJump(
                 moralePointsText.transform.position, jumpPower, 1, 1
             );

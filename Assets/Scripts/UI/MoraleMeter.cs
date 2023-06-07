@@ -24,7 +24,7 @@ namespace UI {
             gd.playerData.md.OnMoraleBoost.AddListener(MoraleBoost);
             gd.playerData.md.OnMoraleBoostEnd.AddListener(EndMoraleBoost);
             gd.playerData.md.OnMoraleUpdated.AddListener(UpdateGraphics);
-            HideMeter();
+            // HideMeter();
         }
         
         private void HideMeter() {
@@ -37,8 +37,8 @@ namespace UI {
         private void ShowMeter(int arg0) {
             // Animate the meter opening
             transform.DOKill();
-            transform.DOScaleY(1, 0.5f).
-                OnComplete(() => gameObject.SetActive(true));
+            gameObject.SetActive(true);
+            transform.DOScaleY(1, 0.5f);
         }
         
         // Update the morale graphics

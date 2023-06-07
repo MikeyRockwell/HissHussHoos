@@ -39,6 +39,10 @@ namespace Animation {
         }
 
         private void PlayPunchFX(TargetData.Target target) {
+            if (gd.customEvents.MenuOpen)
+            {
+                PlayImpactFX(target);
+            }
             animator[(int)target].SetTrigger(FX1);
         }
 

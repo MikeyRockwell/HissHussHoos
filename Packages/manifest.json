@@ -1,15 +1,19 @@
 {
   "dependencies": {
     "com.febucci.custom-hierarchy": "https://github.com/febucci/unitypackage-custom-hierarchy.git",
+    "com.unity.2d.animation": "7.0.11",
+    "com.unity.ads": "4.4.2",
+    "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.0.1",
     "com.unity.device-simulator.devices": "1.0.0",
     "com.unity.feature.2d": "1.0.0",
-    "com.unity.ide.rider": "3.0.18",
+    "com.unity.ide.rider": "3.0.21",
     "com.unity.ide.visualstudio": "2.0.17",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.memoryprofiler": "1.0.0",
     "com.unity.mobile.android-logcat": "1.3.2",
-    "com.unity.render-pipelines.universal": "14.0.7",
+    "com.unity.postprocessing": "3.3.0",
+    "com.unity.render-pipelines.universal": "12.1.11",
     "com.unity.services.authentication": "2.5.0-pre.3",
     "com.unity.services.leaderboards": "file:com.unity.services.leaderboards-1.0.0-exp.1.tgz",
     "com.unity.test-framework": "1.1.33",
@@ -17,6 +21,7 @@
     "com.unity.timeline": "1.7.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
+    "io.backtrace.unity": "3.8.1",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -47,8 +52,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "io.backtrace.unity": "3.8.1"
+    "com.unity.modules.xr": "1.0.0"
   },
   "scopedRegistries": [
     {

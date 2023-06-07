@@ -24,6 +24,11 @@ namespace Audio {
         }
 
         private void PunchOnly(TARGET target) {
+            if (gd.customEvents.MenuOpen)
+            {
+                PunchBag(target);
+                return;
+            }
             voiceSFXPlayers[(int)target].PlayRandomAudio();
             wooshSFX.PlayRandomAudio();
         }

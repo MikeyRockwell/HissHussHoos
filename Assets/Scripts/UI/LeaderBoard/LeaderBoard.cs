@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Data;
+using TMPro;
 using System;
 using Managers;
 using DG.Tweening;
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 using Unity.VisualScripting;
 using UnityEngine.Serialization;
 using System.Collections.Generic;
-using Data;
+using Sirenix.OdinInspector;
 using Unity.Services.Leaderboards;
 using Unity.Services.Authentication;
 using Unity.Services.Leaderboards.Models;
@@ -20,17 +21,22 @@ namespace UI {
         
         // This class opens and populates the LeaderBoard UI
         private const string leaderBoardId = "highScores";
-        
+
         [SerializeField] private Button topScoresTab;
         [SerializeField] private Button yourScoreTab;
         // An array to hold the high score text meshes
+        [SerializeField] private Transform uIEntriesParent;
         [SerializeField] private LeaderBoardEntry[] uIEntries;
         [SerializeField] private float animDuration;
         [SerializeField] private float animDelay;
         [SerializeField] private Ease animEase;
+        // Scroll rect to hold the high score entries
+        [SerializeField] private ScrollRect scrollRect;
         
         private DataWrangler.GameData gd;
         private String textColor;
+        private int playerIndex;
+        private bool playerIsInList;
 
         protected override void Awake() {
             base.Awake();
@@ -42,6 +48,13 @@ namespace UI {
             openWindowButton.onClick.AddListener(CheckLeaderBoardOpen);
             topScoresTab.onClick.AddListener(GetTopScores);
             yourScoreTab.onClick.AddListener(GetPlayerRange);
+        }
+
+        private void Start()
+        {
+            // Get every child of the uiEntriesParent transform
+            // Store them in the uIEntries array
+            uIEntries = uIEntriesParent.GetComponentsInChildren<LeaderBoardEntry>();
         }
 
         private void CheckLeaderBoardOpen() {
@@ -59,7 +72,11 @@ namespace UI {
 
         private async void GetTopScores() {
             LeaderboardScoresPage scoresResponse = await LeaderboardsService.Instance
-                .GetScoresAsync(leaderBoardId);
+                .GetScoresAsync(leaderBoardId, new GetScoresOptions
+                {
+                    Offset = 0,
+                    Limit = 10,
+                });
             FormatScores(scoresResponse.Results);
         }
 
@@ -75,14 +92,29 @@ namespace UI {
             }
 
             // Returns a total of 11 entries (the given player plus 5 on either side)
-            var rangeLimit = uIEntries.Length - 1;
+            var rangeLimit = 100;
             LeaderboardScores scoresResponse = await LeaderboardsService.Instance
                 .GetPlayerRangeAsync(leaderBoardId, new GetPlayerRangeOptions{ RangeLimit = rangeLimit }
                 );
+  
             FormatScores(scoresResponse.Results);
+            // Scroll to the player's score
+            if (!playerIsInList) return;
+            
+            int entryCount = uIEntries.Length;
+            
+            if (entryCount <= 0) return;
+            
+            float normalizedPosition = (float)playerIndex / (entryCount - 1);
+            normalizedPosition = Mathf.Clamp01(normalizedPosition);
+                
+            scrollRect.verticalNormalizedPosition = 1f - normalizedPosition;
         }
 
-        private void FormatScores(List<LeaderboardEntry> scoresResponse) {
+        private void FormatScores(List<LeaderboardEntry> scoresResponse)
+        {
+
+            playerIsInList = false;
             // Extract the names and scores from the response
             for (int i = 0; i < uIEntries.Length; i++) {
                 
@@ -106,16 +138,21 @@ namespace UI {
                 }
                 // Check if this is the player
                 bool isPlayer = playerNameFull == AuthenticationService.Instance.PlayerName;
+                if (isPlayer) {
+                    playerIndex = i;
+                    playerIsInList = true;
+                }
                 // Initialize the entry
                 uIEntries[i].SetEntry(
                         rank: scoresResponse[i].Rank+1,
                         playerName: playerName,
                         playerNumber: playerNumber, 
                         score: (int)scoresResponse[i].Score,
-                        isPlayer: isPlayer
+                        isPlayer: isPlayer,
+                        totalScores: uIEntries.Length
                     );
             }
-
+            
             AnimateEntries();
         }
 

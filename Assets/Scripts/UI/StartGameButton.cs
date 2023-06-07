@@ -1,8 +1,9 @@
-﻿using Data.Customization;
-using Managers;
+﻿using Managers;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using Data.Customization;
+using MoreMountains.Feedbacks;
 
 namespace UI {
     public class StartGameButton : MonoBehaviour {
@@ -16,35 +17,32 @@ namespace UI {
             
             gd = DataWrangler.GetGameData();
             button = GetComponent<Button>();
-            button.onClick.AddListener(()=> gd.roundData.BeginGame());
-            gd.roundData.OnGameBegin.AddListener(Disable);
+            button.onClick.AddListener(BeginGame);
+            
             gd.eventData.OnGameOver.AddListener(Enable);
             gd.customEvents.OnMenuOpened.AddListener(Disable);
             gd.customEvents.OnMenuClosed.AddListener(Enable);
-            Pulse();
         }
 
-
-        private void Pulse() {
-            transform.localScale = startScale;
-            transform.DOScale(transform.localScale * 1.15f, 0.3f).SetLoops(-1, LoopType.Yoyo);
+        private void BeginGame()
+        {
+            gd.roundData.BeginGameDelayed();
+            Disable();
         }
         
         private void Disable(SO_CharacterPart arg0) {
-            Disable(0);
+            Disable();
         }
 
-        private void Disable (int arg0) {
+        private void Disable () {
             button.enabled = false;
             transform.DOKill();
-            transform.DOScale(Vector3.zero, 0.2f);
             gameObject.SetActive(false);
         }
 
         private void Enable() {
             button.enabled = true;
             gameObject.SetActive(true);
-            Pulse();
         }
     }
 }

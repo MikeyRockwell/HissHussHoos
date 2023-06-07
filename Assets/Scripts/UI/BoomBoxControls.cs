@@ -43,7 +43,7 @@ namespace UI {
         }
 
         private void SetMusicVolume(float volume) {
-            musicMixer.SetFloat("MusicVol", Mathf.Log10(volume) * 20);
+            musicMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
             PlayerPrefs.SetFloat("MusicVolume", volume);
         }
 

@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using MoreMountains.Feedbacks;
+using UnityEngine;
 
 namespace Managers {
-    public class HealthManager : MonoBehaviour {
+    public class HealthManager : MonoBehaviour
+    {
 
+        [SerializeField] private MMF_Player feedbacks;
+        
         private DataWrangler.GameData gd;
 
         private void Awake() {
@@ -19,6 +23,7 @@ namespace Managers {
         }
 
         private void RemoveHealth() {
+            feedbacks.PlayFeedbacks();
             gd.playerData.ChangeHealth(-1);
             if (gd.playerData.health == 0) {
                 gd.eventData.GameOver();

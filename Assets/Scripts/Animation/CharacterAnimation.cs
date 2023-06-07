@@ -49,7 +49,6 @@ namespace Animation {
             if (item.zestGlasses) {
 
                 mat.SetColor(ZestLights, item.zestLightColor);
-                Log.Message(mat.GetColor(Color1).ToString());
             }
             else {
                 mat.SetColor(ZestLights, Color.black);

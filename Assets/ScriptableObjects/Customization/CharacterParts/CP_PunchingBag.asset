@@ -15,6 +15,7 @@ MonoBehaviour:
   UIName: BOXING BAG
   Items:
   - {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}
+  - {fileID: 11400000, guid: 06e6baee1512c9a4d8fc36e4100addab, type: 2}
   CurrentItem: {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}
   DefaultItem: {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}
   OnChangeItem:

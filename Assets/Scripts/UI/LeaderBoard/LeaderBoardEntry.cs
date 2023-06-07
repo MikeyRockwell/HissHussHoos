@@ -24,7 +24,7 @@ namespace UI {
             initialized = true;
         }
 
-        public void SetEntry(int rank, string playerName, string playerNumber, int score, bool isPlayer) {
+        public void SetEntry(int rank, string playerName, string playerNumber, int score, bool isPlayer, int totalScores) {
             // Check that the class has been initialized
             if (!initialized) Init();
             
@@ -32,7 +32,7 @@ namespace UI {
             rect.localScale = Vector3.zero;
             
             // Set the color of the player name
-            Color playerNameColor = isPlayer ? gd.uIData.HotPink : rankGradient.Evaluate(rank / 10f);
+            Color playerNameColor = isPlayer ? gd.uIData.HotPink : rankGradient.Evaluate((float)rank / totalScores);
             
             // Set the text of the entry
             rankText.text = rank.ToString();

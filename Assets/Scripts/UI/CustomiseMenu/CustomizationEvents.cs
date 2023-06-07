@@ -15,7 +15,8 @@ namespace UI.CustomiseMenu {
         
         // These are all the events that can be triggered by the customisation menu
         public UnityEvent<SO_CharacterPart> OnMenuOpened;    
-        public UnityEvent OnMenuClosed;    
+        public UnityEvent OnMenuClosed;
+        public bool MenuOpen;
         public UnityEvent<SO_CharacterPart> OnChangeCategory;
         public UnityEvent<Button> OnCategoryButtonPressed;
         public UnityEvent<SO_Item> OnLockedItemPressed;
@@ -31,10 +32,12 @@ namespace UI.CustomiseMenu {
         
         public void OpenMenu() {
             OnMenuOpened?.Invoke(targetPart == null ? defaultPart : targetPart);
+            MenuOpen = true;
         }
 
         public void CloseMenu() {
             OnMenuClosed?.Invoke();
+            MenuOpen = false;
         }
 
         public void SelectClothingItem(SO_CharacterPart newPart, Button button) {

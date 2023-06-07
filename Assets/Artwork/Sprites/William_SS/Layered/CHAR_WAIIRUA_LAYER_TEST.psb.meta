@@ -21,13 +21,11 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
-    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMipmapLimit: 0
+    ignoreMasterTextureLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -90,6 +88,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
@@ -113,6 +112,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 320}
     spritePosition: {x: 15, y: 80}
   - name: HEAD
@@ -134,6 +134,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 102, y: 468}
     spritePosition: {x: 14, y: 73}
   - name: ARM_R
@@ -155,6 +156,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 468}
     spritePosition: {x: 8, y: 55}
   - name: SHIRT
@@ -176,6 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 468}
     spritePosition: {x: 9, y: 44}
   - name: ARM_L
@@ -197,6 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 294}
     spritePosition: {x: 32, y: 62}
   - name: LEGS
@@ -218,6 +222,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 103}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -239,6 +244,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 161}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -260,6 +266,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 219}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -281,6 +288,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 277}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -302,6 +310,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 335}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -323,6 +332,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 393}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -344,6 +354,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 451}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -365,6 +376,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 4}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -386,6 +398,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 62}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -407,6 +420,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 120}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -428,6 +442,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 178}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -449,6 +464,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 236}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -470,6 +486,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 294}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -491,6 +508,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 352}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -512,6 +530,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 67, y: 410}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -533,6 +552,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 4}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -554,6 +574,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 62}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -575,6 +596,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 120}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -596,6 +618,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 178}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -617,6 +640,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 236}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -638,6 +662,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 294}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -659,6 +684,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 352}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -680,6 +706,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 130, y: 410}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -701,6 +728,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 4}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -722,6 +750,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 62}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -743,6 +772,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 120}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -764,6 +794,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 178}
     spritePosition: {x: 1, y: 0}
   - name: LEGS
@@ -785,6 +816,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 193, y: 236}
     spritePosition: {x: 1, y: 0}
   - name: REF
@@ -806,6 +838,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 6, y: 0}
   - name: Layer 1
@@ -827,6 +860,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
+    parentGroupIndex: -1
     uvTransform: {x: 102, y: 477}
     spritePosition: {x: 90, y: 92}
   characterData:
@@ -834,7 +868,6 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
-    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -842,7 +875,6 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
-    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
@@ -888,8 +920,6 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
-  padding: 4
-  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -1248,9 +1278,6 @@ ScriptedImporter:
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
-  importFileNodeState: 1
-  platformSettingsDirtyTick: 638125608480729174
-  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 

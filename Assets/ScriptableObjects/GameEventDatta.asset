@@ -12,12 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9f09bc9ec54e899181493083b26b47, type: 3}
   m_Name: GameEventDatta
   m_EditorClassIdentifier: 
-  OnHiss:
+  inputEnabled: 1
+  OnGameFirstLaunch:
     m_PersistentCalls:
       m_Calls: []
-  OnHuss:
+  OnGameInit:
     m_PersistentCalls:
       m_Calls: []
-  OnHoos:
+  OnPunchWarmup:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPunchNormal:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPunchTimeAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMiss:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameOver:
     m_PersistentCalls:
       m_Calls: []
