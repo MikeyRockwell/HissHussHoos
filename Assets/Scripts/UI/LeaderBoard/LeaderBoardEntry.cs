@@ -32,11 +32,12 @@ namespace UI {
             rect.localScale = Vector3.zero;
             
             // Set the color of the player name
-            Color playerNameColor = isPlayer ? gd.uIData.HotPink : rankGradient.Evaluate((float)rank / totalScores);
+            Color playerNameColor = isPlayer ? gd.uIData.Gold : gd.uIData.HotPink;
             
             // Set the text of the entry
             rankText.text = rank.ToString();
-            rankText.color = rankGradient.Evaluate(rank / 10f);
+            
+            // rankText.color = rankGradient.Evaluate(rank / 10f);
             
             // Set the player name 
             nameText.text = playerName + " <size=75%>#" + playerNumber + "</size>";

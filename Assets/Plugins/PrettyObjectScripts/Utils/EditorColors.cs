@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
-
+#if UNITY_EDITOR
 public static class EditorColors
 {
     // DARK THEME - Background
@@ -72,3 +72,4 @@ public static class EditorColors
         return selectionContainsObject ? windowIsFocused ? ObjectSelectedWindowFocusedText : ObjectSelectedText : Text;
     }
 }
+#endif

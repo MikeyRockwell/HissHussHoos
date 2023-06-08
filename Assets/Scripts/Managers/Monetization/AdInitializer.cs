@@ -14,8 +14,8 @@ namespace Managers.Monetization
         {
             InitializeAds();
         }
- 
-        public void InitializeAds()
+
+        private void InitializeAds()
         {
 #if UNITY_IOS
             _gameId = _iOSGameId;

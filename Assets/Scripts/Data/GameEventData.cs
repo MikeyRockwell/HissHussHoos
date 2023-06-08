@@ -12,6 +12,8 @@ namespace Data {
         // GAME EVENTS
         // Subscribable and callable events 
         // For game objects to link behaviour to
+        
+        // Override inputs on punch buttons etc
         public bool inputEnabled;
         // Called when the game is launched for the first time
         public UnityEvent OnGameFirstLaunch;

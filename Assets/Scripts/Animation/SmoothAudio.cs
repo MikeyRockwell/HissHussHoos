@@ -9,11 +9,13 @@ namespace Animation
     {
         [SerializeField] private MMAudioAnalyzer analyzer;
         [SerializeField] private float fullAmplitudeMultiplier;
-        [FormerlySerializedAs("bassBoostMultipler")] [SerializeField] private float bassBoostMultiplier;
+        [SerializeField] private float bassBoostMultiplier;
         [SerializeField] private float timeMultiplier;
         [SerializeField] private float idleThreshold = 0.01f;
+        [SerializeField] private float idleMultiplier = 1.25f;
 
         public float intensity;
+        public float rawIntensity;
         public float sampledIntensity;
         public bool idling;
         
@@ -34,15 +36,20 @@ namespace Animation
             if (sampledIntensity < idleThreshold)
             {
                 idling = true;
-                sampledIntensity = Mathf.PingPong(Time.time, 1);
+                // Sample a pingpong instead of the audio value
+                sampledIntensity = Mathf.PingPong(Time.time * idleMultiplier, 1);
+                // Smooth the raw intensity
+                rawIntensity = Mathf.Lerp(rawIntensity, sampledIntensity, Time.deltaTime * timeMultiplier);
                 sampledIntensity = Utils.Conversion.Remap
-                    (0, 1, 0, 0.25f, sampledIntensity);
-                intensity = sampledIntensity;
+                    (0, 1, 0, 0.25f, rawIntensity);
+                // Smooth the intensity from what it is to the new pingpong value
+                intensity = Mathf.Lerp(intensity, sampledIntensity, Time.deltaTime * timeMultiplier);
             }
             else
             {
                 idling = false;
                 intensity = Mathf.Lerp(intensity, sampledIntensity, Time.deltaTime * timeMultiplier);
+                rawIntensity = intensity;
             }
         }
     }

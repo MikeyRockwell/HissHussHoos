@@ -6,12 +6,13 @@ using Unity.Services.Core;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 
-namespace Managers {
-    
+namespace Managers 
+{
     // This class is used to initialize the Unity Services SDK
     public class UnityAuthentication : MonoBehaviour {
 
         [SerializeField] private AuthenticationData authData;
+        [SerializeField] private AppleAuthorization appleAuthorization;
         
         private async void Awake() {
             try {
@@ -23,7 +24,7 @@ namespace Managers {
             // Sign in anonymously for testing - possibly solution??
             await SignInAnonymously();
             // Here we will put apple and google sign in
-            
+            // appleAuthorization.LoginToApple();
         }
 
         public async Task SignInAnonymously() {
