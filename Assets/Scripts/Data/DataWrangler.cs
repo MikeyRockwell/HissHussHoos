@@ -2,9 +2,10 @@
 using UI.CustomiseMenu;
 using UnityEngine.Serialization;
 
-namespace Managers {
-    public class DataWrangler : Singleton<DataWrangler> {
-        
+namespace Managers
+{
+    public class DataWrangler : Singleton<DataWrangler>
+    {
         public GameState GameState;
         [FormerlySerializedAs("LoadSaveData")] public DataSaverLoader dataSaverLoader;
         public GameEventData EventData;
@@ -18,17 +19,19 @@ namespace Managers {
         public UIData UIData;
         public ItemData ItemData;
 
-        public static DataSaverLoader GetSaverLoader() {
+        public static DataSaverLoader GetSaverLoader()
+        {
             return Instance.dataSaverLoader;
         }
-        
-        public static GameData GetGameData() {
+
+        public static GameData GetGameData()
+        {
             return new GameData(
                 Instance.GameState,
                 Instance.EventData,
                 Instance.customizationEvents,
-                Instance.TargetData, 
-                Instance.PlayerData, 
+                Instance.TargetData,
+                Instance.PlayerData,
                 Instance.RoundData,
                 Instance.MusicData,
                 Instance.SoundData,
@@ -37,8 +40,8 @@ namespace Managers {
                 Instance.ItemData);
         }
 
-        public struct GameData {
-
+        public struct GameData
+        {
             public readonly GameState gameState;
             public readonly GameEventData eventData;
             public readonly CustomizationEvents customEvents;
@@ -53,8 +56,8 @@ namespace Managers {
 
             public GameData(
                 GameState gameState,
-                GameEventData eventData, 
-                CustomizationEvents customEvents, 
+                GameEventData eventData,
+                CustomizationEvents customEvents,
                 TargetData targetData,
                 PlayerData playerData,
                 RoundData roundData,
@@ -62,8 +65,8 @@ namespace Managers {
                 SoundData soundData,
                 ColorData colorData,
                 UIData uIData,
-                ItemData itemData) {
-
+                ItemData itemData)
+            {
                 this.gameState = gameState;
                 this.eventData = eventData;
                 this.customEvents = customEvents;
@@ -77,6 +80,5 @@ namespace Managers {
                 this.itemData = itemData;
             }
         }
-
     }
 }

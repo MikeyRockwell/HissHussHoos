@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_Hoodie
+  m_EditorClassIdentifier: 
+  characterPart: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
+  itemName: Hoodie
+  menuSprite: {fileID: 21300000, guid: 2ed2a62229b9d8b44ac107d120f8b305, type: 3}
+  animSprites:
+  - {fileID: 545340409, guid: 826e56cd32934ad418fd20b8dbf7cba4, type: 3}
+  - {fileID: -507673783, guid: 826e56cd32934ad418fd20b8dbf7cba4, type: 3}
+  - {fileID: 340213615, guid: 826e56cd32934ad418fd20b8dbf7cba4, type: 3}
+  - {fileID: 1873369163, guid: 826e56cd32934ad418fd20b8dbf7cba4, type: 3}
+  maskSprites:
+  - {fileID: -600476421, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
+  - {fileID: -846225873, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
+  - {fileID: 1684353905, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
+  - {fileID: -2117101254, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
+  itemType: 0
+  torsoOnTop: 1
+  noColors: 0
+  standardColors: 1
+  customColors: 0
+  colorMask: 1
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
+  availableColors: []
+  color: {r: 1, g: 0, b: 0.98544884, a: 1}
+  price: 150
+  defaultItem: 0
+  unlocked: 1
+  equipped: 0

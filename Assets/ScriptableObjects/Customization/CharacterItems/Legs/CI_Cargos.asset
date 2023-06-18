@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_Cargos
+  m_EditorClassIdentifier: 
+  characterPart: {fileID: 11400000, guid: df48d2b86f42e824bb72fbf1f8c7d41b, type: 2}
+  itemName: Cargos
+  menuSprite: {fileID: 21300000, guid: 527248f375d6e08448eb8f5465a59093, type: 3}
+  animSprites:
+  - {fileID: 671737190, guid: 6314e4ca8dfee4545b457421e6881693, type: 3}
+  - {fileID: 1305180897, guid: 6314e4ca8dfee4545b457421e6881693, type: 3}
+  - {fileID: -280866931, guid: 6314e4ca8dfee4545b457421e6881693, type: 3}
+  - {fileID: -172603008, guid: 6314e4ca8dfee4545b457421e6881693, type: 3}
+  maskSprites: []
+  itemType: 2
+  torsoOnTop: 0
+  noColors: 0
+  standardColors: 1
+  customColors: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
+  availableColors: []
+  color: {r: 0.56037736, g: 0.8827673, b: 1, a: 1}
+  price: 150
+  defaultItem: 0
+  unlocked: 1
+  equipped: 0

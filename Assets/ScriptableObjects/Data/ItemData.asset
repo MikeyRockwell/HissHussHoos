@@ -36,7 +36,29 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e05a59f022592604ca97b7951635283e, type: 2}
   - {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}
   - {fileID: 11400000, guid: 18d3250c37433a84f9aecc8339b4074f, type: 2}
+  - {fileID: 11400000, guid: 06e6baee1512c9a4d8fc36e4100addab, type: 2}
   - {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
   - {fileID: 11400000, guid: ed9b035b5d44e754e949eb9b8730aa95, type: 2}
   - {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
+  - {fileID: 11400000, guid: 3194329045683cc4ea2974495b1399fd, type: 2}
+  - {fileID: 11400000, guid: fca064866a85c66448318357fae97bbd, type: 2}
   - {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
+  allColors:
+  - {fileID: 11400000, guid: 073047eddcf0eaa43a85354428d9e404, type: 2}
+  - {fileID: 11400000, guid: 21174b07db062c44f9918c7402e77e50, type: 2}
+  - {fileID: 11400000, guid: 670052056ca5b1f4aad1ec814744f23e, type: 2}
+  - {fileID: 11400000, guid: e79ac1982a51b134c9d6fd1f6f4366ad, type: 2}
+  - {fileID: 11400000, guid: 9c645421fc38357459ed7c4327b81897, type: 2}
+  - {fileID: 11400000, guid: 9e26c78e55093b0469370658f5baf5f4, type: 2}
+  - {fileID: 11400000, guid: d07327e688ae47f448b6cdb948e07e85, type: 2}
+  - {fileID: 11400000, guid: 8a3bf70ab3557814fb7d974763643a0f, type: 2}
+  - {fileID: 11400000, guid: e4753318236ace74f9991b36514b271a, type: 2}
+  - {fileID: 11400000, guid: c0973bcd89523fb4195480899ba0daa9, type: 2}
+  - {fileID: 11400000, guid: 774b676ecbf597845bc84cc4f22489b7, type: 2}
+  - {fileID: 11400000, guid: d37605a0cddd21d4b81971bff50c01ef, type: 2}
+  - {fileID: 11400000, guid: ab2bceff558a08e4a860b47f5a0cac98, type: 2}
+  - {fileID: 11400000, guid: bf6e55988d0bea645b8bc8a28b79ed76, type: 2}
+  - {fileID: 11400000, guid: d2d6b6313053ae740b95e78f35dd7997, type: 2}
+  - {fileID: 11400000, guid: 411f4afeab2bb414b8b5861564eaa45f, type: 2}
+  - {fileID: 11400000, guid: 7c883c7be453eb64c8f8fa0cd61f8783, type: 2}
+  - {fileID: 11400000, guid: caba9c773b1d71544942f0ae5efaed84, type: 2}

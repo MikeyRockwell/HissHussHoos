@@ -12,7 +12,7 @@ namespace Managers.Monetization
         [SerializeField] private string androidAdUnitId = "Banner_Android";
         [SerializeField] private string iOSAdUnitId = "Banner_iOS";
         [SerializeField] private float adLength = 5f;
-        private readonly string adUnitId = null; // This will remain null for unsupported platforms.
+        private string adUnitId = null; // This will remain null for unsupported platforms.
 
         private DataWrangler.GameData gd;
 
@@ -26,9 +26,9 @@ namespace Managers.Monetization
         {
             // Get the Ad Unit ID for the current platform:
 #if UNITY_IOS
-            _adUnitId = _iOSAdUnitId;
+            adUnitId = iOSAdUnitId;
 #elif UNITY_ANDROID
-            _adUnitId = _androidAdUnitId;
+            adUnitId = androidAdUnitId;
 #endif
             // Set the banner position:
             Advertisement.Banner.SetPosition(bannerPosition);
@@ -43,10 +43,7 @@ namespace Managers.Monetization
         private IEnumerator PlayBannerAd()
         {
             LoadBanner();
-            while (!Advertisement.Banner.isLoaded)
-            {
-                yield return null;
-            }
+            while (!Advertisement.Banner.isLoaded) yield return null;
             ShowBannerAd();
             yield return new WaitForSecondsRealtime(adLength);
             HideBannerAd();
@@ -56,22 +53,22 @@ namespace Managers.Monetization
         private void LoadBanner()
         {
             // Set up options to notify the SDK of load events:
-            BannerLoadOptions options = new BannerLoadOptions { };
-     
+            BannerLoadOptions options = new() { };
+
             // Load the Ad Unit with banner content:
             Advertisement.Banner.Load(adUnitId);
         }
-        
+
         // Implement a method to call when the Show Banner button is clicked:
         private void ShowBannerAd()
         {
             // Set up options to notify the SDK of show events:
-            BannerOptions options = new BannerOptions { };
-     
+            BannerOptions options = new() { };
+
             // Show the loaded Banner Ad Unit:
             Advertisement.Banner.Show(adUnitId);
         }
-        
+
         // Implement a method to call when the Hide Banner button is clicked:
         private void HideBannerAd()
         {

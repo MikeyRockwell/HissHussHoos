@@ -5,38 +5,43 @@ using UnityEngine;
 using UnityEngine.UI;
 using Utils;
 
-namespace UI.CustomiseMenu {
-    public class CustomizationMenuButton : MonoBehaviour {
-
+namespace UI.CustomiseMenu
+{
+    public class CustomizationMenuButton : MonoBehaviour
+    {
         [SerializeField] private CustomizationEvents events;
-        
+
         [SerializeField] private Button button;
         [SerializeField] private RectTransform xf;
         [SerializeField] private float animSpeed = 0.2f;
 
         private DataWrangler.GameData gd;
 
-        private void Awake() {
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
-            
+
             button.onClick.AddListener(OpenMenu);
             events.OnMenuClosed.AddListener(UnHideMenu);
-            
+
             gd.roundData.OnGameBegin.AddListener(HideMenu);
             gd.eventData.OnGameOver.AddListener(UnHideMenu);
         }
 
-        private void UnHideMenu() {
+        private void UnHideMenu()
+        {
             xf.DOKill();
-            xf.DOScaleY( 1, animSpeed);
+            xf.DOScaleY(1, animSpeed);
         }
 
-        private void HideMenu(int arg0) {
+        private void HideMenu(int arg0)
+        {
             xf.DOKill();
-            xf.DOScaleY( 0, animSpeed);
+            xf.DOScaleY(0, animSpeed);
         }
 
-        private void OpenMenu() {
+        private void OpenMenu()
+        {
             events.OpenMenu();
         }
     }

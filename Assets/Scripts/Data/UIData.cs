@@ -2,12 +2,13 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Data {
+namespace Data
+{
     [CreateAssetMenu(fileName = "UIData", menuName = "ScriptableObjects/UI/UIData", order = 0)]
-    public class UIData : ScriptableObject {
-
+    public class UIData : ScriptableObject
+    {
         public float MenuAnimSpeed = 0.2f;
-        
+
         public Ease DefaultMenuEase = Ease.InOutCirc;
 
         public Color MenuBackgroundColor;

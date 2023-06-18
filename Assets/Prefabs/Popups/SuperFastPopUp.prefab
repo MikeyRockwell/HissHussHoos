@@ -81,6 +81,30 @@ PrefabInstance:
       propertyPath: AudioEvent
       value: 
       objectReference: {fileID: 11400000, guid: 4f1f4cdb3f12e584d9993f34d613a861, type: 2}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: endCol.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: endCol.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: endCol.g
+      value: 0.2025132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: endCol.r
+      value: 0.4509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: startCol.g
+      value: 0.8407364
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506351230779212260, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
+      propertyPath: startCol.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8476771310070276281, guid: 96c572c9fdad7384dbf33c7920c12b78, type: 3}
       propertyPath: m_RootOrder
       value: 0

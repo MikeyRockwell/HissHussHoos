@@ -5,21 +5,21 @@ using Managers;
 using MoreMountains.Tools;
 using UnityEngine;
 
-namespace Animation {
+namespace Animation
+{
     public class BoomBoxBounce : MonoBehaviour
     {
-
         [SerializeField] private MMAudioAnalyzer analyzer;
         [SerializeField] private Ease vertBounceEase;
         [SerializeField] private float bounceHeight = 0.8f;
         [SerializeField] private float bpm;
-        
+
         private RectTransform xf;
         private DataWrangler.GameData gd;
         private MusicData md;
-        
-        private void Awake() {
-            
+
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
             md = gd.musicData;
             xf = GetComponent<RectTransform>();

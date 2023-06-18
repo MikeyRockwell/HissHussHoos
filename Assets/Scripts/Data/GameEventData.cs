@@ -4,23 +4,24 @@ using UnityEngine.Serialization;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
-namespace Data {
-    
+namespace Data
+{
     [CreateAssetMenu(fileName = "GameEventDatta", menuName = "ScriptableObjects/GameEvents/GameEventData")]
-    public class GameEventData : ScriptableObject {
-            
+    public class GameEventData : ScriptableObject
+    {
         // GAME EVENTS
         // Subscribable and callable events 
         // For game objects to link behaviour to
-        
+
         // Override inputs on punch buttons etc
         public bool inputEnabled;
+
         // Called when the game is launched for the first time
         public UnityEvent OnGameFirstLaunch;
-        
+
         // Called when the game data is first loaded
         public UnityEvent OnGameInit;
-        
+
         // Different punches
         public UnityEvent<TARGET> OnPunchWarmup;
         public UnityEvent<TARGET> OnPunchNormal;
@@ -28,44 +29,59 @@ namespace Data {
 
         // Hit and Miss target
         public UnityEvent<int> OnHit;
+        public UnityEvent<int> OnHitTimeAttack;
         public UnityEvent OnMiss;
-        
+
         // Game over
         public UnityEvent OnGameOver;
-        
-        public void FirstLaunch() {
+
+        public void FirstLaunch()
+        {
             Log.Message("Initializing Brand New Game", Color.green);
             OnGameFirstLaunch?.Invoke();
         }
-        
-        public void InitializeGame() {
+
+        public void InitializeGame()
+        {
             inputEnabled = true;
             OnGameInit?.Invoke();
         }
 
-        public void PunchWarmup(TARGET target) {
+        public void PunchWarmup(TARGET target)
+        {
             OnPunchWarmup?.Invoke(target);
         }
-        public void PunchNormal(TARGET target) {
+
+        public void PunchNormal(TARGET target)
+        {
             Log.Message("Punching Normal");
             if (!inputEnabled) return;
             OnPunchNormal?.Invoke(target);
         }
 
-        public void PunchTimeAttack(TARGET target) {
+        public void PunchTimeAttack(TARGET target)
+        {
             if (!inputEnabled) return;
             OnPunchTimeAttack?.Invoke(target);
         }
 
-        public void Hit(int step) {
+        public void HitTimeAttack(int streak)
+        {
+            OnHitTimeAttack?.Invoke(streak);
+        }
+
+        public void Hit(int step)
+        {
             OnHit?.Invoke(step);
         }
-        
-        public void Miss() {
+
+        public void Miss()
+        {
             OnMiss?.Invoke();
         }
-        
-        public void GameOver() {
+
+        public void GameOver()
+        {
             OnGameOver?.Invoke();
         }
     }

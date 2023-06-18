@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "4f6202e4",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "4f6202e4",
+        "name": "com.RockwellStudios.HISSHUSSHOOS",
+        "processId": 31723,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,12 @@
             "deviceId": "4f6202e4",
             "name": "com.RockwellStudios.HISSHUSSHOOS",
             "processId": 14616,
+            "exited": true
+        },
+        {
+            "deviceId": "4f6202e4",
+            "name": "com.RockwellStudios.HISSHUSSHOOS",
+            "processId": 31723,
             "exited": false
         }
     ],

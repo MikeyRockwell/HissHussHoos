@@ -41,11 +41,13 @@ public static class PostProcessBuild
 #if UNITY_2019_3_OR_NEWER
             var project = new PBXProject();
             project.ReadFromString(System.IO.File.ReadAllText(projectPath));
-            var manager = new ProjectCapabilityManager(projectPath, "Entitlements.entitlements", null, project.GetUnityMainTargetGuid());
+            var manager =
+ new ProjectCapabilityManager(projectPath, "Entitlements.entitlements", null, project.GetUnityMainTargetGuid());
             manager.AddSignInWithAppleWithCompatibility(project.GetUnityFrameworkTargetGuid());
             manager.WriteToFile();
 #else
-            var manager = new ProjectCapabilityManager(projectPath, "Entitlements.entitlements", PBXProject.GetUnityTargetName());
+            var manager =
+ new ProjectCapabilityManager(projectPath, "Entitlements.entitlements", PBXProject.GetUnityTargetName());
             manager.AddSignInWithAppleWithCompatibility();
             manager.WriteToFile();
 #endif

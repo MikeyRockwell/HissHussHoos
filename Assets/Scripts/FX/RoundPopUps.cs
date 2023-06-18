@@ -3,25 +3,29 @@ using Managers;
 using UnityEngine;
 using TYPE = Data.RoundData.RoundType;
 
-namespace FX {
-    public class RoundPopUps : MonoBehaviour {
-        
+namespace FX
+{
+    public class RoundPopUps : MonoBehaviour
+    {
         // Handle round popups based on round type
         [SerializeField] private AnimatedFX regularRoundPop;
         [SerializeField] private AnimatedFX timeAttackPop;
-        [SerializeField] private RoundNumberPopUp roundNumber;       
-        
+        [SerializeField] private RoundNumberPopUp roundNumber;
+
         private DataWrangler.GameData gd;
 
-        private void Awake() {
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
             // Hide all popups
             regularRoundPop.gameObject.SetActive(false);
             timeAttackPop.gameObject.SetActive(false);
         }
-        
-        public void InitRoundPopup(TYPE type) {
-            switch (type) {
+
+        public void InitRoundPopup(TYPE type)
+        {
+            switch (type)
+            {
                 case TYPE.warmup:
                     break;
                 case TYPE.normal:
@@ -38,9 +42,11 @@ namespace FX {
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
         }
-        
-        private void BeginRound() {
-            switch (gd.roundData.roundType) {
+
+        private void BeginRound()
+        {
+            switch (gd.roundData.roundType)
+            {
                 case TYPE.warmup:
                     break;
                 case TYPE.normal:
@@ -53,6 +59,5 @@ namespace FX {
                     break;
             }
         }
-        
     }
 }

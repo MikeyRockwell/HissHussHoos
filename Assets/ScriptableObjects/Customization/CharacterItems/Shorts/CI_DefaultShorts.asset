@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultShorts
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: df48d2b86f42e824bb72fbf1f8c7d41b, type: 2}
-  itemName: 
+  itemName: Default Shorts
   menuSprite: {fileID: 21300000, guid: 5737255ad037b2e4ab40f1ed09407fec, type: 3}
   animSprites:
   - {fileID: -1751008566, guid: 1c7434a7535acfa4984f7fbcb83cebea, type: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
   - {r: 0.09411765, g: 0.8666667, b: 0, a: 1}
   - {r: 0.78431374, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.85490197, b: 0, a: 1}
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.7529412, g: 0, b: 0.023529412, a: 1}
   price: 0
   defaultItem: 1
   unlocked: 1

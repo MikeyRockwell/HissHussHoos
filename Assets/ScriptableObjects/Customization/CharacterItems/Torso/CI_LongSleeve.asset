@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_LongSleeve
+  m_EditorClassIdentifier: 
+  characterPart: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
+  itemName: Long Sleeve
+  menuSprite: {fileID: 21300000, guid: 123cf288e04da754eaafccd1c2dd7eed, type: 3}
+  animSprites:
+  - {fileID: 1698548131, guid: 1f4c65898a5592649a7459e5ba901399, type: 3}
+  - {fileID: -1539278211, guid: 1f4c65898a5592649a7459e5ba901399, type: 3}
+  - {fileID: -691090881, guid: 1f4c65898a5592649a7459e5ba901399, type: 3}
+  - {fileID: -612370881, guid: 1f4c65898a5592649a7459e5ba901399, type: 3}
+  maskSprites:
+  - {fileID: -206216142, guid: 3de8bb04c764e204b94138b2ceb2d6fd, type: 3}
+  - {fileID: 482396143, guid: 3de8bb04c764e204b94138b2ceb2d6fd, type: 3}
+  - {fileID: 871987133, guid: 3de8bb04c764e204b94138b2ceb2d6fd, type: 3}
+  - {fileID: -1049881976, guid: 3de8bb04c764e204b94138b2ceb2d6fd, type: 3}
+  itemType: 0
+  torsoOnTop: 0
+  noColors: 0
+  standardColors: 1
+  customColors: 0
+  colorMask: 1
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
+  availableColors: []
+  color: {r: 0.6525893, g: 0, b: 1, a: 1}
+  price: 150
+  defaultItem: 0
+  unlocked: 1
+  equipped: 0

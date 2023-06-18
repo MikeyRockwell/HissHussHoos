@@ -5,37 +5,36 @@ using Utils;
 using UnityEngine;
 using Unity.Services.Authentication;
 
-namespace Managers {
-    public class DebugControls : MonoBehaviour {
-
+namespace Managers
+{
+    public class DebugControls : MonoBehaviour
+    {
         [SerializeField] private UnityAuthentication authentication;
         [SerializeField] private LeaderBoard Leaderboard;
         [SerializeField] private MoraleManager moraleManager;
         [SerializeField] private RoundPopUps roundPops;
-        
+
         private DataWrangler.GameData gd;
-        
-        private void Awake() {
+
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
         }
 #if UNITY_EDITOR
-        private void Update() {
-            
-            if (Input.GetKeyDown(KeyCode.R) && Input.GetKey(KeyCode.LeftShift)) {
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R) && Input.GetKey(KeyCode.LeftShift))
+            {
                 Log.Message("Resetting All Items", gd.uIData.HotPink);
                 gd.itemData.ResetItems();
-                
             }
 
-            if (Input.GetKey(KeyCode.UpArrow)) {
-                moraleManager.AddMorale(10);
-            }
+            if (Input.GetKey(KeyCode.UpArrow)) moraleManager.AddMorale(10);
 
-            if (Input.GetKeyDown(KeyCode.L)) {
-                Leaderboard.GetPlayerRange();
-            }
+            if (Input.GetKeyDown(KeyCode.L)) Leaderboard.GetPlayerRange();
 
-            if (Input.GetKeyDown(KeyCode.X)) {
+            if (Input.GetKeyDown(KeyCode.X))
+            {
                 // Clear the Authentication session token
                 Log.Message("Logging out from Unity Authentication", gd.uIData.HotPink);
                 AuthenticationService.Instance.SignOut();
@@ -43,12 +42,13 @@ namespace Managers {
                 SignIn();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                roundPops.InitRoundPopup(RoundData.RoundType.timeAttack);
-            }
+            if (Input.GetKeyDown(KeyCode.Alpha1)) roundPops.InitRoundPopup(RoundData.RoundType.timeAttack);
+
+            if (Input.GetKey(KeyCode.KeypadPlus)) gd.playerData.md.moralePoints += 10;
         }
 
-        private async void SignIn() {
+        private async void SignIn()
+        {
             await authentication.SignInAnonymously();
         }
 #endif

@@ -4,9 +4,10 @@ using Data.Customization;
 using Managers;
 using UnityEngine;
 
-namespace Animation {
-    public class PunchFX : MonoBehaviour {
-
+namespace Animation
+{
+    public class PunchFX : MonoBehaviour
+    {
         private DataWrangler.GameData gd;
 
         [SerializeField] private Animator[] animator;
@@ -18,11 +19,12 @@ namespace Animation {
         private static readonly int FX1 = Animator.StringToHash("FX");
         private static readonly int GlowColor = Shader.PropertyToID("GlowColor");
 
-        private void Awake() {
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
-            
+
             gloves.OnChangeItemColor.AddListener(ChangeSpriteColor);
-            
+
             gd.eventData.OnPunchWarmup.AddListener(PlayPunchFX);
             gd.eventData.OnPunchNormal.AddListener(PlayPunchFX);
             gd.eventData.OnPunchNormal.AddListener(PlayImpactFX);
@@ -30,23 +32,23 @@ namespace Animation {
             gd.eventData.OnPunchTimeAttack.AddListener(PlayPunchFX);
         }
 
-        private void ChangeSpriteColor(SO_Item arg0, Color color) {
-            
-            for (int i = 0; i < renderers.Length; i++) {
+        private void ChangeSpriteColor(SO_Item arg0, Color color)
+        {
+            for (int i = 0; i < renderers.Length; i++)
+            {
                 renderers[i].material.SetColor(GlowColor, color);
                 renderers[i].color = color;
             }
         }
 
-        private void PlayPunchFX(TargetData.Target target) {
-            if (gd.customEvents.MenuOpen)
-            {
-                PlayImpactFX(target);
-            }
+        private void PlayPunchFX(TargetData.Target target)
+        {
+            if (gd.customEvents.MenuOpen) PlayImpactFX(target);
             animator[(int)target].SetTrigger(FX1);
         }
 
-        private void PlayImpactFX(TargetData.Target target) {
+        private void PlayImpactFX(TargetData.Target target)
+        {
             particleSystems[(int)target].Emit(puffsToEmit);
         }
     }

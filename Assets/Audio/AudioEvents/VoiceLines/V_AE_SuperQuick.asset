@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: V_AE_SuperQuick
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: b47df3331abfbca4f84a4ddcc751e08c, type: 3}
+  - {fileID: 8300000, guid: 9baa23103e92f524c9b0ca45506a2d96, type: 3}
+  - {fileID: 8300000, guid: 3fb84c2e49f37e2419c779624fad6dd1, type: 3}
+  - {fileID: 8300000, guid: 56206e24d4f2ca74bacafd48f919ad8c, type: 3}
+  - {fileID: 8300000, guid: fc21cdc98b5c4f14895ba82e540b852d, type: 3}
+  - {fileID: 8300000, guid: 251ab2999667af34586ec490c343f381, type: 3}
+  - {fileID: 8300000, guid: 21e6a6ccedaf10847968b6969d80c981, type: 3}
+  - {fileID: 8300000, guid: 8b1cb40658f57f7498a521603dd28392, type: 3}
+  - {fileID: 8300000, guid: 514b444786dbafc45b13775e6df78090, type: 3}
+  volume: {x: 0.5693685, y: 0.56947345}
+  pitch: {x: 0.8596846, y: 0.8584515}
+  chance: 0.394
+  coolDownDuration: 2
+  coolingDown: 0
+  priority: 0
+  currentClip: {fileID: 8300000, guid: 56206e24d4f2ca74bacafd48f919ad8c, type: 3}
+  voiceEffects: 1

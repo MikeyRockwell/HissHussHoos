@@ -13,10 +13,19 @@ MonoBehaviour:
   m_Name: AE_Hoos
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 7a83c5b8482ecda4e9fccbb2db8a66a6, type: 3}
-  - {fileID: 8300000, guid: 555e1e27ae6231f42927bfee431994ac, type: 3}
-  - {fileID: 8300000, guid: b1e74dab68aeec244b384bc2dc679709, type: 3}
-  - {fileID: 8300000, guid: 66b220f495732144c96027f1dba4c572, type: 3}
-  - {fileID: 8300000, guid: 2ac5a97e8661ca64db0322f84b219f2e, type: 3}
-  volume: {x: 0.8, y: 0.9}
-  pitch: {x: 1, y: 1}
+  - {fileID: 8300000, guid: fb506754e816141429d960a1384fe4ee, type: 3}
+  - {fileID: 8300000, guid: 2fc9948ced16c0e4f910497876568bfc, type: 3}
+  - {fileID: 8300000, guid: 629de906e3bdd4748b6048e574d55fdd, type: 3}
+  - {fileID: 8300000, guid: 7f9154bdb31423f49b4f6396b05ea0e5, type: 3}
+  - {fileID: 8300000, guid: 977397e382aecb9409908fdfc1534296, type: 3}
+  - {fileID: 8300000, guid: 2f111c6dad4fd1c49b701a5c4aba38f7, type: 3}
+  - {fileID: 8300000, guid: 153929ae442d8b04eb17b2d2d850c4f9, type: 3}
+  - {fileID: 8300000, guid: 6cd24c122b6d682469b49d6aac78662b, type: 3}
+  - {fileID: 8300000, guid: fa194546b996c9044ad5c82618c5818f, type: 3}
+  - {fileID: 8300000, guid: 7cbb13810430db044b268c047c1af85b, type: 3}
+  - {fileID: 8300000, guid: 345bbf4e47f3332499da277917095e33, type: 3}
+  - {fileID: 8300000, guid: b0d3e74f4f3b8a043be663d07d873a09, type: 3}
+  - {fileID: 8300000, guid: 4be4833a9cfbfef4a89aaba7e2d9ac55, type: 3}
+  - {fileID: 8300000, guid: 4db58f5fb1ae7ae4f81b971354f80471, type: 3}
+  volume: {x: 0.7101364, y: 0.81080794}
+  pitch: {x: 0.92133874, y: 1.0332552}

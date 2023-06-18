@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CI_DefaultPunchingBag
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: fd258f60efaa36147b2356a82591daef, type: 2}
-  itemName: 
-  menuSprite: {fileID: 21300000, guid: d3ad33162abdf524f8a33cbec6ee747e, type: 3}
+  itemName: Default Bag
+  menuSprite: {fileID: 21300000, guid: 32a24907874d7074896a7225f4faae66, type: 3}
   animSprites:
   - {fileID: 21300000, guid: d3ad33162abdf524f8a33cbec6ee747e, type: 3}
   - {fileID: 21300000, guid: 675873bbe1b7a5943b2c1a9476262071, type: 3}
@@ -31,4 +31,4 @@ MonoBehaviour:
   price: 0
   defaultItem: 1
   unlocked: 1
-  equipped: 1
+  equipped: 0

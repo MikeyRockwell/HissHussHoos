@@ -18,7 +18,7 @@ namespace Animation
         public float rawIntensity;
         public float sampledIntensity;
         public bool idling;
-        
+
         private void Update()
         {
             // Get the intensity of the music

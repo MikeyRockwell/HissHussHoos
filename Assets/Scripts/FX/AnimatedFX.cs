@@ -2,21 +2,26 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace FX {
-    public class AnimatedFX : MonoBehaviour {
-        
+namespace FX
+{
+    public class AnimatedFX : MonoBehaviour
+    {
         // This class plays the animation and then deactivates the game object
 
         public float animationLength;
-        
+
         [SerializeField] private Animator animator;
-        [FormerlySerializedAs("whipCrack")] [SerializeField] private SoundFXPlayer primarySFX;
+
+        [FormerlySerializedAs("whipCrack")] [SerializeField]
+        private SoundFXPlayer primarySFX;
+
         [SerializeField] private SoundFXPlayer secondarySFX;
 
         private static readonly int Play = Animator.StringToHash("Play");
 
 
-        public void Init() {
+        public void Init()
+        {
             gameObject.SetActive(true);
             animator.SetTrigger(Play);
             // Play audio events
@@ -25,14 +30,16 @@ namespace FX {
             // Start a timer to deactivate the game object
             Invoke(nameof(Deactivate), animationLength);
         }
-        
+
         // Play the secondary audio event
-        private void PlaySecondaryAudio() {
+        private void PlaySecondaryAudio()
+        {
             secondarySFX.PlayRandomAudio();
         }
-        
+
         // When the animation finishes playing, deactivate the game object
-        public void Deactivate() {
+        public void Deactivate()
+        {
             gameObject.SetActive(false);
         }
     }

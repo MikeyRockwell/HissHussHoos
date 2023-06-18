@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: V_AE_EndGame
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 99775385077e88b4b9308facab702285, type: 3}
+  - {fileID: 8300000, guid: b81f3b0993543f64a8e03bbae8a7b835, type: 3}
+  - {fileID: 8300000, guid: 79fd26ed49d93e2449da01a450713e9f, type: 3}
+  - {fileID: 8300000, guid: 7b92f2284b14bbf4a8fd3ae576f53edc, type: 3}
+  volume: {x: 0.8273822, y: 0.826796}
+  pitch: {x: 0.9240034, y: 1.0705607}
+  chance: 1
+  coolDownDuration: 0
+  coolingDown: 0
+  priority: 1
+  currentClip: {fileID: 8300000, guid: 99775385077e88b4b9308facab702285, type: 3}

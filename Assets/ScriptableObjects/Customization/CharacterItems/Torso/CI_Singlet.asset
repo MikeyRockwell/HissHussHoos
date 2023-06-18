@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: CI_Singlet
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
-  itemName: 
+  itemName: Singlet
   menuSprite: {fileID: 21300000, guid: 2a4911a0fbdf71548be186d1e47797ff, type: 3}
   animSprites:
   - {fileID: -921823419, guid: 551630300f93f784f96f2608d1febdc1, type: 3}
   - {fileID: -1726105164, guid: 551630300f93f784f96f2608d1febdc1, type: 3}
   - {fileID: 105574675, guid: 551630300f93f784f96f2608d1febdc1, type: 3}
   - {fileID: -282790809, guid: 551630300f93f784f96f2608d1febdc1, type: 3}
+  maskSprites:
+  - {fileID: 914074559, guid: f0f7e3e617530fd4cbbd4e48a9de499d, type: 3}
+  - {fileID: -823172778, guid: f0f7e3e617530fd4cbbd4e48a9de499d, type: 3}
+  - {fileID: -464682581, guid: f0f7e3e617530fd4cbbd4e48a9de499d, type: 3}
+  - {fileID: -1436762703, guid: f0f7e3e617530fd4cbbd4e48a9de499d, type: 3}
   noColors: 0
   standardColors: 1
   customColors: 0
@@ -39,7 +44,7 @@ MonoBehaviour:
   - {r: 0.09411765, g: 0.8666667, b: 0, a: 1}
   - {r: 0.78431374, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.85490197, b: 0, a: 1}
-  color: {r: 0, g: 0.7019608, b: 0.74509805, a: 1}
+  color: {r: 1, g: 0.45610023, b: 0, a: 1}
   price: 0
   defaultItem: 1
   unlocked: 1

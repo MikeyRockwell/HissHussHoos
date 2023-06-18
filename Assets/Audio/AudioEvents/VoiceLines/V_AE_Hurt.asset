@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: V_AE_Hurt
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 2e7500a79f78de548901445d83f88782, type: 3}
+  - {fileID: 8300000, guid: dc1569438e0059c41a81d4ae6794fee2, type: 3}
+  - {fileID: 8300000, guid: 5f78b41d114d5de48b306b4c7e9f35b1, type: 3}
+  - {fileID: 8300000, guid: ef586f204887c8b4aa16aca169d01f90, type: 3}
+  - {fileID: 8300000, guid: 51fa25a47d5b66c46bf5ccc30325529e, type: 3}
+  - {fileID: 8300000, guid: 0fb3fbd2495d8654d944a1f014c80dfa, type: 3}
+  - {fileID: 8300000, guid: b2ae274f2b7b5e84190d48872981c738, type: 3}
+  - {fileID: 8300000, guid: 3effba41e042d1c4ea6d41d491a2d59e, type: 3}
+  - {fileID: 8300000, guid: 0d8038f8393d3594ea3f1ab4d47a9be3, type: 3}
+  - {fileID: 8300000, guid: 2d57d99505f06be4fb2234943f3a1d32, type: 3}
+  - {fileID: 8300000, guid: ed9a8420aeebb0d42a6613283119bb78, type: 3}
+  - {fileID: 8300000, guid: 335e2971f5416d84aac55e6515ec4d2c, type: 3}
+  - {fileID: 8300000, guid: 4560ac56d181a294aa74ffef08dcc0c1, type: 3}
+  - {fileID: 8300000, guid: 58aafeef469ab434198eb7bbe7207df4, type: 3}
+  - {fileID: 8300000, guid: 029b7447e11b13344b8d98e436553ce0, type: 3}
+  - {fileID: 8300000, guid: 311c9e6c91fd8984da25d12829bc9be3, type: 3}
+  - {fileID: 8300000, guid: e935c3175aaa6884c95b8b8919c92670, type: 3}
+  - {fileID: 8300000, guid: c3626754ac49ffc4aa20db1a7955e3fe, type: 3}
+  - {fileID: 8300000, guid: 047934b5aa045184ea37e92a08c7aefa, type: 3}
+  volume: {x: 0.8273822, y: 0.826796}
+  pitch: {x: 1.0019186, y: 1.0007461}
+  chance: 1
+  coolDownDuration: 0
+  coolingDown: 0
+  priority: 0
+  currentClip: {fileID: 8300000, guid: 029b7447e11b13344b8d98e436553ce0, type: 3}

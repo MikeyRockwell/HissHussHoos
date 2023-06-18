@@ -4,23 +4,25 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 
-namespace UI {
-    public class HealthGraphics : MonoBehaviour {
-        
+namespace UI
+{
+    public class HealthGraphics : MonoBehaviour
+    {
         [SerializeField] private Slider slider;
         [SerializeField] private Image fill;
-        [GradientUsage(true)]
-        [SerializeField] private Gradient gradient;
+        [GradientUsage(true)] [SerializeField] private Gradient gradient;
         [SerializeField] private TextMeshProUGUI underText;
-        
+
         private DataWrangler.GameData gd;
 
-        private void Awake() {
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
             gd.playerData.OnHealthChange.AddListener(RemoveHealth);
         }
 
-        private void RemoveHealth(int amount) {
+        private void RemoveHealth(int amount)
+        {
             // Update the graphics
             DOTween.To(x => slider.value = x,
                 slider.value,

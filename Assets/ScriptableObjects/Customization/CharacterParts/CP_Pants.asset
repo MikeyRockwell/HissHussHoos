@@ -15,7 +15,9 @@ MonoBehaviour:
   UIName: PANTS
   Items:
   - {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}
-  CurrentItem: {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}
+  - {fileID: 11400000, guid: 1713998e61b73fb45a09c964b5782185, type: 2}
+  - {fileID: 11400000, guid: 8cdc18d94cc865c4898e369729010b06, type: 2}
+  CurrentItem: {fileID: 11400000, guid: 1713998e61b73fb45a09c964b5782185, type: 2}
   DefaultItem: {fileID: 11400000, guid: 7d636e7e93e88094aac89176b49f9729, type: 2}
   OnChangeItem:
     m_PersistentCalls:

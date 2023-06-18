@@ -6,51 +6,58 @@ using System;
 using UnityEngine;
 using System.Collections;
 
-namespace Managers {
-    public class RoundManager : MonoBehaviour {
-
+namespace Managers
+{
+    public class RoundManager : MonoBehaviour
+    {
         [SerializeField] private TextMeshProUGUI roundText;
         [SerializeField] private RoundPopUps roundPops;
 
         private DataWrangler.GameData gd;
 
-        private void Awake() {
+        private void Awake()
+        {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnGameBegin.AddListener(NewGame);
             gd.roundData.OnRoundInit.AddListener(NewRoundInit);
             gd.roundData.OnRoundBegin.AddListener(BeginRound);
-            gd.roundData.OnRoundComplete.AddListener(_=> gd.roundData.InitRound());
-            gd.roundData.OnTimeAttackRoundComplete.AddListener(_=> gd.roundData.InitRound());
+            gd.roundData.OnRoundComplete.AddListener(_ => gd.roundData.InitRound());
+            gd.roundData.OnTimeAttackRoundComplete.AddListener(_ => gd.roundData.InitRound());
             gd.eventData.OnGameOver.AddListener(GameOver);
         }
 
-        private void GameOver() {
+        private void GameOver()
+        {
             gd.roundData.roundType = RoundData.RoundType.warmup;
             roundText.text = "";
         }
 
-        private void Start() {
+        private void Start()
+        {
             // Hide round text
             roundText.text = "";
             // Set warmup round type for free play
             gd.roundData.roundType = RoundData.RoundType.warmup;
         }
 
-        private void NewGame(int round) {
+        private void NewGame(int round)
+        {
             // Called when start game button is pushed
             gd.roundData.currentRound = round;
             NewRoundInit(round);
         }
 
-        private void NewRoundInit(int round) {
+        private void NewRoundInit(int round)
+        {
             // Happens before the round begins
             // Sets the round type and round number
             // Then the popup can happen, then the round begins at the end of the popup
             // We will call round begin from the popup when it ends
-            StartCoroutine(nameof(InitRoundSequence)); 
+            StartCoroutine(nameof(InitRoundSequence));
         }
 
-        private IEnumerator InitRoundSequence() {
+        private IEnumerator InitRoundSequence()
+        {
             gd.eventData.inputEnabled = false;
             int round = gd.roundData.currentRound;
             SelectRoundType(round);
@@ -59,22 +66,22 @@ namespace Managers {
             BeginRound(round);
         }
 
-        private void SelectRoundType(int round) {
-            
+        private void SelectRoundType(int round)
+        {
             // Check if the current round is a time attack round
-            if (round % gd.roundData.timeAttackRoundDivisor == 0) {
+            if (round % gd.roundData.timeAttackRoundDivisor == 0)
                 gd.roundData.roundType = RoundData.RoundType.timeAttack;
-            }
             // else if (round % gd.roundData.precisionRoundDivisor == 0) {
             //     gd.roundData.roundType = RoundData.RoundType.precision;
             // }
-            else {
+            else
                 gd.roundData.roundType = RoundData.RoundType.normal;
-            }
         }
 
-        private void BeginRound(int round) {
-            switch (gd.roundData.roundType) {
+        private void BeginRound(int round)
+        {
+            switch (gd.roundData.roundType)
+            {
                 case RoundData.RoundType.warmup:
                     break;
                 case RoundData.RoundType.normal:
@@ -89,7 +96,8 @@ namespace Managers {
             }
         }
 
-        private void BeginRegularRound(int round) {
+        private void BeginRegularRound(int round)
+        {
             // Starts a regular round
             gd.eventData.inputEnabled = true;
             roundText.text = "ROUND " + $"{round:00}";
@@ -97,12 +105,12 @@ namespace Managers {
             gd.playerData.UpdateRound(round);
         }
 
-        private void BeginTimeAttackRound() {
+        private void BeginTimeAttackRound()
+        {
             // Starts a time attack round
             gd.eventData.inputEnabled = true;
             roundText.text = "TIME ATTACK";
             gd.playerData.UpdateRound(gd.roundData.currentRound);
         }
-
     }
 }

@@ -20,10 +20,11 @@ MonoBehaviour:
   - {fileID: 734040883, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
   - {fileID: 823099704, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
   - {fileID: -363094012, guid: 48ca4b74561541e4db18c20736bd61b3, type: 3}
+  maskSprites: []
   noColors: 1
   standardColors: 0
   customColors: 0
-  colorMask: 1
+  colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors:
@@ -42,5 +43,5 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   price: 1000
   defaultItem: 0
-  unlocked: 0
+  unlocked: 1
   equipped: 0

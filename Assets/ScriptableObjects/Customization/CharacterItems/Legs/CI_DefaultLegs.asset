@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CI_DefaultLegs
   m_EditorClassIdentifier: 
   characterPart: {fileID: 11400000, guid: 72cd17f73f2a7834f9cdb3fd85056321, type: 2}
-  itemName: 
+  itemName: Default Legs
   menuSprite: {fileID: 0}
   animSprites:
   - {fileID: 1072588969, guid: 219dcd5e65a8fa041a609f41c51d5069, type: 3}

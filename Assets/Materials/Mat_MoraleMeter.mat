@@ -51,9 +51,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BubbleSize: 8.6
+    - _BubbleSize: 5.33
     - _BubbleSpeed: 0.33
-    - _Pixelation: 60.4
+    - _Pixelation: 47.46
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Step1: -0.65
+    - _Step2: 1.58
     - _Swirl: 76.5
     m_Colors: []
   m_BuildTextureStacks: []
