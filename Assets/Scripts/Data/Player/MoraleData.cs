@@ -15,12 +15,13 @@ namespace Data
         public int maxMorale = 100;
         public float moraleBoostDuration;
         public int moraleBoostScoreMultiplier = 3;
+        public float moralePointsEarned;
         public bool moraleBoostActive;
 
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoost;
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoostEnd;
         [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoraleUpdated;
-        [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoralePointsEarned;
+        [FoldoutGroup("Events", false)] public UnityEvent OnMoralePointsEarned;
         [FoldoutGroup("Events", false)] public UnityEvent<float, float> OnMoralePointsSpent;
 
         public void ResetMoralePoints()
@@ -35,10 +36,7 @@ namespace Data
             OnMoraleUpdated?.Invoke(newMorale);
         }
 
-        public void DisplayMoralePoints(float moraleEarned)
-        {
-            OnMoralePointsEarned?.Invoke(moraleEarned);
-        }
+        public void DisplayMoralePoints()=> OnMoralePointsEarned?.Invoke();
 
         public void SpendMoralePoints(int moraleSpent)
         {
@@ -58,6 +56,7 @@ namespace Data
         {
             // Not morale points but morale itself
             morale = 0;
+            moralePointsEarned = 0;
             moraleBoostActive = false;
         }
 

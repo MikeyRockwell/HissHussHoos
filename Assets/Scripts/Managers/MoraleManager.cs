@@ -13,7 +13,7 @@ namespace Managers
         [FormerlySerializedAs("moralePointReduction")] [SerializeField]
         private int moraleReduction = 25;
 
-        [SerializeField] private float moralePointsEarned;
+        // [SerializeField] private float moralePointsEarned;
         [SerializeField] private float moralePointsMultiplier = 0.3f;
 
         private DataWrangler.GameData gd;
@@ -35,6 +35,7 @@ namespace Managers
         {
             // Subscribe to events
             gd.eventData.OnGameFirstLaunch.AddListener(moraleData.ResetMoralePoints);
+            gd.roundData.OnGameBegin.AddListener(i => ResetMorale());
             gd.customEvents.OnItemUnlocked.AddListener(SpendMoralPoints);
             gd.eventData.OnHit.AddListener(AddMoraleFromPunch);
             gd.eventData.OnHitTimeAttack.AddListener(AddMoraleFromPunch);
@@ -42,6 +43,8 @@ namespace Managers
             gd.roundData.OnSpeedBonus.AddListener(AddMoraleFromBonus);
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);
         }
+
+        private void ResetMorale()=> moraleData.ResetMorale();
 
         private void AddMoraleFromPunch(int unused)
         {
@@ -90,7 +93,7 @@ namespace Managers
         {
             // Update the morale points earned
             float mpEarned = moraleAdded * moralePointsMultiplier;
-            moralePointsEarned += mpEarned;
+            moraleData.moralePointsEarned += mpEarned;
             moraleData.UpdateMoralePoints(mpEarned);
         }
 
@@ -115,7 +118,7 @@ namespace Managers
         private void DisplayMoralePoints()
         {
             // Display the morale points earned
-            moraleData.DisplayMoralePoints(moralePointsEarned);
+            moraleData.DisplayMoralePoints();
         }
 
         private void SpendMoralPoints(SO_Item item)

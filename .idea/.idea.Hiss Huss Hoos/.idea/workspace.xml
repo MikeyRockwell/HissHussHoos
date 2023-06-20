@@ -5,257 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338fe14c-d9f2-4806-9ed9-c918acebb189" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VoiceLineManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/VoiceLineManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Color.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Color.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TimeAttackSteps.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TimeAttackSteps.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/BackgroundManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/BackgroundManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CharacterManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CharacterManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hiss Huss Hoos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICONE_MB_Black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICONE_MB_Black.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Blue.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Pink.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_Red.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_White.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/ICON_MB_White.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MBRemove.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MBRemove.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterBlack_Anim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterBlack_Anim.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterPink_Anim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterPink_Anim.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterWhite_Anim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterWhite_Anim.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestBlue_Anim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestBlue_Anim.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestLightsMask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestLightsMask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestPink_Anim.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Glasses/MoraleBoosterZestPink_Anim.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/HairHat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/HairHat/WW_Fedora.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/HairHat/WW_Fedora.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/HairHat/WW_Hair_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/HairHat/WW_Hair_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/DefaultShoes_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/DefaultShoes_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/GelLyte_Multi_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/GelLyte_Multi_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Gloves_01_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Gloves_01_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Shirtless_01_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Shirtless_01_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Shorts_01_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Shorts_01_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Singlet_01_ICON.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/Singlet_01_ICON.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/WW_SHORTS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Pants/WW_SHORTS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shirts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shirts/WW_SINGLET.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shirts/WW_SINGLET.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shirts/WW_SINGLET_MASK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shirts/WW_SINGLET_MASK.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shoes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shoes/ASICS_GEL_Lyte_Multi_ANIM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shoes/ASICS_GEL_Lyte_Multi_ANIM.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shoes/DefaultShoes_ANIM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Clothing/Shoes/DefaultShoes_ANIM.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Hair_Hat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Hair_Hat/ICON_WW_Fedora.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Hair_Hat/ICON_WW_Fedora.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Hair_Hat/ICON_WW_Hair_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Hair_Hat/ICON_WW_Hair_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shirt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shirt/ICON_T_Shirt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shirt/ICON_T_Shirt.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shortd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shortd/ICON_Shorts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/Items/Shortd/ICON_Shorts.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/ShoeIcon.aseprite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Menu Icons/ShoeIcon.aseprite.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BlackGold/BB_GOLD_DITH3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagLeather_MASK_SS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagLeather_MASK_SS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagLeather_SS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagLeather_SS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HISS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HISS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HOOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HOOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HUSS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_HUSS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_IDLE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBagOld_IDLE.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HISS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HISS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HOOS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HOOS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HUSS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_HUSS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_Idle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/PunchingBag/BoxingBag_Idle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/William_SS/v2/WW_NUDE_GLOVES.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Artwork/Sprites/William_SS/v2/WW_NUDE_GLOVES.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Hiss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Hiss.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Hoos.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Hoos.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Huss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Huss.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Unlock.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/AudioEvents/AE_Unlock.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_CharacterColorMask.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_CharacterColorMask.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_MoraleMeter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_MoraleMeter.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_ParticlesGlow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_ParticlesGlow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_CharacterColorMask.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_CharacterColorMask.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_MoraleMeter.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_MoraleMeter.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_PixelShader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_PixelShader.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Thin SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-Thin SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Feel/MMTools/Tools/MMAudio/MMSoundManager/Settings/MMSoundManagerAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Feel/MMTools/Tools/MMAudio/MMSoundManager/Settings/MMSoundManagerAudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/BoxingGymBG_V1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/BoxingGymBG_V1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingArtOne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingArtOne.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingArtTwo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingArtTwo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingDithered.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingDithered.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingPosterized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingPosterized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingRender01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingRender01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingTowerStylized 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Artwork/Sprites/Backgrounds/FieldingTowerStylized 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mat_CapeMovement.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mat_CapeMovement.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_CapeMovement.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ShaderGraph/SG_CapeMovement.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HISSButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HISSButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/BonusScoreNumberPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/BonusScoreNumberPopUp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/FastPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/FastPopUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/ScorePopUp.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/ScorePopUp.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/SuperFastPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/SuperFastPopUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Targets/Target.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Targets/Target.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ColorButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ColorButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ScoreEntry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Popups/ScoreNumberPopUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Popups/ScoreNumberPopUp.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/TreatSelector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/TreatSelector.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main/Global Volume Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Head/IC_HatsHair.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Head/IC_HatsHair.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Legs/CI_DefaultLegs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Legs/CI_DefaultLegs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/PunchingBag/CI_DefaultPunchingBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/PunchingBag/CI_DefaultPunchingBag.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/PunchingBag/CI_GoldBlackPunchingBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/PunchingBag/CI_GoldBlackPunchingBag.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Shoes/CI_DefaultShoes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Shoes/CI_DefaultShoes.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Shorts/CI_DefaultShorts.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Shorts/CI_DefaultShorts.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Torso/CI_Shirtless.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Torso/CI_Shirtless.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Torso/CI_Singlet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterItems/Torso/CI_Singlet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Glasses.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Hair_Hat.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Pants.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Customization/CharacterParts/CP_Torso.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/ItemData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/ItemData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/MoraleData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/MoraleData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Data/RoundData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/BoomBoxBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/BoomBoxBounce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterSpriteManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterSpriteManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterSpriteManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CharacterSpriteManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterSpriteManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CharacterSpriteManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/HurtAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/HurtAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/IdleAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/IdleAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagHoist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagHoist.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagSwing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchBagSwing.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/PunchFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/SmoothAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/SmoothAudio.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/SpriteBounce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/SpriteBounce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/PunchAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/PunchAudio.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/AuthenticationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/AuthenticationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ColorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ColorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_CharacterPart.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Customization/SO_Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/DataSaverLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataSaverLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DataWrangler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameEventData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/MusicData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Player/MoraleData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/MoraleData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Player/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/RoundData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/RoundData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/SoundData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/SoundData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/TargetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/TargetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/UIData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/UIData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/ControlPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/ControlPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/PostProcessBuild.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/PostProcessBuild.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/AnimatedFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/AnimatedFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/MoraleBoostFX.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/MoraleBoostFX.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/Popup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/Popup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/RoundNumberPopUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/RoundNumberPopUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/RoundPopUps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/RoundPopUps.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/ScreenImageEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/ScreenImageEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FX/ScreenShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FX/ScreenShake.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/AppleAuthorization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/AppleAuthorization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerNameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/PlayerNameInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Authentication/UnityAuthentication.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DebugControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HealthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HealthManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/AdInitializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/AdInitializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/BannerAdExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/BannerAdExample.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/BannerAdManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/BannerAdManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/InterAdManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/InterAdManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/InterstitialAdExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Monetization/InterstitialAdExample.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MoraleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MoraleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PopupManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/RoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/RoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimeAttackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimeAttackManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimingRoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/RoundManagers/TimingRoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TargetManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BoomBoxControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BoomBoxControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CategoryText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ClothingCategorySelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ClothingCategorySelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ClothingColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ColorButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ClothingColorChanger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ColorButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/CustomizationMenuWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemSelectionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemSelectionButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemUnlockWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/CustomiseMenu/ItemUnlockWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthGraphics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthGraphics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LeaderBoard/LeaderBoardWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MoraleMeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MoraleMeter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MoralePoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MoralePoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PunchButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreGraphics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreGraphics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartGameButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartGameButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/PlayerStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Statistics/UIWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/RegularTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/RegularTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimeAttackTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimeAttackTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimingTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Targets/TimingTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/ComboTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/ComboTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/SpeedTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/SpeedTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/TimerRecording.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Timers/TimerRecording.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Conversion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Conversion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/JsonSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/JsonSerializer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Log.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/RSColors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/RSColors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Serialization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Bitmap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Bitmap.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Black.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Black.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Dilated.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/HEAVY_Outline_Dilated.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF Yellow Outline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Fonts/LAZER84 SDF Yellow Outline.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
@@ -339,32 +126,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.50038254",
-    "do_not_show_Android_plugin_suggestion": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.50038254&quot;,
+    &quot;do_not_show_Android_plugin_suggestion&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\mikey\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\mikey\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\mikey\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../WindowsBuilds/HISS HUSS HOOS.exe" />
@@ -528,6 +315,8 @@
       <workItem from="1686865789542" duration="8847000" />
       <workItem from="1686976230302" duration="1689000" />
       <workItem from="1687122759068" duration="5954000" />
+      <workItem from="1687139438126" duration="361000" />
+      <workItem from="1687210275707" duration="6074000" />
     </task>
     <task id="LOCAL-00001" summary="Creating Repository!!">
       <created>1679967462436</created>

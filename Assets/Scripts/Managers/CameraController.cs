@@ -36,7 +36,7 @@ namespace Managers
             // Tween the cameras orthographic size to the zoomed in ortho scale
             cam.DOOrthoSize(zoomedInOrthoScale, animDuration);
             // Fade the background to black
-            background.DOColor(Color.clear, animDuration);
+            // background.DOColor(Color.clear, animDuration);
         }
 
         private void ZoomToMain()
@@ -46,7 +46,7 @@ namespace Managers
             // Tween the cameras orthographic size to the zoomed out ortho scale
             cam.DOOrthoSize(zoomedOutOrthoScale, animDuration);
             // Fade the background to the original color
-            background.DOColor(bgColor, animDuration);
+            // background.DOColor(bgColor, animDuration);
         }
     }
 }

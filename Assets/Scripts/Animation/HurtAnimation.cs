@@ -9,9 +9,10 @@ namespace Animation
 {
     public class HurtAnimation : MonoBehaviour
     {
+        [SerializeField] private SO_CharacterPart part;
+        
         private SpriteRenderer spriteRenderer;
         private DataWrangler.GameData gd;
-        private SO_CharacterPart part;
         private CharacterSpriteManager charAnim;
         private static readonly int Color1 = Shader.PropertyToID("_Color");
 
@@ -19,8 +20,6 @@ namespace Animation
         {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnMiss.AddListener(Hurt);
-
-            part = GetComponent<CharacterSpriteManager>().part;
             spriteRenderer = GetComponent<SpriteRenderer>();
             charAnim = GetComponent<CharacterSpriteManager>();
         }

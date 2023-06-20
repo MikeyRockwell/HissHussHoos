@@ -40,6 +40,7 @@ namespace UI
         {
             // Load morale points and set the text
             float moralePoints = gd.playerData.md.LoadMoralePoints();
+            moralePointsText.text = moralePoints.ToString($"0");
         }
 
         private void StoreMoralePoints(int i)
@@ -59,14 +60,14 @@ namespace UI
             );
         }
 
-        private void UpdateMoralePoints(float moralePoints)
+        private void UpdateMoralePoints( )
         {
             transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBounce);
             
             // Update the morale points earned
             moralePointsEarnedText.color = gd.uIData.LaserGreen;
             moralePointsEarnedText.transform.position = Vector3.zero;
-            float countDuration = Utils.Conversion.Remap(0, 100, 1, 5, moralePoints);
+            float countDuration = Utils.Conversion.Remap(0, 100, 1, 5, md.moralePointsEarned);
             
             // Play the audio feedbacks
             audioCountStart.PlayFeedbacks();
@@ -76,7 +77,7 @@ namespace UI
             sequence.Append(moralePointsEarnedText.transform.DOScale(Vector3.one, 0.1f).SetEase(Ease.OutBounce));
             sequence.Append(DOTween.To(
                     () => 0, x => moralePointsEarnedText.text = x.ToString(),
-                    Mathf.RoundToInt(moralePoints), countDuration
+                    Mathf.RoundToInt(md.moralePointsEarned), countDuration
                 ).SetEase(Ease.Linear)
                 // Count up the morale points earned from zero to moralePoints in whole numbers
             ).SetEase(Ease.OutCirc).OnComplete(AnimateToTotal);

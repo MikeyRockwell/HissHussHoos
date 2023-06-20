@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xf: {fileID: 2001993194002802312}
   startScale: {x: 0, y: 0}
-  startPos: {x: -2.5, y: 0.35}
+  startPos: {x: -2.2, y: 0.35}
   animDuration: 1.25
   riseHeight: 1.2
   scaleUpDuration: 0.1

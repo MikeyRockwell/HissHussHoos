@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Serialization;
 
 namespace Data.Customization
 {
@@ -14,18 +15,16 @@ namespace Data.Customization
 
         public string itemName;
 
-        public enum ItemType
+        public enum Character
         {
-            Head,
-            Body,
-            Legs,
-            Glasses,
-            Shoes,
+            William,
+            TerryTamati,
             None
         }
 
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Sprites")]
         public Sprite menuSprite;
+        
 
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Sprites")]
         public Sprite[] animSprites;
@@ -33,9 +32,14 @@ namespace Data.Customization
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Sprites")]
         public Sprite[] maskSprites;
 
-        [FoldoutGroup("Sprites")] public ItemType itemType;
+        [FoldoutGroup("Characters")] public Character character;
+        
         [FoldoutGroup("Sprites")] public bool torsoOnTop;
-
+        
+        [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Background")]
+        public Sprite bgSprite;
+        [FoldoutGroup("Background")] public bool hasFlag;
+            
         [FoldoutGroup("Colors")] public bool noColors;
         [FoldoutGroup("Colors")] public bool standardColors;
         [FoldoutGroup("Colors")] public bool customColors;
