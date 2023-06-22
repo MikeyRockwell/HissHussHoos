@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
+  m_Name: CAT_Torso
+  m_EditorClassIdentifier: 
+  UIName: TOPS
+  Items:
+  - {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
+  - {fileID: 11400000, guid: 3194329045683cc4ea2974495b1399fd, type: 2}
+  - {fileID: 11400000, guid: fca064866a85c66448318357fae97bbd, type: 2}
+  - {fileID: 11400000, guid: bb1cf9ecbf69ded43bd2f894e5a410e6, type: 2}
+  - {fileID: 11400000, guid: 55d9a96005d3118488d64843654799fc, type: 2}
+  CurrentItem: {fileID: 11400000, guid: bb1cf9ecbf69ded43bd2f894e5a410e6, type: 2}
+  DefaultItem: {fileID: 11400000, guid: e208b06f0eb5418498ea71a2086abf8c, type: 2}
+  OnChangeItem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChangeItemColor:
+    m_PersistentCalls:
+      m_Calls: []
+  dataSaverLoader: {fileID: 11400000, guid: 25e8ae280a7fa45469b0ba7d01d1fb74, type: 2}

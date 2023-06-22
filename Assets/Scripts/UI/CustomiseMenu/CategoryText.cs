@@ -17,7 +17,7 @@ namespace UI.CustomiseMenu
             textMesh = GetComponent<TextMeshProUGUI>();
         }
 
-        private void UpdateText(SO_CharacterPart part)
+        private void UpdateText(SO_Category part)
         {
             textMesh.text = part.UIName;
         }

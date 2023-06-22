@@ -27,7 +27,7 @@ namespace UI.CustomiseMenu
             menuEvents.OnMenuClosed.AddListener(CloseMenu);
         }
 
-        private void OpenMenu(SO_CharacterPart arg0)
+        private void OpenMenu(SO_Category arg0)
         {
             xf.DOKill();
             xf.DOPivotX(openPivot, animSpeed);

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9d37ddbe124eb6aca0e044cd9d5ab2, type: 3}
+  m_Name: CAT_Shoes
+  m_EditorClassIdentifier: 
+  UIName: SHOES
+  Items:
+  - {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
+  - {fileID: 11400000, guid: ed9b035b5d44e754e949eb9b8730aa95, type: 2}
+  CurrentItem: {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
+  DefaultItem: {fileID: 11400000, guid: 54b48f3503545be41840a424212863fd, type: 2}
+  OnChangeItem:
+    m_PersistentCalls:
+      m_Calls: []
+  OnChangeItemColor:
+    m_PersistentCalls:
+      m_Calls: []
+  dataSaverLoader: {fileID: 11400000, guid: 25e8ae280a7fa45469b0ba7d01d1fb74, type: 2}

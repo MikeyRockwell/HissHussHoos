@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Customization;
 using UI.CustomiseMenu;
 using UnityEngine.Serialization;
 
@@ -18,6 +19,7 @@ namespace Managers
         public ColorData ColorData;
         public UIData UIData;
         public ItemData ItemData;
+        public CharacterData CharacterData;
 
         public static DataSaverLoader GetSaverLoader()
         {
@@ -37,7 +39,8 @@ namespace Managers
                 Instance.SoundData,
                 Instance.ColorData,
                 Instance.UIData,
-                Instance.ItemData);
+                Instance.ItemData,
+                Instance.CharacterData);
         }
 
         public struct GameData
@@ -53,6 +56,7 @@ namespace Managers
             public readonly ColorData colorData;
             public readonly UIData uIData;
             public readonly ItemData itemData;
+            public readonly CharacterData characterData;
 
             public GameData(
                 GameState gameState,
@@ -65,7 +69,8 @@ namespace Managers
                 SoundData soundData,
                 ColorData colorData,
                 UIData uIData,
-                ItemData itemData)
+                ItemData itemData, 
+                CharacterData characterData)
             {
                 this.gameState = gameState;
                 this.eventData = eventData;
@@ -78,6 +83,7 @@ namespace Managers
                 this.colorData = colorData;
                 this.uIData = uIData;
                 this.itemData = itemData;
+                this.characterData = characterData;
             }
         }
     }

@@ -11,16 +11,9 @@ namespace Data.Customization
     // This is the base class for all items that can be equipped by the player
     public class SO_Item : ScriptableObject
     {
-        public SO_CharacterPart characterPart;
+        [FormerlySerializedAs("characterPart")] public SO_Category category;
 
         public string itemName;
-
-        public enum Character
-        {
-            William,
-            TerryTamati,
-            None
-        }
 
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Sprites")]
         public Sprite menuSprite;
@@ -32,7 +25,7 @@ namespace Data.Customization
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Sprites")]
         public Sprite[] maskSprites;
 
-        [FoldoutGroup("Characters")] public Character character;
+        [FoldoutGroup("Characters")] public CharacterData.Character character;
         
         [FoldoutGroup("Sprites")] public bool torsoOnTop;
         
@@ -65,7 +58,7 @@ namespace Data.Customization
             {
                 unlocked = true;
                 equipped = true;
-                characterPart.ChangeItem(this, true);
+                category.ChangeItem(this, true);
             }
             else
             {
@@ -98,7 +91,7 @@ namespace Data.Customization
 
             if (!equipped) return;
             // If the item is equipped, change the character part to this item
-            characterPart.ChangeItem(this, false);
+            category.ChangeItem(this, false);
         }
 
         public SaveData CreateSaveData()

@@ -25,7 +25,7 @@ namespace Animation
             xf = transform;
         }
 
-        private void LowerBag1(SO_CharacterPart arg0)
+        private void LowerBag1(SO_Category arg0)
         {
             LowerBag(0);
         }

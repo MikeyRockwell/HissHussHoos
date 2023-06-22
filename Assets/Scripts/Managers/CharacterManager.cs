@@ -7,18 +7,21 @@ namespace Managers
 {
     public class CharacterManager : MonoBehaviour
     {
-        [FormerlySerializedAs("character")] [SerializeField] private SO_CharacterPart characters;
+        [SerializeField] private SO_Category character;
         [SerializeField] private Transform williamWaiirua;
         [SerializeField] private Transform terryTamati;
         
+        private DataWrangler.GameData gd;
+        
         private void Awake()
         {
-            characters.OnChangeItem.AddListener(ChangeCharacter);
+            gd = DataWrangler.GetGameData();
+            character.OnChangeItem.AddListener(ChangeCharacter);
         }
 
         private void Start()
         {
-            ChangeCharacter(characters.CurrentItem);
+            ChangeCharacter(character.CurrentItem);
         }
 
         private void ChangeCharacter(SO_Item newChar)
@@ -29,17 +32,19 @@ namespace Managers
 
             switch (newChar.character)
             {
-                case SO_Item.Character.William:
+                case CharacterData.Character.William:
                     williamWaiirua.gameObject.SetActive(true);
                     break;
-                case SO_Item.Character.TerryTamati:
+                case CharacterData.Character.TerryTamati:
                     terryTamati.gameObject.SetActive(true);
                     break;
-                case SO_Item.Character.None:
+                case CharacterData.Character.None:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            
+            gd.characterData.currentCharacter = newChar.character;
         }
     }
 }

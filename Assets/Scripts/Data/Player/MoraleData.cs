@@ -10,7 +10,8 @@ namespace Data
     [CreateAssetMenu(fileName = "MoraleData", menuName = "ScriptableObjects/Data/MoraleData", order = 0)]
     public class MoraleData : ScriptableObject
     {
-        [TitleGroup("Morale", "Moraaaaale")] public float moralePoints;
+        [TitleGroup("Morale", "Moraaaaale")] 
+        public float moralePoints;
         public int morale;
         public int maxMorale = 100;
         public float moraleBoostDuration;
@@ -27,6 +28,7 @@ namespace Data
         public void ResetMoralePoints()
         {
             // Called on first launch
+            Log.Message("Resetting Morale Points");
             moralePoints = 0;
             SaveMoralePoints();
         }
@@ -72,7 +74,7 @@ namespace Data
             return (float)morale / maxMorale;
         }
 
-        private void SaveMoralePoints()
+        public void SaveMoralePoints()
         {
             // Write the morale points to the player prefs
             PlayerPrefs.SetFloat("MoralePoints", moralePoints);

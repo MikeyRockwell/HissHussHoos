@@ -24,6 +24,7 @@ namespace UI.CustomiseMenu
             animationSound.pitch = 1 + index * 0.1f;
             image = GetComponent<Image>();
             button.onClick.AddListener(ChangeColor);
+            button.onClick.AddListener(ColorButtonPressed);
         }
 
         public void Init(SO_Color col)
@@ -44,8 +45,16 @@ namespace UI.CustomiseMenu
 
         private void ChangeColor()
         {
-            if (color.Color == events.targetPart.CurrentItem.color) return;
-            events.ChangeItemColor(color);
+            // if (color.Color == events.targetCategory.CurrentItem.color) return;
+            
+            events.ChangeItemColor(events.GetTargetItem(), color);
+        }
+
+        private void ColorButtonPressed()
+        {
+            // if (color.Color == events.targetCategory.CurrentItem.color) return;
+
+            events.ColorButtonPressed(color);
         }
 
         public void PlayAnimation()

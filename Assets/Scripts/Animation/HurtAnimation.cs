@@ -9,7 +9,7 @@ namespace Animation
 {
     public class HurtAnimation : MonoBehaviour
     {
-        [SerializeField] private SO_CharacterPart part;
+        [SerializeField] private SO_Category part;
         
         private SpriteRenderer spriteRenderer;
         private DataWrangler.GameData gd;

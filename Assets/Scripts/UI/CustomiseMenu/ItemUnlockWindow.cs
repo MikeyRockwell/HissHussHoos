@@ -37,7 +37,7 @@ namespace UI.CustomiseMenu
             // Subscribe to events            
             gd = DataWrangler.GetGameData();
             gd.customEvents.OnLockedItemPressed.AddListener(OpenWindow);
-            gd.customEvents.OnLockedColorPressed.AddListener(OpenWindow);
+            // gd.customEvents.OnLockedColorPressed.AddListener(OpenWindow);
             gd.customEvents.OnMenuClosed.AddListener(CloseWindow);
             gd.customEvents.OnItemUnlocked.AddListener(delegate(SO_Item arg0) { CloseWindow(); });
             gd.customEvents.OnColorUnlocked.AddListener(CloseWindow);
@@ -124,7 +124,7 @@ namespace UI.CustomiseMenu
 
         private void UnlockColor()
         {
-            gd.customEvents.UnlockItem(currentColor);
+            // gd.customEvents.UnlockItem(currentColor);
             PlayFX();
         }
 

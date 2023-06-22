@@ -11,7 +11,7 @@ namespace Animation
         private DataWrangler.GameData gd;
 
         [SerializeField] private Animator[] animator;
-        [SerializeField] private SO_CharacterPart gloves;
+        [SerializeField] private SO_Category gloves;
         [SerializeField] private SpriteRenderer[] renderers;
         [SerializeField] private ParticleSystem[] particleSystems;
         [SerializeField] private int puffsToEmit = 5;

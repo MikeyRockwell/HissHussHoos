@@ -20,7 +20,7 @@ namespace UI.CustomiseMenu
         }
 
 
-        private void SetActiveButton(Button eventButton)
+        protected void SetActiveButton(Button eventButton)
         {
             // Manual navigation button highlighting
             button.image.color = button == eventButton ? button.colors.selectedColor : disabledColor;

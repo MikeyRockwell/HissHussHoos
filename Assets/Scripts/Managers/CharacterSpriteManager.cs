@@ -9,7 +9,7 @@ namespace Animation
 {
     public class CharacterSpriteManager : MonoBehaviour
     {
-        public SO_CharacterPart part;
+        public SO_Category part;
 
         private DataWrangler.GameData gd;
         private SpriteRenderer spriteRenderer;
@@ -67,7 +67,7 @@ namespace Animation
         }
 
         private void UpdateSpriteColor(SO_Item item, Color newColor)
-        {
+        {   
             if (item.colorMask)
             {
                 mat.SetColor(Color1, newColor);

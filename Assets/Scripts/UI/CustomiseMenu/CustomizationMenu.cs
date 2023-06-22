@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using Data.Customization;
-using DG.Tweening;
+﻿using System;
 using Managers;
-using UnityEngine.Serialization;
+using UnityEngine;
+using DG.Tweening;
+using Data.Customization;
 
 namespace UI.CustomiseMenu
 {
@@ -12,10 +11,10 @@ namespace UI.CustomiseMenu
         [SerializeField] private CustomizationEvents events;
         [SerializeField] private RectTransform itemGrid;
         [SerializeField] private RectTransform colorGrid;
-        [SerializeField] private Ease colorAnimEase;
+        [SerializeField] private SO_Category defaultCategory;
 
         private DataWrangler.GameData gd;
-        private SO_CharacterPart currentPart;
+        private SO_Category currentCategory;
         private Sequence colorAnim;
 
         private void Awake()
@@ -23,31 +22,43 @@ namespace UI.CustomiseMenu
             gd = DataWrangler.GetGameData();
 
             events.OnMenuOpened.AddListener(InitSubMenu);
+            events.OnMenuClosed.AddListener(ResetItems);
             events.OnChangeCategory.AddListener(InitSubMenu);
             events.OnItemChanged.AddListener(InitializeColorGrid);
             events.OnItemUnlocked.AddListener(RefreshItemGrid);
             events.OnColorUnlocked.AddListener(RefreshColorGrid);
+            
         }
 
-        private void InitSubMenu(SO_CharacterPart part)
+        private void Start()
         {
-            currentPart = part;
-            InitializeItemGrid(part);
-            InitializeColorGrid(part.CurrentItem);
+            events.targetCategory = defaultCategory;
+        }
+
+        private void InitSubMenu(SO_Category category)
+        {
+            currentCategory = category;
+            InitializeItemGrid(category);
+            InitializeColorGrid(category.CurrentItem);
         }
 
         private void RefreshItemGrid(SO_Item arg0)
         {
-            InitializeItemGrid(currentPart);
+            InitializeItemGrid(currentCategory);
         }
 
-        private void InitializeItemGrid(SO_CharacterPart part)
+        private void InitializeItemGrid(SO_Category category)
         {
             DisableItemButtons();
-            for (int i = 0; i < part.Items.Length; i++)
-            {
+            for (int i = 0; i < category.Items.Length; i++)
+            {   
+                // Check if the item is related to this character
+                if (!category.isCharacter && category.Items[i].character != gd.characterData.currentCharacter
+                    && category.Items[i].character != CharacterData.Character.None) continue;
+                
+                // If so then enable the button and initialize it
                 itemGrid.GetChild(i).gameObject.SetActive(true);
-                itemGrid.GetChild(i).GetComponent<ItemSelectionButton>().InitButton(part.Items[i]);
+                itemGrid.GetChild(i).GetComponent<ItemSelectionButton>().InitButton(category.Items[i]);
             }
         }
 
@@ -58,7 +69,8 @@ namespace UI.CustomiseMenu
 
         private void RefreshColorGrid()
         {
-            InitializeColorGrid(currentPart.CurrentItem);
+            SO_Item item = events.GetTargetItem();
+            InitializeColorGrid(item);
         }
 
         private void InitializeColorGrid(SO_Item item)
@@ -69,11 +81,16 @@ namespace UI.CustomiseMenu
                 return;
             }
 
+            // Check if the item is related to this character
+            if (!item.category.isCharacter && item.character != gd.characterData.currentCharacter) return;
+            
             // Loop through all colors in the all colors list and initialize the color buttons
             for (int i = 0; i < gd.itemData.allColors.Count; i++)
+            {   
+                
+                // If so then enable the button and initialize it
                 colorGrid.GetChild(i).GetComponent<ColorButton>().Init(gd.itemData.allColors[i]);
-
-            // AnimateColors();
+            }
         }
 
         private void DisableColorButtons()
@@ -82,6 +99,14 @@ namespace UI.CustomiseMenu
             {
                 child.localScale = Vector3.zero;
                 child.gameObject.SetActive(false);
+            }
+        }
+        
+        private void ResetItems()
+        {
+            foreach (SO_Category cat in gd.itemData.allCategories)
+            {
+                cat.ChangeItem(cat.CurrentItem, true);    
             }
         }
     }

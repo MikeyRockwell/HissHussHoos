@@ -26,16 +26,17 @@ namespace UI.CustomiseMenu
             // Done when category is opened
             item = newItem;
             iconImage.sprite = newItem.menuSprite;
-            iconImage.color = item.unlocked ? item.color : new Color(1, 1, 1, 0.1f);
+            iconImage.color = item.color;
             lockedImage.enabled = !item.unlocked;
 
             button.image.color = newItem.equipped ? button.colors.selectedColor : Color.clear;
+            if (newItem.equipped) events.ChangeItem(item);
         }
 
         // Called when the button is clicked
         private void SetTreat()
         {
-            if (item == item.characterPart.CurrentItem) return;
+            if (item == item.category.CurrentItem && item == item.category.TryingItem) return;
             events.ChangeItem(item);
         }
 
@@ -46,11 +47,13 @@ namespace UI.CustomiseMenu
         }
 
         // Called when the color is changed
-        private void ChangeColor(Color newColor)
+        private void ChangeColor(SO_Item targetItem, Color newColor)
         {
             if (gameObject.activeSelf == false) return;
-            if (events.targetPart.CurrentItem != item) return;
-
+            // if (events.targetCategory.CurrentItem == item && events.TryingOnItem) return;
+            // if (events.targetCategory.CurrentItem != item && events.targetCategory.TryingItem != item) return;
+            // if (!item.equipped && item != item.category.TryingItem) return;
+            if (item != targetItem) return;
             // if (newColor == item.color) return;
             iconImage.color = newColor;
         }

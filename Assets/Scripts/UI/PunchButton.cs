@@ -12,7 +12,7 @@ namespace UI
     public class PunchButton : MonoBehaviour, IPointerDownHandler
     {
         [SerializeField] private TARGET target;
-        [SerializeField] private SO_CharacterPart gloves;
+        [SerializeField] private SO_Category gloves;
 
         private Button button;
 

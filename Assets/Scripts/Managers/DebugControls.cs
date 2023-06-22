@@ -45,6 +45,7 @@ namespace Managers
             if (Input.GetKeyDown(KeyCode.Alpha1)) roundPops.InitRoundPopup(RoundData.RoundType.timeAttack);
 
             if (Input.GetKey(KeyCode.KeypadPlus)) gd.playerData.md.moralePoints += 10;
+            if (Input.GetKeyUp(KeyCode.KeypadPlus)) gd.playerData.md.SaveMoralePoints();
         }
 
         private async void SignIn()

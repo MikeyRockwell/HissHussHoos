@@ -7,7 +7,7 @@ namespace Managers
 {
     public class BackgroundManager : MonoBehaviour
     {
-        [SerializeField] private SO_CharacterPart backgroundPart;
+        [SerializeField] private SO_Category backgroundPart;
         [SerializeField] private SpriteRenderer bgImage;
         [SerializeField] private Transform fieldingFlag;
 

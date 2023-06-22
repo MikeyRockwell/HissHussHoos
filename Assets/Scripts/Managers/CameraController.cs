@@ -29,7 +29,7 @@ namespace Managers
             bgColor = background.color;
         }
 
-        private void ZoomCameraToCharacter(SO_CharacterPart unused)
+        private void ZoomCameraToCharacter(SO_Category unused)
         {
             // Tween the cameras transform to the zoomed in position
             cam.transform.DOMove(zoomedInPosition, animDuration);

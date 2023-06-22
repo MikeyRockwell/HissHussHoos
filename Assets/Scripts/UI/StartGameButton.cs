@@ -49,7 +49,7 @@ namespace UI
                 (startScale * minScale, startScale * maxScale, smoothAudio.rawIntensity * speedMultiplier);
         }
 
-        private void Disable(SO_CharacterPart arg0)
+        private void Disable(SO_Category arg0)
         {
             Disable(0);
         }

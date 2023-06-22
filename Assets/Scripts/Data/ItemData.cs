@@ -4,6 +4,7 @@ using UnityEngine;
 using UI.CustomiseMenu;
 using Data.Customization;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 using static Data.Customization.SO_Color;
 using static Data.Customization.SO_Item;
 
@@ -16,7 +17,7 @@ namespace Data
     {
         public CustomizationEvents events;
 
-        public List<SO_CharacterPart> allParts;
+        [FormerlySerializedAs("allParts")] public List<SO_Category> allCategories;
         public List<SO_Item> allItems;
         public List<SO_Color> allColors;
 
@@ -25,13 +26,13 @@ namespace Data
         {
             // Create a list of all the items
             allItems.Clear();
-            foreach (SO_Item item in allParts.SelectMany(part => part.Items)) allItems.Add(item);
+            foreach (SO_Item item in allCategories.SelectMany(part => part.Items)) allItems.Add(item);
         }
 
         public void ResetItems()
         {
             // Reset all the items
-            foreach (SO_Item item in allParts.SelectMany(part => part.Items)) item.ResetItem();
+            foreach (SO_Item item in allCategories.SelectMany(part => part.Items)) item.ResetItem();
             // Reset all the colors
             foreach (SO_Color color in allColors) color.ResetColor();
         }
