@@ -58,7 +58,7 @@ namespace Data
         {
             // Not morale points but morale itself
             morale = 0;
-            moralePointsEarned = 0;
+            // moralePointsEarned = 0;
             moraleBoostActive = false;
         }
 

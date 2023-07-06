@@ -1,8 +1,6 @@
 <dependencies>
   <packages>
-    <package>com.google.android.gms:play-services-ads-identifier:17.0.0</package>
-    <package>com.google.android.gms:play-services-basement:17.2.1</package>
-    <package>com.ironsource.sdk:mediationsdk:7.2.5</package>
+    <package>com.google.games:gpgs-plugin-support:0.11.01</package>
   </packages>
   <files />
   <settings>
@@ -10,10 +8,8 @@
     <setting name="bundleId" value="com.RockwellStudios.HISSHUSSHOOS" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
-    <setting name="gradlePropertiesTemplateEnabled" value="False" />
-    <setting name="gradleTemplateEnabled" value="False" />
+    <setting name="gradleTemplateEnabled" value="True" />
     <setting name="installAndroidPackages" value="True" />
-    <setting name="localMavenRepoDir" value="Assets/GeneratedLocalRepo" />
     <setting name="packageDir" value="Assets/Plugins/Android" />
     <setting name="patchAndroidManifest" value="True" />
     <setting name="patchMainTemplateGradle" value="True" />

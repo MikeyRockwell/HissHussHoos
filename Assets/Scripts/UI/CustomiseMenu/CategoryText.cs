@@ -14,6 +14,7 @@ namespace UI.CustomiseMenu
         {
             gd = DataWrangler.GetGameData();
             gd.customEvents.OnChangeCategory.AddListener(UpdateText);
+            gd.customEvents.OnMenuOpened.AddListener(UpdateText);
             textMesh = GetComponent<TextMeshProUGUI>();
         }
 

@@ -15,5 +15,5 @@ MonoBehaviour:
   ColorName: LightBlue
   Color: {r: 0, g: 0.73269033, b: 1, a: 1}
   unlocked: 0
-  price: 0
+  price: 15
   defaultColor: 0

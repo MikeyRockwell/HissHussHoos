@@ -49,6 +49,8 @@ namespace UI
         private void SubscribeEvents()
         {
             gd.eventData.OnGameInit.AddListener(NewGame);
+            gd.eventData.initMethods++;
+            
             gd.eventData.OnGameOver.AddListener(CollapseTimer);
             gd.roundData.OnRoundBegin.AddListener(SetTimerSize);
             gd.roundData.OnComboBegin.AddListener(StartTimer);
@@ -59,6 +61,7 @@ namespace UI
         private void NewGame()
         {
             ScaleTimerDown();
+            gd.eventData.RegisterCallBack();
         }
 
         private void ScaleTimerDown()
@@ -75,29 +78,13 @@ namespace UI
 
         private void SetTimerSize(int round)
         {
-            // float width = 0;
-            //
-            // switch (gd.roundData.roundType) {
-            //     case RoundData.RoundType.warmup:
-            //         break;
-            //     case RoundData.RoundType.normal:
-            //         width = gd.roundData.roundTimeLimit * widthMultiplier;
-            //         break;
-            //     case RoundData.RoundType.timeAttack:
-            //         width = gd.roundData.timeAttackLength * widthMultiplier;
-            //         break;
-            //     default:
-            //         throw new ArgumentOutOfRangeException();
-            // }
-            // 
-            // timerRect.sizeDelta = new Vector2(width, timerRect.sizeDelta.y);
             ScaleUpTimer();
         }
 
         private void ScaleUpTimer()
         {
-            timerRect.DOScale(defaultTimeBarScale, 0.5f);
-            timerTextTop.rectTransform.DOScale(defaultTextScale, 0.5f);
+            timerRect.DOScale(defaultTimeBarScale, 0.5f).SetUpdate(true);
+            timerTextTop.rectTransform.DOScale(defaultTextScale, 0.5f).SetUpdate(true);
         }
 
         private void StartTimer(float timeLimit)

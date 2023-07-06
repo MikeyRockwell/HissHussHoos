@@ -21,10 +21,15 @@ namespace Managers
         private void Awake()
         {
             gd = DataWrangler.GetGameData();
+            
+            gd.eventData.OnGameInit.AddListener(NewGame);
+            gd.eventData.initMethods++;
+            
             gd.eventData.OnGameFirstLaunch.AddListener(ClearSavedScores);
             gd.eventData.OnHit.AddListener(AddScore);
             gd.eventData.OnHitTimeAttack.AddListener(AddScoreTimeAttack);
-            gd.eventData.OnGameInit.AddListener(NewGame);
+            
+            
             gd.eventData.OnGameOver.AddListener(GameOver);
             gd.roundData.OnSpeedBonus.AddListener(AddSpeedBonus);
             md = gd.playerData.md;
@@ -33,6 +38,7 @@ namespace Managers
         private void NewGame()
         {
             gd.playerData.ResetScore();
+            gd.eventData.RegisterCallBack();
         }
 
         private void ClearSavedScores()

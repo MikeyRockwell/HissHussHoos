@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorName: Pastel Green
   Color: {r: 0.9098039, g: 1.4980392, b: 0.74509805, a: 1}
-  unlocked: 1
-  price: 0
+  unlocked: 0
+  price: 15
   defaultColor: 0

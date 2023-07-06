@@ -44,7 +44,7 @@ namespace UI
             textMesh.text = type.ToString();
 
             gameObject.SetActive(true);
-            xf.DOScale(Vector3.one, 0.2f);
+            xf.DOScale(Vector3.one, 0.2f).SetUpdate(true);
             AnimateColor();
         }
 

@@ -64,6 +64,7 @@ namespace UI
         {
             // Stop the morale boost animation
             transform.DOKill();
+            transform.DOScale(Vector3.one, 0.5f);
         }
     }
 }

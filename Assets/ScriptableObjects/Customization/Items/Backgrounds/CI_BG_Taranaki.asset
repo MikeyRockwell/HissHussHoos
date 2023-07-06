@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CI_BG_Taranaki
   m_EditorClassIdentifier: 
   category: {fileID: 11400000, guid: 16ac8bf77862bb94b910ab340b3b1405, type: 2}
-  itemName: Fielding, NZ
+  itemName: Taranaki
   menuSprite: {fileID: 21300000, guid: d582fba50cf40bd478771f7c2e739724, type: 3}
   animSprites: []
   maskSprites: []
@@ -32,4 +32,4 @@ MonoBehaviour:
   price: 150
   defaultItem: 0
   unlocked: 1
-  equipped: 1
+  equipped: 0

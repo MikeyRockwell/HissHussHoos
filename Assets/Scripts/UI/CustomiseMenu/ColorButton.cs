@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Data.Customization;
 using DG.Tweening;
 using Managers;
@@ -12,17 +13,17 @@ namespace UI.CustomiseMenu
         [SerializeField] private CustomizationEvents events;
         [SerializeField] private Button button;
         [SerializeField] private Image lockedImage;
+        [SerializeField] private Image colorImage;
         [SerializeField] private AudioSource animationSound;
 
-        private Image image;
         private SO_Color color;
+        private Sequence sequence;
         public int index;
 
         private void Awake()
         {
             index = transform.GetSiblingIndex();
             animationSound.pitch = 1 + index * 0.1f;
-            image = GetComponent<Image>();
             button.onClick.AddListener(ChangeColor);
             button.onClick.AddListener(ColorButtonPressed);
         }
@@ -31,16 +32,18 @@ namespace UI.CustomiseMenu
         {
             lockedImage.enabled = !col.unlocked;
 
-            if (color == col && gameObject.activeSelf == true) return;
-
+            if (color == col && gameObject.activeSelf) return;
+            
             transform.localScale = Vector3.zero;
             gameObject.SetActive(true);
+            
             color = col;
-            image.color = col.Color;
-            transform.DOKill();
-            CancelInvoke();
+            colorImage.color = col.Color;
+            sequence.Kill();
+
             float delay = (index + 1) * 0.05f;
-            Invoke(nameof(PlayAnimation), delay);
+            sequence = DOTween.Sequence();
+            sequence.PrependInterval(delay).SetUpdate(true).OnComplete(PlayAnimation);
         }
 
         private void ChangeColor()
@@ -58,8 +61,8 @@ namespace UI.CustomiseMenu
         }
 
         public void PlayAnimation()
-        {
-            transform.DOScale(1, 0.1f).SetEase(Ease.OutBack);
+        {   
+            transform.DOScale(1, 0.1f).SetEase(Ease.OutBack).SetUpdate(true);
             animationSound.PlayOneShot(animationSound.clip);
         }
     }

@@ -28,7 +28,7 @@ namespace UI.Statistics
             // Add a listener to the button that opens and closes the window
             if (openWindowButton != null) openWindowButton.onClick.AddListener(CheckWindowStatus);
             // Add a listener to the background button that closes the window
-            closeWindowButton.onClick.AddListener(CheckWindowStatus);
+            if (closeWindowButton != null) closeWindowButton.onClick.AddListener(CheckWindowStatus);
         }
 
         protected void CheckWindowStatus()

@@ -1,6 +1,7 @@
 ﻿using Data;
 using UnityEngine;
 using Data.Customization;
+using FX;
 using UnityEngine.Serialization;
 using Utils;
 
@@ -15,6 +16,7 @@ namespace Managers
 
         // [SerializeField] private float moralePointsEarned;
         [SerializeField] private float moralePointsMultiplier = 0.3f;
+        [SerializeField] private ScalePulse moraleBoostText;
 
         private DataWrangler.GameData gd;
         private MoraleData moraleData;
@@ -44,7 +46,11 @@ namespace Managers
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);
         }
 
-        private void ResetMorale()=> moraleData.ResetMorale();
+        private void ResetMorale()
+        {
+            moraleData.ResetMorale();
+            moraleData.moralePointsEarned = 0;
+        }
 
         private void AddMoraleFromPunch(int unused)
         {
@@ -84,7 +90,8 @@ namespace Managers
             // Trigger the morale boost event
             moraleData.moraleBoostActive = true;
             moraleData.OnMoraleBoost?.Invoke();
-            Log.Message("Morale boost activated!", gd.uIData.HotPink);
+            moraleBoostText.gameObject.SetActive(true);
+            
             // Start a timer to reset the morale
             Invoke(nameof(EndMoraleBoost), moraleData.moraleBoostDuration);
         }
@@ -108,17 +115,22 @@ namespace Managers
 
         private void EndMoraleBoost()
         {
+            CancelInvoke();
             // Reset the morale points to zero
             moraleData.ResetMorale();
             moraleData.OnMoraleBoostEnd?.Invoke();
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
+            
+            moraleBoostText.Disable();
         }
 
         private void DisplayMoralePoints()
         {
             // Display the morale points earned
             moraleData.DisplayMoralePoints();
+            
+            moraleBoostText.Disable();
         }
 
         private void SpendMoralPoints(SO_Item item)

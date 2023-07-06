@@ -4,6 +4,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Data.Customization;
+using Data.Tutorial;
 using UnityEngine.EventSystems;
 using TARGET = Data.TargetData.Target;
 
@@ -13,6 +14,7 @@ namespace UI
     {
         [SerializeField] private TARGET target;
         [SerializeField] private SO_Category gloves;
+        [SerializeField] private TutorialEvent tutorial;
 
         private Button button;
 
@@ -26,6 +28,7 @@ namespace UI
             button = GetComponent<Button>();
 
             gloves.OnChangeItemColor.AddListener(ChangeButtonColor);
+            tutorial.OnEventTriggered.AddListener(()=>gameObject.SetActive(true));
         }
 
         private void ChangeButtonColor(SO_Item arg0, Color color)

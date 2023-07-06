@@ -1,4 +1,5 @@
-﻿using Data;
+﻿using System.Threading.Tasks;
+using Data;
 using UnityEngine;
 
 namespace Managers
@@ -10,24 +11,8 @@ namespace Managers
         private void Awake()
         {
             gd = DataWrangler.GetGameData();
-            // Target frame rate 
-            // TODO move to a video controller 
-            Application.targetFrameRate = 60;
-
-            // This is a hack to reset the game to new
-            NUKE();
         }
-
-        // TODO DELETE THIS
-        private void NUKE()
-        {
-            if (PlayerPrefs.GetInt("Nuke4", 1) == 1)
-            {
-                PlayerPrefs.SetInt("FirstLaunch", 1);
-                PlayerPrefs.SetInt("Nuke4", 0);
-            }
-        }
-
+        
         private void Start()
         {
             DataSaverLoader dataSaverLoader = DataWrangler.GetSaverLoader();

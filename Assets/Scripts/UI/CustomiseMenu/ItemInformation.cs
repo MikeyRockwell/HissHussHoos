@@ -21,6 +21,7 @@ namespace UI.CustomiseMenu
         private void Awake()
         {
             gd = DataWrangler.GetGameData();
+            // gd.customEvents.OnMenuOpened.AddListener();
             gd.customEvents.OnItemChanged.AddListener(UpdateItemInformation);
             gd.customEvents.OnColorButtonPressed.AddListener(UpdateColorInformation);
         }

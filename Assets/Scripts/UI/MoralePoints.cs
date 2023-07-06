@@ -27,7 +27,10 @@ namespace UI
             // Subscribe to events
             gd = DataWrangler.GetGameData();
             md = gd.playerData.md;
+            
             gd.eventData.OnGameInit.AddListener(InitMoralePoints);
+            gd.eventData.initMethods++;
+            
             gd.roundData.OnGameBegin.AddListener(StoreMoralePoints);
             md.OnMoralePointsEarned.AddListener(UpdateMoralePoints);
             md.OnMoralePointsSpent.AddListener(SpendMoralePoints);
@@ -41,6 +44,8 @@ namespace UI
             // Load morale points and set the text
             float moralePoints = gd.playerData.md.LoadMoralePoints();
             moralePointsText.text = moralePoints.ToString($"0");
+            
+            gd.eventData.RegisterCallBack();
         }
 
         private void StoreMoralePoints(int i)

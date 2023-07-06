@@ -1,5 +1,6 @@
 ﻿using Data;
 using FX;
+using Managers.Tutorial;
 using UI;
 using Utils;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Managers
         [SerializeField] private LeaderBoard Leaderboard;
         [SerializeField] private MoraleManager moraleManager;
         [SerializeField] private RoundPopUps roundPops;
+        [SerializeField] private DialogueManager dialogueManager;
 
         private DataWrangler.GameData gd;
 
@@ -39,13 +41,14 @@ namespace Managers
                 Log.Message("Logging out from Unity Authentication", gd.uIData.HotPink);
                 AuthenticationService.Instance.SignOut();
                 AuthenticationService.Instance.ClearSessionToken();
-                SignIn();
+                // SignIn();
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha1)) roundPops.InitRoundPopup(RoundData.RoundType.timeAttack);
 
             if (Input.GetKey(KeyCode.KeypadPlus)) gd.playerData.md.moralePoints += 10;
             if (Input.GetKeyUp(KeyCode.KeypadPlus)) gd.playerData.md.SaveMoralePoints();
+            if (Input.GetKeyDown(KeyCode.Escape)) dialogueManager.EndDialogue();
         }
 
         private async void SignIn()

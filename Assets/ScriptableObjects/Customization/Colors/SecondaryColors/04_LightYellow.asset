@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorName: Light Yellow
   Color: {r: 1, g: 0.83049214, b: 0.1641509, a: 1}
-  unlocked: 1
-  price: 0
+  unlocked: 0
+  price: 15
   defaultColor: 0

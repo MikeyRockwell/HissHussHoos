@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Serialization;
 
 namespace Data
 {
@@ -15,8 +16,9 @@ namespace Data
         {
             firstLaunch = !firstLaunch;
         }
-
+        
         public bool firstLaunch;
+        public int NUKECODE;
 
         [Serializable]
         public struct SaveData

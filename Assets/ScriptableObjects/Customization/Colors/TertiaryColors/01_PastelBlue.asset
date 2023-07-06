@@ -15,5 +15,5 @@ MonoBehaviour:
   ColorName: Pastel Blue
   Color: {r: 0.56037736, g: 0.8827673, b: 1, a: 1}
   unlocked: 1
-  price: 0
+  price: 15
   defaultColor: 0

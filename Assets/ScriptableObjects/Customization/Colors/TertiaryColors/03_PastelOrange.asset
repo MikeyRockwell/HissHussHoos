@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorName: Pastel Orange
   Color: {r: 1, g: 0.83347857, b: 0.71132076, a: 1}
-  unlocked: 1
-  price: 0
+  unlocked: 0
+  price: 15
   defaultColor: 0

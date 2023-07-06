@@ -33,7 +33,7 @@ namespace Audio
         [SerializeField] private AudioMixerGroup voiceLineFXMixerGroup;
 
         private DataWrangler.GameData gd;
-        public bool priorityAudioPlaying;
+        public bool priorityAudioPlaying = true;
 
         protected override void Awake()
         {
@@ -51,6 +51,13 @@ namespace Audio
             gd.customEvents.OnItemUnlocked.AddListener(delegate { PlayVoiceLine(unlockItem); });
             gd.customEvents.OnColorUnlocked.AddListener(delegate { PlayVoiceLine(unlockItem); });
         }
+
+        private void Start()
+        {
+            Invoke(nameof(UnlockAudio), 3f);
+        }
+        
+        private void UnlockAudio() => priorityAudioPlaying = false;
 
         public void PlayVoiceLine(AudioEvent audioEvent)
         {

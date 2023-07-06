@@ -15,5 +15,5 @@ MonoBehaviour:
   ColorName: Mint
   Color: {r: 0, g: 1, b: 0.5333595, a: 1}
   unlocked: 0
-  price: 0
+  price: 15
   defaultColor: 0

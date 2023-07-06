@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorName: Pastel Pink
   Color: {r: 0.99485725, g: 0.7294118, b: 1, a: 1}
-  unlocked: 1
-  price: 0
+  unlocked: 0
+  price: 15
   defaultColor: 0

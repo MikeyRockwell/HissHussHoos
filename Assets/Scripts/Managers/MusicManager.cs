@@ -32,9 +32,16 @@ namespace Managers
 
         private void Start()
         {
-            md.currentTrackIndex = PlayerPrefs.GetInt("CurrentMusicTrack");
+            md.currentTrackIndex = PlayerPrefs.GetInt("CurrentMusicTrack", 0);
             md.playing = false;
-            if (md.playByDefault) md.Play();
+            
+            // Allow the settings to be loaded before playing the music
+            Invoke(nameof(DelayedPlay), 0.5f);
+        }
+
+        private void DelayedPlay()
+        {
+            md.Play();
         }
 
         private void Play(bool playing)

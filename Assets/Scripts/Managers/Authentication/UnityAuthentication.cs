@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using Unity.Services.Core;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 using Unity.Services.Authentication;
 
 namespace Managers
@@ -12,9 +13,15 @@ namespace Managers
     public class UnityAuthentication : MonoBehaviour
     {
         [SerializeField] private AuthenticationData authData;
-        [SerializeField] private AppleAuthorization appleAuthorization;
+        [SerializeField] private SceneManager sceneManager;
 
-        private async void Awake()
+        public async Task StartUnityServices()
+        {
+            await InitUnityServices();
+            authData.OnPlayerNameSubmitted.AddListener(SubmitPlayerName);
+        }
+
+        private async Task InitUnityServices()
         {
             try
             {
@@ -25,10 +32,14 @@ namespace Managers
                 Log.Error(e.ToString());
             }
 
-            // Sign in anonymously for testing - possibly solution??
             await SignInAnonymously();
-            // Here we will put apple and google sign in
-            // appleAuthorization.LoginToApple();
+        }
+
+        public async Task LogOutOfUnity()
+        {
+            await UnityServices.InitializeAsync();
+            AuthenticationService.Instance.SignOut();
+            AuthenticationService.Instance.ClearSessionToken();
         }
 
         public async Task SignInAnonymously()
@@ -61,6 +72,19 @@ namespace Managers
             // Check to see if the player signed in has a name
             // If not, prompt the player to enter a name
             if (AuthenticationService.Instance.PlayerName == null) authData.PlayerNameRequired();
+            else sceneManager.SceneTransition(2);
+        }
+        
+        private async void SubmitPlayerName(string playerName)
+        {
+            await SubmitPlayerNameAsync(playerName);
+            sceneManager.SceneTransition(2);
+        }
+
+        private async Task SubmitPlayerNameAsync(string playerName)
+        {
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(playerName);
+            Log.Message($"Player name set to {playerName}");
         }
     }
 }

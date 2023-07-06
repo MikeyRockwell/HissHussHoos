@@ -11,7 +11,10 @@ namespace Data
         // Such as the player name which will be save and loaded
         // Also events related to authentication
 
+        public UnityEvent OnLogPlayerOut;
+        
         public UnityEvent OnPlayerNameRequired;
+        public UnityEvent<string> OnPlayerNameSubmitted;
 
         public string PlayerName
         {
@@ -19,9 +22,9 @@ namespace Data
             set => PlayerPrefs.SetString("PlayerName", value);
         }
 
-        public void PlayerNameRequired()
-        {
-            OnPlayerNameRequired?.Invoke();
-        }
+        public void PlayerNameRequired()=>OnPlayerNameRequired?.Invoke();
+        public void PlayerNameSubmitted(string input)=>OnPlayerNameSubmitted?.Invoke(input);
+        public void LogPlayerOut()=>OnLogPlayerOut?.Invoke();
+        
     }
 }

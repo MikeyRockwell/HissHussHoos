@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using Data.Tutorial;
+using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
@@ -21,6 +22,11 @@ namespace Data
 
         // Called when the game data is first loaded
         public UnityEvent OnGameInit;
+        public UnityEvent OnGameInitComplete;
+        public UnityEvent OnGameReady;
+        
+        
+        public int initMethods;
 
         // Different punches
         public UnityEvent<TARGET> OnPunchWarmup;
@@ -34,6 +40,10 @@ namespace Data
 
         // Game over
         public UnityEvent OnGameOver;
+        
+        // Tutorials
+        public UnityEvent<SO_Dialogue> OnDialogueStart;
+        public UnityEvent<SO_Dialogue> OnDialogueEnd;
 
         public void FirstLaunch()
         {
@@ -42,19 +52,26 @@ namespace Data
         }
 
         public void InitializeGame()
-        {
-            inputEnabled = true;
+        {   
+            // Get the number of listeners of the OnGameInit event
+            // initMethods = OnGameInit.GetPersistentEventCount();
+            // Log.Message("Initialization methods: " + initMethods, Color.green);
             OnGameInit?.Invoke();
         }
-
-        public void PunchWarmup(TARGET target)
+        
+        public void RegisterCallBack()
         {
-            OnPunchWarmup?.Invoke(target);
+            initMethods--;
+            if (initMethods > 0) return;
+            OnGameInitComplete?.Invoke();
         }
+        
+        public void GameReady()=>OnGameReady?.Invoke();
 
+        public void PunchWarmup(TARGET target)=>OnPunchWarmup?.Invoke(target);
+        
         public void PunchNormal(TARGET target)
         {
-            Log.Message("Punching Normal");
             if (!inputEnabled) return;
             OnPunchNormal?.Invoke(target);
         }
@@ -70,19 +87,11 @@ namespace Data
             OnHitTimeAttack?.Invoke(streak);
         }
 
-        public void Hit(int step)
-        {
-            OnHit?.Invoke(step);
-        }
-
-        public void Miss()
-        {
-            OnMiss?.Invoke();
-        }
-
-        public void GameOver()
-        {
-            OnGameOver?.Invoke();
-        }
+        public void Hit(int step)=>OnHit?.Invoke(step);
+        public void Miss()=>OnMiss?.Invoke();
+        public void GameOver()=>OnGameOver?.Invoke();
+        
+        public void StartDialogue(SO_Dialogue dialogue)=>OnDialogueStart?.Invoke(dialogue);
+        public void EndDialogue(SO_Dialogue dialogue)=>OnDialogueEnd?.Invoke(dialogue);
     }
 }

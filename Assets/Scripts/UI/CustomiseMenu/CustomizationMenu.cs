@@ -3,6 +3,7 @@ using Managers;
 using UnityEngine;
 using DG.Tweening;
 using Data.Customization;
+using Utils;
 
 namespace UI.CustomiseMenu
 {
@@ -16,6 +17,7 @@ namespace UI.CustomiseMenu
         private DataWrangler.GameData gd;
         private SO_Category currentCategory;
         private Sequence colorAnim;
+        private CustomizationMenuWindow window;
 
         private void Awake()
         {
@@ -28,6 +30,7 @@ namespace UI.CustomiseMenu
             events.OnItemUnlocked.AddListener(RefreshItemGrid);
             events.OnColorUnlocked.AddListener(RefreshColorGrid);
             
+            window = GetComponent<CustomizationMenuWindow>();
         }
 
         private void Start()
@@ -38,6 +41,9 @@ namespace UI.CustomiseMenu
         private void InitSubMenu(SO_Category category)
         {
             currentCategory = category;
+
+            if (!window.isOpen) return;
+            
             InitializeItemGrid(category);
             InitializeColorGrid(category.CurrentItem);
         }
@@ -80,15 +86,15 @@ namespace UI.CustomiseMenu
                 DisableColorButtons();
                 return;
             }
-
+            Log.Message("Initializing color grid");
             // Check if the item is related to this character
             if (!item.category.isCharacter && item.character != gd.characterData.currentCharacter) return;
             
             // Loop through all colors in the all colors list and initialize the color buttons
             for (int i = 0; i < gd.itemData.allColors.Count; i++)
-            {   
-                
+            {
                 // If so then enable the button and initialize it
+                // colorGrid.GetChild(i).gameObject.SetActive(true);
                 colorGrid.GetChild(i).GetComponent<ColorButton>().Init(gd.itemData.allColors[i]);
             }
         }

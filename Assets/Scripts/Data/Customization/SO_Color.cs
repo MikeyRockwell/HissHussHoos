@@ -26,8 +26,15 @@ namespace Data.Customization
 
             // Load the save data if it exists
             foreach (SaveData item in saveData.colorSaveData)
-                if (item.colorName == ColorName)
-                    unlocked = item.unlocked;
+            {   
+                if (defaultColor)
+                {
+                    unlocked = true;
+                    return;
+                }
+
+                if (item.colorName == ColorName) unlocked = item.unlocked;
+            }
         }
 
         public SaveData CreateSaveData()

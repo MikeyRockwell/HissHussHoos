@@ -197,7 +197,7 @@ namespace UI
             {
                 entry.transform.DOKill();
                 seq.Append(
-                    entry.transform.DOScale(1, animDuration).OnPlay(() => entry.PlayAudioFX()).SetEase(animEase));
+                    entry.transform.DOScale(1, animDuration));
             }
 
             // OpenWindow();

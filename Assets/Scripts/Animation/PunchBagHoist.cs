@@ -24,8 +24,9 @@ namespace Animation
             gd.customEvents.OnMenuClosed.AddListener(RaiseBag);
             xf = transform;
         }
-
+        
         private void LowerBag1(SO_Category arg0)
+
         {
             LowerBag(0);
         }
@@ -33,13 +34,13 @@ namespace Animation
         private void LowerBag(int arg0)
         {
             xf.DOKill();
-            xf.DOLocalMove(new Vector2(xf.position.x, yDefault), animDuration);
+            xf.DOLocalMove(new Vector2(xf.position.x, yDefault), animDuration).SetUpdate(true);
         }
 
         private void RaiseBag()
         {
             xf.DOKill();
-            xf.DOLocalMove(new Vector2(xf.position.x, yHoist), animDuration);
+            xf.DOLocalMove(new Vector2(xf.position.x, yHoist), animDuration).SetUpdate(true);
         }
     }
 }

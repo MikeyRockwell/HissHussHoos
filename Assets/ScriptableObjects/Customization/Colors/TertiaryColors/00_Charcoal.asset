@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ColorName: Charcoal
   Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
-  unlocked: 1
-  price: 0
+  unlocked: 0
+  price: 15
   defaultColor: 0

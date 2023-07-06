@@ -66,19 +66,19 @@ namespace UI
         private void ScaleTextUp()
         {
             Vector3 targetScale = activeTarget ? Vector3.one : inactiveScale;
-            xf.DOScale(targetScale, 0.1f).OnComplete(StartPulse);
+            xf.DOScale(targetScale, 0.1f).SetUpdate(true).OnComplete(StartPulse);
         }
 
         private void RotateTextToCenter()
         {
-            xf.DORotate(Vector3.zero, 0.05f);
+            xf.DORotate(Vector3.zero, 0.05f).SetUpdate(true);
         }
 
         private void SetText()
         {
             textMesh.text = gd.targetData.currentSet[index].ToString();
             Color targetColor = activeTarget ? RSColors.Green() : Color.white;
-            textMesh.DOColor(targetColor, 0.2f);
+            textMesh.DOColor(targetColor, 0.2f).SetUpdate(true);
         }
 
         private void StartPulse()
@@ -86,7 +86,9 @@ namespace UI
             if (!activeTarget) return;
             // Pulse loop
             xf.DOScale(
-                xf.localScale + new Vector3(-0.1f, -0.1f, -0.1f), 0.5f).SetLoops(-1, LoopType.Yoyo);
+                xf.localScale + new Vector3(-0.1f, -0.1f, -0.1f), 0.5f)
+                .SetUpdate(true)
+                .SetLoops(-1, LoopType.Yoyo);
         }
 
         private void CheckHit(int step)

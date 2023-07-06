@@ -35,10 +35,11 @@ namespace UI
                 steps[i].gameObject.SetActive(true);
                 steps[i].color = gd.uIData.DisabledComboText;
                 sequence.Append(
-                    transform.GetChild(i).DOScale(1, 0.02f).From(0).SetEase(Ease.OutBounce));
+                    transform.GetChild(i).DOScale(1, 0.02f)
+                        .From(0)
+                        .SetUpdate(true)
+                        .SetEase(Ease.OutBounce)).SetUpdate(true);
             }
-
-            sequence.Play();
         }
 
         private void CheckTarget(TargetData.Target target)
