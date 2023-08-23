@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &143406178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143406180}
+  - component: {fileID: 143406179}
+  m_Layer: 0
+  m_Name: DataWrangler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &143406179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143406178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1839c2b319444278677259d3d5f56ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 480e9dc09d85f714cace671c77908297, type: 2}
+  dataSaverLoader: {fileID: 0}
+  EventData: {fileID: 11400000, guid: 81ff4fd6cb91e0e4d9e483f26ea14433, type: 2}
+  customizationEvents: {fileID: 0}
+  TargetData: {fileID: 0}
+  PlayerData: {fileID: 0}
+  RoundData: {fileID: 0}
+  MusicData: {fileID: 0}
+  SoundData: {fileID: 0}
+  ColorData: {fileID: 0}
+  UIData: {fileID: 0}
+  ItemData: {fileID: 0}
+  CharacterData: {fileID: 0}
+--- !u!4 &143406180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143406178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13647176, y: -0.06647107, z: -0.82769656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503030535
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +214,7 @@ VideoPlayer:
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_AspectRatio: 1
   m_DataSource: 0
   m_PlaybackSpeed: 1
@@ -240,6 +297,7 @@ MonoBehaviour:
   rightPanel: {fileID: 0}
   animationTime: 2
   ease: 4
+  soundFX: {fileID: 0}
 --- !u!4 &1867853420
 Transform:
   m_ObjectHideFlags: 0

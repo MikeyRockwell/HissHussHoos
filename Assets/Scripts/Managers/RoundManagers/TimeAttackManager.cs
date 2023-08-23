@@ -5,10 +5,8 @@ using TMPro;
 using UnityEngine;
 using TARGET = Data.TargetData.Target;
 
-namespace Managers
-{
-    public class TimeAttackManager : MonoBehaviour
-    {
+namespace Managers {
+    public class TimeAttackManager : MonoBehaviour {
         // This class manages the Time Attack round
         // Spawning a single target with a short timer before it disappears
         // If you miss a target, you lose time
@@ -24,8 +22,7 @@ namespace Managers
         private int streak;
 
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnTimeAttackRoundBegin.AddListener(BeginRound);
             gd.roundData.OnTimeAttackTargetTimedOut.AddListener(TargetTimeOut);
@@ -33,8 +30,7 @@ namespace Managers
             gd.eventData.OnPunchTimeAttack.AddListener(CheckTarget);
         }
 
-        private void BeginRound()
-        {
+        private void BeginRound() {
             // Setup streak text
             streak = 0;
             FormatStreakText();
@@ -43,17 +39,19 @@ namespace Managers
 
             gd.roundData.roundStep = 0;
             SpawnNewTarget();
-
-            // StartCoroutine(gd.roundData.TimeAttackRoundTimer());
         }
 
-        private void SpawnNewTarget()
-        {
-            // if (gd.roundData.roundType != RoundData.RoundType.timeAttack) return;
-            if (gd.roundData.roundStep == targetsPerRound)
-            {
-                // End the round
-                gd.roundData.EndTimeAttackRound();
+        private void SpawnNewTarget() {
+            // Check if the round is over
+            if (gd.roundData.roundStep == targetsPerRound) {
+                // Check if the player has a perfect streak
+                if (streak == targetsPerRound) {
+                    // Add a health
+                    gd.playerData.ChangeHealth(1);
+                    gd.roundData.EndTimeAttackRound(true);
+                    return;
+                }
+                gd.roundData.EndTimeAttackRound(false);
                 return;
             }
 
@@ -67,10 +65,8 @@ namespace Managers
             gd.roundData.roundStep++;
         }
 
-        private TimeAttackTarget GetTargetFromPool()
-        {
-            foreach (Transform target in targetPool)
-            {
+        private TimeAttackTarget GetTargetFromPool() {
+            foreach (Transform target in targetPool) {
                 if (target.gameObject.activeSelf) continue;
                 return target.GetComponent<TimeAttackTarget>();
             }
@@ -78,10 +74,8 @@ namespace Managers
             return Instantiate(targetPrefab, targetPool);
         }
 
-        private void CheckTarget(TARGET target)
-        { // OnPunchTimeAttack
-            if (target != gd.targetData.currentTimeAttackTarget)
-            {
+        private void CheckTarget(TARGET target) { // OnPunchTimeAttack
+            if (target != gd.targetData.currentTimeAttackTarget) {
                 ResetStreak();
                 currentTATarget.DisableSelfMiss();
                 SpawnNewTarget();
@@ -98,25 +92,22 @@ namespace Managers
             SpawnNewTarget();
         }
 
-        private void ResetStreak()
-        {
+        private void ResetStreak() {
             streak = 0;
             FormatStreakText();
         }
 
-        private void FormatStreakText()
-        {
+        private void FormatStreakText() {
             streakText.text = "STREAK: " + streak;
         }
 
-        private void TargetTimeOut()
-        {
+        private void TargetTimeOut() {
             ResetStreak();
             SpawnNewTarget();
         }
 
-        private void EndRound(int unused)
-        {
+        private void EndRound(int unused) {
+            
             streakText.DOScale(0, 0.2f).OnComplete(() => streakText.gameObject.SetActive(false));
             currentTATarget.DisableSelfMiss();
         }

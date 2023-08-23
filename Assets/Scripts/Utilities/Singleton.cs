@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : Component
-{
+public class Singleton<T> : MonoBehaviour where T : Component {
     private static T _instance;
 
-    public static T Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
+    public static T Instance {
+        get {
+            if (_instance == null) {
                 _instance = FindObjectOfType<T>();
-                if (_instance == null)
-                {
+                if (_instance == null) {
                     GameObject newGO = new();
                     _instance = newGO.AddComponent<T>();
                 }
@@ -22,8 +17,7 @@ public class Singleton<T> : MonoBehaviour where T : Component
         }
     }
 
-    protected virtual void Awake()
-    {
+    protected virtual void Awake() {
         _instance = this as T;
     }
     // Singleton base class, can be used to set Singleton pattern

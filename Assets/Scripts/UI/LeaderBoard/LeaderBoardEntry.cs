@@ -4,10 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
-{
-    public class LeaderBoardEntry : MonoBehaviour
-    {
+namespace UI {
+    public class LeaderBoardEntry : MonoBehaviour {
         // This class is used to display the leaderboard entries
         [SerializeField] private TextMeshProUGUI rankText;
         [SerializeField] private TextMeshProUGUI nameText;
@@ -21,8 +19,7 @@ namespace UI
         private bool initialized;
         private int childIndex;
 
-        private void Init()
-        {
+        private void Init() {
             childIndex = transform.GetSiblingIndex();
             animationSound.pitch = 1 + childIndex * 0.1f;
             rect = GetComponent<RectTransform>();
@@ -31,8 +28,7 @@ namespace UI
         }
 
         public void SetEntry
-            (int rank, string playerName, string playerNumber, int score, bool isPlayer, int totalScores)
-        {
+            (int rank, string playerName, string playerNumber, int score, bool isPlayer, int totalScores) {
             // Check that the class has been initialized
             if (!initialized) Init();
 
@@ -60,8 +56,7 @@ namespace UI
             gameObject.SetActive(true);
         }
 
-        public void PlayAudioFX()
-        {
+        public void PlayAudioFX() {
             animationSound.PlayOneShot(animationSound.clip);
         }
     }

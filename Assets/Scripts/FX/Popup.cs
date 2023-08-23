@@ -3,10 +3,8 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace FX
-{
-    public class Popup : MonoBehaviour
-    {
+namespace FX {
+    public class Popup : MonoBehaviour {
         // ANIMATION
         [SerializeField] private Transform xf;
         [SerializeField] private Vector2 startScale;
@@ -17,48 +15,45 @@ namespace FX
         [SerializeField] private float minXDrift;
         [SerializeField] private float maxXDrift;
         [SerializeField] private Ease animEase;
-        
+
         // TEXT
         [SerializeField] private TextMeshPro textMesh;
-        [ColorUsage(true, true)]
-        [SerializeField] private Color startCol;
-        [ColorUsage(true, true)]
-        [SerializeField] private Color endCol;
+
+        [ColorUsage(true, true)] [SerializeField]
+        private Color startCol;
+
+        [ColorUsage(true, true)] [SerializeField]
+        private Color endCol;
 
         // AUDIO
         [SerializeField] private Audio.SoundFXPlayer soundFX;
 
 
-        public void Init()
-        {
+        public void Init() {
             ResetPopUp();
             Animate();
         }
 
-        public void Init(string newText)
-        {
+        public void Init(string newText) {
             textMesh.text = newText;
             ResetPopUp();
             Animate();
         }
 
-        public void Init(string newText, float time)
-        {
+        public void Init(string newText, float time) {
             textMesh.text = newText;
             ResetPopUp();
             Animate();
         }
 
-        public void Init(string newText, Color newColor)
-        {
+        public void Init(string newText, Color newColor) {
             textMesh.text = newText;
             textMesh.color = newColor;
             ResetPopUp();
             Animate();
         }
 
-        private void ResetPopUp()
-        {
+        private void ResetPopUp() {
             // Cache the transform is it is null
             if (xf == null) xf = transform;
             xf.DOKill();
@@ -67,14 +62,13 @@ namespace FX
             textMesh.alpha = 1;
         }
 
-        private void Animate()
-        {   
+        private void Animate() {
             // Set a random end position on the x
             float xDrift = Random.Range(minXDrift, maxXDrift);
 
             if (soundFX != null) soundFX.PlayRandomAudio();
             textMesh.DOColor(endCol, animDuration).SetEase(animEase).From(startCol);
-            
+
             Sequence seq = DOTween.Sequence();
             seq.Append(xf.DOScale(Vector2.one, scaleUpDuration).SetEase(animEase))
                 .AppendInterval(animDuration - scaleUpDuration)
@@ -84,8 +78,7 @@ namespace FX
                 animDuration).SetEase(animEase);
         }
 
-        private void SetInactive()
-        {
+        private void SetInactive() {
             gameObject.SetActive(false);
         }
     }

@@ -3,10 +3,8 @@ using UnityEngine;
 using Data.Customization;
 using UnityEngine.UI;
 
-namespace UI.CustomiseMenu
-{
-    public class CustomizationMenuAnimation : MonoBehaviour
-    {
+namespace UI.CustomiseMenu {
+    public class CustomizationMenuAnimation : MonoBehaviour {
         [SerializeField] private CustomizationEvents menuEvents;
 
         [SerializeField] private float openPivot;
@@ -16,8 +14,7 @@ namespace UI.CustomiseMenu
         private RectTransform xf;
         private Button button;
 
-        private void Awake()
-        {
+        private void Awake() {
             xf = GetComponent<RectTransform>();
 
             button = GetComponent<Button>();
@@ -27,14 +24,12 @@ namespace UI.CustomiseMenu
             menuEvents.OnMenuClosed.AddListener(CloseMenu);
         }
 
-        private void OpenMenu(SO_Category arg0)
-        {
+        private void OpenMenu(SO_Category arg0) {
             xf.DOKill();
             xf.DOPivotX(openPivot, animSpeed);
         }
 
-        private void CloseMenu()
-        {
+        private void CloseMenu() {
             xf.DOKill();
             xf.DOPivotX(closedPivot, animSpeed);
         }

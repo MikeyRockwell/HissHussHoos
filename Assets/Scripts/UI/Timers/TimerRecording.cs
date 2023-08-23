@@ -4,10 +4,8 @@ using DG.Tweening;
 using Managers;
 using UnityEngine;
 
-namespace UI
-{
-    public class TimerRecording : MonoBehaviour
-    {
+namespace UI {
+    public class TimerRecording : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI timerText;
         [SerializeField] private TextMeshProUGUI bestText;
 
@@ -20,8 +18,7 @@ namespace UI
 
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnComboBegin.AddListener(StartTimer);
             gd.roundData.OnComboComplete.AddListener(StopTimer);
@@ -31,20 +28,17 @@ namespace UI
             timerText.rectTransform.localScale = Vector3.zero;
         }
 
-        private void CollapseTimer()
-        {
+        private void CollapseTimer() {
             timerActive = false;
             timerText.text = "";
         }
 
-        private void StartTimer(float timeLimit)
-        {
+        private void StartTimer(float timeLimit) {
             currentTime = 0;
             timerActive = true;
         }
 
-        private void StopTimer()
-        {
+        private void StopTimer() {
             timerActive = false;
 
             if (timerText.rectTransform.localScale == Vector3.zero)
@@ -71,14 +65,12 @@ namespace UI
             bestText.text = "FASTEST COMBO: " + bestTimeString;
         }*/
 
-        private string GetFormattedString(float time)
-        {
+        private string GetFormattedString(float time) {
             ts = TimeSpan.FromSeconds(time);
             return $"{ts.Seconds:00}.{ts.Milliseconds:000}";
         }
 
-        private void Update()
-        {
+        private void Update() {
             if (!timerActive) return;
 
             currentTime += Time.deltaTime;

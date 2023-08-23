@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
   m_Name: CI_Trackies
   m_EditorClassIdentifier: 
-  characterPart: {fileID: 11400000, guid: df48d2b86f42e824bb72fbf1f8c7d41b, type: 2}
+  category: {fileID: 11400000, guid: df48d2b86f42e824bb72fbf1f8c7d41b, type: 2}
   itemName: Trackies
   menuSprite: {fileID: 21300000, guid: 475b222bf492b0946ae965178bf23364, type: 3}
   animSprites:
@@ -21,16 +21,18 @@ MonoBehaviour:
   - {fileID: -115946809, guid: e9b3d3e8870784f43b739268069325f9, type: 3}
   - {fileID: 897522677, guid: e9b3d3e8870784f43b739268069325f9, type: 3}
   maskSprites: []
-  itemType: 2
+  character: 0
   torsoOnTop: 0
+  bgSprite: {fileID: 0}
+  hasFlag: 0
   noColors: 0
-  standardColors: 1
-  customColors: 0
+  customShader: 0
   colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 0.9098039, g: 1.4980392, b: 0.74509805, a: 1}
+  material: {fileID: 2100000, guid: 999a62fed1be40a4ab25b7256b75dc3a, type: 2}
   price: 150
   defaultItem: 0
   unlocked: 1

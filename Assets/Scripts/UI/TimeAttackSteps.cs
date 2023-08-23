@@ -4,15 +4,12 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 
-namespace UI
-{
-    public class TimeAttackSteps : MonoBehaviour
-    {
+namespace UI {
+    public class TimeAttackSteps : MonoBehaviour {
         private DataWrangler.GameData gd;
         private Image[] steps;
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnTimeAttackRoundBegin.AddListener(AnimateStepsOn);
             gd.roundData.OnTimeAttackTargetTimedOut.AddListener(delegate { ColorStep(false); });
@@ -23,15 +20,13 @@ namespace UI
             gameObject.SetActive(false);
         }
 
-        private void AnimateStepsOn()
-        {
+        private void AnimateStepsOn() {
             gameObject.SetActive(true);
 
             Sequence sequence = DOTween.Sequence();
 
             // Animate the steps
-            for (int i = 0; i < transform.childCount; i++)
-            {
+            for (int i = 0; i < transform.childCount; i++) {
                 steps[i].gameObject.SetActive(true);
                 steps[i].color = gd.uIData.DisabledComboText;
                 sequence.Append(
@@ -42,18 +37,15 @@ namespace UI
             }
         }
 
-        private void CheckTarget(TargetData.Target target)
-        {
+        private void CheckTarget(TargetData.Target target) {
             ColorStep(target == gd.targetData.currentTimeAttackTarget);
         }
 
-        private void ColorStep(bool correct)
-        {
+        private void ColorStep(bool correct) {
             steps[gd.roundData.roundStep - 1].DOColor(correct ? Color.green : Color.red, 0.5f);
         }
 
-        private void AnimateStepsOff(int arg0)
-        {
+        private void AnimateStepsOff(int arg0) {
             Sequence sequence = DOTween.Sequence();
 
             // Animate the steps

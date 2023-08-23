@@ -2,10 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
-namespace Managers.Monetization
-{
-    public class BannerAdExample : MonoBehaviour
-    {
+namespace Managers.Monetization {
+    public class BannerAdExample : MonoBehaviour {
         // For the purpose of this example, these buttons are for functionality testing:
         [SerializeField] private Button _loadBannerButton;
         [SerializeField] private Button _showBannerButton;
@@ -17,8 +15,7 @@ namespace Managers.Monetization
         [SerializeField] private string _iOSAdUnitId = "Banner_iOS";
         private string _adUnitId = null; // This will remain null for unsupported platforms.
 
-        private void Start()
-        {
+        private void Start() {
             // Get the Ad Unit ID for the current platform:
 #if UNITY_IOS
             _adUnitId = _iOSAdUnitId;
@@ -39,11 +36,9 @@ namespace Managers.Monetization
         }
 
         // Implement a method to call when the Load Banner button is clicked:
-        public void LoadBanner()
-        {
+        public void LoadBanner() {
             // Set up options to notify the SDK of load events:
-            BannerLoadOptions options = new()
-            {
+            BannerLoadOptions options = new() {
                 loadCallback = OnBannerLoaded,
                 errorCallback = OnBannerError
             };
@@ -53,8 +48,7 @@ namespace Managers.Monetization
         }
 
         // Implement code to execute when the loadCallback event triggers:
-        private void OnBannerLoaded()
-        {
+        private void OnBannerLoaded() {
             Debug.Log("Banner loaded");
 
             // Configure the Show Banner button to call the ShowBannerAd() method when clicked:
@@ -68,18 +62,15 @@ namespace Managers.Monetization
         }
 
         // Implement code to execute when the load errorCallback event triggers:
-        private void OnBannerError(string message)
-        {
+        private void OnBannerError(string message) {
             Debug.Log($"Banner Error: {message}");
             // Optionally execute additional code, such as attempting to load another ad.
         }
 
         // Implement a method to call when the Show Banner button is clicked:
-        private void ShowBannerAd()
-        {
+        private void ShowBannerAd() {
             // Set up options to notify the SDK of show events:
-            BannerOptions options = new()
-            {
+            BannerOptions options = new() {
                 clickCallback = OnBannerClicked,
                 hideCallback = OnBannerHidden,
                 showCallback = OnBannerShown
@@ -90,26 +81,21 @@ namespace Managers.Monetization
         }
 
         // Implement a method to call when the Hide Banner button is clicked:
-        private void HideBannerAd()
-        {
+        private void HideBannerAd() {
             // Hide the banner:
             Advertisement.Banner.Hide();
         }
 
-        private void OnBannerClicked()
-        {
+        private void OnBannerClicked() {
         }
 
-        private void OnBannerShown()
-        {
+        private void OnBannerShown() {
         }
 
-        private void OnBannerHidden()
-        {
+        private void OnBannerHidden() {
         }
 
-        private void OnDestroy()
-        {
+        private void OnDestroy() {
             // Clean up the listeners:
             _loadBannerButton.onClick.RemoveAllListeners();
             _showBannerButton.onClick.RemoveAllListeners();

@@ -5,12 +5,10 @@ using FX;
 using UnityEngine.Serialization;
 using Utils;
 
-namespace Managers
-{
+namespace Managers {
     // This class is used to communicate between the game and the player data
     // For morale points, the player data is the source of truth
-    public class MoraleManager : MonoBehaviour
-    {
+    public class MoraleManager : MonoBehaviour {
         [FormerlySerializedAs("moralePointReduction")] [SerializeField]
         private int moraleReduction = 25;
 
@@ -21,8 +19,7 @@ namespace Managers
         private DataWrangler.GameData gd;
         private MoraleData moraleData;
 
-        private void Awake()
-        {
+        private void Awake() {
             // Cache components
             gd = DataWrangler.GetGameData();
             moraleData = gd.playerData.md;
@@ -33,8 +30,7 @@ namespace Managers
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
         }
 
-        private void SubscribeEvents()
-        {
+        private void SubscribeEvents() {
             // Subscribe to events
             gd.eventData.OnGameFirstLaunch.AddListener(moraleData.ResetMoralePoints);
             gd.roundData.OnGameBegin.AddListener(i => ResetMorale());
@@ -46,22 +42,18 @@ namespace Managers
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);
         }
 
-        private void ResetMorale()
-        {
+        private void ResetMorale() {
             moraleData.ResetMorale();
             moraleData.moralePointsEarned = 0;
         }
 
-        private void AddMoraleFromPunch(int unused)
-        {
+        private void AddMoraleFromPunch(int unused) {
             AddMorale(1);
         }
 
-        private void AddMoraleFromBonus(RoundData.SpeedBonusType arg0)
-        {
+        private void AddMoraleFromBonus(RoundData.SpeedBonusType arg0) {
             // Add morale points based on the type of speed bonus
-            int moralePoints = arg0 switch
-            {
+            int moralePoints = arg0 switch {
                 RoundData.SpeedBonusType.fast => 2,
                 RoundData.SpeedBonusType.super => 3,
                 _ => 0
@@ -69,8 +61,7 @@ namespace Managers
             AddMorale(moralePoints);
         }
 
-        public void AddMorale(int morale)
-        {
+        public void AddMorale(int morale) {
             // // If morale boost is active multiply the amount of morale by the boost multiplier
             // int moraleAdded = Mathf.RoundToInt(
             //     moraleData.moraleBoostActive ? morale * moraleData.moraleBoostMultiplier : morale);
@@ -91,21 +82,19 @@ namespace Managers
             moraleData.moraleBoostActive = true;
             moraleData.OnMoraleBoost?.Invoke();
             moraleBoostText.gameObject.SetActive(true);
-            
+
             // Start a timer to reset the morale
             Invoke(nameof(EndMoraleBoost), moraleData.moraleBoostDuration);
         }
 
-        private void UpdateMoralePoints(int moraleAdded)
-        {
+        private void UpdateMoralePoints(int moraleAdded) {
             // Update the morale points earned
             float mpEarned = moraleAdded * moralePointsMultiplier;
             moraleData.moralePointsEarned += mpEarned;
             moraleData.UpdateMoralePoints(mpEarned);
         }
 
-        private void RemoveMorale()
-        {
+        private void RemoveMorale() {
             if (moraleData.moraleBoostActive) return;
             // Remove morale points to a minimum of zero
             moraleData.morale = Mathf.Max(0, moraleData.morale - moraleReduction);
@@ -113,28 +102,25 @@ namespace Managers
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
         }
 
-        private void EndMoraleBoost()
-        {
+        private void EndMoraleBoost() {
             CancelInvoke();
             // Reset the morale points to zero
             moraleData.ResetMorale();
             moraleData.OnMoraleBoostEnd?.Invoke();
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
-            
+
             moraleBoostText.Disable();
         }
 
-        private void DisplayMoralePoints()
-        {
+        private void DisplayMoralePoints() {
             // Display the morale points earned
             moraleData.DisplayMoralePoints();
-            
+
             moraleBoostText.Disable();
         }
 
-        private void SpendMoralPoints(SO_Item item)
-        {
+        private void SpendMoralPoints(SO_Item item) {
             // Spend morale points
             moraleData.SpendMoralePoints(item.price);
             DataWrangler.GetSaverLoader().SaveGame();

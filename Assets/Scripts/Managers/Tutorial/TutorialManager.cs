@@ -5,10 +5,8 @@ using MoreMountains.Feedbacks;
 using UnityEngine;
 using Utils;
 
-namespace Managers.Tutorial
-{
-    public class TutorialManager : MonoBehaviour
-    {
+namespace Managers.Tutorial {
+    public class TutorialManager : MonoBehaviour {
         // Tutorial manager calls into action tutorials at different game points
         // This will send a message to the Dialogue Manager to start dialogue
         // And control Manager to control inputs
@@ -23,8 +21,7 @@ namespace Managers.Tutorial
         [SerializeField] private CanvasGroup shopOverlay;
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.eventData.OnGameReady.AddListener(FirstGameIntro);
             gd.roundData.OnRoundBegin.AddListener(delegate { FirstRoundIntro(); });
@@ -33,51 +30,42 @@ namespace Managers.Tutorial
             gd.eventData.OnDialogueEnd.AddListener(EndTutorial);
         }
 
-        private void EndTutorial(SO_Dialogue arg0)
-        {
+        private void EndTutorial(SO_Dialogue arg0) {
             timeScaleFX.StopFeedbacks();
             shopOverlay.interactable = true;
         }
-        
-        private void FirstGameIntro()
-        {   
+
+        private void FirstGameIntro() {
             if (!overrideTutorial)
-            {
-                if (PlayerPrefs.GetInt("FirstTutorial", 1) != 1) return;
-            }
+                if (PlayerPrefs.GetInt("FirstTutorial", 1) != 1)
+                    return;
             PlayerPrefs.SetInt("FirstTutorial", 0);
             gd.eventData.StartDialogue(firstGameIntro);
         }
 
-        private void FirstRoundIntro()
-        {
+        private void FirstRoundIntro() {
             if (gd.roundData.currentRound != 1) return;
             if (!overrideTutorial)
-            {
-                if (PlayerPrefs.GetInt("FirstRound", 1) != 1) return;    
-            }
+                if (PlayerPrefs.GetInt("FirstRound", 1) != 1)
+                    return;
             PlayerPrefs.SetInt("FirstRound", 0);
             timeScaleFX.PlayFeedbacks();
             gd.eventData.StartDialogue(firstRoundIntro);
         }
-        
-        private void TimeAttackIntro()
-        {
+
+        private void TimeAttackIntro() {
             if (!overrideTutorial)
-            {
-                if (PlayerPrefs.GetInt("TimeAttack", 1) != 1) return;    
-            }
+                if (PlayerPrefs.GetInt("TimeAttack", 1) != 1)
+                    return;
             PlayerPrefs.SetInt("TimeAttack", 0);
             timeScaleFX.PlayFeedbacks();
             gd.eventData.StartDialogue(timeAttackIntro);
         }
-        
-        private void CustomizationIntro(SO_Category arg0)
-        {
+
+        private void CustomizationIntro(SO_Category arg0) {
             if (!overrideTutorial)
-            {
-                if (PlayerPrefs.GetInt("Customization", 1) != 1) return;    
-            }
+                if (PlayerPrefs.GetInt("Customization", 1) != 1)
+                    return;
             PlayerPrefs.SetInt("Customization", 0);
             shopOverlay.interactable = false;
             // timeScaleFX.PlayFeedbacks();

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
   m_Name: CI_GoldBlackPunchingBag
   m_EditorClassIdentifier: 
-  characterPart: {fileID: 11400000, guid: fd258f60efaa36147b2356a82591daef, type: 2}
+  category: {fileID: 11400000, guid: fd258f60efaa36147b2356a82591daef, type: 2}
   itemName: Black Gold Sports Bag
   menuSprite: {fileID: 21300000, guid: 9f3d62aee6454a04f82029ed0ce621e0, type: 3}
   animSprites:
@@ -20,14 +20,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a2a4b3dac70e4ad4abd2a1e62d942eaa, type: 3}
   - {fileID: 21300000, guid: 4be2e7cc2e9c1334c960ec807d2fbe58, type: 3}
   - {fileID: 21300000, guid: 8d16642d15e3d7c4aa4d0a5d59535ff1, type: 3}
+  maskSprites: []
+  character: 0
+  torsoOnTop: 0
+  bgSprite: {fileID: 0}
+  hasFlag: 0
   noColors: 1
-  standardColors: 0
-  customColors: 0
+  customShader: 0
   colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
+  material: {fileID: 2100000, guid: 999a62fed1be40a4ab25b7256b75dc3a, type: 2}
   price: 300
   defaultItem: 0
   unlocked: 1

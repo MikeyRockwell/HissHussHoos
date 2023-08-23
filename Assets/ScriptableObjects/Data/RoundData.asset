@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0940a20709c84a708e789595c4f8c7ee, type: 3}
   m_Name: RoundData
   m_EditorClassIdentifier: 
-  roundType: 0
+  roundType: 1
   roundTextTime: 2.5
-  currentRound: 2
+  currentRound: 3
   roundLength: 10
-  roundStep: 5
+  roundStep: 0
   maxRoundTime: 10
   minRoundTime: 1.5
-  roundTimeLimit: 9.34
+  roundTimeLimit: 9.01
   lastComboTime: 0
   OnGameBegin:
     m_PersistentCalls:
@@ -45,7 +45,7 @@ MonoBehaviour:
   OnLogTimer:
     m_PersistentCalls:
       m_Calls: []
-  timeAttackRoundDivisor: 4
+  timeAttackRoundDivisor: 2
   timeAttackLength: 15
   timeAttackRoundClock: -0.5050472
   OnTimeAttackRoundBegin:

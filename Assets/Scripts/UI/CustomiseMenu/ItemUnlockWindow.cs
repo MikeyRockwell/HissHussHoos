@@ -8,10 +8,8 @@ using UnityEngine.UI;
 using Data.Customization;
 using Utils;
 
-namespace UI.CustomiseMenu
-{
-    public class ItemUnlockWindow : MonoBehaviour
-    {
+namespace UI.CustomiseMenu {
+    public class ItemUnlockWindow : MonoBehaviour {
         // Window that pops up when you click on a locked item
         [SerializeField] private Button button;
         [SerializeField] private Button unlockButton;
@@ -30,8 +28,7 @@ namespace UI.CustomiseMenu
         private SO_Item currentItem;
         private SO_Color currentColor;
 
-        private void Awake()
-        {
+        private void Awake() {
             // Cache components
             xf = GetComponent<RectTransform>();
             // Subscribe to events            
@@ -50,8 +47,7 @@ namespace UI.CustomiseMenu
             CloseWindow();
         }
 
-        private void OpenWindow(SO_Item item)
-        {
+        private void OpenWindow(SO_Item item) {
             unlockButton.onClick.RemoveAllListeners();
             // Open the window and set the item
             currentItem = item;
@@ -68,8 +64,7 @@ namespace UI.CustomiseMenu
                     .OnComplete(() => open = true);
         }
 
-        private void OpenWindow(SO_Color color)
-        {
+        private void OpenWindow(SO_Color color) {
             unlockButton.onClick.RemoveAllListeners();
             // Open the window and set the item
             currentColor = color;
@@ -86,8 +81,7 @@ namespace UI.CustomiseMenu
                     .OnComplete(() => open = true);
         }
 
-        private void InitGraphics(SO_Color color, bool available)
-        {
+        private void InitGraphics(SO_Color color, bool available) {
             // Init graphics
             itemImage.color = color.Color;
             itemImage.sprite = colorSprite;
@@ -101,8 +95,7 @@ namespace UI.CustomiseMenu
             itemPrice.text = color.price + " MP";
         }
 
-        private void InitGraphics(SO_Item item, bool available)
-        {
+        private void InitGraphics(SO_Item item, bool available) {
             // Init graphics
             itemImage.sprite = item.menuSprite;
             itemImage.color = Color.white;
@@ -116,26 +109,22 @@ namespace UI.CustomiseMenu
             itemPrice.text = item.price + " MP";
         }
 
-        private void UnlockItem()
-        {
+        private void UnlockItem() {
             gd.customEvents.UnlockItem(currentItem);
             PlayFX();
         }
 
-        private void UnlockColor()
-        {
+        private void UnlockColor() {
             // gd.customEvents.UnlockItem(currentColor);
             PlayFX();
         }
 
-        private void PlayFX()
-        {
+        private void PlayFX() {
             unlockSFX.PlayRandomAudio();
             unlockFX.Play();
         }
 
-        private void CloseWindow()
-        {
+        private void CloseWindow() {
             // Close the window
             if (open)
                 xf.DOScale(Vector3.zero, gd.uIData.MenuAnimSpeed).SetEase(gd.uIData.DefaultMenuEase)

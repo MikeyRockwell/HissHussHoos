@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
   m_Name: CI_GelLyte_Multi
   m_EditorClassIdentifier: 
-  characterPart: {fileID: 11400000, guid: 58c4cd704f6b1be41b8d6de1fc280212, type: 2}
+  category: {fileID: 11400000, guid: 58c4cd704f6b1be41b8d6de1fc280212, type: 2}
   itemName: ASICS Gel Lyte IV
   menuSprite: {fileID: 21300000, guid: 99bab2bcad041d3459fe73fe75b1b67d, type: 3}
   animSprites:
@@ -20,14 +20,19 @@ MonoBehaviour:
   - {fileID: 1496883951, guid: b51a07423ca9b6b43b805723ced5f779, type: 3}
   - {fileID: 1713525868, guid: b51a07423ca9b6b43b805723ced5f779, type: 3}
   - {fileID: 527726662, guid: b51a07423ca9b6b43b805723ced5f779, type: 3}
+  maskSprites: []
+  character: 0
+  torsoOnTop: 0
+  bgSprite: {fileID: 0}
+  hasFlag: 0
   noColors: 1
-  standardColors: 0
-  customColors: 0
+  customShader: 0
   colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
+  material: {fileID: 2100000, guid: 999a62fed1be40a4ab25b7256b75dc3a, type: 2}
   price: 350
   defaultItem: 0
   unlocked: 0

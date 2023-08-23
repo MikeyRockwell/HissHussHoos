@@ -6,13 +6,10 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
 
-namespace Data
-{
+namespace Data {
     [CreateAssetMenu(fileName = "RoundData", menuName = "ScriptableObjects/Data/RoundData", order = 0)]
-    public class RoundData : ScriptableObject
-    {
-        public enum RoundType
-        {
+    public class RoundData : ScriptableObject {
+        public enum RoundType {
             warmup,
             normal,
             timeAttack,
@@ -21,8 +18,7 @@ namespace Data
 
         public RoundType roundType;
 
-        public enum SpeedBonusType
-        {
+        public enum SpeedBonusType {
             fast,
             super
         }
@@ -55,51 +51,50 @@ namespace Data
         [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackRoundBegin;
         [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackTargetTimedOut;
         [FoldoutGroup("Time Attack Events")] public UnityEvent<int> OnTimeAttackRoundComplete;
+        [FoldoutGroup("Time Attack Events")] public UnityEvent<string> OnTimeAttackPerfectRound;
 
         // Precision Game Mode
         [TitleGroup("PRECISION ROUND")] public int precisionRoundDivisor = 8;
-        
+
         // Score Events
         [FoldoutGroup("Score Events")] public UnityEvent<int> OnScoreAdded;
         [FoldoutGroup("Score Events")] public UnityEvent<int> OnBonusScoreAdded;
 
 
-        private void CalcRoundTime()
-        {
+        private void CalcRoundTime() {
             // Calculation for round time limit - needs refining
             roundTimeLimit = maxRoundTime - currentRound * 0.33f;
             roundTimeLimit = Mathf.Max(roundTimeLimit, minRoundTime);
         }
 
-        public void BeginGameDelayed()
-        {
+        public void BeginGameDelayed() {
             Sequence seq = DOTween.Sequence();
             seq.AppendInterval(1.0f).OnComplete(BeginGame);
         }
 
-        private void BeginGame ()=> OnGameBegin?.Invoke(1);
+        private void BeginGame() {
+            OnGameBegin?.Invoke(1);
+        }
 
-        public void InitRound()=> OnRoundInit?.Invoke(currentRound);
+        public void InitRound() {
+            OnRoundInit?.Invoke(currentRound);
+        }
 
 
-        public void BeginRound()
-        {
+        public void BeginRound() {
             roundStep = 0;
             OnRoundBegin?.Invoke(currentRound);
         }
 
-        public void BeginCombo()
-        {
+        public void BeginCombo() {
             CalcRoundTime();
             OnComboBegin?.Invoke(roundTimeLimit);
         }
 
-        public void CompleteCombo()
-        {
+        public void CompleteCombo() {
             // Increase the round step
             roundStep++;
-            if (roundStep == roundLength)
-            {
+            if (roundStep == roundLength) {
                 // If we are at the end of the round
                 currentRound++;
                 OnComboComplete?.Invoke();
@@ -112,28 +107,44 @@ namespace Data
             BeginCombo();
         }
 
-        public void LogTimer(int combo, float elapsedTime) => OnLogTimer?.Invoke(combo, elapsedTime);
-        public void SpeedBonus(SpeedBonusType type) => OnSpeedBonus?.Invoke(type);
-        public void BeginTimeAttackRound() => OnTimeAttackRoundBegin?.Invoke();
-        public void TimeAttackTargetTimedOut() => OnTimeAttackTargetTimedOut?.Invoke();
-
-        public void EndTimeAttackRound()
-        {
-            currentRound++;
-            OnTimeAttackRoundComplete?.Invoke(currentRound);
+        public void LogTimer(int combo, float elapsedTime) {
+            OnLogTimer?.Invoke(combo, elapsedTime);
         }
 
-        public IEnumerator TimeAttackRoundTimer()
-        {
+        public void SpeedBonus(SpeedBonusType type) {
+            OnSpeedBonus?.Invoke(type);
+        }
+
+        public void BeginTimeAttackRound() {
+            OnTimeAttackRoundBegin?.Invoke();
+        }
+
+        public void TimeAttackTargetTimedOut() {
+            OnTimeAttackTargetTimedOut?.Invoke();
+        }
+
+        public void EndTimeAttackRound(bool perfect) {
+            currentRound++;
+            OnTimeAttackRoundComplete?.Invoke(currentRound);
+            if (perfect) {
+                OnTimeAttackPerfectRound?.Invoke("+1 WAIIRUA");
+            }
+        }
+
+        public IEnumerator TimeAttackRoundTimer() {
             timeAttackRoundClock = timeAttackLength;
-            while (timeAttackRoundClock > 0)
-            {
+            while (timeAttackRoundClock > 0) {
                 timeAttackRoundClock -= Time.deltaTime;
                 yield return null;
             }
         }
-        
-        public void ScoreAdded(int score) => OnScoreAdded?.Invoke(score);
-        public void BonusScoreAdded(int score) => OnBonusScoreAdded?.Invoke(score);
+
+        public void ScoreAdded(int score) {
+            OnScoreAdded?.Invoke(score);
+        }
+
+        public void BonusScoreAdded(int score) {
+            OnBonusScoreAdded?.Invoke(score);
+        }
     }
 }

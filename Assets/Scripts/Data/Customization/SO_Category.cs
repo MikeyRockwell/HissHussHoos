@@ -2,12 +2,10 @@
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace Data.Customization
-{
+namespace Data.Customization {
     [CreateAssetMenu(
         fileName = "NewCharacterPart", menuName = "ScriptableObjects/Customization/CharacterPart", order = 0)]
-    public class SO_Category : ScriptableObject
-    {
+    public class SO_Category : ScriptableObject {
         // This is a communicator for each part of the character
         // Sends a message to the correct body part when we want to switch to another article of clothing etc
         // Could be used as a save game data collection too
@@ -17,7 +15,9 @@ namespace Data.Customization
         public SO_Item[] Items;
         public SO_Item CurrentItem;
         public SO_Item DefaultItem;
+
         public SO_Item TryingItem;
+
         // These events are subscribed to by the character sprite manager
         // To change sprites and colors
         public UnityEvent<SO_Item> OnChangeItem;
@@ -25,8 +25,7 @@ namespace Data.Customization
 
         public DataSaverLoader dataSaverLoader;
 
-        public void ChangeItem(SO_Item newItem, bool save)
-        {
+        public void ChangeItem(SO_Item newItem, bool save) {
             // Sets default item if none is current
             CurrentItem ??= DefaultItem;
 
@@ -42,30 +41,26 @@ namespace Data.Customization
             ChangeItemColor(CurrentItem.color, save);
         }
 
-        public void ChangeItemColor(Color newColor, bool save)
-        {
+        public void ChangeItemColor(Color newColor, bool save) {
             CurrentItem.color = newColor;
             OnChangeItemColor?.Invoke(CurrentItem, newColor);
-            
+
             if (save) dataSaverLoader.SaveGame();
         }
 
-        public void TryOnItem(SO_Item tryingItem)
-        {
+        public void TryOnItem(SO_Item tryingItem) {
             TryingItem = tryingItem;
-            
+
             OnChangeItem?.Invoke(tryingItem);
             TryOnColorLockedItem(tryingItem.color);
         }
 
-        public void TryOnColorLockedItem(Color newColor)
-        {
+        public void TryOnColorLockedItem(Color newColor) {
             TryingItem.color = newColor;
             OnChangeItemColor?.Invoke(TryingItem, newColor);
         }
 
-        public void TryOnColorUnlockedItem(Color newColor)
-        {
+        public void TryOnColorUnlockedItem(Color newColor) {
             OnChangeItemColor?.Invoke(CurrentItem, newColor);
         }
     }

@@ -7,13 +7,11 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Utils;
 
-namespace UI.CustomiseMenu
-{
+namespace UI.CustomiseMenu {
     // This is the main menu window
-    public class CustomizationMenuWindow : MonoBehaviour
-    {
+    public class CustomizationMenuWindow : MonoBehaviour {
         public bool isOpen;
-        
+
         [SerializeField] private CustomizationEvents menuEvents;
         [SerializeField] private MMF_Player openFeedbacks;
         [SerializeField] private MMF_Player closeFeedbacks;
@@ -25,8 +23,7 @@ namespace UI.CustomiseMenu
         [SerializeField] private Button bgButton;
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             // Get the game data
             gd = DataWrangler.GetGameData();
 
@@ -40,14 +37,12 @@ namespace UI.CustomiseMenu
             gd.roundData.OnGameBegin.AddListener(CloseMenu);
         }
 
-        private void OpenMenu(SO_Category arg0)
-        {
+        private void OpenMenu(SO_Category arg0) {
             isOpen = true;
             openFeedbacks.PlayFeedbacks();
         }
 
-        private void CloseMenu(int arg0)
-        {
+        private void CloseMenu(int arg0) {
             closeFeedbacks.PlayFeedbacks();
             isOpen = false;
         }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
   m_Name: CI_Hoodie
   m_EditorClassIdentifier: 
-  characterPart: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
+  category: {fileID: 11400000, guid: 699b30b5bcc3d834b95fd2b847203586, type: 2}
   itemName: Hoodie
   menuSprite: {fileID: 21300000, guid: 2ed2a62229b9d8b44ac107d120f8b305, type: 3}
   animSprites:
@@ -25,16 +25,18 @@ MonoBehaviour:
   - {fileID: -846225873, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
   - {fileID: 1684353905, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
   - {fileID: -2117101254, guid: 49f98a135bf481d42a05c61c5d6b62f0, type: 3}
-  itemType: 0
+  character: 0
   torsoOnTop: 1
+  bgSprite: {fileID: 0}
+  hasFlag: 0
   noColors: 0
-  standardColors: 1
-  customColors: 0
+  customShader: 0
   colorMask: 1
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 0, b: 0.98544884, a: 1}
+  material: {fileID: 2100000, guid: 6746da836644bdf42a5f8fc0396317f8, type: 2}
   price: 150
   defaultItem: 0
   unlocked: 1

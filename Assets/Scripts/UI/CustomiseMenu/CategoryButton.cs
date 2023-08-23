@@ -1,17 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.CustomiseMenu
-{
-    public class CategoryButton : MonoBehaviour
-    {
+namespace UI.CustomiseMenu {
+    public class CategoryButton : MonoBehaviour {
         public Button button;
         public Color disabledColor;
 
         public CustomizationEvents events;
 
-        public virtual void Awake()
-        {
+        public virtual void Awake() {
             // Cache button and set disabled
             button = GetComponent<Button>();
             disabledColor = button.image.color;
@@ -20,8 +17,7 @@ namespace UI.CustomiseMenu
         }
 
 
-        protected void SetActiveButton(Button eventButton)
-        {
+        protected void SetActiveButton(Button eventButton) {
             // Manual navigation button highlighting
             button.image.color = button == eventButton ? button.colors.selectedColor : disabledColor;
         }

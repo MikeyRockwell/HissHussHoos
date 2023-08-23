@@ -5,11 +5,9 @@ using UnityEngine.Events;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
-namespace Data
-{
+namespace Data {
     [CreateAssetMenu(fileName = "GameEventDatta", menuName = "ScriptableObjects/GameEvents/GameEventData")]
-    public class GameEventData : ScriptableObject
-    {
+    public class GameEventData : ScriptableObject {
         // GAME EVENTS
         // Subscribable and callable events 
         // For game objects to link behaviour to
@@ -25,7 +23,6 @@ namespace Data
         public UnityEvent OnGameInitComplete;
         public UnityEvent OnGameReady;
         
-        
         public int initMethods;
 
         // Different punches
@@ -40,58 +37,69 @@ namespace Data
 
         // Game over
         public UnityEvent OnGameOver;
-        
+
         // Tutorials
         public UnityEvent<SO_Dialogue> OnDialogueStart;
         public UnityEvent<SO_Dialogue> OnDialogueEnd;
 
-        public void FirstLaunch()
-        {
+        public void FirstLaunch() {
             Log.Message("Initializing Brand New Game", Color.green);
             OnGameFirstLaunch?.Invoke();
         }
 
-        public void InitializeGame()
-        {   
+        public void InitializeGame() {
             // Get the number of listeners of the OnGameInit event
             // initMethods = OnGameInit.GetPersistentEventCount();
             // Log.Message("Initialization methods: " + initMethods, Color.green);
             OnGameInit?.Invoke();
         }
-        
-        public void RegisterCallBack()
-        {
+
+        public void RegisterCallBack() {
             initMethods--;
             if (initMethods > 0) return;
             OnGameInitComplete?.Invoke();
         }
-        
-        public void GameReady()=>OnGameReady?.Invoke();
 
-        public void PunchWarmup(TARGET target)=>OnPunchWarmup?.Invoke(target);
-        
-        public void PunchNormal(TARGET target)
-        {
+        public void GameReady() {
+            OnGameReady?.Invoke();
+        }
+
+        public void PunchWarmup(TARGET target) {
+            OnPunchWarmup?.Invoke(target);
+        }
+
+        public void PunchNormal(TARGET target) {
             if (!inputEnabled) return;
             OnPunchNormal?.Invoke(target);
         }
 
-        public void PunchTimeAttack(TARGET target)
-        {
+        public void PunchTimeAttack(TARGET target) {
             if (!inputEnabled) return;
             OnPunchTimeAttack?.Invoke(target);
         }
 
-        public void HitTimeAttack(int streak)
-        {
+        public void HitTimeAttack(int streak) {
             OnHitTimeAttack?.Invoke(streak);
         }
 
-        public void Hit(int step)=>OnHit?.Invoke(step);
-        public void Miss()=>OnMiss?.Invoke();
-        public void GameOver()=>OnGameOver?.Invoke();
-        
-        public void StartDialogue(SO_Dialogue dialogue)=>OnDialogueStart?.Invoke(dialogue);
-        public void EndDialogue(SO_Dialogue dialogue)=>OnDialogueEnd?.Invoke(dialogue);
+        public void Hit(int step) {
+            OnHit?.Invoke(step);
+        }
+
+        public void Miss() {
+            OnMiss?.Invoke();
+        }
+
+        public void GameOver() {
+            OnGameOver?.Invoke();
+        }
+
+        public void StartDialogue(SO_Dialogue dialogue) {
+            OnDialogueStart?.Invoke(dialogue);
+        }
+
+        public void EndDialogue(SO_Dialogue dialogue) {
+            OnDialogueEnd?.Invoke(dialogue);
+        }
     }
 }

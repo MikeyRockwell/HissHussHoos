@@ -9,10 +9,8 @@ using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Utils;
 
-namespace UI
-{
-    public class ComboTimer : MonoBehaviour
-    {
+namespace UI {
+    public class ComboTimer : MonoBehaviour {
         [SerializeField] private TextMeshProUGUI timerTextTop;
         [SerializeField] private TextMeshProUGUI timerTextBot;
         [SerializeField] private RectTransform timerRect;
@@ -35,8 +33,7 @@ namespace UI
 
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             SubscribeEvents();
 
@@ -46,11 +43,10 @@ namespace UI
             defaultTimeBarScale = timerRect.localScale;
         }
 
-        private void SubscribeEvents()
-        {
+        private void SubscribeEvents() {
             gd.eventData.OnGameInit.AddListener(NewGame);
             gd.eventData.initMethods++;
-            
+
             gd.eventData.OnGameOver.AddListener(CollapseTimer);
             gd.roundData.OnRoundBegin.AddListener(SetTimerSize);
             gd.roundData.OnComboBegin.AddListener(StartTimer);
@@ -58,58 +54,48 @@ namespace UI
             gd.roundData.OnTimeAttackRoundBegin.AddListener(CollapseTimer);
         }
 
-        private void NewGame()
-        {
+        private void NewGame() {
             ScaleTimerDown();
             gd.eventData.RegisterCallBack();
         }
 
-        private void ScaleTimerDown()
-        {
+        private void ScaleTimerDown() {
             timerRect.localScale = Vector3.zero;
             timerTextTop.rectTransform.localScale = Vector3.zero;
         }
 
-        private void SetTimeAttackTimer()
-        {
+        private void SetTimeAttackTimer() {
             SetTimerSize(0);
             StartTimer(gd.roundData.timeAttackLength);
         }
 
-        private void SetTimerSize(int round)
-        {
+        private void SetTimerSize(int round) {
             ScaleUpTimer();
         }
 
-        private void ScaleUpTimer()
-        {
+        private void ScaleUpTimer() {
             timerRect.DOScale(defaultTimeBarScale, 0.5f).SetUpdate(true);
             timerTextTop.rectTransform.DOScale(defaultTextScale, 0.5f).SetUpdate(true);
         }
 
-        private void StartTimer(float timeLimit)
-        {
+        private void StartTimer(float timeLimit) {
             currentTime = timeLimit;
             maxTime = timeLimit;
             active = true;
         }
 
-        private void StopTimer()
-        {
+        private void StopTimer() {
             active = false;
             UpdateGraphics();
         }
 
-        private void CollapseTimer()
-        {
+        private void CollapseTimer() {
             active = false;
             ScaleTimerDown();
         }
 
-        private void FormatTimer()
-        {
-            switch (currentTime)
-            {
+        private void FormatTimer() {
+            switch (currentTime) {
                 case <= 0 when gd.roundData.roundType == RoundData.RoundType.normal:
                     timerTextTop.text = "TIMEOUT";
                     timerTextBot.text = "TIMEOUT";
@@ -117,11 +103,6 @@ namespace UI
                     timerTextBot.color = gradient.Evaluate(slider.value);
                     gd.eventData.Miss();
                     active = false;
-                    return;
-                case <= 0 when gd.roundData.roundType == RoundData.RoundType.timeAttack:
-                    gd.roundData.EndTimeAttackRound();
-                    active = false;
-                    ScaleTimerDown();
                     return;
             }
 
@@ -132,18 +113,15 @@ namespace UI
             timerTextBot.color = gradient.Evaluate(slider.value);
         }
 
-        private string GetFormattedString()
-        {
+        private string GetFormattedString() {
             ts = TimeSpan.FromSeconds(currentTime);
             return $"{ts.Seconds:00}.{ts.Milliseconds:000}";
         }
 
-        private void FixedUpdate()
-        {
+        private void FixedUpdate() {
             if (!active) return;
 
-            switch (gd.roundData.roundType)
-            {
+            switch (gd.roundData.roundType) {
                 // Regular round timer
                 case RoundData.RoundType.normal:
                     currentTime -= Time.deltaTime;
@@ -164,8 +142,7 @@ namespace UI
             if (frameUpdate % timerUpdateFrames == 0) FormatTimer();
         }
 
-        private void UpdateGraphics()
-        {
+        private void UpdateGraphics() {
             slider.value = currentTime / maxTime;
             // scale fill 2 by slider value
             fill2.rectTransform.anchorMax = new Vector2(slider.value, 1);

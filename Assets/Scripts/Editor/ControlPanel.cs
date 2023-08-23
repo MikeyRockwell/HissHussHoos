@@ -1,20 +1,16 @@
 ﻿using UnityEditor;
 using Sirenix.OdinInspector.Editor;
 
-public class ControlPanel : OdinMenuEditorWindow
-{
+public class ControlPanel : OdinMenuEditorWindow {
     [MenuItem("Tools/Control Panel")]
-    private static void OpenWindow()
-    {
+    private static void OpenWindow() {
         GetWindow<ControlPanel>().Show();
     }
 
     // Build the menu tree
-    protected override OdinMenuTree BuildMenuTree()
-    {
+    protected override OdinMenuTree BuildMenuTree() {
         // Create a new tree
-        OdinMenuTree tree = new()
-        {
+        OdinMenuTree tree = new() {
             { "DATA", new OdinMenuTree() },
             { "AUDIO", new OdinMenuTree() }
         };

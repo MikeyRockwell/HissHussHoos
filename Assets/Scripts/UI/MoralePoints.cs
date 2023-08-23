@@ -6,10 +6,8 @@ using MoreMountains.Feedbacks;
 using TMPro;
 using UnityEngine;
 
-namespace UI
-{
-    public class MoralePoints : MonoBehaviour
-    {
+namespace UI {
+    public class MoralePoints : MonoBehaviour {
         // Class to display the morale points
         // And the morale points earned
         [SerializeField] private TextMeshProUGUI moralePointsText;
@@ -22,15 +20,14 @@ namespace UI
         private MoraleData md;
         private float moralePointsAtRoundStart;
 
-        private void Awake()
-        {
+        private void Awake() {
             // Subscribe to events
             gd = DataWrangler.GetGameData();
             md = gd.playerData.md;
-            
+
             gd.eventData.OnGameInit.AddListener(InitMoralePoints);
             gd.eventData.initMethods++;
-            
+
             gd.roundData.OnGameBegin.AddListener(StoreMoralePoints);
             md.OnMoralePointsEarned.AddListener(UpdateMoralePoints);
             md.OnMoralePointsSpent.AddListener(SpendMoralePoints);
@@ -39,25 +36,22 @@ namespace UI
             moralePointsEarnedText.text = 0.ToString();
         }
 
-        private void InitMoralePoints()
-        {
+        private void InitMoralePoints() {
             // Load morale points and set the text
             float moralePoints = gd.playerData.md.LoadMoralePoints();
             moralePointsText.text = moralePoints.ToString($"0");
-            
+
             gd.eventData.RegisterCallBack();
         }
 
-        private void StoreMoralePoints(int i)
-        {
+        private void StoreMoralePoints(int i) {
             // Store the morale points at the start of the round
             moralePointsAtRoundStart = gd.playerData.md.moralePoints;
             // Hide the morale points UI
             transform.DOScale(Vector3.zero, 0.2f);
         }
 
-        private void SpendMoralePoints(float moralePoints, float moralePointsSpent)
-        {
+        private void SpendMoralePoints(float moralePoints, float moralePointsSpent) {
             // Spend morale points
             DOTween.To(
                 () => moralePoints, x => moralePointsText.text = x.ToString($"0"),
@@ -65,15 +59,14 @@ namespace UI
             );
         }
 
-        private void UpdateMoralePoints( )
-        {
+        private void UpdateMoralePoints() {
             transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBounce);
-            
+
             // Update the morale points earned
             moralePointsEarnedText.color = gd.uIData.LaserGreen;
             moralePointsEarnedText.transform.position = Vector3.zero;
             float countDuration = Utils.Conversion.Remap(0, 100, 1, 5, md.moralePointsEarned);
-            
+
             // Play the audio feedbacks
             audioCountStart.PlayFeedbacks();
             Invoke(nameof(FadeOutCountAudio), countDuration - 0.25f);
@@ -89,13 +82,11 @@ namespace UI
             sequence.Play();
         }
 
-        private void FadeOutCountAudio()
-        {
+        private void FadeOutCountAudio() {
             audioCountStart.StopFeedbacks();
         }
 
-        private void AnimateToTotal()
-        {
+        private void AnimateToTotal() {
             // Animate the morale points earned to the total points position
             // In an arc
             // Stop the audio feedbacks
@@ -108,8 +99,7 @@ namespace UI
                 Vector3.zero, 1f).SetEase(Ease.InBounce).OnComplete(UpdateTotal);
         }
 
-        private void UpdateTotal()
-        {
+        private void UpdateTotal() {
             // Update the morale points total with a counting animation
             DOTween.To(
                 () => moralePointsAtRoundStart, x => moralePointsText.text = x.ToString($"0"),

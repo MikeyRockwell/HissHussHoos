@@ -18,10 +18,8 @@ using Unity.Services.Leaderboards.Models;
 using Utils;
 using Sequence = DG.Tweening.Sequence;
 
-namespace UI
-{
-    public class LeaderBoard : UIWindow
-    {
+namespace UI {
+    public class LeaderBoard : UIWindow {
         // This class opens and populates the LeaderBoard UI
         private const string leaderBoardId = "highScores";
 
@@ -49,8 +47,7 @@ namespace UI
         private int playerIndex;
         private bool playerIsInList;
 
-        protected override void Awake()
-        {
+        protected override void Awake() {
             base.Awake();
             gd = DataWrangler.GetGameData();
 
@@ -65,28 +62,24 @@ namespace UI
             OnWindowOpen.AddListener(GetPlayerRange);
         }
 
-        private void UnHideMenu()
-        {
+        private void UnHideMenu() {
             xf.DOKill();
             xf.DOScaleY(1, gd.uIData.MenuAnimSpeed);
         }
 
-        private void HideMenu(int arg0)
-        {
+        private void HideMenu(int arg0) {
             xf.DOKill();
             xf.DOScaleY(0, gd.uIData.MenuAnimSpeed);
         }
 
-        private void Start()
-        {
+        private void Start() {
             // Get every child of the uiEntriesParent transform
             // Store them in the uIEntries array
             uIEntries = uIEntriesParent.GetComponentsInChildren<LeaderBoardEntry>();
             foreach (LeaderBoardEntry entry in uIEntries) entry.gameObject.SetActive(false);
         }
 
-        private void CheckLeaderBoardOpen()
-        {
+        private void CheckLeaderBoardOpen() {
             if (gd.roundData.roundType != RoundData.RoundType.warmup) return;
             // Check if the leaderboard is open
             if (background.gameObject.activeSelf)
@@ -95,11 +88,9 @@ namespace UI
                 GetPlayerRange();
         }
 
-        private async void GetTopScores()
-        {
+        private async void GetTopScores() {
             LeaderboardScoresPage scoresResponse = await LeaderboardsService.Instance
-                .GetScoresAsync(leaderBoardId, new GetScoresOptions
-                {
+                .GetScoresAsync(leaderBoardId, new GetScoresOptions {
                     Offset = 0,
                     Limit = 10
                 });
@@ -107,16 +98,13 @@ namespace UI
             FormatScores(scoresResponse.Results);
         }
 
-        public async void GetPlayerRange()
-        {
+        public async void GetPlayerRange() {
             // Check if the player has a score on the leaderboard
-            try
-            {
+            try {
                 LeaderboardEntry playerScore = await LeaderboardsService.Instance
                     .GetPlayerScoreAsync(leaderBoardId);
             }
-            catch
-            {
+            catch {
                 GetTopScores();
                 return;
             }
@@ -130,12 +118,10 @@ namespace UI
             FormatScores(scoresResponse.Results);
         }
 
-        private void FormatScores(List<LeaderboardEntry> scoresResponse)
-        {
+        private void FormatScores(List<LeaderboardEntry> scoresResponse) {
             playerIsInList = false;
             // Extract the names and scores from the response
-            for (int i = 0; i < uIEntries.Length; i++)
-            {
+            for (int i = 0; i < uIEntries.Length; i++) {
                 // Disable the text mesh
                 uIEntries[i].gameObject.SetActive(false);
                 // If there are no more scores continue
@@ -150,8 +136,7 @@ namespace UI
                 if (index > 0) playerNumber = playerNameFull[(index + 1)..];
                 // Check if this is the player
                 bool isPlayer = playerNameFull == AuthenticationService.Instance.PlayerName;
-                if (isPlayer)
-                {
+                if (isPlayer) {
                     playerIndex = i;
                     playerIsInList = true;
                 }
@@ -172,8 +157,7 @@ namespace UI
             // AnimateEntries();
         }
 
-        private IEnumerator SetVerticalScrollPosition(int count)
-        {
+        private IEnumerator SetVerticalScrollPosition(int count) {
             yield return null;
             // Scroll to the player's score
             if (!playerIsInList) yield break;
@@ -188,13 +172,11 @@ namespace UI
             Log.Message("Scroll Rect Vertical Normalized Position: " + scrollRect.verticalNormalizedPosition);
         }
 
-        private void AnimateEntries()
-        {
+        private void AnimateEntries() {
             // Animate each entry scale to 1 in a cascade using DoTween
             Sequence seq = DOTween.Sequence();
 
-            foreach (LeaderBoardEntry entry in uIEntries)
-            {
+            foreach (LeaderBoardEntry entry in uIEntries) {
                 entry.transform.DOKill();
                 seq.Append(
                     entry.transform.DOScale(1, animDuration));
@@ -203,8 +185,7 @@ namespace UI
             // OpenWindow();
         }
 
-        public async void GetPlayerScore()
-        {
+        public async void GetPlayerScore() {
             LeaderboardEntry scoreResponse = await LeaderboardsService.Instance
                 .GetPlayerScoreAsync(leaderBoardId);
             Debug.Log(JsonConvert.SerializeObject(scoreResponse));

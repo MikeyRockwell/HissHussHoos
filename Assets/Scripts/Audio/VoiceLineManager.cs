@@ -1,20 +1,18 @@
-﻿using System;
-using Data;
-using Data.Customization;
+﻿using Data;
+using System;
 using Managers;
-using MoreMountains.Feedbacks;
-using MoreMountains.Tools;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Serialization;
-using Utils;
+using Sirenix.OdinInspector;
 using Random = UnityEngine.Random;
 
-namespace Audio
-{
-    public class VoiceLineManager : Singleton<VoiceLineManager>
-    {
+namespace Audio {
+    /// <summary>
+    /// Singleton
+    /// Holds references to all the voice lines as AudioEvents
+    /// Plays the voice lines when called via events
+    /// </summary>
+    public class VoiceLineManager : Singleton<VoiceLineManager> {
         [TitleGroup("Audio Events")] [FoldoutGroup("AudioEvents")]
         public AudioEvent startGame;
 
@@ -35,11 +33,11 @@ namespace Audio
         private DataWrangler.GameData gd;
         public bool priorityAudioPlaying = true;
 
-        protected override void Awake()
-        {
+        protected override void Awake() {
+            // SINGLETON
             base.Awake();
+            // EVENTS
             gd = DataWrangler.GetGameData();
-
             gd.roundData.OnGameBegin.AddListener(delegate { PlayVoiceLine(startGame); });
             gd.eventData.OnGameOver.AddListener(delegate { PlayVoiceLine(endGame); });
             gd.eventData.OnMiss.AddListener(HurtAudio);
@@ -52,43 +50,47 @@ namespace Audio
             gd.customEvents.OnColorUnlocked.AddListener(delegate { PlayVoiceLine(unlockItem); });
         }
 
-        private void Start()
-        {
+        private void Start() {
+            // The game starts with a priority boolean enabled
+            // This stops voice lines from playing until the game is ready
+            // After 3 seconds, the priority boolean is disabled
             Invoke(nameof(UnlockAudio), 3f);
         }
-        
-        private void UnlockAudio() => priorityAudioPlaying = false;
 
-        public void PlayVoiceLine(AudioEvent audioEvent)
-        {
+        private void UnlockAudio() {
+            priorityAudioPlaying = false;
+        }
+
+        public void PlayVoiceLine(AudioEvent audioEvent) {
+            // If the a priority audio is playing, don't play this audio
             if (priorityAudioPlaying) return;
+            // If the audio is cooling down, don't play this audio
             if (audioEvent.coolingDown) return;
+            // If the random chance fails, don't play this audio
             if (Random.value > audioEvent.chance) return;
 
             // Get the first available audio source
             AudioSource source = GetAvailableAudioSource();
             if (source == null) return;
+            // Set the audio source's mixer group
             source.outputAudioMixerGroup = audioEvent.voiceEffects ? voiceLineFXMixerGroup : voiceLineMixerGroup;
-
+            // Play the audio via the audio event
             audioEvent.PlayRandomClip(source);
-
             // Start the cooldown on the audio event
             StartCoroutine(audioEvent.CoolDown());
-
-            // If the audio is a priority, make voice lines unable to play
+            // If the audio is not a priority, return
             if (!audioEvent.priority) return;
-
+            // If the audio is a priority, set the priority boolean to true
             priorityAudioPlaying = true;
+            // After the audio has finished playing, set the priority boolean to false
             Invoke(nameof(ResetPriorityAudio), audioEvent.currentClip.length);
         }
 
-        private void ResetPriorityAudio()
-        {
+        private void ResetPriorityAudio() {
             priorityAudioPlaying = false;
         }
 
-        private AudioSource GetAvailableAudioSource()
-        {
+        private AudioSource GetAvailableAudioSource() {
             // Find the first available audio source
             foreach (Transform child in transform)
                 if (!child.GetComponent<AudioSource>().isPlaying)
@@ -96,16 +98,16 @@ namespace Audio
             // If none are available, return null
             return null;
         }
-
-        private void HurtAudio()
-        {
+        
+        // DIFFERENT VOICE LINES
+        private void HurtAudio() {
+            // If player still has health, play the hurt voice line
             if (gd.playerData.health > 1) PlayVoiceLine(hurt);
         }
 
-        private void SpeedCombo(RoundData.SpeedBonusType type)
-        {
-            switch (type)
-            {
+        private void SpeedCombo(RoundData.SpeedBonusType type) {
+            // Play the correct voice line based on the speed bonus type
+            switch (type) {
                 case RoundData.SpeedBonusType.fast:
                     PlayVoiceLine(quickCombo);
                     break;
@@ -117,8 +119,8 @@ namespace Audio
             }
         }
 
-        private void BeginRound()
-        {
+        private void BeginRound() {
+            // If the round is not the first round, play the new round voice line
             if (gd.roundData.currentRound > 1) PlayVoiceLine(newRound);
         }
     }

@@ -26,8 +26,7 @@ MonoBehaviour:
   bgSprite: {fileID: 0}
   hasFlag: 0
   noColors: 0
-  standardColors: 1
-  customColors: 0
+  customShader: 0
   colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
@@ -45,6 +44,7 @@ MonoBehaviour:
   - {r: 0.78431374, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.85490197, b: 0, a: 1}
   color: {r: 1, g: 1, b: 1, a: 1}
+  material: {fileID: 2100000, guid: 999a62fed1be40a4ab25b7256b75dc3a, type: 2}
   price: 0
   defaultItem: 1
   unlocked: 1

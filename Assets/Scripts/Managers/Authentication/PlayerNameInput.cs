@@ -7,41 +7,35 @@ using Unity.Services.Authentication;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Managers
-{
-    public class PlayerNameInput : UIWindow
-    {
+namespace Managers {
+    public class PlayerNameInput : UIWindow {
         // This class is used to get the player's name from an input field
         [SerializeField] private AuthenticationData authData;
         [SerializeField] private SceneManager sceneManager;
-        [SerializeField] private TMPro.TMP_InputField inputField;
+        [SerializeField] private TMP_InputField inputField;
         [SerializeField] private TextMeshProUGUI infoText;
         [SerializeField] private ProfanityFilter filter;
         [SerializeField] private Button submitButton;
 
         public string inputName;
 
-        protected override void Awake()
-        {
+        protected override void Awake() {
             base.Awake();
             authData.OnPlayerNameRequired.AddListener(OpenWindow);
-            
+
             submitButton.interactable = false;
-            
+
             inputField.onSubmit.AddListener(EnableSubmitButton);
             submitButton.onClick.AddListener(() => SubmitName(inputName));
         }
 
-        private void EnableSubmitButton(string input)
-        {
+        private void EnableSubmitButton(string input) {
             inputName = input;
             submitButton.interactable = true;
         }
 
-        private async void SubmitName(string input)
-        {
-            switch (input.Length)
-            {
+        private async void SubmitName(string input) {
+            switch (input.Length) {
                 case < 3:
                     Log.Message("Player name must be at least 3 characters long");
                     infoText.text = "Name must be at least 3 characters long";
@@ -58,11 +52,11 @@ namespace Managers
             //     infoText.text = "Name contains a naughty word!";
             //     return;
             // }
-            
+
             await AuthenticationService.Instance.UpdatePlayerNameAsync(input);
             PlayerPrefs.SetString("PlayerName", input);
             Log.Message($"Player name set to {input}");
-            
+
             sceneManager.SceneTransition(02);
         }
     }

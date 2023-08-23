@@ -3,10 +3,8 @@ using UnityEngine;
 using Data.Customization;
 using Data.Tutorial;
 
-namespace Managers
-{
-    public class CameraController : MonoBehaviour
-    {
+namespace Managers {
+    public class CameraController : MonoBehaviour {
         // Class to animate the camera
         [SerializeField] private float animDuration = 0.3f;
         [SerializeField] private Vector3 zoomedInPosition;
@@ -20,8 +18,7 @@ namespace Managers
         private DataWrangler.GameData gd;
 
 
-        private void Awake()
-        {
+        private void Awake() {
             cam = Camera.main;
             gd = DataWrangler.GetGameData();
             gd.customEvents.OnMenuOpened.AddListener(ZoomCameraToCharacter);
@@ -31,20 +28,17 @@ namespace Managers
             bgColor = background.color;
         }
 
-        private void TutorialZoomIn(SO_Dialogue dialogue)
-        {
+        private void TutorialZoomIn(SO_Dialogue dialogue) {
             if (!dialogue.zoomCamera) return;
             if (dialogue.position == SO_Dialogue.Position.Left) ZoomCameraToCharacter(null);
         }
 
-        private void TutorialReturnZoom(SO_Dialogue dialogue)
-        {
+        private void TutorialReturnZoom(SO_Dialogue dialogue) {
             if (!dialogue.zoomCamera) return;
             ZoomToMain();
         }
 
-        private void ZoomCameraToCharacter(SO_Category unused)
-        {
+        private void ZoomCameraToCharacter(SO_Category unused) {
             cam.DOKill();
             // Tween the cameras transform to the zoomed in position
             cam.transform.DOMove(zoomedInPosition, animDuration).SetUpdate(true);
@@ -54,8 +48,7 @@ namespace Managers
             // background.DOColor(Color.clear, animDuration);
         }
 
-        private void ZoomToMain()
-        {
+        private void ZoomToMain() {
             cam.DOKill();
             // Tween the camera to the zoomed out position
             cam.transform.DOMove(zoomedOutPosition, animDuration).SetUpdate(true);

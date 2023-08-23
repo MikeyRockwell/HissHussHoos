@@ -1,22 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.Advertisements;
 
-namespace Managers.Monetization
-{
-    public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
-    {
+namespace Managers.Monetization {
+    public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener {
         [SerializeField] private string _androidGameId;
         [SerializeField] private string _iOSGameId;
         [SerializeField] private bool _testMode = true;
         private string _gameId;
 
-        private void Awake()
-        {
+        private void Awake() {
             InitializeAds();
         }
 
-        private void InitializeAds()
-        {
+        private void InitializeAds() {
 #if UNITY_IOS
             _gameId = _iOSGameId;
 #elif UNITY_ANDROID
@@ -29,13 +25,11 @@ namespace Managers.Monetization
         }
 
 
-        public void OnInitializationComplete()
-        {
+        public void OnInitializationComplete() {
             Debug.Log("Unity Ads initialization complete.");
         }
 
-        public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-        {
+        public void OnInitializationFailed(UnityAdsInitializationError error, string message) {
             Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
         }
     }

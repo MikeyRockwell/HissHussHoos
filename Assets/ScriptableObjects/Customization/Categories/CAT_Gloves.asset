@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: CAT_Gloves
   m_EditorClassIdentifier: 
   UIName: GLOVES
+  isCharacter: 0
   Items:
   - {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}
+  - {fileID: 11400000, guid: 3902e55bec3abb64d8425ee7a23008ab, type: 2}
+  - {fileID: 11400000, guid: 5bdbadf80de96a04f8198e10f579fdfc, type: 2}
   CurrentItem: {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}
   DefaultItem: {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}
+  TryingItem: {fileID: 11400000, guid: 3902e55bec3abb64d8425ee7a23008ab, type: 2}
   OnChangeItem:
     m_PersistentCalls:
       m_Calls: []

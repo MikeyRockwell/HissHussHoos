@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CAT_Hair_Hat
   m_EditorClassIdentifier: 
   UIName: HAT / HAIR
+  isCharacter: 0
   Items:
   - {fileID: 11400000, guid: 8b3cc1155787fff4493dbd1bba7c4552, type: 2}
   - {fileID: 11400000, guid: 8ce93741c04751a41b946080e19e5ec3, type: 2}
@@ -21,11 +22,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb095a5c1c0b6b945b64725ed005315b, type: 2}
   - {fileID: 11400000, guid: f1340c7ab38f00c45a39378b1f67a022, type: 2}
   - {fileID: 11400000, guid: 529ab2de2d5cd324aa2a785d266f8057, type: 2}
-  - {fileID: 11400000, guid: 5dfd7637f6a33364290ad0f2d106b779, type: 2}
   - {fileID: 11400000, guid: 05b542ae2d7c143448c414f66eec52b3, type: 2}
   - {fileID: 11400000, guid: b240075e537dc1449a7c0b272583ec79, type: 2}
-  CurrentItem: {fileID: 11400000, guid: f1340c7ab38f00c45a39378b1f67a022, type: 2}
+  CurrentItem: {fileID: 11400000, guid: b240075e537dc1449a7c0b272583ec79, type: 2}
   DefaultItem: {fileID: 11400000, guid: 8b3cc1155787fff4493dbd1bba7c4552, type: 2}
+  TryingItem: {fileID: 11400000, guid: b240075e537dc1449a7c0b272583ec79, type: 2}
   OnChangeItem:
     m_PersistentCalls:
       m_Calls: []

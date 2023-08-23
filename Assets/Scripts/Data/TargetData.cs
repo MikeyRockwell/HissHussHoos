@@ -6,13 +6,10 @@ using UnityEngine.Events;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
-namespace Data
-{
+namespace Data {
     [CreateAssetMenu(fileName = "TargetData", menuName = "ScriptableObjects/Targets/TargetData")]
-    public class TargetData : ScriptableObject
-    {
-        public enum Target
-        {
+    public class TargetData : ScriptableObject {
+        public enum Target {
             HISS = 0,
             HUSS = 1,
             HOOS = 2
@@ -35,8 +32,7 @@ namespace Data
         public float perfectDistanceThresh = 0.02f;
         public float okDistanceThresh = 0.1f;
 
-        public void CreateTargetSet(int length)
-        {
+        public void CreateTargetSet(int length) {
             // Regular Target Set
             // Assigns random Targets to currentTarget array
             step = 0;
@@ -45,8 +41,7 @@ namespace Data
             OnTargetsReset?.Invoke();
         }
 
-        public void CheckBonusPunch(TARGET target)
-        {
+        public void CheckBonusPunch(TARGET target) {
             if (bonusTargets.Count == 0) return;
             if (target != bonusTargets[0].type) return;
 

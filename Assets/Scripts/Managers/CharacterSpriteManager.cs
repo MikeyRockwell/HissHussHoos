@@ -5,17 +5,16 @@ using DG.Tweening;
 using Data.Customization;
 using TARGET = Data.TargetData.Target;
 
-namespace Animation
-{
-    public class CharacterSpriteManager : MonoBehaviour
-    {
+namespace Animation {
+    public class CharacterSpriteManager : MonoBehaviour {
         public SO_Category part;
 
         private DataWrangler.GameData gd;
         private SpriteRenderer spriteRenderer;
         private PunchAnimation punchAnimation;
-        
+
         public Material mat;
+        public Material customMat;
 
         [SerializeField] private int spriteOrder;
         [SerializeField] private int spriteOrderOnTop;
@@ -24,13 +23,12 @@ namespace Animation
         private static readonly int ZestLights = Shader.PropertyToID("_ZestLights");
         private static readonly int MaskTex = Shader.PropertyToID("_MaskTex");
 
-        private void Awake()
-        {
+        private void Awake() {
             // Cache renderer and material
             punchAnimation = GetComponent<PunchAnimation>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             mat = spriteRenderer.material;
-            
+
             gd = DataWrangler.GetGameData();
 
             // Listen for item changes on the character part
@@ -38,22 +36,25 @@ namespace Animation
             part.OnChangeItemColor.AddListener(UpdateSpriteColor);
         }
 
-        private void Start()
-        {
+        private void Start() {
             part.ChangeItem(part.CurrentItem, false);
         }
 
-        private void UpdateSprites(SO_Item item)
-        {
+        private void UpdateSprites(SO_Item item) {
             // Update the sprite arrays
             punchAnimation.punchSprites = item.animSprites;
-            if (item.colorMask)
-            {
+            // mat = item.material;
+            if (item.colorMask) {
+                spriteRenderer.material = mat;
                 punchAnimation.maskSprites = item.maskSprites;
                 mat.SetTexture(MaskTex, punchAnimation.maskSprites[0].texture);
             }
-            else
-            {
+            else if (item.customShader) {
+                customMat = item.customMaterial;
+                spriteRenderer.material = customMat;
+            }
+            else {
+                spriteRenderer.material = mat;
                 mat.SetTexture(MaskTex, null);
             }
 
@@ -66,15 +67,12 @@ namespace Animation
             mat.SetColor(ZestLights, item.zestGlasses ? item.zestLightColor : Color.black);
         }
 
-        private void UpdateSpriteColor(SO_Item item, Color newColor)
-        {   
-            if (item.colorMask)
-            {
+        private void UpdateSpriteColor(SO_Item item, Color newColor) {
+            if (item.colorMask) {
                 mat.SetColor(Color1, newColor);
                 spriteRenderer.color = Color.white;
             }
-            else
-            {
+            else {
                 mat.SetColor(Color1, Color.white);
                 spriteRenderer.color = newColor;
             }

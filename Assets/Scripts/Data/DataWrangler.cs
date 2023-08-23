@@ -3,10 +3,8 @@ using Data.Customization;
 using UI.CustomiseMenu;
 using UnityEngine.Serialization;
 
-namespace Managers
-{
-    public class DataWrangler : Singleton<DataWrangler>
-    {
+namespace Managers {
+    public class DataWrangler : Singleton<DataWrangler> {
         public GameState GameState;
         [FormerlySerializedAs("LoadSaveData")] public DataSaverLoader dataSaverLoader;
         public GameEventData EventData;
@@ -21,13 +19,11 @@ namespace Managers
         public ItemData ItemData;
         public CharacterData CharacterData;
 
-        public static DataSaverLoader GetSaverLoader()
-        {
+        public static DataSaverLoader GetSaverLoader() {
             return Instance.dataSaverLoader;
         }
 
-        public static GameData GetGameData()
-        {
+        public static GameData GetGameData() {
             return new GameData(
                 Instance.GameState,
                 Instance.EventData,
@@ -43,8 +39,7 @@ namespace Managers
                 Instance.CharacterData);
         }
 
-        public struct GameData
-        {
+        public struct GameData {
             public readonly GameState gameState;
             public readonly GameEventData eventData;
             public readonly CustomizationEvents customEvents;
@@ -69,9 +64,8 @@ namespace Managers
                 SoundData soundData,
                 ColorData colorData,
                 UIData uIData,
-                ItemData itemData, 
-                CharacterData characterData)
-            {
+                ItemData itemData,
+                CharacterData characterData) {
                 this.gameState = gameState;
                 this.eventData = eventData;
                 this.customEvents = customEvents;

@@ -4,10 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 
-namespace UI
-{
-    public class MoraleMeter : MonoBehaviour
-    {
+namespace UI {
+    public class MoraleMeter : MonoBehaviour {
         [GradientUsage(true)] [SerializeField] private Gradient gradient;
         [SerializeField] private Slider moraleSlider;
         [SerializeField] private Image fill;
@@ -15,8 +13,7 @@ namespace UI
 
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             // Cache components
             gd = DataWrangler.GetGameData();
             // Subscribe to events
@@ -28,15 +25,13 @@ namespace UI
             // HideMeter();
         }
 
-        private void HideMeter()
-        {
+        private void HideMeter() {
             // Animate the meter closing
             transform.DOKill();
             transform.DOScaleY(0, 0.5f).OnComplete(() => gameObject.SetActive(false));
         }
 
-        private void ShowMeter(int arg0)
-        {
+        private void ShowMeter(int arg0) {
             // Animate the meter opening
             transform.DOKill();
             gameObject.SetActive(true);
@@ -44,8 +39,7 @@ namespace UI
         }
 
         // Update the morale graphics
-        private void UpdateGraphics(float morale)
-        {
+        private void UpdateGraphics(float morale) {
             // Update the slider using DOTween
             moraleSlider.DOValue(morale, 0.5f);
             fill.DOColor(gradient.Evaluate(morale), 0.5f);
@@ -53,15 +47,13 @@ namespace UI
         }
 
         // Trigger the morale boost animation
-        private void MoraleBoost()
-        {
+        private void MoraleBoost() {
             // Animate the morale boost
             transform.DOKill();
             transform.DOPunchScale(Vector3.one * 0.12f, 0.5f, 2).SetLoops(-1, LoopType.Yoyo);
         }
 
-        private void EndMoraleBoost()
-        {
+        private void EndMoraleBoost() {
             // Stop the morale boost animation
             transform.DOKill();
             transform.DOScale(Vector3.one, 0.5f);

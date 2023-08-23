@@ -4,10 +4,8 @@ using System.Collections;
 using UnityEngine.Advertisements;
 using UnityEngine.Serialization;
 
-namespace Managers.Monetization
-{
-    public class BannerAdManager : MonoBehaviour
-    {
+namespace Managers.Monetization {
+    public class BannerAdManager : MonoBehaviour {
         [SerializeField] private BannerPosition bannerPosition = BannerPosition.BOTTOM_CENTER;
         [SerializeField] private string androidAdUnitId = "Banner_Android";
         [SerializeField] private string iOSAdUnitId = "Banner_iOS";
@@ -16,14 +14,12 @@ namespace Managers.Monetization
 
         private DataWrangler.GameData gd;
 
-        private void Awake()
-        {
+        private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnGameBegin.AddListener(InitBannerAd);
         }
 
-        private void Start()
-        {
+        private void Start() {
             // Get the Ad Unit ID for the current platform:
 #if UNITY_IOS
             adUnitId = iOSAdUnitId;
@@ -34,14 +30,12 @@ namespace Managers.Monetization
             Advertisement.Banner.SetPosition(bannerPosition);
         }
 
-        private void InitBannerAd(int arg0)
-        {
+        private void InitBannerAd(int arg0) {
             StopAllCoroutines();
             StartCoroutine(nameof(PlayBannerAd));
         }
 
-        private IEnumerator PlayBannerAd()
-        {
+        private IEnumerator PlayBannerAd() {
             LoadBanner();
             while (!Advertisement.Banner.isLoaded) yield return null;
             ShowBannerAd();
@@ -50,8 +44,7 @@ namespace Managers.Monetization
         }
 
         // Implement a method to call when the Load Banner button is clicked:
-        private void LoadBanner()
-        {
+        private void LoadBanner() {
             // Set up options to notify the SDK of load events:
             BannerLoadOptions options = new() { };
 
@@ -60,8 +53,7 @@ namespace Managers.Monetization
         }
 
         // Implement a method to call when the Show Banner button is clicked:
-        private void ShowBannerAd()
-        {
+        private void ShowBannerAd() {
             // Set up options to notify the SDK of show events:
             BannerOptions options = new() { };
 
@@ -70,8 +62,7 @@ namespace Managers.Monetization
         }
 
         // Implement a method to call when the Hide Banner button is clicked:
-        private void HideBannerAd()
-        {
+        private void HideBannerAd() {
             // Hide the banner:
             Advertisement.Banner.Hide();
         }
