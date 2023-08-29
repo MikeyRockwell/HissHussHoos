@@ -1,14 +1,14 @@
-﻿using System;
-using DG.Tweening;
-using Sirenix.OdinInspector;
+﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
+using Sirenix.OdinInspector;
 
 namespace Data {
     [CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/Data/PlayerData", order = 0)]
 
     // A scriptable object to hold all the player data and events
     public class PlayerData : ScriptableObject {
+        
         [TitleGroup("Stats")] public int score;
         public int health;
         public int maxHealth = 5;
@@ -28,6 +28,9 @@ namespace Data {
         [FoldoutGroup("Events", false)] public UnityEvent<int> OnHealthChange;
         [FoldoutGroup("Events", false)] public UnityEvent<int> OnHighScoreUpdated;
         [FoldoutGroup("Events", false)] public UnityEvent<int> OnBestRoundUpdated;
+        [FoldoutGroup("Events", false)] public UnityEvent      OnNewHighScore;
+        [FoldoutGroup("Events", false)] public UnityEvent      OnLowScore;
+        [FoldoutGroup("Events", false)] public UnityEvent      OnRegularScore;
 
         public void ResetScore() {
             // Reset the score

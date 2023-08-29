@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dae5e27e644412d9c6c03329f497a48, type: 3}
   m_Name: MoraleData
   m_EditorClassIdentifier: 
-  moralePoints: 830
+  moralePoints: 522.0959
   morale: 0
   maxMorale: 100
   moraleBoostDuration: 10
   moraleBoostScoreMultiplier: 3
-  moralePointsEarned: 0
+  moralePointsEarned: 24.899984
   moraleBoostActive: 0
   OnMoraleBoost:
     m_PersistentCalls:
@@ -26,6 +26,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnMoraleUpdated:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMoraleBoostTick:
     m_PersistentCalls:
       m_Calls: []
   OnMoralePointsEarned:

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: V_AE_LowScore
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 029b7447e11b13344b8d98e436553ce0, type: 3}
+  - {fileID: 8300000, guid: 311c9e6c91fd8984da25d12829bc9be3, type: 3}
+  - {fileID: 8300000, guid: e935c3175aaa6884c95b8b8919c92670, type: 3}
+  - {fileID: 8300000, guid: 46a814b5d3b272247994cef177cd2a3e, type: 3}
+  - {fileID: 8300000, guid: c3626754ac49ffc4aa20db1a7955e3fe, type: 3}
+  volume: {x: 0.6941727, y: 0.69374734}
+  pitch: {x: 1.007231, y: 1.0063803}
+  chance: 1
+  coolDownDuration: 0
+  coolingDown: 0
+  priority: 1
+  currentClip: {fileID: 8300000, guid: 33653bc31cc1f5d4fb416a29e2432c57, type: 3}
+  voiceEffects: 0

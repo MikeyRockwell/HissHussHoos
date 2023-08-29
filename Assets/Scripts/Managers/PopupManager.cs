@@ -30,7 +30,7 @@ namespace Managers {
             gd.roundData.OnSpeedBonus.AddListener(SpeedBonusPopUp);
             gd.roundData.OnScoreAdded.AddListener(Popup);
             gd.roundData.OnBonusScoreAdded.AddListener(BonusNumberPopUp);
-            gd.roundData.OnTimeAttackPerfectRound.AddListener(StringPopUp);
+            gd.roundData.OnTimeAttackAddWaiirua.AddListener(StringPopUp);
         }
 
         private void Popup(int score) {

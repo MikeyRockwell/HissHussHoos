@@ -10,17 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
-  m_Name: CI_BG_Fielding
+  m_Name: CI_GreyPinkShoes
   m_EditorClassIdentifier: 
-  category: {fileID: 11400000, guid: 16ac8bf77862bb94b910ab340b3b1405, type: 2}
-  itemName: Fielding, NZ
-  menuSprite: {fileID: 21300000, guid: 8c40b3d337beebf4286fc525a654af49, type: 3}
-  animSprites: []
+  category: {fileID: 11400000, guid: 58c4cd704f6b1be41b8d6de1fc280212, type: 2}
+  itemName: Grey/Pink Shoes
+  menuSprite: {fileID: 21300000, guid: 22cbc3ba5355fa74b833c030e2462466, type: 3}
+  animSprites:
+  - {fileID: -429296313, guid: 87ba9fdaa968543419a8dfde40ec47f7, type: 3}
+  - {fileID: -218866401, guid: 87ba9fdaa968543419a8dfde40ec47f7, type: 3}
+  - {fileID: 1507404197, guid: 87ba9fdaa968543419a8dfde40ec47f7, type: 3}
+  - {fileID: 2029618377, guid: 87ba9fdaa968543419a8dfde40ec47f7, type: 3}
   maskSprites: []
-  character: 2
+  character: 0
   torsoOnTop: 0
-  bgSprite: {fileID: 21300000, guid: b5f8e069220d69348acde8b9a4d6c23b, type: 3}
-  hasFlag: 1
+  bgSprite: {fileID: 0}
+  hasFlag: 0
   noColors: 1
   customShader: 0
   colorMask: 0
@@ -32,7 +36,7 @@ MonoBehaviour:
   customMaterial: {fileID: 0}
   customIconMaterial: {fileID: 0}
   fxType: 0
-  price: 500
+  price: 350
   defaultItem: 0
   unlocked: 0
   equipped: 0

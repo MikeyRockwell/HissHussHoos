@@ -19,6 +19,7 @@ namespace Data {
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoost;
         [FoldoutGroup("Events", false)] public UnityEvent OnMoraleBoostEnd;
         [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoraleUpdated;
+        [FoldoutGroup("Events", false)] public UnityEvent<float> OnMoraleBoostTick;
         [FoldoutGroup("Events", false)] public UnityEvent OnMoralePointsEarned;
         [FoldoutGroup("Events", false)] public UnityEvent<float, float> OnMoralePointsSpent;
 
@@ -31,6 +32,14 @@ namespace Data {
 
         public void UpdateMoraleMeter(float newMorale) {
             OnMoraleUpdated?.Invoke(newMorale);
+        }
+        
+        /// <summary>
+        /// This is a communicator to indicate the time left on the morale boost
+        /// </summary>
+        /// <param name="tickValue"></param>
+        public void TickMoraleBoost(float tickValue) {
+            OnMoraleBoostTick?.Invoke(tickValue);
         }
 
         public void DisplayMoralePoints() {

@@ -22,14 +22,17 @@ MonoBehaviour:
   bgSprite: {fileID: 21300000, guid: 8741da84d14981540898d123e9856451, type: 3}
   hasFlag: 0
   noColors: 1
-  standardColors: 0
-  customColors: 0
+  customShader: 0
   colorMask: 0
   zestGlasses: 0
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  price: 150
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  customMaterial: {fileID: 0}
+  customIconMaterial: {fileID: 0}
+  fxType: 0
+  price: 500
   defaultItem: 0
-  unlocked: 1
+  unlocked: 0
   equipped: 0

@@ -32,10 +32,11 @@ MonoBehaviour:
   zestLightColor: {r: 0, g: 0, b: 0, a: 0}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   customMaterial: {fileID: 2100000, guid: 2dee5381511b6a84a8c42fca070d42c2, type: 2}
   customIconMaterial: {fileID: 2100000, guid: e17b586f9bce72746a1c1ff6a9b24adf, type: 2}
   fxType: 1
-  price: 0
+  price: 500
   defaultItem: 0
-  unlocked: 1
-  equipped: 1
+  unlocked: 0
+  equipped: 0

@@ -20,24 +20,30 @@ namespace UI {
 
         private DataWrangler.GameData gd;
 
-        private void Awake() {
-            CacheReference();
-        }
-
         private void CacheReference() {
             if (!ReferenceEquals(gd.roundData, null)) return;
             gd = DataWrangler.GetGameData();
         }
 
         public void Init(TARGET newType, int index) {
-            timeToKill = index == 0 ? 2.5f : 1f;
-
+            CacheReference();
+            // If this is the first target, give it a longer timer
+            if (index == 0) {
+                timeToKill = 2.5f;
+            }
+            // Otherwise, make the timer shorter based on the round
+            else {
+                timeToKill = 1f - gd.roundData.currentRound / 100f;
+            }
+            
+            // Reset the target
             xf.localScale = Vector3.zero;
             xf.anchoredPosition = spawnPosition;
             xf.rotation = Quaternion.identity;
             type = newType;
             textMesh.text = type.ToString();
-
+            
+            // Enable the target
             gameObject.SetActive(true);
             xf.DOScale(Vector3.one, 0.2f).SetUpdate(true);
             AnimateColor();

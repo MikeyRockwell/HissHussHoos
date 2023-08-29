@@ -22,7 +22,8 @@ namespace Animation {
         [SerializeField] private int puffsToEmit = 5;
         // Glove FX
         [SerializeField] private GloveFX rainbowFX;
-        [SerializeField] private GloveFX goldenFX;
+        [SerializeField] private Transform goldenFX;
+        [SerializeField] private ParticleSystem[] goldenParticleSystems;
         
         private DataWrangler.GameData gd;
 
@@ -30,13 +31,25 @@ namespace Animation {
         private void Awake() {
             // EVENTS
             gd = DataWrangler.GetGameData();
+            gd.eventData.OnPunchWarmup.AddListener(CheckCustomizationMenuOpen);
             gd.eventData.OnPunchNormal.AddListener(PlayImpactFX);
             gd.eventData.OnPunchTimeAttack.AddListener(PlayImpactFX);
             gloves.OnChangeItemColor.AddListener(SetGloveFX);
         }
 
+        private void CheckCustomizationMenuOpen(TargetData.Target target) {
+            // If the customization menu is open, play the impact FX
+            if (gd.customEvents.MenuOpen) {
+                PlayImpactFX(target);
+            }
+        }
+
         private void PlayImpactFX(TargetData.Target target) { // Emits the default smoke puffs
             defaultParticleSystems[(int)target].Emit(puffsToEmit);
+
+            if (goldenFX.gameObject.activeSelf) {
+                goldenParticleSystems[(int)target].Emit(15);
+            }
         }
 
         private void SetGloveFX(SO_Item item, Color color) { // Sets the glove FX based on the glove type

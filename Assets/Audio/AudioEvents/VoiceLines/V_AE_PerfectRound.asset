@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: V_AE_PerfectRound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: db576ba1f6ca77640beaa7dc48efcf6a, type: 3}
+  - {fileID: 8300000, guid: 9b038dd727382684e8eadeb924f53cf3, type: 3}
+  - {fileID: 8300000, guid: 9bfa0ad791125c641ae3e34fa677f0ca, type: 3}
+  - {fileID: 8300000, guid: db22c0c54ef24e3408a36caace98d777, type: 3}
+  - {fileID: 8300000, guid: 9187db8d54cb0e84cb7465b99738475e, type: 3}
+  volume: {x: 0.6941727, y: 0.69374734}
+  pitch: {x: 1.007231, y: 1.0063803}
+  chance: 1
+  coolDownDuration: 0
+  coolingDown: 0
+  priority: 1
+  currentClip: {fileID: 0}
+  voiceEffects: 0

@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 namespace UI {
     public class MoraleMeter : MonoBehaviour {
-        [GradientUsage(true)] [SerializeField] private Gradient gradient;
+        
+        [GradientUsage(true)] 
+        [SerializeField] private Gradient gradient;
         [SerializeField] private Slider moraleSlider;
         [SerializeField] private Image fill;
         [SerializeField] private TextMeshProUGUI underText;
@@ -22,6 +24,7 @@ namespace UI {
             gd.playerData.md.OnMoraleBoost.AddListener(MoraleBoost);
             gd.playerData.md.OnMoraleBoostEnd.AddListener(EndMoraleBoost);
             gd.playerData.md.OnMoraleUpdated.AddListener(UpdateGraphics);
+            gd.playerData.md.OnMoraleBoostTick.AddListener(MeterTick);
             // HideMeter();
         }
 
@@ -44,6 +47,14 @@ namespace UI {
             moraleSlider.DOValue(morale, 0.5f);
             fill.DOColor(gradient.Evaluate(morale), 0.5f);
             underText.DOColor(gradient.Evaluate(morale), 0.5f);
+        }
+        
+        // Update the morale graphics during a morale boost
+        private void MeterTick(float morale) {
+            // Update the slider using DOTween
+            moraleSlider.value = morale;
+            fill.color = gradient.Evaluate(morale);
+            underText.color = gradient.Evaluate(morale);
         }
 
         // Trigger the morale boost animation

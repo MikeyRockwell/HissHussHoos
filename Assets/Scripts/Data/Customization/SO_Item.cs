@@ -43,6 +43,7 @@ namespace Data.Customization {
 
         [FoldoutGroup("Colors")] public Color[] availableColors;
         [FoldoutGroup("Colors")] public Color color = Color.white;
+        [FoldoutGroup("Colors")] public Color defaultColor = Color.white;
         [FoldoutGroup("Colors")] public Material customMaterial;
         [FoldoutGroup("Colors")] public Material customIconMaterial;
 
@@ -57,7 +58,7 @@ namespace Data.Customization {
 
         public void ResetItem() {
             // This is called when the game resets the character
-            color = Color.white;
+            color = defaultColor;
             if (defaultItem) {
                 unlocked = true;
                 equipped = true;

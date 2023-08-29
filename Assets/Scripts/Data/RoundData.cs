@@ -1,10 +1,9 @@
-﻿using Utils;
+﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 using DG.Tweening;
 using Sirenix.OdinInspector;
-using UnityEngine.Serialization;
 
 namespace Data {
     [CreateAssetMenu(fileName = "RoundData", menuName = "ScriptableObjects/Data/RoundData", order = 0)]
@@ -23,6 +22,14 @@ namespace Data {
             super
         }
 
+        public enum TimeAttackResult {
+            none,
+            addWaiirua,
+            addScore,
+        }
+        
+        public TimeAttackResult timeAttackResult;
+
         public float roundTextTime = 2.1f;
         public int currentRound;
         public int roundLength;
@@ -31,6 +38,7 @@ namespace Data {
         public float minRoundTime;
         public float roundTimeLimit;
         public float lastComboTime;
+        public bool roundActive;
 
         // Regular Game Mode HHH
         [FoldoutGroup("Regular Events")] public UnityEvent<int> OnGameBegin;
@@ -46,12 +54,14 @@ namespace Data {
         [TitleGroup("TIME ATTACK ROUND")] public int timeAttackRoundDivisor = 4;
         public float timeAttackLength;
         public float timeAttackRoundClock;
+        public int timeAttackPerfectScoreBonus = 100;
 
         // Events
         [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackRoundBegin;
         [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackTargetTimedOut;
         [FoldoutGroup("Time Attack Events")] public UnityEvent<int> OnTimeAttackRoundComplete;
-        [FoldoutGroup("Time Attack Events")] public UnityEvent<string> OnTimeAttackPerfectRound;
+        [FoldoutGroup("Time Attack Events")] public UnityEvent<string> OnTimeAttackAddWaiirua;
+        [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackPerfectScore;
 
         // Precision Game Mode
         [TitleGroup("PRECISION ROUND")] public int precisionRoundDivisor = 8;
@@ -123,11 +133,19 @@ namespace Data {
             OnTimeAttackTargetTimedOut?.Invoke();
         }
 
-        public void EndTimeAttackRound(bool perfect) {
+        public void EndTimeAttackRound() {
             currentRound++;
             OnTimeAttackRoundComplete?.Invoke(currentRound);
-            if (perfect) {
-                OnTimeAttackPerfectRound?.Invoke("+1 WAIIRUA");
+
+            switch (timeAttackResult) {
+                case TimeAttackResult.none:
+                    break;
+                case TimeAttackResult.addWaiirua:
+                    OnTimeAttackAddWaiirua?.Invoke("+1 WAIIRUA");
+                    break;
+                case TimeAttackResult.addScore:
+                    OnTimeAttackPerfectScore?.Invoke();
+                    break;
             }
         }
 

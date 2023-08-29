@@ -26,6 +26,9 @@ namespace Audio {
         [FoldoutGroup("AudioEvents")] public AudioEvent changeItem;
         [FoldoutGroup("AudioEvents")] public AudioEvent changeColor;
         [FoldoutGroup("AudioEvents")] public AudioEvent unlockItem;
+        [FoldoutGroup("AudioEvents")] public AudioEvent personalBest;
+        [FoldoutGroup("AudioEvents")] public AudioEvent perfectRound;
+        [FoldoutGroup("AudioEvents")] public AudioEvent lowScore;
 
         [SerializeField] private AudioMixerGroup voiceLineMixerGroup;
         [SerializeField] private AudioMixerGroup voiceLineFXMixerGroup;
@@ -38,16 +41,20 @@ namespace Audio {
             base.Awake();
             // EVENTS
             gd = DataWrangler.GetGameData();
-            gd.roundData.OnGameBegin.AddListener(delegate { PlayVoiceLine(startGame); });
-            gd.eventData.OnGameOver.AddListener(delegate { PlayVoiceLine(endGame); });
-            gd.eventData.OnMiss.AddListener(HurtAudio);
-            gd.roundData.OnSpeedBonus.AddListener(SpeedCombo);
-            gd.customEvents.OnItemChanged.AddListener(delegate { PlayVoiceLine(changeItem); });
-            gd.customEvents.OnColorChanged.AddListener(delegate { PlayVoiceLine(changeColor); });
-            gd.playerData.md.OnMoraleBoost.AddListener(delegate { PlayVoiceLine(moraleBoost); });
-            gd.roundData.OnRoundComplete.AddListener(delegate { BeginRound(); });
-            gd.customEvents.OnItemUnlocked.AddListener(delegate { PlayVoiceLine(unlockItem); });
-            gd.customEvents.OnColorUnlocked.AddListener(delegate { PlayVoiceLine(unlockItem); });
+            gd.roundData.OnGameBegin.AddListener               (delegate { PlayVoiceLine(startGame);    });
+            gd.customEvents.OnItemChanged.AddListener          (delegate { PlayVoiceLine(changeItem);   });
+            gd.customEvents.OnColorChanged.AddListener         (delegate { PlayVoiceLine(changeColor);  });
+            gd.playerData.md.OnMoraleBoost.AddListener         (delegate { PlayVoiceLine(moraleBoost);  });
+            gd.customEvents.OnItemUnlocked.AddListener         (delegate { PlayVoiceLine(unlockItem);   });
+            gd.customEvents.OnColorUnlocked.AddListener        (delegate { PlayVoiceLine(unlockItem);   });
+            gd.roundData.OnTimeAttackPerfectScore.AddListener  (delegate { PlayVoiceLine(perfectRound); });
+            gd.roundData.OnTimeAttackAddWaiirua.AddListener    (delegate { PlayVoiceLine(perfectRound); });
+            gd.playerData.OnRegularScore.AddListener           (delegate { PlayVoiceLine(endGame);      });
+            gd.playerData.OnLowScore.AddListener               (delegate { PlayVoiceLine(lowScore);     });
+            gd.playerData.OnNewHighScore.AddListener           (delegate { PlayVoiceLine(personalBest); });
+            gd.roundData.OnRoundComplete.AddListener           (delegate { BeginRound();                });
+            gd.roundData.OnSpeedBonus.AddListener              (SpeedCombo);
+            gd.eventData.OnMiss.AddListener                    (HurtAudio);
         }
 
         private void Start() {

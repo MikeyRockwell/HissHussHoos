@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: RoundData
   m_EditorClassIdentifier: 
   roundType: 1
+  timeAttackResult: 2
   roundTextTime: 2.5
   currentRound: 3
   roundLength: 10
-  roundStep: 0
+  roundStep: 3
   maxRoundTime: 10
   minRoundTime: 1.5
   roundTimeLimit: 9.01
@@ -48,6 +49,7 @@ MonoBehaviour:
   timeAttackRoundDivisor: 2
   timeAttackLength: 15
   timeAttackRoundClock: -0.5050472
+  timeAttackPerfectScoreBonus: 100
   OnTimeAttackRoundBegin:
     m_PersistentCalls:
       m_Calls: []
@@ -55,6 +57,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnTimeAttackRoundComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTimeAttackAddWaiirua:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTimeAttackPerfectScore:
     m_PersistentCalls:
       m_Calls: []
   precisionRoundDivisor: 7

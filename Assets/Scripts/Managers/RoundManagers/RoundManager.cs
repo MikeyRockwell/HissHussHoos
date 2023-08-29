@@ -33,6 +33,7 @@ namespace Managers {
             roundText.text = "";
             // Set warmup round type for free play
             gd.roundData.roundType = RoundData.RoundType.warmup;
+            gd.roundData.roundActive = false;
         }
 
         private void NewGame(int round) {
@@ -51,11 +52,13 @@ namespace Managers {
 
         private IEnumerator InitRoundSequence() {
             gd.eventData.inputEnabled = false;
+            gd.roundData.roundActive = false;
             int round = gd.roundData.currentRound;
             SelectRoundType(round);
             roundPops.InitRoundPopup(gd.roundData.roundType);
             yield return new WaitForSeconds(gd.roundData.roundTextTime);
             BeginRound(round);
+            gd.roundData.roundActive = true;
         }
 
         private void SelectRoundType(int round) {

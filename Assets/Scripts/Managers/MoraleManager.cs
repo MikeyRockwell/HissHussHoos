@@ -1,7 +1,8 @@
-﻿using Data;
+﻿using FX;
+using Data;
 using UnityEngine;
 using Data.Customization;
-using FX;
+using System.Collections;
 using UnityEngine.Serialization;
 using Utils;
 
@@ -9,12 +10,11 @@ namespace Managers {
     // This class is used to communicate between the game and the player data
     // For morale points, the player data is the source of truth
     public class MoraleManager : MonoBehaviour {
-        [FormerlySerializedAs("moralePointReduction")] [SerializeField]
-        private int moraleReduction = 25;
-
-        // [SerializeField] private float moralePointsEarned;
+        
+        [SerializeField] private int moraleReduction = 25;
         [SerializeField] private float moralePointsMultiplier = 0.3f;
         [SerializeField] private ScalePulse moraleBoostText;
+        [SerializeField] private VolumeFX moraleFXVolume;
 
         private DataWrangler.GameData gd;
         private MoraleData moraleData;
@@ -62,30 +62,48 @@ namespace Managers {
         }
 
         public void AddMorale(int morale) {
-            // // If morale boost is active multiply the amount of morale by the boost multiplier
-            // int moraleAdded = Mathf.RoundToInt(
-            //     moraleData.moraleBoostActive ? morale * moraleData.moraleBoostMultiplier : morale);
-
+           
             // Update the morale to a maximum of 100
             moraleData.morale = Mathf.Min(moraleData.maxMorale, moraleData.morale + morale);
-
+            // Award the player morale points
             UpdateMoralePoints(morale);
 
-            // Trigger the update morale event
-            moraleData.UpdateMoraleMeter(moraleData.GetMorale());
-            // If the player has reached the maximum morale, trigger the morale boost event
-            if (moraleData.morale != moraleData.maxMorale) return;
+            // If the player has not yet reached the maximum morale, update the meter
+            if (moraleData.morale != moraleData.maxMorale && !moraleData.moraleBoostActive) {
+                moraleData.UpdateMoraleMeter(moraleData.GetMorale());
+                return;
+            }
             // If the morale boost is already active, return
             if (moraleData.moraleBoostActive) return;
-
+            
             // Trigger the morale boost event
             moraleData.moraleBoostActive = true;
             moraleData.OnMoraleBoost?.Invoke();
             moraleBoostText.gameObject.SetActive(true);
+            moraleFXVolume.AnimateVolume(1);
 
             // Start a timer to reset the morale
-            Invoke(nameof(EndMoraleBoost), moraleData.moraleBoostDuration);
+            StartCoroutine(nameof(MoraleBoostTimer));
         }
+
+        private IEnumerator MoraleBoostTimer() {
+            float time = moraleData.moraleBoostDuration;
+            
+            while (time > 0) {
+                // Only run the timer if the round is active
+                if (gd.roundData.roundActive) {
+                    // Calculate the time remaining as a normalized value
+                    float timeRemaining = time / moraleData.moraleBoostDuration;
+                    moraleData.TickMoraleBoost(timeRemaining);
+                    time -= Time.deltaTime;
+                    yield return null;
+                }
+                
+                yield return null;
+            }
+            
+            EndMoraleBoost();
+        } 
 
         private void UpdateMoralePoints(int moraleAdded) {
             // Update the morale points earned
@@ -109,14 +127,14 @@ namespace Managers {
             moraleData.OnMoraleBoostEnd?.Invoke();
             // Trigger the update morale event
             moraleData.UpdateMoraleMeter(moraleData.GetMorale());
-
+            
             moraleBoostText.Disable();
+            moraleFXVolume.AnimateVolume(0);
         }
 
         private void DisplayMoralePoints() {
             // Display the morale points earned
             moraleData.DisplayMoralePoints();
-
             moraleBoostText.Disable();
         }
 

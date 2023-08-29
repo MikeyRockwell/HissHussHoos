@@ -21,7 +21,6 @@ namespace Managers {
         private TimeAttackTarget currentTATarget;
         private int streak;
 
-
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnTimeAttackRoundBegin.AddListener(BeginRound);
@@ -44,14 +43,24 @@ namespace Managers {
         private void SpawnNewTarget() {
             // Check if the round is over
             if (gd.roundData.roundStep == targetsPerRound) {
-                // Check if the player has a perfect streak
+                // Check if the player has a perfect streak give a bonus
                 if (streak == targetsPerRound) {
-                    // Add a health
-                    gd.playerData.ChangeHealth(1);
-                    gd.roundData.EndTimeAttackRound(true);
-                    return;
+                    // Add a health point if the player has less than max health
+                    if (gd.playerData.health < gd.playerData.maxHealth) {
+                        gd.roundData.timeAttackResult = RoundData.TimeAttackResult.addWaiirua;
+                        gd.playerData.ChangeHealth(1);
+                    }
+                    // Otherwise add a score bonus
+                    else if (gd.playerData.health == gd.playerData.maxHealth) {
+                        gd.roundData.timeAttackResult = RoundData.TimeAttackResult.addScore;
+                    }
                 }
-                gd.roundData.EndTimeAttackRound(false);
+                // Otherwise there is no bonus
+                else {
+                    gd.roundData.timeAttackResult = RoundData.TimeAttackResult.none;
+                }
+                
+                gd.roundData.EndTimeAttackRound();
                 return;
             }
 
@@ -107,7 +116,6 @@ namespace Managers {
         }
 
         private void EndRound(int unused) {
-            
             streakText.DOScale(0, 0.2f).OnComplete(() => streakText.gameObject.SetActive(false));
             currentTATarget.DisableSelfMiss();
         }
