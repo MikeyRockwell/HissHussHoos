@@ -158,6 +158,7 @@ MonoBehaviour:
   iconImage: {fileID: 1687199192070744886}
   lockedImage: {fileID: 2964979926734965093}
   item: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: 0376ae0a4420abc47819f36b6247b31f, type: 2}
 --- !u!1 &5652165060134182324
 GameObject:
   m_ObjectHideFlags: 0

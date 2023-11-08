@@ -31,8 +31,7 @@ MonoBehaviour:
   - text: Unlock new *items* and *colors* using _morale points_
     tutorialEvent: {fileID: 0}
     hasAction: 0
-  - text: Earn _morale points_ by playing the game, or you can *purchase* _morale
-      points_
+  - text: Earn _morale points_ by playing the game, it's that easy!
     tutorialEvent: {fileID: 0}
     hasAction: 0
   - text: '*enjoy!*'

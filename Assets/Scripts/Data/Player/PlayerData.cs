@@ -16,9 +16,8 @@ namespace Data {
         [TitleGroup("Punches", "Punch Speed")] public float punchSpeed = 0.1f;
         public float punchCoolDown = 0.15f;
 
-        [TitleGroup("SpeedBonus", "Combo Bonuses")] [GUIColor(0.5f, 1, 0.5f)]
-        public float superThreshold = 1.8f;
-
+        [TitleGroup("SpeedBonus", "Combo Bonuses")] 
+        [GUIColor(0.5f, 1, 0.5f)] public float superThreshold = 1.8f;
         [GUIColor(0.5f, 1, 0.5f)] public float fastThreshold = 0.08f;
         [GUIColor(0.5f, 1, 0.5f)] public bool punching;
 

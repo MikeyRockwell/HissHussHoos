@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_BluePurple
+  m_EditorClassIdentifier: 
+  category: {fileID: 11400000, guid: 58c4cd704f6b1be41b8d6de1fc280212, type: 2}
+  itemName: Blue/Purple Shoes
+  menuSprite: {fileID: 21300000, guid: ca7ccad2e66036240a99b3e1b937c0d4, type: 3}
+  animSprites:
+  - {fileID: -120629176, guid: 4db532faaeaec4f4898c8f220d490240, type: 3}
+  - {fileID: 1688392041, guid: 4db532faaeaec4f4898c8f220d490240, type: 3}
+  - {fileID: -687858090, guid: 4db532faaeaec4f4898c8f220d490240, type: 3}
+  - {fileID: 1508145497, guid: 4db532faaeaec4f4898c8f220d490240, type: 3}
+  maskSprites: []
+  character: 0
+  torsoOnTop: 0
+  bgSprite: {fileID: 0}
+  hasFlag: 0
+  noColors: 1
+  customShader: 0
+  colorMask: 0
+  zestGlasses: 0
+  zestLightColor: {r: 0, g: 0, b: 0, a: 0}
+  availableColors: []
+  color: {r: 1, g: 1, b: 1, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  customMaterial: {fileID: 0}
+  customIconMaterial: {fileID: 0}
+  fxType: 0
+  price: 350
+  defaultItem: 0
+  unlocked: 0
+  equipped: 0

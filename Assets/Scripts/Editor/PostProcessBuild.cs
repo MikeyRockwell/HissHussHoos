@@ -29,5 +29,6 @@ public static class PostProcessBuild {
                     ("Unity-iPhone/Images.xcassets", "Images.xcassets"));
             project.WriteToFile(projectPath);
         }
+    }
 #endif
 }

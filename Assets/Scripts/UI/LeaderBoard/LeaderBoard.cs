@@ -56,18 +56,20 @@ namespace UI {
             // openWindowButton.onClick.AddListener(CheckLeaderBoardOpen);
             topScoresTab.onClick.AddListener(GetTopScores);
             yourScoreTab.onClick.AddListener(GetPlayerRange);
-            gd.roundData.OnGameBegin.AddListener(HideMenu);
+            gd.roundData.OnGameBeginDelayed.AddListener(HideMenu);
             gd.eventData.OnGameOver.AddListener(UnHideMenu);
 
             OnWindowOpen.AddListener(GetPlayerRange);
         }
 
         private void UnHideMenu() {
+            openWindowButton.interactable = true;
             xf.DOKill();
             xf.DOScaleY(1, gd.uIData.MenuAnimSpeed);
         }
 
-        private void HideMenu(int arg0) {
+        private void HideMenu() {
+            openWindowButton.interactable = false;
             xf.DOKill();
             xf.DOScaleY(0, gd.uIData.MenuAnimSpeed);
         }

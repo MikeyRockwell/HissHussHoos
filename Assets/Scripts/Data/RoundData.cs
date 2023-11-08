@@ -1,8 +1,7 @@
-﻿using System;
+﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
-using DG.Tweening;
 using Sirenix.OdinInspector;
 
 namespace Data {
@@ -34,13 +33,14 @@ namespace Data {
         public int currentRound;
         public int roundLength;
         public int roundStep;
+        
         public float maxRoundTime;
         public float minRoundTime;
         public float roundTimeLimit;
-        public float lastComboTime;
         public bool roundActive;
 
         // Regular Game Mode HHH
+        [FoldoutGroup("Regular Events")] public UnityEvent OnGameBeginDelayed;
         [FoldoutGroup("Regular Events")] public UnityEvent<int> OnGameBegin;
         [FoldoutGroup("Regular Events")] public UnityEvent<int> OnRoundInit;
         [FoldoutGroup("Regular Events")] public UnityEvent<int> OnRoundBegin;
@@ -78,6 +78,7 @@ namespace Data {
         }
 
         public void BeginGameDelayed() {
+            OnGameBeginDelayed?.Invoke();
             Sequence seq = DOTween.Sequence();
             seq.AppendInterval(1.0f).OnComplete(BeginGame);
         }

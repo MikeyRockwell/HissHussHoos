@@ -39,6 +39,7 @@ namespace UI {
             transform.DOKill();
             gameObject.SetActive(true);
             transform.DOScaleY(1, 0.5f);
+            UpdateGraphics(0);
         }
 
         // Update the morale graphics

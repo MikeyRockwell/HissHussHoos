@@ -1,7 +1,5 @@
-﻿using Utils;
-using Managers;
+﻿using Managers;
 using UnityEngine;
-using DG.Tweening;
 using Data.Customization;
 using TARGET = Data.TargetData.Target;
 
@@ -22,6 +20,7 @@ namespace Animation {
         private static readonly int Color1 = Shader.PropertyToID("_Color");
         private static readonly int ZestLights = Shader.PropertyToID("_ZestLights");
         private static readonly int MaskTex = Shader.PropertyToID("_MaskTex");
+        private static readonly int Tex = Shader.PropertyToID("MaskTex");
 
         private void Awake() {
             // Cache renderer and material
@@ -65,6 +64,7 @@ namespace Animation {
 
             // Update the color of the zest lights
             mat.SetColor(ZestLights, item.zestGlasses ? item.zestLightColor : Color.black);
+            // mat.SetTexture(Tex, item.zestGlasses ? item.zestMaskTex : null);
         }
 
         private void UpdateSpriteColor(SO_Item item, Color newColor) {

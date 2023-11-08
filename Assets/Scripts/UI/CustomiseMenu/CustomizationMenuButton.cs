@@ -19,20 +19,22 @@ namespace UI.CustomiseMenu {
             gd = DataWrangler.GetGameData();
 
             button.onClick.AddListener(OpenMenu);
-            events.OnMenuClosed.AddListener(UnHideMenu);
+            events.OnMenuClosed.AddListener(UnHideButton);
 
-            gd.roundData.OnGameBegin.AddListener(HideMenu);
-            gd.eventData.OnGameOver.AddListener(UnHideMenu);
+            gd.roundData.OnGameBeginDelayed.AddListener(HideButton);
+            gd.eventData.OnGameOver.AddListener(UnHideButton);
         }
 
-        private void UnHideMenu() {
+        private void UnHideButton() {
+            button.interactable = true;
             xf.DOKill();
-            xf.DOScaleY(1, animSpeed);
+            xf.DOScaleY(1, gd.uIData.MenuAnimSpeed);
         }
 
-        private void HideMenu(int arg0) {
+        private void HideButton() {
+            button.interactable = false;
             xf.DOKill();
-            xf.DOScaleY(0, animSpeed);
+            xf.DOScaleY(0, gd.uIData.MenuAnimSpeed);
         }
 
         private void OpenMenu() {

@@ -28,7 +28,7 @@ namespace UI.CustomiseMenu {
         private SO_Item currentItem;
         private SO_Color currentColor;
 
-        private void Awake() {
+        /*private void Awake() {
             // Cache components
             xf = GetComponent<RectTransform>();
             // Subscribe to events            
@@ -124,11 +124,11 @@ namespace UI.CustomiseMenu {
             unlockFX.Play();
         }
 
-        private void CloseWindow() {
+        private void CloseWindow(SO_Color color) {
             // Close the window
             if (open)
                 xf.DOScale(Vector3.zero, gd.uIData.MenuAnimSpeed).SetEase(gd.uIData.DefaultMenuEase)
                     .OnComplete(() => open = false);
-        }
+        }*/
     }
 }

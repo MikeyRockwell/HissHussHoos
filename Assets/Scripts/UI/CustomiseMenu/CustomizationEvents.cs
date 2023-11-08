@@ -22,7 +22,7 @@ namespace UI.CustomiseMenu {
         public UnityEvent<SO_Item> OnLockedItemPressed;
         public UnityEvent<SO_Color> OnColorButtonPressed;
         public UnityEvent<SO_Item> OnItemUnlocked;
-        public UnityEvent OnColorUnlocked;
+        public UnityEvent<SO_Color> OnColorUnlocked;
         public UnityEvent<SO_Item> OnItemChanged;
         public UnityEvent<SO_Item, Color> OnColorChanged;
 
@@ -31,13 +31,13 @@ namespace UI.CustomiseMenu {
         public bool TryingOnColor;
 
         public void OpenMenu() {
-            OnMenuOpened?.Invoke(targetCategory);
             MenuOpen = true;
+            OnMenuOpened?.Invoke(targetCategory);
         }
 
         public void CloseMenu() {
-            OnMenuClosed?.Invoke();
             MenuOpen = false;
+            OnMenuClosed?.Invoke();
         }
 
         public void SelectClothingItem(SO_Category newPart, Button button) {
@@ -100,7 +100,7 @@ namespace UI.CustomiseMenu {
 
         public void UnlockItem(SO_Item currentItem, SO_Color color) {
             color.unlocked = true;
-            OnColorUnlocked?.Invoke();
+            OnColorUnlocked?.Invoke(color);
             ChangeItemColor(currentItem, color);
         }
 

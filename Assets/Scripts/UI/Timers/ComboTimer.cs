@@ -14,11 +14,11 @@ namespace UI {
         [SerializeField] private TextMeshProUGUI timerTextTop;
         [SerializeField] private TextMeshProUGUI timerTextBot;
         [SerializeField] private RectTransform timerRect;
-        [SerializeField] private float widthMultiplier = 50f;
         [SerializeField] private Slider slider;
         [SerializeField] private Image fill;
         [SerializeField] private Image fill2;
-        [GradientUsage(true)] [SerializeField] private Gradient gradient;
+        [GradientUsage(true)] 
+        [SerializeField] private Gradient gradient;
         [SerializeField] private float maxTime;
         [SerializeField] private int timerUpdateFrames = 3;
 

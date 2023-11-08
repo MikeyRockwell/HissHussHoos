@@ -43,6 +43,10 @@ namespace UI {
         }
 
         public void OnPointerDown(PointerEventData eventData) {
+            Punch();
+        }
+
+        public void Punch() {
             if (gd.playerData.punching) return;
 
             // Punch type

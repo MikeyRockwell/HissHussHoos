@@ -20,7 +20,7 @@ MonoBehaviour:
   character: 2
   torsoOnTop: 0
   bgSprite: {fileID: 21300000, guid: b5f8e069220d69348acde8b9a4d6c23b, type: 3}
-  hasFlag: 1
+  bgType: 1
   noColors: 1
   customShader: 0
   colorMask: 0

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Data.Customization;
+using UnityEngine.Serialization;
+using Utils;
 
 namespace UI.CustomiseMenu {
     public class ItemSelectionButton : MonoBehaviour {
@@ -11,34 +13,46 @@ namespace UI.CustomiseMenu {
 
         public SO_Item item;
 
-        private Material mat;
+        [SerializeField] Material defaultMaterial;
         private Material customMat;
+        private bool initialized;
 
-        private void Awake() {
+        private void Initialize() {
             button.onClick.AddListener(SetTreat);
             events.OnItemChanged.AddListener(SetActiveSwitch);
             events.OnColorChanged.AddListener(ChangeColor);
-            mat = iconImage.material;
+            defaultMaterial = iconImage.material;
+            initialized = true;
+        }
+
+        private void InitMaterial() {
             
         }
 
         // Called when the button is initialized
         public void InitButton(SO_Item newItem) {
+            
+            if (!initialized) Initialize();
+            
             // Done when category is opened
             item = newItem;
             iconImage.sprite = newItem.menuSprite;
             iconImage.color = item.color;
             lockedImage.enabled = !item.unlocked;
+            
 
             button.image.color = newItem.equipped ? button.colors.selectedColor : Color.clear;
-            if (newItem.equipped) events.ChangeItem(item);
+            if (newItem.equipped) {
+                Log.Message("Equipped: " + item.name + " in " + item.category.name, item.color);
+                events.ChangeItem(item);
+            }
 
             if (newItem.customShader) {
                 customMat = newItem.customMaterial;
                 iconImage.material = item.customIconMaterial;
             }
             else {
-                iconImage.material = mat;
+                iconImage.material = defaultMaterial;
             }
         }
 
@@ -49,7 +63,7 @@ namespace UI.CustomiseMenu {
         }
 
         // Called when the item is changed
-        private void SetActiveSwitch(SO_Item newItem) {
+        public void SetActiveSwitch(SO_Item newItem) {
             button.image.color = newItem == item ? button.colors.selectedColor : Color.clear;
         }
 

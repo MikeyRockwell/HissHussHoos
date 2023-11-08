@@ -1,12 +1,12 @@
-﻿using System;
-using UI;
+﻿using UI;
 using FX;
 using Data;
 using Utils;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using Managers.Tutorial;
 using Unity.Services.Authentication;
-using UnityEngine.UI;
 using TARGET = Data.TargetData.Target;
 
 namespace Managers {
@@ -17,6 +17,7 @@ namespace Managers {
         [SerializeField] private RoundPopUps roundPops;
         [SerializeField] private DialogueManager dialogueManager;
         [SerializeField] private StartGameButton start;
+        [SerializeField] private PunchButton[] punchButtons;
 
         private DataWrangler.GameData gd;
 
@@ -66,6 +67,16 @@ namespace Managers {
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad9)) {
+                punchButtons[0].Punch();
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad6)) {
+                punchButtons[1].Punch();
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad3)) {
+                punchButtons[2].Punch();
             }
         }
 

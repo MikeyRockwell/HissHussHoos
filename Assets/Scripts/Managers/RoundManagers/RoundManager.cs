@@ -38,6 +38,7 @@ namespace Managers {
 
         private void NewGame(int round) {
             // Called when start game button is pushed
+            // The round is always set to 1??
             gd.roundData.currentRound = round;
             NewRoundInit(round);
         }

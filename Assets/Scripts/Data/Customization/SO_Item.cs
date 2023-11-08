@@ -1,6 +1,5 @@
 ﻿using System;
 using Animation;
-using UnityEditor;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
@@ -10,6 +9,7 @@ namespace Data.Customization {
 
     // This is the base class for all items that can be equipped by the player
     public class SO_Item : ScriptableObject {
+        
         [FormerlySerializedAs("characterPart")]
         public SO_Category category;
 
@@ -31,7 +31,8 @@ namespace Data.Customization {
         [PreviewField(100, ObjectFieldAlignment.Left)] [FoldoutGroup("Background")]
         public Sprite bgSprite;
 
-        [FoldoutGroup("Background")] public bool hasFlag;
+        [FoldoutGroup("Background")] public enum BackgroundType { gym, fielding, taranaki};
+        [FoldoutGroup("Background")] public BackgroundType bgType;
 
         [FoldoutGroup("Colors")] public bool noColors;
         [FoldoutGroup("Colors")] public bool customShader;
@@ -46,6 +47,7 @@ namespace Data.Customization {
         [FoldoutGroup("Colors")] public Color defaultColor = Color.white;
         [FoldoutGroup("Colors")] public Material customMaterial;
         [FoldoutGroup("Colors")] public Material customIconMaterial;
+        [FoldoutGroup("Colors")] public Texture2D zestMaskTex;
 
         [FoldoutGroup("FX")] public PunchFX.GloveFXType fxType;
         
@@ -53,8 +55,6 @@ namespace Data.Customization {
         [FoldoutGroup("Status")] public bool defaultItem;
         [FoldoutGroup("Status")] public bool unlocked;
         [FoldoutGroup("Status")] public bool equipped;
-        
-        
 
         public void ResetItem() {
             // This is called when the game resets the character

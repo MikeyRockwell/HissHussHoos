@@ -8,7 +8,7 @@ namespace Data.Customization {
         [ColorUsage(true, true)] public Color Color;
 
         public bool unlocked;
-        public float price;
+        public int price;
         public bool defaultColor;
 
         public void ResetColor() {

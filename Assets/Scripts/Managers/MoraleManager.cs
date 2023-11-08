@@ -2,9 +2,6 @@
 using Data;
 using UnityEngine;
 using Data.Customization;
-using System.Collections;
-using UnityEngine.Serialization;
-using Utils;
 
 namespace Managers {
     // This class is used to communicate between the game and the player data
@@ -18,6 +15,7 @@ namespace Managers {
 
         private DataWrangler.GameData gd;
         private MoraleData moraleData;
+        private float moraleBoostClock;
 
         private void Awake() {
             // Cache components
@@ -34,12 +32,14 @@ namespace Managers {
             // Subscribe to events
             gd.eventData.OnGameFirstLaunch.AddListener(moraleData.ResetMoralePoints);
             gd.roundData.OnGameBegin.AddListener(i => ResetMorale());
-            gd.customEvents.OnItemUnlocked.AddListener(SpendMoralPoints);
+            gd.customEvents.OnItemUnlocked.AddListener(SpendMoralePoints);
+            gd.customEvents.OnColorUnlocked.AddListener(SpendMoralePoints);
             gd.eventData.OnHit.AddListener(AddMoraleFromPunch);
             gd.eventData.OnHitTimeAttack.AddListener(AddMoraleFromPunch);
             gd.eventData.OnMiss.AddListener(RemoveMorale);
             gd.roundData.OnSpeedBonus.AddListener(AddMoraleFromBonus);
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);
+            gd.eventData.OnGameOver.AddListener(GameOver);
         }
 
         private void ResetMorale() {
@@ -83,27 +83,25 @@ namespace Managers {
             moraleFXVolume.AnimateVolume(1);
 
             // Start a timer to reset the morale
-            StartCoroutine(nameof(MoraleBoostTimer));
+            moraleBoostClock = moraleData.moraleBoostDuration;
         }
 
-        private IEnumerator MoraleBoostTimer() {
-            float time = moraleData.moraleBoostDuration;
-            
-            while (time > 0) {
-                // Only run the timer if the round is active
-                if (gd.roundData.roundActive) {
-                    // Calculate the time remaining as a normalized value
-                    float timeRemaining = time / moraleData.moraleBoostDuration;
-                    moraleData.TickMoraleBoost(timeRemaining);
-                    time -= Time.deltaTime;
-                    yield return null;
-                }
-                
-                yield return null;
+        private void FixedUpdate() {
+            // If the morale boost is not active, return
+            if (!moraleData.moraleBoostActive) return;
+            // If the round is not active, return
+            if (!gd.roundData.roundActive) return;
+            // If the morale boost timer is up, end the morale boost
+            if (moraleBoostClock <= 0) {
+                EndMoraleBoost();
             }
+            // Update the morale boost timer
+            if (!(moraleBoostClock > 0)) return;
             
-            EndMoraleBoost();
-        } 
+            moraleData.TickMoraleBoost(moraleBoostClock / moraleData.moraleBoostDuration);
+            moraleBoostClock -= Time.deltaTime;
+
+        }
 
         private void UpdateMoralePoints(int moraleAdded) {
             // Update the morale points earned
@@ -132,15 +130,27 @@ namespace Managers {
             moraleFXVolume.AnimateVolume(0);
         }
 
+        private void GameOver() {
+            CancelInvoke();
+            moraleBoostText.Disable();
+            moraleFXVolume.AnimateVolume(0);
+        }
+
         private void DisplayMoralePoints() {
             // Display the morale points earned
             moraleData.DisplayMoralePoints();
             moraleBoostText.Disable();
         }
 
-        private void SpendMoralPoints(SO_Item item) {
+        private void SpendMoralePoints(SO_Item item) {
             // Spend morale points
             moraleData.SpendMoralePoints(item.price);
+            DataWrangler.GetSaverLoader().SaveGame();
+        }
+        
+        private void SpendMoralePoints(SO_Color color) {
+            // Spend morale points
+            moraleData.SpendMoralePoints(color.price);
             DataWrangler.GetSaverLoader().SaveGame();
         }
     }

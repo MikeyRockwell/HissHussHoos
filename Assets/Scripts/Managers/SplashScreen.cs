@@ -14,11 +14,8 @@ namespace Managers {
 
         private void Start() {
             // Splash video delay
-            // delay = videoPlayer.clip.length;
-            // Invoke(nameof(OnSplashScreenFinished), (float)delay);
-            
-            // TODO remove this once the splash screen is done
-            OnSplashScreenFinished();
+            delay = videoPlayer.clip.length;
+            Invoke(nameof(OnSplashScreenFinished), (float)delay);
         }
 
         private void OnSplashScreenFinished() {

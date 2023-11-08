@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7585cb5c4844e668ea71391261f607c, type: 3}
+  m_Name: CI_PinkMoraleBoostersZest
+  m_EditorClassIdentifier: 
+  category: {fileID: 11400000, guid: f32d5cf56256bd341bf86eeb3587e34a, type: 2}
+  itemName: Pink Morale Boosters with Zest
+  menuSprite: {fileID: 21300000, guid: 0cdf6875c4f87764287e9b3c2c46daf6, type: 3}
+  animSprites:
+  - {fileID: 491771196, guid: 6174be663ec80644da149cff1c7f7666, type: 3}
+  - {fileID: -1286045351, guid: 6174be663ec80644da149cff1c7f7666, type: 3}
+  - {fileID: 1755662972, guid: 6174be663ec80644da149cff1c7f7666, type: 3}
+  - {fileID: 1044878786, guid: 6174be663ec80644da149cff1c7f7666, type: 3}
+  maskSprites: []
+  character: 0
+  torsoOnTop: 0
+  bgSprite: {fileID: 0}
+  bgType: 0
+  noColors: 1
+  customShader: 0
+  colorMask: 0
+  zestGlasses: 1
+  zestLightColor: {r: 20.865906, g: 5.462279, b: 10.487576, a: 1}
+  availableColors: []
+  color: {r: 1, g: 1, b: 1, a: 1}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  customMaterial: {fileID: 0}
+  customIconMaterial: {fileID: 0}
+  zestMaskTex: {fileID: 0}
+  fxType: 0
+  price: 500
+  defaultItem: 0
+  unlocked: 1
+  equipped: 0

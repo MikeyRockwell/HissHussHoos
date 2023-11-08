@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 using Data.Customization;
-using Managers;
-using UnityEngine.Serialization;
 
 namespace UI.CustomiseMenu {
     public class CategorySelector : CategoryButton {
+        
         [SerializeField] private SO_Category category;
 
         private DataWrangler.GameData gd;

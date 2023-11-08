@@ -24,16 +24,20 @@ MonoBehaviour:
   character: 0
   torsoOnTop: 0
   bgSprite: {fileID: 0}
-  hasFlag: 0
+  bgType: 0
   noColors: 1
   customShader: 0
   colorMask: 0
   zestGlasses: 1
-  zestLightColor: {r: 0, g: 13.496456, b: 13.766361, a: 1}
+  zestLightColor: {r: 9.145801, g: 33.35527, b: 33.758762, a: 1}
   availableColors: []
   color: {r: 1, g: 1, b: 1, a: 1}
-  material: {fileID: 2100000, guid: 394d24466ed84134293ba03b1afc77ea, type: 2}
+  defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  customMaterial: {fileID: 0}
+  customIconMaterial: {fileID: 0}
+  zestMaskTex: {fileID: 0}
+  fxType: 0
   price: 500
   defaultItem: 0
-  unlocked: 0
+  unlocked: 1
   equipped: 0

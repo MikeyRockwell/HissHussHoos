@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Utils;
 using Managers;
 using UnityEngine;
 using DG.Tweening;
 using Data.Customization;
-using Utils;
 
 namespace UI.CustomiseMenu {
     public class CustomizationMenu : MonoBehaviour {
@@ -36,8 +35,7 @@ namespace UI.CustomiseMenu {
 
         private void InitSubMenu(SO_Category category) {
             currentCategory = category;
-
-            if (!window.isOpen) return;
+            // if (!window.isOpen) return;
 
             InitializeItemGrid(category);
             InitializeColorGrid(category.CurrentItem);
@@ -48,6 +46,7 @@ namespace UI.CustomiseMenu {
         }
 
         private void InitializeItemGrid(SO_Category category) {
+            Log.Message("Initializing item grid");
             DisableItemButtons();
             for (int i = 0; i < category.Items.Length; i++) {
                 // Check if the item is related to this character
@@ -57,6 +56,9 @@ namespace UI.CustomiseMenu {
                 // If so then enable the button and initialize it
                 itemGrid.GetChild(i).gameObject.SetActive(true);
                 itemGrid.GetChild(i).GetComponent<ItemSelectionButton>().InitButton(category.Items[i]);
+                // if (category.Items[i] == category.CurrentItem) {
+                //     itemGrid.GetChild(i).GetComponent<ItemSelectionButton>().SetActiveSwitch(category.CurrentItem);
+                // }
             }
         }
 
@@ -64,7 +66,7 @@ namespace UI.CustomiseMenu {
             foreach (RectTransform child in itemGrid) child.gameObject.SetActive(false);
         }
 
-        private void RefreshColorGrid() {
+        private void RefreshColorGrid(SO_Color color) {
             SO_Item item = events.GetTargetItem();
             InitializeColorGrid(item);
         }
