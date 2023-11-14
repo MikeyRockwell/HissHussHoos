@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using TMPro;
 using DG.Tweening;
-using TMPro;
 using UnityEngine;
+using System.Threading.Tasks;
 
 namespace Managers {
     public class LoginManager : MonoBehaviour {

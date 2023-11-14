@@ -35,7 +35,8 @@ MonoBehaviour:
   volume: {x: 0.8273822, y: 0.826796}
   pitch: {x: 1.0019186, y: 1.0007461}
   chance: 1
-  coolDownDuration: 0
+  coolDownDuration: 2
   coolingDown: 0
   priority: 0
-  currentClip: {fileID: 8300000, guid: 029b7447e11b13344b8d98e436553ce0, type: 3}
+  currentClip: {fileID: 8300000, guid: ef586f204887c8b4aa16aca169d01f90, type: 3}
+  voiceEffects: 0

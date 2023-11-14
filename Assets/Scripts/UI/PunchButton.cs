@@ -60,7 +60,8 @@ namespace UI {
                 case RoundData.RoundType.timeAttack:
                     gd.eventData.PunchTimeAttack(target);
                     break;
-                default:
+                case RoundData.RoundType.precision:
+                    gd.eventData.PunchPrecision(target);
                     break;
             }
 

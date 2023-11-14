@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0940a20709c84a708e789595c4f8c7ee, type: 3}
   m_Name: RoundData
   m_EditorClassIdentifier: 
-  roundType: 2
+  roundType: 1
   timeAttackResult: 2
   roundTextTime: 2.5
-  currentRound: 4
+  currentRound: 13
   roundLength: 10
-  roundStep: 1
+  roundStep: 0
   maxRoundTime: 10
   minRoundTime: 1.5
-  roundTimeLimit: 9.01
-  roundActive: 0
+  roundTimeLimit: 5.71
+  roundActive: 1
+  OnGameBeginDelayed:
+    m_PersistentCalls:
+      m_Calls: []
   OnGameBegin:
     m_PersistentCalls:
       m_Calls: []
@@ -46,7 +49,8 @@ MonoBehaviour:
   OnLogTimer:
     m_PersistentCalls:
       m_Calls: []
-  timeAttackRoundDivisor: 5
+  bonusRoundDivisor: 4
+  timeAttackRoundDivisor: 7
   timeAttackLength: 15
   timeAttackRoundClock: -0.5050472
   timeAttackPerfectScoreBonus: 100
@@ -65,7 +69,15 @@ MonoBehaviour:
   OnTimeAttackPerfectScore:
     m_PersistentCalls:
       m_Calls: []
-  precisionRoundDivisor: 7
+  precisionRoundDivisor: 4
+  precisionRoundLength: 30
+  precisionIntervalRange: {x: 0.25, y: 0.85}
+  OnPrecisionRoundBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPrecisionRoundComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnScoreAdded:
     m_PersistentCalls:
       m_Calls: []

@@ -49,7 +49,10 @@ namespace Data {
         [FoldoutGroup("Regular Events")] public UnityEvent OnComboComplete;
         [FoldoutGroup("Regular Events")] public UnityEvent<SpeedBonusType> OnSpeedBonus;
         [FoldoutGroup("Regular Events")] public UnityEvent<int, float> OnLogTimer;
-
+        
+        [TitleGroup("BONUS ROUND")]
+        public int bonusRoundDivisor = 5;
+        
         // Time Attack Game Mode
         [TitleGroup("TIME ATTACK ROUND")] public int timeAttackRoundDivisor = 4;
         public float timeAttackLength;
@@ -64,8 +67,14 @@ namespace Data {
         [FoldoutGroup("Time Attack Events")] public UnityEvent OnTimeAttackPerfectScore;
 
         // Precision Game Mode
-        [TitleGroup("PRECISION ROUND")] public int precisionRoundDivisor = 8;
-
+        [TitleGroup("Precision Round")] public int precisionRoundDivisor = 8;
+        [TitleGroup("Precision Round")] public int precisionRoundLength;
+        [TitleGroup("Precision Round")] public Vector2 precisionIntervalRange = new(0.2f, 0.5f);
+        
+        // Precision Events
+        [FoldoutGroup("Precision Events")] public UnityEvent OnPrecisionRoundBegin;
+        [FoldoutGroup("Precision Events")] public UnityEvent<int> OnPrecisionRoundComplete;
+        
         // Score Events
         [FoldoutGroup("Score Events")] public UnityEvent<int> OnScoreAdded;
         [FoldoutGroup("Score Events")] public UnityEvent<int> OnBonusScoreAdded;
@@ -156,6 +165,15 @@ namespace Data {
                 timeAttackRoundClock -= Time.deltaTime;
                 yield return null;
             }
+        }
+        
+        public void BeginPrecisionRound() {
+            OnPrecisionRoundBegin?.Invoke();
+        }
+        
+        public void EndPrecisionRound() {
+            currentRound++;
+            OnPrecisionRoundComplete?.Invoke(currentRound);
         }
 
         public void ScoreAdded(int score) {

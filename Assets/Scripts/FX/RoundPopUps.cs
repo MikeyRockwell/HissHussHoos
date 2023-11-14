@@ -8,6 +8,7 @@ namespace FX {
         // Handle round popups based on round type
         [SerializeField] private AnimatedFX regularRoundPop;
         [SerializeField] private AnimatedFX timeAttackPop;
+        [SerializeField] private AnimatedFX precisionRoundPop;
         [SerializeField] private RoundNumberPopUp roundNumber;
 
         private DataWrangler.GameData gd;
@@ -33,6 +34,9 @@ namespace FX {
                     Invoke(nameof(BeginRound), timeAttackPop.animationLength);
                     break;
                 case TYPE.precision:
+                    precisionRoundPop.Init();
+                    Invoke(nameof(BeginRound), regularRoundPop.animationLength);
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
@@ -49,6 +53,7 @@ namespace FX {
                     gd.roundData.BeginTimeAttackRound();
                     break;
                 case TYPE.precision:
+                    gd.roundData.BeginPrecisionRound();
                     break;
             }
         }

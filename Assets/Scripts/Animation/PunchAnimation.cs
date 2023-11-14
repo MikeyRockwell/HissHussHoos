@@ -21,6 +21,7 @@ namespace Animation {
             gd.eventData.OnPunchNormal.AddListener(Punch);
             gd.eventData.OnPunchWarmup.AddListener(Punch);
             gd.eventData.OnPunchTimeAttack.AddListener(Punch);
+            gd.eventData.OnPunchPrecision.AddListener(Punch);
             // COMPONENTS
             spriteRenderer = GetComponent<SpriteRenderer>();
         }

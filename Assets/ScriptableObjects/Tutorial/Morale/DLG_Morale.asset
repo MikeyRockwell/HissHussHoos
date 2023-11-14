@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f892eecd77545c4a795ccaccbe67109, type: 3}
+  m_Name: DLG_Morale
+  m_EditorClassIdentifier: 
+  dialogueName: WILLIAM WAIIRUA
+  sentences:
+  - text: '*That was goooood!!*<br>
+
+      On the bottom right is your _morale meter_'
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: Each time you score points you will gain morale
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: if you miss a target you will lose morale
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: Fill your _morale meter_ and you will get a *morale boost!*
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: during a *morale boost* you will get 3x more points!
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: Completing fast combos and getting *speed bonuses* will increase morale
+      faster
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  - text: _hiss huss hoos!_
+    tutorialEvent: {fileID: 0}
+    hasAction: 0
+  position: 0
+  zoomCamera: 0

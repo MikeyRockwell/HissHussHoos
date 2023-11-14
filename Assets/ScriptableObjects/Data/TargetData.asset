@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSet: 000000000000000001000000
   currentTimeAttackTarget: 0
-  step: 3
+  currentPrecisionTarget: 0
+  step: 24
   fiveHitComboRoundThreshold: 10
   oneHitComboChance: 0.2
   fiveHitComboChance: 0.2
@@ -23,11 +24,8 @@ MonoBehaviour:
   OnTargetsReset:
     m_PersistentCalls:
       m_Calls: []
-  bonusTargets: []
-  punchTargets:
-  - {x: 1.18, y: 0.83}
-  - {x: 1.18, y: 0.18}
-  - {x: 1.18, y: -0.47}
-  bonusTargetSpeedMultiplier: 0.5
-  perfectDistanceThresh: 0.02
-  okDistanceThresh: 0.1
+  precisionTargetSpeedMultiplier: 1
+  missThreshold: 0.25
+  perfectXPosition: 0.637
+  perfectDistanceThresh: 0.15
+  okDistanceThresh: 0.45

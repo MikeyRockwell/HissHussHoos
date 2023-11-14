@@ -15,17 +15,34 @@ MonoBehaviour:
   OnMenuOpened:
     m_PersistentCalls:
       m_Calls: []
+  OnMenuClosed:
+    m_PersistentCalls:
+      m_Calls: []
+  MenuOpen: 0
   OnChangeCategory:
     m_PersistentCalls:
       m_Calls: []
   OnCategoryButtonPressed:
     m_PersistentCalls:
       m_Calls: []
-  OnItemSelected:
+  OnLockedItemPressed:
     m_PersistentCalls:
       m_Calls: []
-  OnCloseOtherTabs:
+  OnColorButtonPressed:
     m_PersistentCalls:
       m_Calls: []
-  targetPart: {fileID: 11400000, guid: 0ea2794192414dc40bd2f7ba7bceba08, type: 2}
-  defaultPart: {fileID: 11400000, guid: 0ea2794192414dc40bd2f7ba7bceba08, type: 2}
+  OnItemUnlocked:
+    m_PersistentCalls:
+      m_Calls: []
+  OnColorUnlocked:
+    m_PersistentCalls:
+      m_Calls: []
+  OnItemChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnColorChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  targetCategory: {fileID: 11400000, guid: a80cc4843c4850d4a8ee31f84f69813a, type: 2}
+  TryingOnItem: 0
+  TryingOnColor: 0

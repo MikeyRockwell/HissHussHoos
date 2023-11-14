@@ -17,6 +17,7 @@ namespace Audio {
             gd.eventData.OnPunchWarmup.AddListener(PunchOnly);
             gd.eventData.OnPunchNormal.AddListener(PunchBag);
             gd.eventData.OnPunchTimeAttack.AddListener(PunchBag);
+            gd.eventData.OnPunchPrecision.AddListener(PunchOnly);
         }
 
         private void PunchBag(TARGET target) {

@@ -61,9 +61,6 @@ namespace UI {
                     break;
             }
             
-            Log.Message("Adjusted Super Threshold: " + adjustedSuperThreshold, Color.green);
-            Log.Message("Adjusted Fast Threshold:  " + adjustedFastThreshold,  Color.magenta);
-            
             // If the timer is active and below the superThreshold - give the player a super bonus
             if (elapsedTime < adjustedSuperThreshold) {
                 isActive = false;

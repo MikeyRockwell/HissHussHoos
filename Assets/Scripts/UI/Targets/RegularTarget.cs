@@ -68,7 +68,7 @@ namespace UI {
             xf.DORotate(Vector3.zero, 0.05f).SetUpdate(true);
         }
 
-        private void SetText() {
+        private void SetText()  {
             textMesh.text = gd.targetData.currentSet[index].ToString();
             Color targetColor = currentTarget ? RSColors.Green() : Color.white;
             textMesh.DOColor(targetColor, 0.2f).SetUpdate(true);
@@ -103,6 +103,7 @@ namespace UI {
         private void DisableTarget() {
             xf.SetParent(targetPool);
             gameObject.SetActive(false);
+            active = false;
         }
 
         private void GameOver() {

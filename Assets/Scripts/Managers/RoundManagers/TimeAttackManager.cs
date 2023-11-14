@@ -1,7 +1,7 @@
 ﻿using UI;
 using Data;
-using DG.Tweening;
 using TMPro;
+using DG.Tweening;
 using UnityEngine;
 using TARGET = Data.TargetData.Target;
 

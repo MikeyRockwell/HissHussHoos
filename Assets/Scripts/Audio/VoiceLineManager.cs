@@ -4,6 +4,7 @@ using Managers;
 using UnityEngine;
 using UnityEngine.Audio;
 using Sirenix.OdinInspector;
+using Utils;
 using Random = UnityEngine.Random;
 
 namespace Audio {
@@ -13,6 +14,7 @@ namespace Audio {
     /// Plays the voice lines when called via events
     /// </summary>
     public class VoiceLineManager : Singleton<VoiceLineManager> {
+        
         [TitleGroup("Audio Events")] [FoldoutGroup("AudioEvents")]
         public AudioEvent startGame;
 
@@ -55,6 +57,7 @@ namespace Audio {
             gd.roundData.OnRoundComplete.AddListener           (delegate { BeginRound();                });
             gd.roundData.OnSpeedBonus.AddListener              (SpeedCombo);
             gd.eventData.OnMiss.AddListener                    (HurtAudio);
+            gd.eventData.OnMissPrecision.AddListener           (delegate { HurtAudio();                 });
         }
 
         private void Start() {
@@ -62,6 +65,19 @@ namespace Audio {
             // This stops voice lines from playing until the game is ready
             // After 3 seconds, the priority boolean is disabled
             Invoke(nameof(UnlockAudio), 3f);
+            endGame.coolingDown = false;
+            quickCombo.coolingDown = false;
+            superQuickCombo.coolingDown = false;
+            morale.coolingDown = false;
+            moraleBoost.coolingDown = false;
+            newRound.coolingDown = false;
+            hurt.coolingDown = false;
+            changeItem.coolingDown = false;
+            changeColor.coolingDown = false;
+            unlockItem.coolingDown = false;
+            personalBest.coolingDown = false;
+            perfectRound.coolingDown = false;
+            lowScore.coolingDown = false;
         }
 
         private void UnlockAudio() {

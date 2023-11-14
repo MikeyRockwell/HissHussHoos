@@ -2,6 +2,7 @@
 using Data.Tutorial;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using Utils;
 using TARGET = Data.TargetData.Target;
 
@@ -29,11 +30,14 @@ namespace Data {
         public UnityEvent<TARGET> OnPunchWarmup;
         public UnityEvent<TARGET> OnPunchNormal;
         public UnityEvent<TARGET> OnPunchTimeAttack;
+        public UnityEvent<TARGET> OnPunchPrecision;
 
         // Hit and Miss target
         public UnityEvent<int> OnHit;
         public UnityEvent<int> OnHitTimeAttack;
-        public UnityEvent OnMiss;
+        public UnityEvent      OnMiss;
+        public UnityEvent<int> OnHitPrecision;
+        public UnityEvent<int> OnMissPrecision;
 
         // Game over
         public UnityEvent OnGameOver;
@@ -77,7 +81,12 @@ namespace Data {
             if (!inputEnabled) return;
             OnPunchTimeAttack?.Invoke(target);
         }
-
+        
+        public void PunchPrecision(TARGET target) {
+            if (!inputEnabled) return;
+            OnPunchPrecision?.Invoke(target);
+        }
+        
         public void HitTimeAttack(int streak) {
             OnHitTimeAttack?.Invoke(streak);
         }
@@ -88,6 +97,14 @@ namespace Data {
 
         public void Miss() {
             OnMiss?.Invoke();
+        }
+
+        public void HitPrecision(int index) {
+            OnHitPrecision?.Invoke(index);
+        }
+
+        public void MissPrecision(int index) {
+            OnMissPrecision?.Invoke(index);            
         }
 
         public void GameOver() {

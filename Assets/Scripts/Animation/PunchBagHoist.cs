@@ -22,6 +22,7 @@ namespace Animation {
             gd.eventData.OnGameOver.AddListener(RaiseBag);
             gd.customEvents.OnMenuOpened.AddListener((x)=>LowerBag(0));
             gd.customEvents.OnMenuClosed.AddListener(RaiseBag);
+            gd.roundData.OnPrecisionRoundBegin.AddListener(RaiseBag);
             // COMPONENTS
             xf = transform;
         }

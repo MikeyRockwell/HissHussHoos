@@ -6,6 +6,7 @@ using TARGET = Data.TargetData.Target;
 
 namespace UI {
     public class TimeAttackTarget : MonoBehaviour {
+        
         // Time Attack Target
         // This target is spawned in the Time Attack round
         // It has a short timer before it disappears

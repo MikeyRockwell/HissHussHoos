@@ -3,10 +3,12 @@ using Data.Customization;
 using Data.Tutorial;
 using MoreMountains.Feedbacks;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace Managers.Tutorial {
     public class TutorialManager : MonoBehaviour {
+        
         // Tutorial manager calls into action tutorials at different game points
         // This will send a message to the Dialogue Manager to start dialogue
         // And control Manager to control inputs
@@ -15,6 +17,8 @@ namespace Managers.Tutorial {
         public SO_Dialogue firstRoundIntro;
         public SO_Dialogue timeAttackIntro;
         public SO_Dialogue customizationIntro;
+        public SO_Dialogue precisionIntro;
+        public SO_Dialogue moraleIntro;
         public bool overrideTutorial;
 
         [SerializeField] private MMF_Player timeScaleFX;
@@ -28,6 +32,8 @@ namespace Managers.Tutorial {
             gd.roundData.OnTimeAttackRoundBegin.AddListener(TimeAttackIntro);
             gd.customEvents.OnMenuOpened.AddListener(CustomizationIntro);
             gd.eventData.OnDialogueEnd.AddListener(EndTutorial);
+            gd.roundData.OnPrecisionRoundBegin.AddListener(PrecisionIntro);
+            gd.roundData.OnRoundBegin.AddListener(delegate { MoraleIntro(); });
         }
 
         private void EndTutorial(SO_Dialogue arg0) {
@@ -70,6 +76,25 @@ namespace Managers.Tutorial {
             shopOverlay.interactable = false;
             // timeScaleFX.PlayFeedbacks();
             gd.eventData.StartDialogue(customizationIntro);
+        }
+        
+        private void PrecisionIntro() {
+            if (!overrideTutorial)
+                if (PlayerPrefs.GetInt("Precision", 1) != 1)
+                    return;
+            PlayerPrefs.SetInt("Precision", 0);
+            timeScaleFX.PlayFeedbacks();
+            gd.eventData.StartDialogue(precisionIntro);
+        }
+        
+        private void MoraleIntro() {
+            if (gd.roundData.currentRound != 2) return;
+            if (!overrideTutorial)
+                if (PlayerPrefs.GetInt("MoraleBoost", 1) != 1)
+                    return;
+            PlayerPrefs.SetInt("MoraleBoost", 0);
+            timeScaleFX.PlayFeedbacks();
+            gd.eventData.StartDialogue(moraleIntro);
         }
     }
 }

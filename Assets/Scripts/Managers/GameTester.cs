@@ -67,20 +67,16 @@ namespace Managers {
 
         private IEnumerator AttemptPunch() {
             if (!AutoPlay) yield break;
-            Log.Message("Attempting Punch", Color.gray);
             // Create random delay
             // float delay = Random.Range(0, (100 - skillLevel) * 0.01f);
             // delay = Mathf.Clamp(delay, gd.playerData.punchSpeed * DelayMultiplier, 1);
             float delay = gd.playerData.punchSpeed * DelayMultiplier;
-            Log.Message("Delay: " + delay, Color.gray);
             yield return new WaitForSeconds(delay);
             
             // Roll for correct punch
             float roll = Random.Range(0, 100);
-            Log.Message("Rolled: " + roll, Color.blue);
             
             if (roll > skillLevel) {
-                Log.Message("Missed", Color.red);
                 // Select a random punch that is not the correct punch
                 int correctPunch = (int)gd.targetData.currentSet[gd.targetData.step];
                 int punch = Random.Range(0, PunchButtons.Length);
@@ -91,7 +87,6 @@ namespace Managers {
                 yield break;
             }
             
-            Log.Message("Hit", Color.green);
             if (gd.playerData.punching) {
                 yield return new WaitForSeconds(0.1f);
             }
@@ -101,7 +96,6 @@ namespace Managers {
         private IEnumerator TimeAttackPunch() {
             if (!AutoPlay) yield break;
             
-            Log.Message("Attempting Time Attack Punch", Color.gray);
             float delay = gd.playerData.punchSpeed * DelayMultiplier;
             yield return new WaitForSeconds(delay);
             
@@ -127,6 +121,6 @@ namespace Managers {
             Log.Message("Hit", Color.green);
             PunchButtons[(int)gd.targetData.currentTimeAttackTarget].Punch();
         }
-    }
 #endif
+    }
 }

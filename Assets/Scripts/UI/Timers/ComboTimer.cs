@@ -52,6 +52,7 @@ namespace UI {
             gd.roundData.OnComboBegin.AddListener(StartTimer);
             gd.roundData.OnComboComplete.AddListener(StopTimer);
             gd.roundData.OnTimeAttackRoundBegin.AddListener(CollapseTimer);
+            gd.roundData.OnPrecisionRoundBegin.AddListener(CollapseTimer);
         }
 
         private void NewGame() {

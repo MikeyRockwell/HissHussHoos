@@ -12,6 +12,7 @@ namespace Managers {
         [SerializeField] private RoundPopUps roundPops;
 
         private DataWrangler.GameData gd;
+        private bool bonusRoundSwitch;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
@@ -20,6 +21,7 @@ namespace Managers {
             gd.roundData.OnRoundBegin.AddListener(BeginRound);
             gd.roundData.OnRoundComplete.AddListener(_ => gd.roundData.InitRound());
             gd.roundData.OnTimeAttackRoundComplete.AddListener(_ => gd.roundData.InitRound());
+            gd.roundData.OnPrecisionRoundComplete.AddListener(_ => gd.roundData.InitRound());
             gd.eventData.OnGameOver.AddListener(GameOver);
         }
 
@@ -64,11 +66,17 @@ namespace Managers {
 
         private void SelectRoundType(int round) {
             // Check if the current round is a time attack round
-            if (round % gd.roundData.timeAttackRoundDivisor == 0)
-                gd.roundData.roundType = RoundData.RoundType.timeAttack;
+            // if (round % gd.roundData.timeAttackRoundDivisor == 0)
+            //     gd.roundData.roundType = RoundData.RoundType.timeAttack;
             // else if (round % gd.roundData.precisionRoundDivisor == 0) {
             //     gd.roundData.roundType = RoundData.RoundType.precision;
             // }
+            // Check if the current round is a bonus round
+            if (round % gd.roundData.bonusRoundDivisor == 0) {
+                bonusRoundSwitch = !bonusRoundSwitch;
+                gd.roundData.roundType =
+                    bonusRoundSwitch ? RoundData.RoundType.precision : RoundData.RoundType.timeAttack;
+            }
             else
                 gd.roundData.roundType = RoundData.RoundType.normal;
         }
@@ -84,6 +92,8 @@ namespace Managers {
                     BeginTimeAttackRound();
                     break;
                 case RoundData.RoundType.precision:
+                    BeginPrecisionRound();
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -101,6 +111,13 @@ namespace Managers {
             // Starts a time attack round
             gd.eventData.inputEnabled = true;
             roundText.text = "TIME ATTACK";
+            gd.playerData.UpdateRound(gd.roundData.currentRound);
+        }
+        
+        private void BeginPrecisionRound() {
+            // Starts a precision round
+            gd.eventData.inputEnabled = true;
+            roundText.text = "PRECISION";
             gd.playerData.UpdateRound(gd.roundData.currentRound);
         }
     }
