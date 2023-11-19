@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 01_Cobalt
   m_EditorClassIdentifier: 
   ColorName: Cobalt
-  Color: {r: 0, g: 0.021445274, b: 1, a: 1}
+  Color: {r: 0.10815233, g: 0.12415984, b: 0.9245283, a: 1}
   unlocked: 1
   price: 0
   defaultColor: 1

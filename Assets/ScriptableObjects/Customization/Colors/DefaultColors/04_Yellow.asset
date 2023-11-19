@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 04_Yellow
   m_EditorClassIdentifier: 
   ColorName: Yellow
-  Color: {r: 1, g: 0.694045, b: 0, a: 1}
-  unlocked: 0
+  Color: {r: 0.9150943, g: 0.66792744, b: 0.10704873, a: 1}
+  unlocked: 1
   price: 0
   defaultColor: 1

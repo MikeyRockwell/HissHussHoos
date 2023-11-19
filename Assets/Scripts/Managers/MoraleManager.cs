@@ -36,6 +36,7 @@ namespace Managers {
             gd.customEvents.OnColorUnlocked.AddListener(SpendMoralePoints);
             gd.eventData.OnHit.AddListener(AddMoraleFromPunch);
             gd.eventData.OnHitTimeAttack.AddListener(AddMoraleFromPunch);
+            gd.eventData.OnHitPrecision.AddListener(AddMoraleFromPunch);
             gd.eventData.OnMiss.AddListener(RemoveMorale);
             gd.roundData.OnSpeedBonus.AddListener(AddMoraleFromBonus);
             gd.eventData.OnGameOver.AddListener(DisplayMoralePoints);

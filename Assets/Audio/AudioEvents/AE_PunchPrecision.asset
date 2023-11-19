@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: AE_PunchPrecision
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 5f6babb2fb26d1744827c35b1f3e3b65, type: 3}
+  - {fileID: 8300000, guid: 13dc402dba102264194c1cbcf1472b23, type: 3}
+  - {fileID: 8300000, guid: 7b6945e307751fb44a50d177126a7713, type: 3}
+  - {fileID: 8300000, guid: a3dc2a1403adc484c92cc4c9e8de64dd, type: 3}
+  - {fileID: 8300000, guid: a35d826798e8f4040aa43a9502707725, type: 3}
   volume: {x: 0.24262989, y: 0.33115754}
   pitch: {x: 0.669186, y: 0.8087519}
   chance: 1
   coolDownDuration: 0
   coolingDown: 0
   priority: 0
-  currentClip: {fileID: 8300000, guid: 5f6babb2fb26d1744827c35b1f3e3b65, type: 3}
+  currentClip: {fileID: 8300000, guid: 13dc402dba102264194c1cbcf1472b23, type: 3}
   voiceEffects: 0

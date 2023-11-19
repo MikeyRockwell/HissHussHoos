@@ -18,6 +18,7 @@ namespace Managers {
         [SerializeField] private DialogueManager dialogueManager;
         [SerializeField] private StartGameButton start;
         [SerializeField] private PunchButton[] punchButtons;
+        [SerializeField] private MusicManager musicManager;
 
         private DataWrangler.GameData gd;
 

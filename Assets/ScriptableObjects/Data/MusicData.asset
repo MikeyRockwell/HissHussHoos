@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: MusicData
   m_EditorClassIdentifier: 
   musicTracks:
-  - artist: William Waiirua
+  - artist: William Waiirua<br>feat Vince Harder
+    songName: A Very Merry Christmas
+    clip: {fileID: 8300000, guid: 619b1cf995975624a9da0f52eb74d50f, type: 3}
+    bpm: 0
+  - artist: William Waiirua<br>feat Vince Harder
     songName: Wowee
     clip: {fileID: 8300000, guid: 01457c18458de93468a4f4e9c43eb80c, type: 3}
     bpm: 115
-  - artist: JBrown
-    songName: HISS HUSS HOOS Theme
-    clip: {fileID: 8300000, guid: e258210399835e541a8a35320b087562, type: 3}
-    bpm: 0
   - artist: William Waiirua
-    songName: Mauri Mahi
+    songName: Mauri Mahi, Mauri Ora
     clip: {fileID: 8300000, guid: 0cf35dc650859ec4686ad10dd6b77b7e, type: 3}
     bpm: 0
   - artist: William Waiirua
@@ -37,7 +37,7 @@ MonoBehaviour:
     songName: Ka Wani Ke
     clip: {fileID: 8300000, guid: 436359f5f5e94374f8e40c23381eac66, type: 3}
     bpm: 0
-  currentTrackIndex: 3
+  currentTrackIndex: 0
   playing: 1
   playByDefault: 1
   OnPressPlay:

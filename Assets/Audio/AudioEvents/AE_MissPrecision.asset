@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80640c2f4b884af1bee997fbb53977c8, type: 3}
+  m_Name: AE_MissPrecision
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 5f6babb2fb26d1744827c35b1f3e3b65, type: 3}
+  volume: {x: 0.24262989, y: 0.33115754}
+  pitch: {x: 0.669186, y: 0.8087519}
+  chance: 1
+  coolDownDuration: 0
+  coolingDown: 0
+  priority: 0
+  currentClip: {fileID: 8300000, guid: 5f6babb2fb26d1744827c35b1f3e3b65, type: 3}
+  voiceEffects: 0

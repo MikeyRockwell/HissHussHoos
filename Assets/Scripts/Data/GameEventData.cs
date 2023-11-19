@@ -33,11 +33,12 @@ namespace Data {
         public UnityEvent<TARGET> OnPunchPrecision;
 
         // Hit and Miss target
-        public UnityEvent<int> OnHit;
-        public UnityEvent<int> OnHitTimeAttack;
-        public UnityEvent      OnMiss;
-        public UnityEvent<int> OnHitPrecision;
-        public UnityEvent<int> OnMissPrecision;
+        public UnityEvent<int>    OnHit;
+        public UnityEvent<int>    OnHitTimeAttack;
+        public UnityEvent         OnMiss;
+        public UnityEvent<int>    OnHitPrecision;
+        public UnityEvent<TARGET> OnHitPrecisionFX;
+        public UnityEvent<int>    OnMissPrecision;
 
         // Game over
         public UnityEvent OnGameOver;
@@ -101,6 +102,10 @@ namespace Data {
 
         public void HitPrecision(int index) {
             OnHitPrecision?.Invoke(index);
+        }
+        
+        public void HitPrecisionFX(TARGET target) {
+            OnHitPrecisionFX?.Invoke(target);
         }
 
         public void MissPrecision(int index) {

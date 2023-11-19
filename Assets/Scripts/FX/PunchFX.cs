@@ -13,7 +13,8 @@ namespace Animation {
         public enum GloveFXType {
             none,
             rainbow,
-            golden
+            golden,
+            xmas
         }
         
         [SerializeField] private SO_Category gloves;
@@ -23,7 +24,9 @@ namespace Animation {
         // Glove FX
         [SerializeField] private GloveFX rainbowFX;
         [SerializeField] private Transform goldenFX;
+        [SerializeField] private Transform xmasFX;
         [SerializeField] private ParticleSystem[] goldenParticleSystems;
+        [SerializeField] private ParticleSystem[] xmasParticleSystems;
         
         private DataWrangler.GameData gd;
 
@@ -34,6 +37,7 @@ namespace Animation {
             gd.eventData.OnPunchWarmup.AddListener(CheckCustomizationMenuOpen);
             gd.eventData.OnPunchNormal.AddListener(PlayImpactFX);
             gd.eventData.OnPunchTimeAttack.AddListener(PlayImpactFX);
+            gd.eventData.OnHitPrecisionFX.AddListener(PlayImpactFX);
             gloves.OnChangeItemColor.AddListener(SetGloveFX);
         }
 
@@ -42,6 +46,13 @@ namespace Animation {
             if (gd.customEvents.MenuOpen) {
                 PlayImpactFX(target);
             }
+            if (xmasFX.gameObject.activeSelf) {
+                xmasParticleSystems[(int)target].Emit(15);
+            }
+        }
+        
+        private void PlayImpactFXInt(int target) {
+            PlayImpactFX((TargetData.Target)target);
         }
 
         private void PlayImpactFX(TargetData.Target target) { // Emits the default smoke puffs
@@ -50,6 +61,9 @@ namespace Animation {
             if (goldenFX.gameObject.activeSelf) {
                 goldenParticleSystems[(int)target].Emit(15);
             }
+            if (xmasFX.gameObject.activeSelf) {
+                xmasParticleSystems[(int)target].Emit(15);
+            }
         }
 
         private void SetGloveFX(SO_Item item, Color color) { // Sets the glove FX based on the glove type
@@ -57,14 +71,22 @@ namespace Animation {
                 case GloveFXType.none:
                     rainbowFX.gameObject.SetActive(false);
                     goldenFX.gameObject.SetActive(false);
+                    xmasFX.gameObject.SetActive(false);
                     break;
                 case GloveFXType.rainbow:
                     rainbowFX.gameObject.SetActive(true);
                     goldenFX.gameObject.SetActive(false);
+                    xmasFX.gameObject.SetActive(false);
                     break;
                 case GloveFXType.golden:
                     goldenFX.gameObject.SetActive(true);
                     rainbowFX.gameObject.SetActive(false);
+                    xmasFX.gameObject.SetActive(false);
+                    break;
+                case GloveFXType.xmas:
+                    goldenFX.gameObject.SetActive(false);
+                    rainbowFX.gameObject.SetActive(false);
+                    xmasFX.gameObject.SetActive(true);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -16,6 +16,7 @@ MonoBehaviour:
   isCharacter: 0
   Items:
   - {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}
+  - {fileID: 11400000, guid: 9a99503a05fccd5458bb9f743d4d8302, type: 2}
   - {fileID: 11400000, guid: 3902e55bec3abb64d8425ee7a23008ab, type: 2}
   - {fileID: 11400000, guid: 5bdbadf80de96a04f8198e10f579fdfc, type: 2}
   CurrentItem: {fileID: 11400000, guid: 444c925b3e1872949b070067426a0dc4, type: 2}

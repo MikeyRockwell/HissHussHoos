@@ -13,6 +13,7 @@ namespace Managers {
         [SerializeField] private TextMeshProUGUI artistNameText;
         [SerializeField] private TextMeshProUGUI trackNameText;
         [SerializeField] private RectTransform trackText;
+        [SerializeField] private TextMeshProUGUI debugText;
 
         private DataWrangler.GameData gd;
         private MusicData md;
@@ -94,6 +95,13 @@ namespace Managers {
             playTime = time;
             // Timer is the length of the song
             while (playTime > 0) {
+                // Show the play time and the clip length in the debug text
+                // To two decimal places
+                // debugText.text = 
+                //     "Play Time: " + 
+                //     playTime.ToString("F2") + 
+                //     "\nClip Length: " + 
+                //     audioSource.clip.length.ToString("F2");
                 playTime -= Time.deltaTime;
                 yield return null;
             }

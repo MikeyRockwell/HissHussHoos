@@ -38,6 +38,7 @@ namespace UI {
                 PunchFX.GloveFXType.none => defaultMaterial,
                 PunchFX.GloveFXType.rainbow => newItem.customMaterial,
                 PunchFX.GloveFXType.golden => newItem.customMaterial,
+                PunchFX.GloveFXType.xmas => defaultMaterial,
                 _ => throw new ArgumentOutOfRangeException()
             };
         }

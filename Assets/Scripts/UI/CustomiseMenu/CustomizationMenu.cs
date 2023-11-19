@@ -1,4 +1,5 @@
-﻿using Utils;
+﻿using System;
+using Utils;
 using Managers;
 using UnityEngine;
 using DG.Tweening;
@@ -31,6 +32,7 @@ namespace UI.CustomiseMenu {
 
         private void Start() {
             events.targetCategory = defaultCategory;
+            gd.customEvents.MenuOpen = false;
         }
 
         private void InitSubMenu(SO_Category category) {
@@ -97,6 +99,10 @@ namespace UI.CustomiseMenu {
 
         private void ResetItems() {
             foreach (SO_Category cat in gd.itemData.allCategories) cat.ChangeItem(cat.CurrentItem, true);
+        }
+
+        private void OnDestroy() {
+            gd.customEvents.MenuOpen = false;
         }
     }
 }

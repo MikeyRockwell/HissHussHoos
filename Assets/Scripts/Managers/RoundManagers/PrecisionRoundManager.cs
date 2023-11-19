@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UI;
-using Utils;
+﻿using UI;
 using UnityEngine;
+using System.Collections;
 using TARGET = Data.TargetData.Target;
 
 namespace Managers {
@@ -14,15 +12,13 @@ namespace Managers {
         
         [SerializeField] private Transform targetPool;
         [SerializeField] private PrecisionTarget[] targetPrefabs;
-        [SerializeField] private float roundStartDelay = 2f;
+        [SerializeField] private float roundStartDelay = 1f;
         
         private DataWrangler.GameData gd;
 
         private void Awake() {
             gd = DataWrangler.GetGameData();
             gd.roundData.OnPrecisionRoundBegin.AddListener(BeginRound);
-            // gd.roundData.OnPrecisionRoundComplete.AddListener(EndRound);
-            gd.eventData.OnPunchPrecision.AddListener(CheckTargets);
         }
         
         private void BeginRound() {
@@ -65,13 +61,7 @@ namespace Managers {
             // }
             return Instantiate(targetPrefabs[Random.Range(0, targetPrefabs.Length)], targetPool);
         }
-        
-        private void CheckTargets(TARGET punchType) {
-            foreach (Transform target in targetPool) {
-                if (!target.gameObject.activeSelf) continue;
-                target.GetComponentInChildren<PrecisionTarget>().CheckHit(punchType);
-            }
-        }
+   
         
     }
 }

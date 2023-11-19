@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 05_Green
   m_EditorClassIdentifier: 
   ColorName: Green
-  Color: {r: 0, g: 1, b: 0.06207323, a: 1}
-  unlocked: 0
+  Color: {r: 0.13568883, g: 0.9339623, b: 0.18577658, a: 1}
+  unlocked: 1
   price: 0
   defaultColor: 1
